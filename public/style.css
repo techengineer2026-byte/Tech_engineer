@@ -6,6 +6,7 @@
     --dark-bg: #1f2937;
 }
 
+/* Fix FOIT issue for Font Awesome fonts */
 @font-face {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
@@ -14,24 +15,30 @@
     src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2') format('woff2');
 }
 
+/* Section Background */
 .about-section {
     background-color: #fff;
 }
 
+/* Image Wrapper */
 .about-img-wrapper {
     position: relative;
     padding: 20px;
     z-index: 1;
 }
 
+/* Main Image Styling */
 .main-img {
     width: 100%;
+    /* You can use a real image URL in the HTML. 
+       If the image is small, object-fit helps cover the area */
     min-height: 400px;
     object-fit: cover;
     position: relative;
     z-index: 2;
 }
 
+/* Decorative Background Shape (Behind Image) */
 .img-bg-shape {
     position: absolute;
     top: 0;
@@ -40,15 +47,18 @@
     height: 200px;
     background-image: radial-gradient(#4e3db8 2px, transparent 2px);
     background-size: 20px 20px;
+    /* Polka dot pattern */
     opacity: 0.5;
     z-index: 0;
     transform: translate(-20px, -20px);
 }
 
+/* Floating Experience Card */
 .experience-card {
     position: absolute;
     bottom: 40px;
     right: -20px;
+    /* Overlaps the right edge */
     background: #fff;
     padding: 20px 30px;
     border-radius: 15px;
@@ -58,12 +68,14 @@
     gap: 15px;
     z-index: 3;
     border-left: 5px solid #fd7e14;
+    /* Orange accent */
 }
 
 .exp-icon {
     width: 50px;
     height: 50px;
     background: #fef3e8;
+    /* Light orange */
     color: #fd7e14;
     border-radius: 50%;
     display: flex;
@@ -76,6 +88,7 @@
     line-height: 1.2;
 }
 
+/* Floating Animation */
 .floating-anim {
     animation: floatCard 4s ease-in-out infinite;
 }
@@ -94,6 +107,7 @@
     }
 }
 
+/* Button Hover Lift */
 .btn-hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -104,14 +118,17 @@
     overflow: hidden;
 }
 
+/* The Card Styling */
 .pillar-card {
     background: white;
     border-radius: 12px;
     padding: 40px 30px;
     border-bottom: 5px solid var(--accent);
+    /* Adds the "Block" feel */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     height: 100%;
     position: relative;
+    /* Initial State for Animation */
     opacity: 0;
     transform: translateY(-100px);
 }
@@ -129,6 +146,7 @@
     margin-bottom: 25px;
 }
 
+/* THE "GAME DROP" ANIMATION */
 .animate-drop {
     animation: dropBlock 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
@@ -143,12 +161,14 @@
         transform: translateY(10px);
     }
 
+    /* Bounce effect */
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 }
 
+/* Stagger the delays so they fall one by one */
 .delay-1 {
     animation-delay: 0.2s;
 }
@@ -161,6 +181,8 @@
     animation-delay: 0.6s;
 }
 
+
+/* --- SECTION 2: BLAZOR DEEP DIVE --- */
 .blazor-section {
     background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
     color: white;
@@ -168,6 +190,7 @@
     position: relative;
 }
 
+/* Code Window Styling */
 .code-window {
     background: #0f172a;
     border-radius: 10px;
@@ -209,23 +232,28 @@
     line-height: 1.6;
 }
 
+/* Syntax Highlighting Mockup */
 .code-keyword {
     color: #c77dff;
 }
 
+/* Purple */
 .code-method {
     color: #61a0ff;
 }
 
+/* Blue */
 .code-string {
     color: #a3e635;
 }
 
+/* Green */
 .code-comment {
     color: #64748b;
     font-style: italic;
 }
 
+/* Feature List Styling */
 .blazor-list {
     list-style: none;
     padding: 0;
@@ -244,11 +272,13 @@
     margin-top: 5px;
 }
 
+
 .btn-hover-lift:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(78, 61, 184, 0.3);
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 991px) {
     .experience-card {
         right: 0;
@@ -260,6 +290,7 @@
     }
 }
 
+/* Hero Section Background */
 .asp-hero-section {
     background-color: #f8f9fa;
     padding: 80px 0;
@@ -267,6 +298,7 @@
     position: relative;
 }
 
+/* Background blob decoration */
 .hero-bg-shape {
     position: absolute;
     top: -100px;
@@ -277,6 +309,7 @@
     z-index: 0;
 }
 
+/* Game Card Container */
 .game-card {
     background: white;
     padding: 30px;
@@ -288,6 +321,7 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Status Text */
 .game-status {
     font-weight: 700;
     color: #3853A8;
@@ -296,12 +330,14 @@
     min-height: 24px;
 }
 
+/* The Grid Board */
 .tic-tac-toe-board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
+/* Individual Cells */
 .cell {
     width: 90px;
     height: 90px;
@@ -321,14 +357,18 @@
     background: #e2e8f0;
 }
 
+/* Colors for X and O */
 .cell.x {
     color: #3853A8;
+    /* Your Brand Blue */
 }
 
 .cell.o {
     color: #fd7e14;
+    /* Orange Accent */
 }
 
+/* Winning Line Highlight */
 .cell.win {
     background-color: #d1fae5;
     color: #047857;
@@ -342,8 +382,10 @@
     src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
 }
 
+/* Modal Background */
 .auto-modal {
     display: none !important;
+    /* Hide by default */
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -352,15 +394,19 @@
     height: 100%;
     padding: 15px;
     background: rgba(0, 0, 0, 0.6);
+
+    /* Center modal box */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Optional: when modal is active */
 .auto-modal.active {
     display: flex;
 }
 
+/* Modal Box */
 .auto-modal-content {
     background: #fff;
     width: 320px;
@@ -371,6 +417,7 @@
     animation: fadeIn 0.4s ease;
 }
 
+/* Close Button */
 .auto-close {
     position: absolute;
     top: 8px;
@@ -379,10 +426,17 @@
     font-size: 24px;
 }
 
+
+
+
+
+
+/* Section Background */
 .achiever-section {
     background-color: #f8f9fa;
 }
 
+/* Card Styling */
 .achiever-card {
     border: none;
     border-radius: 15px;
@@ -391,13 +445,16 @@
     background: #fff;
 }
 
+/* Hover Effect: Lifts up and increases shadow */
 .achiever-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Image Handling - The most important fix! */
 .achiever-img-wrapper {
     height: 260px;
+    /* Fixed height for uniformity */
     overflow: hidden;
     position: relative;
 }
@@ -406,17 +463,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Prevents stretching */
     object-position: top;
+    /* Focuses on faces */
     transition: transform 0.5s ease;
 }
 
+/* Zoom image slightly on hover */
 .achiever-card:hover .achiever-img {
     transform: scale(1.05);
 }
 
+/* Badge Styling */
 .course-badge {
     background-color: #eef2ff;
     color: #4e3db8;
+    /* Your brand blue */
     font-size: 0.8rem;
     font-weight: 700;
     padding: 5px 12px;
@@ -425,8 +487,10 @@
     margin-bottom: 10px;
 }
 
+/* Text Styling */
 .package-text {
     color: #198754;
+    /* Green for money/success */
     font-weight: 800;
     font-size: 1.1rem;
 }
@@ -442,14 +506,25 @@
 .info-row i {
     width: 25px;
     color: #fd7e14;
+    /* Your brand orange */
 }
 
+
+
+
+
+
+
+
+
+/* === MODAL CONTAINER === */
 .modal-content {
     border-radius: 20px;
     overflow: hidden;
     border: none;
 }
 
+/* === LEFT SIDE PANEL === */
 .modal-left {
     background-color: #3d2c79;
     color: white;
@@ -473,6 +548,7 @@
     transform: scale(1.2);
 }
 
+/* === FORM SIDE === */
 .form-control,
 .form-select {
     background-color: #f8f9fa;
@@ -495,8 +571,10 @@
 .special-input {
     border: 1px solid #6f42c1 !important;
     height: 45px;
+    /* slightly smaller for mobile */
 }
 
+/* Radio Buttons */
 .form-check {
     margin-bottom: 10px;
 }
@@ -514,6 +592,7 @@
     border-color: #4e3db8;
 }
 
+/* Submit Button */
 .btn-submit {
     background-color: #4e3db8;
     color: white;
@@ -530,6 +609,7 @@
     color: white;
 }
 
+/* Utilities */
 .text-orange {
     color: #fd7e14 !important;
 }
@@ -542,21 +622,27 @@
     z-index: 10;
 }
 
+/* === MOBILE RESPONSIVE TWEAKS === */
 @media (max-width: 991px) {
+
+    /* Modal smaller */
     .modal-dialog {
         max-width: 90%;
         margin-top: 150px;
         margin-left: 30px;
+        /* reduce modal width */
     }
 
     .modal-content {
         border-radius: 12px;
     }
 
+    /* Reduce padding in form side */
     .col-lg-7.p-5 {
         padding: 20px !important;
     }
 
+    /* Left panel smaller */
     .modal-left {
         padding: 20px !important;
         font-size: 0.9rem;
@@ -566,32 +652,48 @@
         font-size: 1.1rem;
     }
 
+    /* Inputs smaller */
     .form-control,
     .form-select {
         padding: 10px;
         font-size: 13px;
     }
 
+    /* Special input smaller */
     .special-input {
         height: 40px;
     }
 
+    /* Submit button smaller */
     .btn-submit {
         padding: 10px;
         font-size: 14px;
     }
 
+    /* Radio button labels smaller */
     .form-check-label.small {
         font-size: 0.75rem;
         line-height: 1.2;
     }
 
+    /* Radio buttons stacked instead of side-by-side if needed */
     .row.mt-3.mb-4 .col-md-6 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+/* Form Styling */
 .bg-light-gray {
     background-color: #f8f9fa !important;
     border: 1px solid #dee2e6;
@@ -599,14 +701,17 @@
     border-radius: 6px;
 }
 
+/* Ensure Dropdown looks just like the Text Inputs */
 .form-select {
     padding: 12px;
     border-radius: 6px;
     border: 1px solid #dee2e6;
     background-color: #f8f9fa;
     color: #6c757d;
+    /* Muted text color for placeholder feel */
 }
 
+/* Remove blue focus glow and use purple instead */
 .form-control:focus,
 .form-select:focus {
     box-shadow: none;
@@ -614,6 +719,7 @@
     background-color: white;
 }
 
+/* Radio Button Styling */
 .form-check-input {
     cursor: pointer;
     border: 1px solid #ccc;
@@ -624,10 +730,12 @@
     border-color: #4e3db8;
 }
 
+/* Left Panel Cursor */
 .cursor-pointer {
     cursor: pointer;
 }
 
+/* Buttons */
 .modal-btn {
     display: block;
     margin: 10px auto;
@@ -652,22 +760,27 @@
     margin: 10px auto;
     color: #fff;
     border-radius: 8px;
+    cursor: pointer;
 }
 
+/* Input field */
 .subscribe-form input {
     padding: 10px;
     width: 80%;
     margin-top: 10px;
     border-radius: 50px;
+    /* cleaner */
     border: 1px solid #000000;
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .auto-modal-content {
         width: 250px;
     }
 }
 
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -680,6 +793,7 @@
     }
 }
 
+
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     margin: 0;
@@ -688,16 +802,45 @@ body {
     color: var(--text-color);
 }
 
+
+
+/* Header and Navigation */
+/* header {
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+} */
+/* Normal Header */
 .header {
     background-color: #4698a7;
+    /* Teal Background */
     width: 100%;
     position: fixed;
+    /* Keeps it stuck to top */
     top: 0;
     left: 0;
     z-index: 2000;
+    /* Stays on top of everything */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* --- FIXES ADDED BELOW --- */
+    padding: 12px 0;
+    /* Adds breathing room top/bottom */
+    transition: all 0.3s ease;
+    /* Smooth effect when scrolling */
 }
 
+/* IMPORTANT: Make sure links inside the header are WHITE */
+.header nav a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Sticky / on scroll */
 .header.sticky {
     background-color: rgba(70, 161, 179, 0.9);
     padding: 6px 0;
@@ -787,6 +930,8 @@ nav a:hover::after {
     width: 125px;
 }
 
+
+/* Hamburger button */
 .mobile-nav-toggle {
     display: none;
     flex-direction: column;
@@ -797,6 +942,7 @@ nav a:hover::after {
     border: none;
 }
 
+/* Desktop Menu */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -818,12 +964,15 @@ nav a:hover::after {
     padding: 12px 0;
 }
 
+/* Section Background */
 .creative-section {
     background-color: #f9fafb;
     padding: 80px 0;
     overflow-x: hidden;
+    /* Prevent scrollbar during animation */
 }
 
+/* Section Title Styling */
 .section-header h2 {
     font-weight: 800;
     color: #0f172a;
@@ -846,6 +995,7 @@ nav a:hover::after {
     z-index: -1;
 }
 
+/* CTA Button with PULSE Animation */
 .btn-counselling {
     background-color: #fd7e14;
     color: white;
@@ -857,12 +1007,14 @@ nav a:hover::after {
     text-decoration: none;
     display: inline-block;
     animation: pulse-orange 2s infinite;
+    /* The Heartbeat Effect */
 }
 
 .btn-counselling:hover {
     background-color: #e86b02;
     color: white;
     animation: none;
+    /* Stop pulsing on hover */
     transform: scale(1.05);
 }
 
@@ -880,6 +1032,7 @@ nav a:hover::after {
     }
 }
 
+/* Course Card Styling */
 .creative-card {
     background: white;
     border: 1px solid #eee;
@@ -887,18 +1040,22 @@ nav a:hover::after {
     padding: 30px;
     height: 100%;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy transition */
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
+/* Card Hover Effect */
 .creative-card:hover {
     transform: translateY(-10px);
+    /* Lift up */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border-color: #4e3db8;
 }
 
+/* Icons & Software Logos */
 .icon-wrapper {
     width: 60px;
     height: 60px;
@@ -909,12 +1066,16 @@ nav a:hover::after {
     font-size: 28px;
     margin-bottom: 20px;
     transition: transform 0.4s ease;
+    /* Smooth icon movement */
 }
 
+/* Icon Animation on Hover */
 .creative-card:hover .icon-wrapper {
     transform: scale(1.2) rotate(5deg);
+    /* Zoom and tilt */
 }
 
+/* Brand Colors */
 .bg-ps {
     background: #001e36;
     color: #31a8ff;
@@ -969,6 +1130,7 @@ nav a:hover::after {
     flex-grow: 1;
 }
 
+/* Category Badge */
 .category-badge {
     font-size: 0.75rem;
     font-weight: 600;
@@ -1013,7 +1175,10 @@ nav a:hover::after {
     }
 }
 
+/* For screens smaller than 768px */
 @media (max-width: 768px) {
+
+    /* The hamburger button */
     .mobile-nav-toggle {
         display: flex;
         z-index: 3001;
@@ -1030,6 +1195,7 @@ nav a:hover::after {
         right: -100%;
         width: 100%;
         height: 100vh;
+
         background: #000;
         color: #fff;
         display: flex;
@@ -1050,11 +1216,13 @@ nav a:hover::after {
         font-size: 20px;
     }
 
+
     .internship a {
         background: #fff;
         color: #000 !important;
     }
 
+    /* Styling the spans inside the hamburger button */
     .mobile-nav-toggle span {
         display: block;
         height: 3px;
@@ -1064,6 +1232,7 @@ nav a:hover::after {
         transition: 0.3s ease;
     }
 
+    /* Hamburger → X */
     .mobile-nav-toggle.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
         background: #fff;
@@ -1078,6 +1247,7 @@ nav a:hover::after {
         background: #fff;
     }
 
+    /* For the nav menu */
     nav ul {
         position: fixed;
         top: 0;
@@ -1092,6 +1262,7 @@ nav a:hover::after {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);
+        /* start slightly above */
         transition:
             opacity 0.4s ease,
             visibility 0.4s ease,
@@ -1100,6 +1271,8 @@ nav a:hover::after {
         overflow-y: auto;
     }
 
+
+    /* When menu is active → fade in + slide down */
     nav ul.active {
         opacity: 1;
         visibility: visible;
@@ -1108,12 +1281,14 @@ nav a:hover::after {
         background-color: #000;
     }
 
+    /* Menu items animation */
     nav ul li {
         opacity: 0;
         transform: translateY(15px);
         animation: fadeSlideIn 0.4s ease forwards;
     }
 
+    /* Delay each item slightly for a cascade effect */
     nav ul li:nth-child(1) {
         animation-delay: 0.1s;
     }
@@ -1138,6 +1313,7 @@ nav a:hover::after {
         animation-delay: 0.6s;
     }
 
+    /* Keyframes for the items */
     @keyframes fadeSlideIn {
         from {
             opacity: 0;
@@ -1150,10 +1326,16 @@ nav a:hover::after {
         }
     }
 
+    /* When menu closes → smoothly fades out */
     nav ul:not(.active) li {
         animation: none;
     }
+
+
+    /* Make sure the body scroll is disabled when the menu is open */
+
 }
+
 
 .wcu-section {
     padding: 80px 0;
@@ -1161,6 +1343,7 @@ nav a:hover::after {
     position: relative;
 }
 
+/* Large Scrolling Title Effect (Static for clean CSS) */
 .big-title {
     font-size: 3.5rem;
     font-weight: 800;
@@ -1176,9 +1359,11 @@ nav a:hover::after {
 
 .big-title:hover span {
     color: #4e3db8;
+    /* Brand Color */
     transform: translateY(-5px);
 }
 
+/* Left Image */
 .wcu-image-wrapper {
     position: relative;
     border-radius: 20px;
@@ -1192,6 +1377,7 @@ nav a:hover::after {
     object-fit: cover;
 }
 
+/* Center Sticky Icon */
 .sticky-column {
     display: flex;
     justify-content: center;
@@ -1225,6 +1411,7 @@ nav a:hover::after {
     }
 }
 
+/* Tabs Styling */
 .wcu-tabs-nav {
     margin-bottom: 30px;
     border-bottom: 2px solid #eee;
@@ -1258,6 +1445,7 @@ nav a:hover::after {
     background-color: #4e3db8;
 }
 
+/* Tab Content */
 .tab-content-item {
     display: none;
     animation: fadeIn 0.5s ease;
@@ -1274,6 +1462,7 @@ nav a:hover::after {
     margin-bottom: 30px;
 }
 
+/* List Items */
 .feature-list-item {
     padding: 15px;
     border-bottom: 1px solid #eee;
@@ -1285,12 +1474,14 @@ nav a:hover::after {
 
 .feature-list-item::before {
     content: '\f00c';
+    /* FontAwesome Check */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     margin-right: 10px;
     color: #4e3db8;
 }
 
+/* Contact Button */
 .btn-black-icon {
     background-color: #000;
     color: #fff;
@@ -1359,6 +1550,7 @@ nav a:hover::after {
     }
 }
 
+/* Section Background */
 .faq-section {
     padding: 80px 0;
     background-color: #f9fafb;
@@ -1366,6 +1558,7 @@ nav a:hover::after {
     overflow: hidden;
 }
 
+/* Large Animated Title */
 .faq-title {
     font-size: 5rem;
     font-weight: 800;
@@ -1383,9 +1576,11 @@ nav a:hover::after {
 
 .faq-title span:hover {
     color: #4e3db8;
+    /* Brand Purple */
     transform: translateY(-10px);
 }
 
+/* Accordion Styling */
 .custom-accordion-item {
     background: white;
     border: 1px solid #eee;
@@ -1419,8 +1614,10 @@ nav a:hover::after {
     color: #64748b;
     line-height: 1.6;
     display: none;
+    /* Hidden by default */
 }
 
+/* Active State */
 .custom-accordion-item.active {
     border-color: #4e3db8;
     box-shadow: 0 10px 30px rgba(78, 61, 184, 0.1);
@@ -1435,6 +1632,7 @@ nav a:hover::after {
     animation: fadeIn 0.4s ease;
 }
 
+/* Plus/Minus Icon Animation */
 .icon-plus {
     width: 24px;
     height: 24px;
@@ -1464,10 +1662,13 @@ nav a:hover::after {
     left: 0;
 }
 
+/* Rotate to minus when active */
 .custom-accordion-item.active .icon-plus {
     transform: rotate(45deg);
+    /* Turns plus into X */
 }
 
+/* Dynamic Image Section */
 .faq-image-container {
     position: sticky;
     top: 100px;
@@ -1504,9 +1705,11 @@ nav a:hover::after {
     }
 }
 
+/* Mobile adjustments */
 @media (max-width: 991px) {
     .faq-image-container {
         display: none;
+        /* Hide image on mobile to save space */
     }
 
     .faq-title {
@@ -1514,11 +1717,13 @@ nav a:hover::after {
     }
 }
 
+/* Mobile Adjustments */
 @media (max-width: 991px) {
     .sticky-icon-wrapper {
         display: none;
     }
 
+    /* Hide sticky icon on mobile */
     .wcu-image-wrapper {
         margin-bottom: 30px;
     }
@@ -1602,23 +1807,36 @@ nav a:hover::after {
 
 #thankYouMessage {
     display: none;
+    /* Hidden by default */
     position: fixed;
+    /* Stays on top of content */
     top: 20px;
+    /* Slightly below the top */
     right: 20px;
+    /* Right aligned */
     background-color: #4caf50;
+    /* Green background for success */
     color: white;
+    /* White text */
     padding: 15px 25px;
+    /* Comfortable padding */
     border-radius: 8px;
+    /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight: 500;
     z-index: 1000;
+    /* Ensure it's above other elements */
     opacity: 0;
+    /* Start invisible for fade-in */
     transform: translateY(-20px);
+    /* Slight slide-up effect */
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+/* Show state */
 #thankYouMessage.show {
     display: block;
     opacity: 1;
@@ -1652,6 +1870,7 @@ nav a:hover::after {
     background-color: #00509e;
 }
 
+/* Floating Helpline Box */
 .helpline-box {
     position: fixed;
     bottom: 20px;
@@ -1731,6 +1950,7 @@ nav a:hover::after {
 
 .theme-color-1 {
     color: #ff6a00;
+    /* Change theme color */
 }
 
 .card-box {
@@ -1840,6 +2060,7 @@ nav a:hover::after {
     word-break: break-word;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .skill-card {
         width: 100%;
@@ -1869,6 +2090,7 @@ nav a:hover::after {
     }
 }
 
+/* Hero Section */
 .hero {
     padding: 120px 0px;
     background: url('images/home-bg.webp') no-repeat center center;
@@ -1888,10 +2110,13 @@ nav a:hover::after {
     height: 100%;
     background: rgba(71, 71, 71, 0.4);
     backdrop-filter: blur(8px);
+    /* Adjust the blur effect */
 }
+
 
 .hero .container {
     position: relative;
+    /* z-index: 2; */
 }
 
 .hero h1 {
@@ -1922,6 +2147,7 @@ nav a:hover::after {
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .tech-section h3 {
     font-weight: 700;
@@ -2015,8 +2241,10 @@ nav a:hover::after {
     font-weight: 600;
 }
 
+/* 1. The Section Wrapper */
 .coursesCard_ctaSection__LVxAV {
     background: linear-gradient(135deg, #4e3db8 0%, #302b63 100%);
+    /* Purple Gradient */
     padding: 80px 20px;
     display: flex;
     justify-content: center;
@@ -2024,6 +2252,7 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* 2. The Container */
 .coursesCard_ctaContainer__kB4ya {
     max-width: 800px;
     text-align: center;
@@ -2031,6 +2260,7 @@ nav a:hover::after {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 3. The Title */
 .coursesCard_ctaTitle__f7esc {
     font-size: 2.5rem;
     font-weight: 800;
@@ -2038,15 +2268,19 @@ nav a:hover::after {
     line-height: 1.2;
 }
 
+/* 4. The Subtitle */
 .coursesCard_ctaSubtitle__YCj22 {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
     opacity: 0.9;
     color: #e0e7ff;
+    /* Light blue-white */
 }
 
+/* 5. The Button (Note the backslash to escape the + sign) */
 .coursesCard_ctaButton__3\+F0j {
     background-color: #fd7e14;
+    /* Orange Accent */
     color: white;
     border: none;
     padding: 15px 40px;
@@ -2064,12 +2298,14 @@ nav a:hover::after {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .coursesCard_ctaTitle__f7esc {
         font-size: 1.8rem;
     }
 }
 
+/* HERO SECTION */
 .hero-section {
     background: linear-gradient(135deg, #3faeca, #156962, #067cdd);
     color: white;
@@ -2078,6 +2314,7 @@ nav a:hover::after {
     overflow: hidden;
 }
 
+/* Background Shape Decoration */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -2104,6 +2341,7 @@ nav a:hover::after {
     margin-bottom: 30px;
 }
 
+/* Floating Animation for Image */
 .hero-img {
     animation: float 3s ease-in-out infinite;
 }
@@ -2122,6 +2360,7 @@ nav a:hover::after {
     }
 }
 
+/* STATS STRIP */
 .stats-strip {
     background: var(--accent);
     color: white;
@@ -2134,6 +2373,7 @@ nav a:hover::after {
     background: linear-gradient(to right, #fd7e14, #ff9f43);
 }
 
+/* COURSE CARDS */
 .course-card {
     border: none;
     border-radius: 15px;
@@ -2176,6 +2416,7 @@ nav a:hover::after {
     margin-bottom: 10px;
 }
 
+/* WHY CHOOSE US */
 .feature-box {
     text-align: center;
     padding: 40px 30px;
@@ -2211,6 +2452,7 @@ nav a:hover::after {
     color: white;
 }
 
+/* CONTACT FORM WRAPPER */
 .contact-wrapper {
     background: white;
     border-radius: 20px;
@@ -2219,6 +2461,7 @@ nav a:hover::after {
     padding: 10px;
 }
 
+/* FADE LEFT + RIGHT */
 .scroller-container::before,
 .scroller-container::after {
     content: "";
@@ -2240,6 +2483,7 @@ nav a:hover::after {
     background: linear-gradient(to left, white, transparent);
 }
 
+/* Infinite Auto Scroll */
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -2268,15 +2512,18 @@ nav a:hover::after {
     .scroller-container::before,
     .scroller-container::after {
         width: 80px;
+        /* smaller fade effect */
     }
 }
 
+/* Button Container */
 .btn-group-custom {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+/* Primary Button */
 .talk-btn {
     background: #0d6efd;
     color: #fff;
@@ -2291,6 +2538,7 @@ nav a:hover::after {
     color: #fff;
 }
 
+/* Outline Button */
 .demo-btn {
     border: 2px solid #0d6efd;
     padding: 12px 26px;
@@ -2322,28 +2570,36 @@ nav a:hover::after {
     animation: rotateCube 12s infinite linear;
 }
 
+/* Image stays fully visible */
 .cube>div img {
     position: absolute;
     width: 50%;
     height: 50%;
     object-fit: contain;
+
+    /* perfect centering */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     opacity: 1 !important;
     pointer-events: none;
 }
+
 
 .cube>div {
     position: absolute;
     height: 300px;
     width: 300px;
+
+    /* Background stays 0.2 opacity */
     background: linear-gradient(to right, #1e40af, #00bcd4);
     opacity: 0.9;
 }
 
 .s1 {
     transform: translateZ(150px);
+
 }
 
 .s2 {
@@ -2378,6 +2634,7 @@ nav a:hover::after {
     transform: rotateX(-90deg) translateZ(150px);
 }
 
+/* Left card */
 .project-card {
     background: #fff;
     border-radius: 12px;
@@ -2386,6 +2643,7 @@ nav a:hover::after {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
+/* Inner info boxes */
 .info-box {
     background: #f1f5f9;
     border-radius: 10px;
@@ -2393,6 +2651,7 @@ nav a:hover::after {
     margin-top: 14px;
 }
 
+/* GitHub button */
 .btn-github {
     background-color: #4f46e5;
     color: white;
@@ -2405,11 +2664,13 @@ nav a:hover::after {
     color: #fff;
 }
 
+/* Image styling */
 .project-img {
     border-radius: 14px;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Heading color */
 .text-modern {
     color: #6366f1;
 }
@@ -2435,12 +2696,15 @@ nav a:hover::after {
         position: absolute;
         height: 200px;
         width: 200px;
+
+        /* Background stays 0.2 opacity */
         background: linear-gradient(to right, #1e40af, #00bcd4);
         opacity: 0.9;
     }
 
     .s1 {
         transform: translateZ(100px);
+
     }
 
     .s2 {
@@ -2489,6 +2753,7 @@ nav a:hover::after {
     }
 }
 
+/* Counter Section */
 .counter-up {
     background-color: #000;
     min-height: 50vh;
@@ -2518,6 +2783,7 @@ nav a:hover::after {
     gap: 20px;
 }
 
+/* Counter Box */
 .content .box {
     width: calc(25% - 20px);
     min-width: 200px;
@@ -2536,6 +2802,7 @@ nav a:hover::after {
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -2543,18 +2810,22 @@ nav a:hover::after {
     }
 }
 
+/* Responsive Layout */
 @media (max-width: 992px) {
     .content .box {
         width: calc(50% - 20px);
+        /* 2 per row on tablets */
     }
 }
 
 @media (max-width: 600px) {
     .content .box {
         width: 100%;
+        /* Full width on smaller screens */
     }
 }
 
+/* Hover Effects */
 .content .box:hover {
     transform: scale(1.1) rotate(2deg);
     background-color: rgba(255, 255, 255, 0.2);
@@ -2595,6 +2866,7 @@ nav a:hover::after {
     color: #fff;
 }
 
+/* Service Banner Section */
 .bannerservice {
     background: url('images/banner2.webp') no-repeat center center;
     background-size: cover;
@@ -2618,6 +2890,7 @@ nav a:hover::after {
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(16, 194, 229, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%);
     background-size: 200% 200%;
     animation: gradientFlow 15s ease infinite;
+    /* z-index: 1; */
 }
 
 @keyframes gradientFlow {
@@ -2632,6 +2905,7 @@ nav a:hover::after {
 
 .bannerservice .banner-content {
     position: relative;
+    /* z-index: 2; */
     max-width: 800px;
     padding: 0 20px;
 }
@@ -2695,6 +2969,7 @@ nav a:hover::after {
     }
 }
 
+/* Services Section */
 .services {
     padding: 80px 0;
     background-color: #f8f9fa;
@@ -2708,6 +2983,7 @@ nav a:hover::after {
     font-weight: 700;
 }
 
+/* Service Grid */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2716,6 +2992,7 @@ nav a:hover::after {
     margin: 0 auto;
 }
 
+/* Individual Service Box */
 .service {
     background: #fff;
     padding: 30px 25px;
@@ -2734,10 +3011,12 @@ nav a:hover::after {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+
 .service:hover .service-icon {
     transform: scale(1.08);
 }
 
+/* Service Title */
 .service h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -2745,6 +3024,7 @@ nav a:hover::after {
     font-weight: 600;
 }
 
+/* Service Description */
 .service p {
     font-size: 1rem;
     color: #555;
@@ -2752,6 +3032,7 @@ nav a:hover::after {
     margin: 0;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .services {
         padding: 60px 20px;
@@ -2769,11 +3050,13 @@ nav a:hover::after {
 
     .portfolio-section h1 {
         margin-top: 150px;
+
     }
 
     .service {
         padding: 25px;
     }
+
 
     .service h3 {
         font-size: 1.3rem;
@@ -2784,6 +3067,8 @@ nav a:hover::after {
     }
 }
 
+
+/* Process Section */
 .process-section {
     padding: 20px 0;
     background: #fff;
@@ -2818,6 +3103,7 @@ nav a:hover::after {
     text-align: center;
     position: relative;
     padding: 0 15px;
+    /* Ensure the step sits above the line */
     z-index: 1;
 }
 
@@ -2830,8 +3116,11 @@ nav a:hover::after {
     justify-content: center;
     margin: 0 auto 20px;
     position: relative;
+    /* Removed background: #fff here because you have gradients below */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+
+    /* FIX: Icon must be on top of line */
     z-index: 10;
 }
 
@@ -2840,19 +3129,30 @@ nav a:hover::after {
     color: #fff;
 }
 
+/* --- The Line Fix --- */
 .step-line {
     position: absolute;
     top: 40px;
+    /* Center of the 80px icon */
+
+    /* FIX: Use left 50% to start from center of this icon */
     left: 50%;
+
+    /* FIX: Stretch to the center of the next icon */
     width: 100%;
+
     height: 3px;
+
+    /* FIX: Send it behind everything */
     z-index: -1 !important;
 }
 
+/* Hide line for the last item */
 .process-step:last-child .step-line {
     display: none;
 }
 
+/* --- Gradients --- */
 .step-icon.orange {
     background: linear-gradient(45deg, #ff6b6b, #ffa502);
 }
@@ -2877,6 +3177,7 @@ nav a:hover::after {
     background: linear-gradient(45deg, #43a047, #66bb6a);
 }
 
+/* --- Line Gradients --- */
 .process-step:nth-child(1) .step-line {
     background: linear-gradient(90deg, #ffa502, #ff4757);
 }
@@ -2902,9 +3203,12 @@ nav a:hover::after {
     color: #333;
     margin: 0;
     font-weight: 500;
+
+    /* FIX: Text sits on top */
     position: relative;
     z-index: 10;
     background-color: transparent;
+    /* Don't use white or it looks blocky */
 }
 
 .process-step:hover .step-icon {
@@ -2912,6 +3216,7 @@ nav a:hover::after {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Section Container */
 .software-section {
     background: #0f172a;
     padding: 40px 20px;
@@ -2934,6 +3239,7 @@ nav a:hover::after {
     opacity: 0.8;
 }
 
+/* Row & Cards */
 .icon-row {
     display: flex;
     justify-content: center;
@@ -3006,6 +3312,7 @@ nav a:hover::after {
     color: #5a82df;
 }
 
+/* Container */
 .help-section {
     padding: 60px 20px;
     background: #f0f4ff;
@@ -3017,6 +3324,7 @@ nav a:hover::after {
     margin: 0 auto;
 }
 
+/* Headings */
 .help-section h4 {
     color: #1d4ed8;
     margin-bottom: 10px;
@@ -3034,6 +3342,7 @@ nav a:hover::after {
     margin-bottom: 30px;
 }
 
+/* Form */
 .appointment-form {
     padding: 30px;
     border-radius: 15px;
@@ -3083,6 +3392,7 @@ nav a:hover::after {
     background: #2563eb;
 }
 
+/* Section Fullscreen */
 .new-batch-section {
     position: relative;
     width: 100%;
@@ -3095,6 +3405,7 @@ nav a:hover::after {
     color: #fff;
 }
 
+/* Background Video */
 .bg-video {
     position: absolute;
     top: 0;
@@ -3105,6 +3416,7 @@ nav a:hover::after {
     z-index: -2;
 }
 
+/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -3112,9 +3424,11 @@ nav a:hover::after {
     width: 100%;
     height: 100%;
     background: rgba(15, 23, 42, 0.5);
+    /* Dark overlay for readability */
     z-index: -1;
 }
 
+/* Content */
 .batch-content {
     z-index: 1;
     max-width: 700px;
@@ -3137,10 +3451,13 @@ nav a:hover::after {
     margin-bottom: 30px;
 }
 
+/* Button */
 .batch-content .btn {
     padding: 12px 30px;
     background: #044662;
     color: #ffffff;
+
+
     font-weight: 600;
     text-decoration: none;
     border-radius: 8px;
@@ -3151,6 +3468,7 @@ nav a:hover::after {
     background: #0ea5e9;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .batch-content h2 {
         font-size: 2.2rem;
@@ -3165,12 +3483,14 @@ nav a:hover::after {
     }
 }
 
+/* Responsive */
 @media (max-width: 480px) {
     .help-section h2 {
         font-size: 1.5rem;
     }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
     .software-section h2 {
         font-size: 1.6rem;
@@ -3193,9 +3513,14 @@ nav a:hover::after {
     .tech-section {
         background: #f8fafc;
         padding-top: 60px;
+
+        /* Adjust for the shape divider */
     }
+
+
 }
 
+/* --- Mobile View --- */
 @media (max-width: 992px) {
     .process-flow {
         flex-direction: column;
@@ -3219,11 +3544,13 @@ nav a:hover::after {
         right: auto;
     }
 
+    /* Make sure the line stops before hitting the bottom on mobile */
     .process-step:last-child {
         margin-bottom: 0;
     }
 }
 
+/* Call to Action Section */
 .cta-section {
     background: linear-gradient(45deg, #10c2e5, #0077be);
     padding: 100px 0;
@@ -3320,11 +3647,13 @@ nav a:hover::after {
     transform: translateY(-3px);
 }
 
+/* WhatsApp button */
 .cta-whatsapp {
     background: #fff;
     color: #10c2e5;
     padding: 15px 35px;
     border-radius: 50px;
+    /* match CTA style */
     font-size: 1.1em;
     font-weight: 600;
     text-decoration: none;
@@ -3342,6 +3671,7 @@ nav a:hover::after {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
 }
+
 
 @media (max-width: 768px) {
     .cta-section {
@@ -3367,16 +3697,22 @@ nav a:hover::after {
     }
 }
 
+/* about baneer section */
+
 .about-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/about_banner.webp");
     background-size: cover;
     padding: 10%;
+
+
 }
 
 .about-banner h1 {
     text-align: center;
     color: white;
     font-size: 2.5em;
+
+
 }
 
 .about-banner p {
@@ -3384,8 +3720,10 @@ nav a:hover::after {
     font-size: 1.2em;
 }
 
+/* About Section Styling */
 .about-content {
     background-color: #FFF;
+    /* Gradient background */
     color: #444;
     padding: 10px 0;
     text-align: center;
@@ -3404,6 +3742,7 @@ nav a:hover::after {
     color: #444;
 }
 
+/* About Grid */
 .about-grid {
     display: flex;
     flex-wrap: wrap;
@@ -3412,8 +3751,10 @@ nav a:hover::after {
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
+
 }
 
+/* About Text */
 .about-text {
     background-color: #46a1b3;
     padding: 30px;
@@ -3431,6 +3772,7 @@ nav a:hover::after {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: #000000;
+    /* Highlighted yellow */
 }
 
 .about-text p {
@@ -3439,6 +3781,7 @@ nav a:hover::after {
     color: #000000;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .about-banner {
         margin-top: 100px;
@@ -3453,6 +3796,7 @@ nav a:hover::after {
     }
 }
 
+/* Vision and Mission Section */
 .vision-main {
     background-image: url("images/mission_vision_bg.webp");
     background-size: cover;
@@ -3536,6 +3880,7 @@ nav a:hover::after {
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .vision-sub {
         text-align: center;
@@ -3557,6 +3902,59 @@ nav a:hover::after {
     }
 }
 
+/* 
+/* Team Section 
+.team-section {
+    background-color: var(--light-bg);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.4em;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.team-member p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.team-member strong {
+    color: var(--text-color);
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+} */
+
+/* Our Services Section */
 .ourservice {
     padding: 20px 0;
     background: #f8f9fa;
@@ -3712,6 +4110,8 @@ nav a:hover::after {
     }
 }
 
+/* Portfolio Page Styles */
+
 .portfolio-filters {
     text-align: center;
     margin: 30px 0;
@@ -3729,6 +4129,7 @@ nav a:hover::after {
 .portfolio-item[style="display: none;"] {
     opacity: 0;
 }
+
 
 .filter-btn {
     background: none;
@@ -3826,6 +4227,8 @@ nav a:hover::after {
     color: var(--text-color);
 }
 
+/* Blog Page Styles */
+
 .blog-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -3913,6 +4316,7 @@ p {
     color: var(--text-color);
 }
 
+/* Blog Sidebar Styles */
 .blog-sidebar {
     display: grid;
     gap: 30px;
@@ -4053,6 +4457,7 @@ p {
     margin: 15px auto 0;
 }
 
+/* Contact Page Styles */
 .contact-container {
     margin-top: 50px;
     height: 750px;
@@ -4079,9 +4484,13 @@ p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* ==============================
+   MOBILE RESPONSIVE DESIGN
+   ============================== */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
+        /* stack vertically */
         height: auto;
     }
 
@@ -4123,6 +4532,7 @@ p {
     }
 }
 
+/* Extra small devices */
 @media (max-width: 480px) {
     .left-section h1 {
         font-size: 24px;
@@ -4176,6 +4586,8 @@ p {
     height: auto;
 }
 
+
+
 #thankYouMessage {
     display: none;
     color: green;
@@ -4208,10 +4620,13 @@ p {
     }
 }
 
+
+
 .left-section h1 {
     color: #19a5c1;
     font-size: 4.3em;
     font-family: 'Times New Roman', Times, serif;
+
 }
 
 .left-section p {
@@ -4247,8 +4662,11 @@ p {
     transition: .3s ease-in-out 0s;
     position: relative;
     overflow: hidden;
+
 }
 
+
+/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -4320,6 +4738,7 @@ p {
 
     .subtopnav .nav-link:hover {
         color: #007bff !important;
+        /* Bootstrap blue */
         text-decoration: underline;
     }
 
@@ -4330,8 +4749,11 @@ p {
     .blog-post.featured {
         grid-column: auto;
     }
+
+
 }
 
+/* Location Section */
 .location {
     padding: 20px 0;
     text-align: center;
@@ -4385,6 +4807,7 @@ p {
     bottom: 0;
     border-radius: 20px;
     box-shadow: 0 8px 30px rgba(25, 165, 193, 0.1);
+    /* z-index: -1; */
 }
 
 .location iframe {
@@ -4425,16 +4848,20 @@ p {
 
 .subtopnav .nav-link {
     color: #000000 !important;
+    /* force black text */
     padding: 0.75rem 1rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
+/* On hover */
 .subtopnav .nav-link:hover {
     color: #007bff !important;
+    /* Bootstrap primary blue */
     text-decoration: underline;
 }
 
+/* Clientele Section */
 .SectionClientele {
     padding: 10px 0;
     text-align: center;
@@ -4523,6 +4950,7 @@ p {
     }
 }
 
+/* Transformation Journey Section */
 .TransJour {
     padding: 50px 0;
     background-color: #fff;
@@ -4532,6 +4960,7 @@ p {
     text-align: center;
     font-size: 2em;
     color: #333;
+    /* margin-bottom: 30px; */
     padding: 0 20px;
 }
 
@@ -4627,6 +5056,7 @@ p {
     }
 }
 
+/* Testimonial Section */
 .Testimonial {
     padding: 60px 0;
     background-color: #f8f9fa;
@@ -4824,6 +5254,7 @@ p {
     width: 40px;
     height: 3px;
     background: #ff6a00;
+    /* Change color */
 }
 
 .letter-spacing-minus-small {
@@ -4846,21 +5277,30 @@ p {
     display: inline-block;
 }
 
+/* =========================================
+   FOOTER SECTION STYLES
+   ========================================= */
+
+/* 1. Main Footer Container */
 .footer-section {
     background-color: #000;
+    /* Pure Black */
     color: #fff;
     padding-top: 60px;
     padding-bottom: 0;
     font-size: 0.9rem;
     text-align: left;
+    /* Ensures text aligns correctly in columns */
 }
 
+/* 2. Logo Sizing */
 .footer-logo {
-    max-width: 150px;
+    max-width: 250px;
     height: auto;
     margin-bottom: 15px;
 }
 
+/* 3. Headings (Quick Links, Our Courses, etc.) */
 .footer-section h5 {
     color: #fff;
     font-weight: 700;
@@ -4870,31 +5310,40 @@ p {
     letter-spacing: 1px;
 }
 
+/* 4. Lists (Links & Contact) */
 .footer-list {
     list-style: none;
+    /* Removes bullets */
     padding: 0;
     margin: 0;
 }
 
 .footer-list li {
     margin-bottom: 12px;
+    /* Spacing between links */
 }
 
 .footer-list a {
     color: #ccc;
+    /* Light gray text */
     text-decoration: none !important;
     transition: all 0.3s ease;
     display: block;
+    /* Makes the whole area clickable */
 }
 
 .footer-list a:hover {
     color: #4e3db8;
+    /* Hover Color (Purple/Blue) */
     padding-left: 5px;
+    /* Slide effect */
 }
 
+/* 5. Contact Icons (Envelope, Phone, Map) */
 .footer-icon {
     color: #4e3db8;
     width: 25px;
+    /* Fixed width ensures text aligns perfectly */
     text-align: center;
     margin-right: 10px;
 }
@@ -4902,9 +5351,11 @@ p {
 .contact-info li {
     display: flex;
     align-items: start;
+    /* Aligns icon with top line of text */
     color: #ccc;
 }
 
+/* 6. Social Icons (Fixed the large size issue) */
 .social-icons {
     display: flex;
     gap: 12px;
@@ -4913,12 +5364,15 @@ p {
 
 .social-icons a {
     width: 38px;
+    /* Fixed Pixel Size - No Percentages! */
     height: 38px;
     background-color: #222;
+    /* Dark Gray Circle */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    /* Circle shape */
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -4927,15 +5381,20 @@ p {
 
 .social-icons a:hover {
     background-color: #4e3db8;
+    /* Brand Color on Hover */
     transform: translateY(-3px);
+    /* Float effect */
     color: #fff;
 }
 
+/* 7. Copyright Bar */
 .footer-bottom {
     border-top: 1px solid #333;
+    /* Darker border line */
     margin-top: 40px;
     padding: 20px 0;
     background-color: #050505;
+    /* Slightly different shade */
 }
 
 .footer-bottom a {
@@ -4947,24 +5406,34 @@ p {
     color: #fff;
 }
 
+/* 8. Responsive Fixes */
 @media (max-width: 768px) {
     .footer-section {
         text-align: center;
+        /* Center text on mobile */
+    }
+
+    .footer-logo {
+        max-width: 200px;
     }
 
     .social-icons {
         justify-content: center;
+        /* Center icons on mobile */
     }
 
     .contact-info li {
         justify-content: center;
+        /* Center contact info */
     }
 
     .footer-section h5 {
         margin-top: 20px;
+        /* Add space between stacked columns */
     }
 }
 
+/* backToTop css */
 #backToTop {
     position: fixed;
     bottom: 20px;
@@ -5002,6 +5471,7 @@ p {
 
 #btn-wht {
     bottom: 80px;
+    /* moves it up */
     background: #25D366;
 }
 
@@ -5018,6 +5488,7 @@ p {
     transform: scale(1.05);
 }
 
+/* Card hover shadow */
 .card {
     transition: box-shadow 0.3s ease;
 }
@@ -5051,6 +5522,7 @@ p {
     width: 100%;
     height: 100%;
     background: rgba(37, 99, 235, 0.6);
+    /* Blue overlay with opacity */
     z-index: -1;
 }
 
@@ -5118,6 +5590,9 @@ h6 {
     transform: scale(1.1);
 }
 
+/* =========================
+   VideoAbout Section
+   ========================= */
 .videoabout {
     background-color: #f8f9fa;
     padding: 80px 0;
@@ -5205,6 +5680,7 @@ h6 {
     color: #1e73d9;
 }
 
+/* Responsive adjustments */
 @media (max-width: 992px) {
     .videoabout {
         padding: 60px 0;
@@ -5226,10 +5702,12 @@ h6 {
     }
 }
 
+/* Custom Colors matching the HTML classes */
 .text-orange {
     color: #fd7e14 !important;
 }
 
+/* Accordion Styling */
 .accordion-item {
     border: none;
     margin-bottom: 12px;
@@ -5243,19 +5721,26 @@ h6 {
     color: #333;
     background-color: #fff;
     box-shadow: none !important;
+    /* Remove blue focus ring */
 }
 
+/* Style when the item is OPEN */
 .accordion-button:not(.collapsed) {
     color: #0d6efd;
+    /* Bootstrap Primary Blue */
     background-color: #f0f8ff;
+    /* Light Blue Background */
 }
 
+/* Icon Styles */
 .accordion-button i {
     font-size: 1.2rem;
     color: #fd7e14;
+    /* Orange Icon */
     margin-right: 10px;
 }
 
+/* TAGS Styling */
 .tag {
     display: inline-block;
     background-color: #f1f3f5;
@@ -5263,12 +5748,14 @@ h6 {
     padding: 6px 14px;
     margin: 4px;
     border-radius: 50px;
+    /* Pill shape */
     font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid transparent;
 }
 
+/* Tag Hover Effect */
 .tag:hover {
     background-color: #0d6efd;
     color: white;
@@ -5276,10 +5763,12 @@ h6 {
     cursor: pointer;
 }
 
+/* Layout spacing */
 .learning-career-section {
     background-color: #fafafa;
 }
 
+/* Styling for the video container */
 .video-wrapper {
     border-radius: 12px;
     overflow: hidden;
@@ -5288,23 +5777,28 @@ h6 {
     transition: transform 0.3s ease;
 }
 
+/* Lift effect on hover */
 .video-wrapper:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Ensure Carousel height is stable */
 .carousel-inner {
     padding-bottom: 20px;
 }
 
+/* Ensure images cover the area without stretching */
 .object-fit-cover {
     object-fit: cover;
 }
 
+/* Rounded corners for the images */
 .rounded-4 {
     border-radius: 1rem !important;
 }
 
+/* Wrapper for hover animation */
 .gallery-item {
     overflow: hidden;
     border-radius: 1rem;
@@ -5312,10 +5806,12 @@ h6 {
     cursor: pointer;
 }
 
+/* Image Zoom Animation */
 .gallery-item img {
     transition: transform 0.4s ease;
 }
 
 .gallery-item:hover img {
     transform: scale(1.05);
+    /* Slight zoom on hover */
 }
