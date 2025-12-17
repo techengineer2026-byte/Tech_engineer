@@ -1,3 +1,712 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Engineer Blog – Web, Mobile, AI & IT Insights</title>
+    <meta name="description"
+        content="Read expert articles on web development, mobile apps, digital marketing, AI, and IT solutions by Tech Engineer. Stay ahead with actionable tips and tech trends.">
+    <meta name="author" content="Tech Engineer">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://techengineer.co/blog.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+
+
+    <meta name="geo.region" content="IN-PB">
+    <meta name="geo.placename" content="Sahibzada Ajit Singh Nagar">
+    <meta name="geo.position" content="30.7046;76.7179">
+    <meta name="ICBM" content="30.7046, 76.7179">
+
+    <meta name="keywords"
+        content="Tech Engineer, Tech Engineer Blog, IT Services, Web Development, Mobile App Development, Artificial Intelligence, Machine Learning, Cloud Computing, Cybersecurity, Digital Marketing, Software Engineering, Tech Trends 2025, IT Consulting, Data Science, Full Stack Development, Android Development, iOS Development, SEO Strategies, E-commerce Solutions, Tech Podcast, TechCast, Coding Tutorials, Industrial Training, Tech Internship, Network Security, Edge Computing, Serverless Architecture, DevOps Practices, IT Infrastructure, Business Automation, React Development, Python Programming, Tech Career Tips, IT Solutions Provider, Best Tech Blog, App Design, User Experience, Cloud Migration, Cyber Threats, Tech News, Programming Insights, Startup Tech, Digital Transformation, Mohali IT Company, Punjab Tech Services, Software Development Company, Tech Interviews, Information Technology, Future of Tech, Technology Insights">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta property="og:title" content="Tech Engineer Blog | Tutorials, IT Courses & Career Tips">
+    <meta property="og:description"
+        content="Read blogs on web development, digital marketing, programming, design, and IT career growth.">
+    <meta property="og:image" content="https://techengineer.co/images/logo.webp">
+    <meta property="og:url" content="https://techengineer.co/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tech Engineer">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tech Engineer Blog | Learn & Grow">
+    <meta name="twitter:description" content="Sharpen your IT skills with tutorials, guides, and career tips.">
+    <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "url": "https://techengineer.co/blog.html",
+      "name": "Tech Engineer Blog",
+      "description": "Expert articles and tutorials on web, mobile, AI, IT and digital marketing topics.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tech Engineer",
+        "logo": { "@type": "ImageObject", "url": "https://techengineer.co/images/logo.webp" }
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #06b6d4;
+            --dark-bg: #0f172a;
+            --light-bg: #f8fafc;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .blog-banner {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1e3a8a 100%);
+            padding: 120px 0 80px;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb i {
+            font-size: 0.7rem;
+            opacity: 0.7;
+        }
+
+        .breadcrumb .current {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .banner-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+
+        .banner-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .blog-section {
+            padding: 60px 0;
+        }
+
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .post-meta span {
+            margin-right: 15px;
+        }
+
+        .post-meta i {
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+
+        .card-content h2 {
+            font-size: 1.75rem;
+            margin: 0 0 15px;
+            line-height: 1.3;
+            color: #1e293b;
+        }
+
+        .card-content p {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            gap: 8px;
+        }
+
+        .read-more-btn:hover {
+            color: var(--secondary-color);
+            gap: 12px;
+        }
+
+        .blog-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .sidebar-widget h4 {
+            margin: 0 0 20px;
+            font-size: 1.2rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            color: #1e293b;
+        }
+
+        .category-list li {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .category-list span {
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        .recent-posts li {
+            margin-bottom: 15px;
+        }
+
+        .recent-posts a {
+            display: block;
+        }
+
+        .recent-posts .post-title {
+            display: block;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+
+        .recent-posts a:hover .post-title {
+            color: var(--primary-color);
+        }
+
+        .recent-posts .post-date {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .search-widget form {
+            display: flex;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .search-widget input {
+            border: none;
+            padding: 10px 15px;
+            width: 100%;
+            outline: none;
+        }
+
+        .search-widget button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        .search-widget button:hover {
+            background: var(--secondary-color);
+        }
+
+        .newsletter-widget p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .subscribe-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .btn-subscribe {
+            width: 100%;
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-subscribe:hover {
+            background: #059669;
+        }
+
+        @media (max-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .card-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .blog-banner {
+                padding: 100px 0 60px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KPZ2FD2T');</script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPZ2FD2T" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Tech Engineer Logo" loading="lazy">
+            </a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+                <li class="internship">
+                    <a href="https://industrialtraining.codebank.in/">
+                        <img src="images/logo.webp" alt="Internship" loading="lazy">
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="blog-banner">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="/">Home</a>
+                <i class="fa fa-angle-right"></i>
+                <span class="current">Blog</span>
+            </nav>
+            <div class="banner-content">
+                <h1>Insights & Innovation</h1>
+                <p>Innovating Your Digital Future in Mohali & Beyond</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-layout">
+
+                <main class="blog-main">
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="images/techcast-ep3-mr-bhatia-rise.jpg" alt="Mr. Bhatia TechCast">
+                            <span class="category-tag">Podcast</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="far fa-calendar"></i> April 13, 2025</span>
+                                <span class="author"><i class="far fa-user"></i> Tech Cast Team</span>
+                            </div>
+                            <h2>Mr. Bhatia: From IT Groundwork to Sales Leadership</h2>
+                            <p>Mr. Bhatia opens up about his journey — from tackling language barriers in South India to
+                                managing IT and telecom projects across Airtel and Jio.</p>
+                            <a href="https://techcast.techengineer.co/blog/bhatia-sales-success-journey.html"
+                                target="_blank" rel="noopener noreferrer" class="read-more-btn">Read Story <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="images/techcast-ep15-jobanjeet-singh-coding-journey.jpg"
+                                alt="Jobanjeet Singh Coding">
+                            <span class="category-tag">Dev Story</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="far fa-calendar"></i> July 6, 2025</span>
+                            </div>
+                            <h2>Journey of a Self-Taught Coder: Jobanjeet Singh</h2>
+                            <p>A motivating Punjabi episode where a self-taught coder shares how college theory failed
+                                him — and how GitHub and LinkedIn shaped his career.</p>
+                            <a href="https://techcast.techengineer.co/blog/journey-of-a-coder-jobanjeet-singh.html"
+                                target="_blank" rel="noopener noreferrer" class="read-more-btn">Read Story <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="images/techcast-ep18-akash-ecommerce-smart-farming.jpg" alt="Akash Ecommerce">
+                            <span class="category-tag">E-Commerce</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="far fa-calendar"></i> July 27, 2025</span>
+                            </div>
+                            <h2>Akash’s Digital Sales Blueprint</h2>
+                            <p>From village fields to national platforms! Akash shares how he built product-based
+                                businesses on Amazon, Meesho & Flipkart.</p>
+                            <a href="https://techcast.techengineer.co/blog/ecommerce-business-journey-akash-techcast.html"
+                                target="_blank" rel="noopener noreferrer" class="read-more-btn">Read Story <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="images/Kamalpreet_singh.jpg" alt="Kamalpreet Singh Doha">
+                            <span class="category-tag">Career</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="far fa-calendar"></i> Dec 7, 2025</span>
+                            </div>
+                            <h2>Mastering Your IT Career in Doha 🇶🇦</h2>
+                            <p>Thinking of working abroad? This episode breaks down the Software Engineer career in Doha
+                                — from salary expectations to work culture.</p>
+                            <a href="https://techcast.techengineer.co/blog/software-engineer-job-in-doha-salary-lifestyle-career-growth.html"
+                                target="_blank" rel="noopener noreferrer" class="read-more-btn">Read Story <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="images/CC2.webp" alt="Cloud Computing">
+                            <span class="category-tag">Cloud</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="far fa-calendar"></i> Jan 31, 2025</span>
+                            </div>
+                            <h2>The Future of Cloud Computing: 2025 Trends</h2>
+                            <p>Explore the latest trends in cloud computing — from edge computing to serverless
+                                architecture — shaping the future.</p>
+                            <a href="#" class="read-more-btn">Read Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                </main>
+
+                <aside class="blog-sidebar">
+
+                    <div class="sidebar-widget search-widget">
+                        <form>
+                            <input type="text" placeholder="Search articles...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Categories</h4>
+                        <ul class="category-list">
+                            <li><a href="#">TechCast <span>(3)</span></a></li>
+                            <li><a href="#">Cloud Computing <span>(5)</span></a></li>
+                            <li><a href="#">Cybersecurity <span>(8)</span></a></li>
+                            <li><a href="#">AI & Machine Learning <span>(6)</span></a></li>
+                            <li><a href="#">Web Development <span>(10)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Recent Posts</h4>
+                        <ul class="recent-posts">
+                            <li>
+                                <a href="#">
+                                    <span class="post-title">5G Technology Impact</span>
+                                    <span class="post-date">Jan 20, 2025</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="post-title">DevOps Best Practices</span>
+                                    <span class="post-date">Jan 18, 2025</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget newsletter-widget">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Get the latest tech updates weekly.</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn-subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img src="images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
+                    </a>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="services.html">Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-3">Our Courses</h5>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="web-designing-course-mohali.html">Web Design</a></li>
+                                <li><a href="programming-classes-mohali.html">Programming</a></li>
+                                <li><a href="graphic-design-course-mohali.html">Graphic Design</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="digital-marketing-mohali.html">DigitalMarketing</a></li>
+                                <li><a href="dotnet-asp-course-mohali.html">Asp.Net</a></li>
+                                <li><a href="video-editing-course-mohali.html">Video Editior</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-3">Get in Touch</h5>
+
+                    <ul class="footer-list contact-info mb-4">
+                        <li>
+                            <i class="fas fa-envelope footer-icon"></i>
+                            <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone footer-icon"></i>
+                            <a href="tel:+918544884846">+91 85448 84846</a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt footer-icon mt-1"></i>
+                            <span class="small">4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
+                        </li>
+                    </ul>
+
+                    <div class="social-icons">
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-5 py-3 border-top border-secondary">
+            <div class="container text-center">
+                <p class="mb-0 text-white-50 small">
+                    &copy; 2025 Tech Engineer. All Rights Reserved. |
+                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
+                </p>
+            </div>
+        </div>
+
+        <button id="backToTop" onclick="scrollToTop()">&#8679;</button>
+        <button id="btn-call" onclick="clicktocall()"></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()"></button>
+
+    </footer>
+
+
+
+    <script src="javascript.js" defer></script>
+</body>
+
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -414,7 +1123,7 @@
             <div class="container text-center">
                 <p class="mb-0 text-white-50 small">
                     &copy; 2025 Tech Engineer. All Rights Reserved. |
-                    <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
                     <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
                 </p>
             </div>

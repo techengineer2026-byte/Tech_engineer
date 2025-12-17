@@ -86,6 +86,272 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-KPZ2FD2T');</script>
+    <style>
+        /* 1. Contact Banner */
+        .contact-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/contact-bg.webp");
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            /* Space for fixed header */
+        }
+
+        .contact-banner h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ddd;
+        }
+
+        .breadcrumb .active {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .breadcrumb i {
+            font-size: 0.7rem;
+        }
+
+        /* --- Common Styles --- */
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-weight: 700;
+            color: #1e1b4b;
+            font-size: 2.5rem;
+        }
+
+        .section-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: #4f46e5;
+        }
+
+        /* Tech Blue */
+
+        /* --- 1. Clients Section --- */
+        .section-clients {
+            padding: 60px 0;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            /* Responsive Grid */
+            gap: 30px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .client-item img {
+            max-width: 140px;
+            height: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.4s ease;
+        }
+
+        .client-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* --- 2. Transformation Journey --- */
+        .section-journey {
+            padding: 80px 0;
+            background-color: #f8fafc;
+            /* Light Gray */
+        }
+
+        .journey-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .journey-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .journey-img {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journey-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .journey-card:hover .journey-img img {
+            transform: scale(1.05);
+        }
+
+        .journey-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .journey-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e1b4b;
+            margin-bottom: 15px;
+        }
+
+        .journey-content p {
+            color: #64748b;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .btn-journey {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #4f46e5;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-journey:hover {
+            background-color: #3730a3;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+        }
+
+        /* --- 3. Location Section --- */
+        .section-location {
+            padding: 40px 0;
+            background: #ffffff;
+        }
+
+        .location-details h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e1b4b;
+        }
+
+        .loc-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .loc-item i {
+            font-size: 1.2rem;
+            color: #4f46e5;
+            background: rgba(79, 70, 229, 0.1);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .loc-item h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #334155;
+        }
+
+        .loc-item p,
+        .loc-item a {
+            margin: 0;
+            color: #64748b;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        .loc-item a:hover {
+            color: #4f46e5;
+        }
+
+        .review-box {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #4f46e5;
+        }
+
+        .btn-review {
+            color: #4f46e5;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .btn-review:hover {
+            text-decoration: underline;
+            color: #3730a3;
+        }
+
+        .map-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            /* Fixed height for consistency */
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .map-wrapper {
+                height: 300px;
+            }
+        }
+    </style>
     <!-- End Google Tag Manager -->
 </head>
 
@@ -124,91 +390,139 @@
         </nav>
     </header>
 
-
-    <section class="SectionClientele">
-        <h2>Our <span>Client</span></h2>
-        <p>The team at Tech Engineer is trusted by high-value businesses across the globe.</p>
-        <div class="clientele-grid">
-            <div class="client-logo">
-                <img src="images/clients/client1.webp" loading="lazy" alt="Client Company 1">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client2.webp" loading="lazy" alt="Client Company 2">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client3.webp" loading="lazy" alt="Client Company 3">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client4.webp" loading="lazy" alt="Client Company 4">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client5.webp" loading="lazy" alt="Client Company 5">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client6.webp" loading="lazy" alt="Client Company 6">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client7.webp" loading="lazy" alt="Client Company 7">
-            </div>
-            <div class="client-logo">
-                <img src="images/clients/client8.webp" loading="lazy" alt="Client Company 8">
-            </div>
-        </div>
-    </section>
-
-    <section class="TransJour">
-        <h2>Get Started <span>on Your Transformation Journey</span></h2>
-        <div class="journey-container">
-            <div class="journey-card left">
-                <div class="image-container">
-                    <img src="images/blog.webp" loading="lazy" alt="Blog and Insights">
-                </div>
-                <div class="content">
-                    <h3>Blog</h3>
-                    <p>Discover the latest insights, trends, and expert advice on digital technologies.</p>
-                    <a href="blog.html">
-                        <button class="read-more">Read Our Blog on Digital Innovation</button>
-                    </a>
-                </div>
-            </div>
-            <div class="journey-card right">
-                <div class="image-container">
-                    <img src="images/Succ.webp" loading="lazy" alt="Success Stories">
-                </div>
-                <div class="content">
-                    <h3>Success Stories</h3>
-                    <p>See how we have helped businesses build success stories that inspire.</p>
-                    <a href="about.html">
-                        <button class="read-more">Learn More About Tech Engineer’s Success Stories</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="location">
+    <!-- 1. HERO BANNER -->
+    <section class="contact-banner">
         <div class="container">
-            <h2>Find us <span>On Map</span></h2>
-            <p style="font-weight:600;">
-                Tech Engineer · 4th Floor R&R Tower<br> Plot F‑298 Phase 8B Sector 74<br>Mohali · <br>
-                <a href="tel:+918544884846">+91 85448 84846</a> · 
-                <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
-            </p>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.2522126161134!2d76.68759957544081!3d30.711309286667856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefb734292bc9%3A0xe8d5a561abf59757!2sTech%20Engineer!5e0!3m2!1sen!2sin!4v1738736686230!5m2!1sen!2sin"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="breadcrumb">
+                <span>Home</span> <i class="fas fa-chevron-right"></i> <span class="active">Contact Us</span>
             </div>
-            <p style="font-size:16px; color:#333;">
-                Loved working with us?
-                <a href="https://www.google.com/search?sca_esv=4acce884baa46368&sxsrf=AE3TifMuhQXl5UW5qs99hnayLTl2dCR7_g:1761121113814&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1YtlSGXYPmT0O5cqaSDLxPceJDzz2St5pwwSlcwO_VzqE6UNtAVUVw0M3_MQSQhwDvY2YuMPJKaCvu12-3E8NDL20Lg&q=Tech+Engineer+Reviews&sa=X&ved=2ahUKEwiuzpSzr7eQAxVNV2wGHTPEGBMQ0bkNegQIQxAE&biw=1440&bih=773&dpr=1"
-                    target="_blank" rel="noopener noreferrer"
-                    style="color:#0073e6; font-weight:bold; text-decoration:none;">
-                    Write a Google Review for Tech Engineer
-                </a>
-            </p>
+            <h1>Get In Touch</h1>
+            <p>We are here to help you grow your business.</p>
+        </div>
+    </section>
 
+    <!-- =======================
+         1. CLIENTS SECTION
+    ======================== -->
+    <section class="section-clients">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Trusted by <span class="highlight">Industry Leaders</span></h2>
+                <p>Empowering high-value businesses globally with cutting-edge tech solutions.</p>
+            </div>
+
+            <div class="client-grid">
+                <!-- Client Items -->
+                <div class="client-item"><img src="images/clients/client1.webp" alt="Client 1"></div>
+                <div class="client-item"><img src="images/clients/client2.webp" alt="Client 2"></div>
+                <div class="client-item"><img src="images/clients/client3.webp" alt="Client 3"></div>
+                <div class="client-item"><img src="images/clients/client4.webp" alt="Client 4"></div>
+                <div class="client-item"><img src="images/clients/client5.webp" alt="Client 5"></div>
+                <div class="client-item"><img src="images/clients/client6.webp" alt="Client 6"></div>
+                <div class="client-item"><img src="images/clients/client7.webp" alt="Client 7"></div>
+                <div class="client-item"><img src="images/clients/client8.webp" alt="Client 8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         2. TRANSFORMATION JOURNEY
+    ======================== -->
+    <section class="section-journey">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Start Your <span class="highlight">Transformation Journey</span></h2>
+                <p>Choose your path to digital excellence.</p>
+            </div>
+
+            <div class="journey-row">
+                <!-- Card 1: Blog -->
+                <div class="journey-card">
+                    <div class="journey-img">
+                        <img src="images/blog.webp" alt="Insights">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="journey-content">
+                        <h3><i class="fas fa-lightbulb text-warning"></i> Insights & Trends</h3>
+                        <p>Discover the latest expert advice on digital technologies and innovation.</p>
+                        <a href="blog.html" class="btn-journey">Read Our Blog <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Success Stories -->
+                <div class="journey-card">
+                    <div class="journey-img">
+                        <img src="images/Succ.webp" alt="Success">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="journey-content">
+                        <h3><i class="fas fa-trophy text-warning"></i> Success Stories</h3>
+                        <p>See how we have helped businesses build success stories that inspire.</p>
+                        <a href="about.html" class="btn-journey">View Case Studies <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         3. LOCATION / MAP
+    ======================== -->
+    <section class="section-location">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left: Contact Details -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="location-details">
+                        <h2 class="mb-4">Visit Our <span class="highlight">HQ</span></h2>
+
+                        <div class="loc-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>Tech Engineer, 4th Floor R&R Tower,<br>Plot F-298, Phase 8B, Sector 74, Mohali</p>
+                            </div>
+                        </div>
+
+                        <div class="loc-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p><a href="tel:+918544884846">+91 85448 84846</a></p>
+                            </div>
+                        </div>
+
+                        <div class="loc-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p><a href="mailto:contact@techengineer.co">contact@techengineer.co</a></p>
+                            </div>
+                        </div>
+
+                        <div class="review-box mt-4">
+                            <p class="mb-2">Loved working with us?</p>
+                            <a href="https://www.google.com/search?q=Tech+Engineer+Reviews" target="_blank"
+                                class="btn-review">
+                                <i class="fab fa-google"></i> Write a Google Review
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Map -->
+                <div class="col-lg-7">
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.2522126161134!2d76.68759957544081!3d30.711309286667856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefb734292bc9%3A0xe8d5a561abf59757!2sTech%20Engineer!5e0!3m2!1sen!2sin!4v1738736686230!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
     <footer class="footer-section">
@@ -287,12 +601,12 @@
 
                     <!-- Social Icons (Placed here to fit the layout) -->
                     <div class="social-icons">
-                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank" aria-label="YouTube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -306,7 +620,7 @@
             <div class="container text-center">
                 <p class="mb-0 text-white-50 small">
                     &copy; 2025 Tech Engineer. All Rights Reserved. |
-                    <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
                     <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
                 </p>
             </div>
@@ -314,8 +628,9 @@
 
         <!-- Buttons -->
         <button id="backToTop" onclick="scrollToTop()">&#8679;</button>
-        <button id="btn-call" onclick="clicktocall()"><i class="fas fa-phone-alt"></i></button>
-        <button id="btn-wht" onclick="clicktowhatsapp()"><i class="fab fa-whatsapp"></i></button>
+        <button id="btn-call" onclick="clicktocall()"></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()"></button>
+
     </footer>
     <script>
         document.getElementById("contactForm").addEventListener("submit", function (e) {

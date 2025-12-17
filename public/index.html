@@ -102,59 +102,57 @@
             </ul>
         </nav>
     </header>
-    <nav class="navbar navbar-expand bg-white border-bottom subtopnav">
-        <div class="container-fluid overflow-auto">
-            <ul class="navbar-nav flex-row flex-nowrap w-100">
-                <li class="nav-item me-3">
-                    <a class="nav-link text-black fw-bold" href="dotnet-asp-course-mohali.html">.NET / ASP.NET</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-black" href="web-designing-course-mohali.html">Web Designing</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-black" href="programming-classes-mohali.html">Programming</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-black" href="digital-marketing-mohali.html">Digital Marketing</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <section class="hero">
+    <section class="hero-index">
         <div class="container">
             <h1>Trusted IT Partner in Mohali - Tech Engineer</h1>
-            <p>Tech Engineer helps businesses grow with simple, reliable, and affordable IT services.
+            <p class="main-text">Tech Engineer helps businesses grow with simple, reliable, and affordable IT services.
                 We offer web development, IT support, networking, and custom software for all business types.</p>
+
+            <div class="hero-divider"></div>
+
             <h2>Professional Web Design & IT Company in Mohali</h2>
-            <p>We create user-friendly websites, powerful software, and practical programming courses for students and
+            <p class="sub-text">We create user-friendly websites, powerful software, and practical programming courses
+                for students and
                 businesses in Mohali.</p>
-            <button onclick="location.href='contact.html'">Get a Free Consultation</button>
+
+            <!-- Fixed: Used <a> instead of <button> for link -->
+            <a href="contact.html" class="hero-btn">Get a Free Consultation</a>
         </div>
     </section>
-    <div class="counter-up">
+    <section class="counter-up">
         <div class="content">
+
+            <!-- Box 1 -->
             <div class="box">
-                <i class="fa fa-history"></i>
+                <div class="icon"><i class="fa fa-clock"></i></div>
                 <div class="counter" data-target="150">0</div>
                 <div class="text">Working Hours</div>
             </div>
+
+            <!-- Box 2 -->
             <div class="box">
-                <i class="fa fa-folder"></i>
+                <div class="icon"><i class="fa fa-folder-open"></i></div>
                 <div class="counter" data-target="85">0</div>
                 <div class="text">Completed Projects</div>
             </div>
+
+            <!-- Box 3 -->
             <div class="box">
-                <i class="fa fa-user"></i>
+                <div class="icon"><i class="fa fa-users"></i></div>
                 <div class="counter" data-target="120">0</div>
                 <div class="text">Happy Clients</div>
             </div>
+
+            <!-- Box 4 -->
             <div class="box">
-                <i class="fa fa-star"></i>
+                <div class="icon"><i class="fa fa-star"></i></div>
                 <div class="counter" data-target="95">0</div>
                 <div class="text">Client Reviews</div>
             </div>
+
         </div>
-    </div>
+    </section>
+
     <section class="ourservice">
         <div class="container">
 
@@ -395,12 +393,12 @@
 
                     <!-- Social Icons (Placed here to fit the layout) -->
                     <div class="social-icons">
-                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank" aria-label="YouTube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -414,7 +412,7 @@
             <div class="container text-center">
                 <p class="mb-0 text-white-50 small">
                     &copy; 2025 Tech Engineer. All Rights Reserved. |
-                    <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
                     <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
                 </p>
             </div>
@@ -422,8 +420,9 @@
 
         <!-- Buttons -->
         <button id="backToTop" onclick="scrollToTop()">&#8679;</button>
-        <button id="btn-call" onclick="clicktocall()"><i class="fas fa-phone-alt"></i></button>
-        <button id="btn-wht" onclick="clicktowhatsapp()"><i class="fab fa-whatsapp"></i></button>
+        <button id="btn-call" onclick="clicktocall()"></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()"></button>
+
     </footer>
     <script src="javascript.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>

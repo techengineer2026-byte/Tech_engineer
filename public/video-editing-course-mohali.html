@@ -58,6 +58,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style"
         onload="this.rel='stylesheet'"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <noscript>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -136,126 +138,130 @@
             </ul>
         </nav>
     </header>
-    <section class="hero-section d-flex align-items-center">
-        <div class="container text-center text-lg-start">
-            <div class="row align-items-center">
+    <section class="video-hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
                 <!-- Text Content -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h1 class="hero-title fw-bold">
-                        Master Video Editing <br> & Motion Graphics in Mohali
-                    </h1>
-                    <p class="hero-subtitle  mb-4">
-                        Learn Adobe Premiere Pro, After Effects, VFX, color grading, and YouTube content creation
-                        with hands-on projects. Get trained by industry experts and start your creative career today!
-                    </p>
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Hands-on practical
-                            training</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Industry-ready skills
-                            & portfolio</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Learn from expert
-                            trainers</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Flexible online &
-                            offline classes</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary btn-lg me-3 mb-2">Enroll Now</a>
-
-                </div>
-
-                <!-- Hero Video/Image -->
                 <div class="col-lg-6">
-                    <div class="hero-video-wrapper position-relative rounded shadow-lg overflow-hidden">
-                        <video autoplay muted loop playsinline class="w-100 rounded">
-                            <source src="images/videoback.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div
-                            class="video-overlay d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100">
-                            <a href="images/videoback.mp4" class="btn btn-primary btn-lg" target="_blank">
-                                <i class="bi bi-play-circle me-2"></i> Watch Video
-                            </a>
-                        </div>
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">
+                        <i class="bi bi-star-fill me-1"></i> Best Rated Training
+                    </span>
+
+                    <h1 class="hero-title fw-bold mb-3">
+                        Master Video Editing <br> & Motion Graphics
+                    </h1>
+
+                    <p class="hero-subtitle mb-4">
+                        Learn Adobe Premiere Pro, After Effects, VFX, and color grading.
+                        Build a professional portfolio and start your creative career in Mohali.
+                    </p>
+
+                    <ul class="list-unstyled hero-list mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-3"></i> Hands-on practical training</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-3"></i> Industry-ready portfolio</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-3"></i> Expert mentorship</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-3"></i> Flexible online & offline batches
+                        </li>
+                    </ul>
+
+                    <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start">
+                        <a href="contact.html" class="btn btn-white-shadow btn-lg">Enroll Now</a>
+                        <a href="#syllabus" class="btn btn-outline-light btn-lg rounded-pill px-4">View Syllabus</a>
                     </div>
                 </div>
+
+                <!-- Hero Video -->
+                <div class="col-lg-6">
+                    <div class="hero-video-wrapper">
+                        <!-- preload="auto" helps it load faster -->
+                        <video autoplay muted loop playsinline class="hero-video" preload="auto"
+                            poster="images/video-placeholder.jpg">
+                            <source src="images/videoback.mp4" type="video/mp4">
+                            <!-- Fallback if video fails -->
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="whyte">
-        <div class="shape-top">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-                <path opacity="0.33" fill="#4da3ff" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7
-                    c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7
-                    S492.4,59,473,67.3z" />
+    <section class="why-choose-us-section position-relative overflow-hidden">
 
-                <path opacity="0.66" fill="#1e73d9" d="M734,67c-45.5,0-77.2-23-129-39C576,19,454-3,350,47s-92-34-149,0
-                        C116,118,0,40,0,40V0h1000v36c0,0-28-18-92-18C810,18,776,67,734,67z" />
+        <!-- Top Wave Decoration -->
+        <div class="wave-shape-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f8f9fa" fill-opacity="1"
+                    d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
             </svg>
-
         </div>
 
-        <section class="tech-section">
-            <div class="container">
+        <div class="container position-relative z-2">
 
-                <!-- Heading -->
-                <div class="text-center mb-4">
-                    <h2 class="header-why fw-bold">Why</h4>
-                        <h3 class="fw-bold">Should You Join Our Tech Training Program?
-                    </h2>
-                </div>
-
-                <!-- Description -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <p class="text-muted">
-                            Learn with experienced tech professionals who focus on practical training, real project
-                            work,
-                            and industry-ready skills. Our programs help you upgrade your technical knowledge, build
-                            strong
-                            project portfolios, and prepare for better career opportunities in IT and engineering
-                            fields.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Features Section -->
-                <div class="row g-4 text-center">
-
-                    <!-- Online Classes -->
-                    <div class="col-6 col-md-3">
-                        <div class="feature-box">
-                            <i class="bi bi-laptop fs-1 text-primary"></i>
-                            <h5 class="mt-3">Online Classes</h5>
-                        </div>
-                    </div>
-
-                    <!-- Offline Classes -->
-                    <div class="col-6 col-md-3">
-                        <div class="feature-box">
-                            <i class="bi bi-building fs-1 text-primary"></i>
-                            <h5 class="mt-3">Offline Classes</h5>
-                        </div>
-                    </div>
-
-                    <!-- Expert Trainers -->
-                    <div class="col-6 col-md-3">
-                        <div class="feature-box">
-                            <i class="bi bi-mortarboard fs-1 text-primary"></i>
-                            <h5 class="mt-3">Expert Trainers</h5>
-                        </div>
-                    </div>
-
-                    <!-- Advanced Lab Setup -->
-                    <div class="col-6 col-md-3">
-                        <div class="feature-box">
-                            <i class="bi bi-cpu fs-1 text-primary"></i>
-                            <h5 class="mt-3">Advanced Lab Setup</h5>
-                        </div>
-                    </div>
-
-                </div>
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 rounded-pill fw-bold">WHY CHOOSE
+                    US</span>
+                <h2 class="display-5 fw-bold text-dark">Why Join Our <span class="text-primary">Tech Engineer?</span>
+                </h2>
+                <p class="text-muted lead mx-auto mt-3" style="max-width: 700px;">
+                    Learn with experienced professionals who focus on practical training, real project work, and
+                    industry-ready skills.
+                </p>
             </div>
-        </section>
+
+            <!-- Features Grid -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="icon-circle bg-blue">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h5 class="fw-bold mt-3">Online Classes</h5>
+                        <p class="small text-muted mb-0">Learn from anywhere</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="icon-circle bg-orange">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h5 class="fw-bold mt-3">Offline Classes</h5>
+                        <p class="small text-muted mb-0">Interactive campus learning</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="icon-circle bg-green">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h5 class="fw-bold mt-3">Expert Trainers</h5>
+                        <p class="small text-muted mb-0">Industry veteran mentors</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="icon-circle bg-purple">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h5 class="fw-bold mt-3">Advanced Lab</h5>
+                        <p class="small text-muted mb-0">High-end PC setup</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
     <section class="software-section">
         <h2>Software & Tools We Use</h2>
@@ -320,36 +326,52 @@
         </div>
     </section>
     <section class="new-batch-section">
-        <!-- Video Background -->
+        <!-- Background Video -->
         <video class="bg-video" autoplay muted loop playsinline>
             <source src="images/videoback.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
 
-        <div class="overlay"></div>
+        <!-- Overlay -->
+        <div class="video-overlay"></div>
 
-        <!-- Content -->
-        <div class="batch-content">
-            <h2>New Batch</h2>
-            <h4>Coming Soon!</h4>
-            <p>Reserve your seat and start your journey to mastering video editing.</p>
-            <a href="#appointmentForm" class="btn">Book Now</a>
-        </div>
-    </section>
-    <section class="whatsapp-section">
-        <div class="wa-overlay"></div>
-
-        <div class="wa-content">
-            <h2>Need Help?</h2>
-            <h4>Chat With Us on WhatsApp!</h4>
-            <p>Get instant answers, course details, and guidance from our support team.</p>
-
-            <a href="https://wa.me/918544884846" target="_blank" class="wa-btn">
-                💬 Chat on WhatsApp
-            </a>
+        <!-- Glass Content -->
+        <div class="container d-flex justify-content-center">
+            <div class="batch-content-box">
+                <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill">LIMITED SEATS AVAILABLE</span>
+                <h2 class="display-4 fw-bold mb-3">New Batch Starting Soon!</h2>
+                <p class="lead mb-4 text-white-50">
+                    Don't miss the opportunity to master high-income skills. Reserve your seat today and start your
+                    journey towards a professional career.
+                </p>
+                <a href="contact.html" class="btn-glow">
+                    Book Your Seat Now <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- 2. WHATSAPP SUPPORT STRIP -->
+    <section class="whatsapp-strip">
+        <div class="container position-relative z-2">
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- Left: Text -->
+                <div class="col-md-8 mb-3 mb-md-0">
+                    <h2 class="fw-bold text-white mb-1">Need Help Choosing a Course?</h2>
+                    <p class="text-white mb-0 opacity-75 fs-5">Chat with our experts directly for instant guidance and
+                        details.</p>
+                </div>
+
+                <!-- Right: Button -->
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="https://wa.me/918544884846" target="_blank" class="wa-btn-white">
+                        <i class="fab fa-whatsapp fa-lg"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <footer class="footer-section">
         <div class="container">
             <div class="row g-4">
@@ -361,7 +383,7 @@
                     </a>
 
                 </div>
-                
+
                 <!-- COLUMN 2: Quick Links (Split) -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white fw-bold mb-3">Quick Links</h5>
@@ -426,12 +448,12 @@
 
                     <!-- Social Icons (Placed here to fit the layout) -->
                     <div class="social-icons">
-                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank" aria-label="YouTube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -445,7 +467,7 @@
             <div class="container text-center">
                 <p class="mb-0 text-white-50 small">
                     &copy; 2025 Tech Engineer. All Rights Reserved. |
-                    <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
                     <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
                 </p>
             </div>
@@ -453,8 +475,9 @@
 
         <!-- Buttons -->
         <button id="backToTop" onclick="scrollToTop()">&#8679;</button>
-        <button id="btn-call" onclick="clicktocall()"><i class="fas fa-phone-alt"></i></button>
-        <button id="btn-wht" onclick="clicktowhatsapp()"><i class="fab fa-whatsapp"></i></button>
+        <button id="btn-call" onclick="clicktocall()"></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()"></button>
+
     </footer>
     <script>
         document.getElementById("appointmentForm").addEventListener("submit", function (e) {
@@ -470,6 +493,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
+<script src="javascript.js"></script>
 
 </html>
