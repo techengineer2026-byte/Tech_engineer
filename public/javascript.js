@@ -302,3 +302,56 @@ document.getElementById("freebieForm").addEventListener("submit", function (e) {
         });
 });
 
+// // 1. Mobile/Tablet Menu Toggle
+// const mobileBtn = document.querySelector(".mobile-nav-toggle");
+// const navMenu = document.querySelector(".nav-menu");
+// const bars = document.querySelectorAll(".mobile-nav-toggle span");
+
+// mobileBtn.addEventListener("click", () => {
+//     navMenu.classList.toggle("active");
+
+//     // Hamburger to X animation
+//     if (navMenu.classList.contains("active")) {
+//         bars[0].style.transform = "rotate(45deg) translate(5px, 6px)";
+//         bars[1].style.opacity = "0";
+//         bars[2].style.transform = "rotate(-45deg) translate(5px, -6px)";
+//     } else {
+//         bars[0].style.transform = "none";
+//         bars[1].style.opacity = "1";
+//         bars[2].style.transform = "none";
+//     }
+// });
+
+// // 2. Sticky Header Effect
+// window.addEventListener("scroll", () => {
+//     const header = document.querySelector(".header");
+//     header.classList.toggle("sticky", window.scrollY > 50);
+// });
+// // Portfolio Filtering Logic
+// const filterButtons = document.querySelectorAll('.filter-btn');
+// const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+// filterButtons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         filterButtons.forEach(btn => btn.classList.remove('active'));
+//         button.classList.add('active');
+
+//         const filterValue = button.getAttribute('data-filter');
+
+//         portfolioItems.forEach(item => {
+//             if (filterValue === 'all' || item.classList.contains(filterValue)) {
+//                 item.style.display = 'block';
+//                 setTimeout(() => {
+//                     item.style.opacity = '1';
+//                     item.style.transform = 'scale(1)';
+//                 }, 50);
+//             } else {
+//                 item.style.opacity = '0';
+//                 item.style.transform = 'scale(0.8)';
+//                 setTimeout(() => {
+//                     item.style.display = 'none';
+//                 }, 300);
+//             }
+//         });
+//     });
+// });

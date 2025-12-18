@@ -86,7 +86,9 @@
             </a>
 
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
             <ul class="nav-menu">
@@ -106,104 +108,143 @@
             </ul>
         </nav>
     </header>
-
-    <section class="portfolio-section">
+    <!-- 1. PORTFOLIO HERO BANNER -->
+    <section class="portfolio-banner">
         <div class="container">
-            <h1>Our Portfolio</h1>
-            <p class="section-intro">
-                Explore our successful projects and see how we've helped businesses transform their digital presence and
-                IT infrastructure.
-            </p>
 
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="software">Software Solutions</button>
-                <button class="filter-btn" data-filter="network">Network Infrastructure</button>
-                <button class="filter-btn" data-filter="mobile-app">Mobile Apps</button>
+            <!-- Breadcrumb Navigation -->
+            <nav class="custom-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="active">Portfolio</span>
+            </nav>
+
+            <!-- Banner Content -->
+            <div class="banner-content">
+                <h1>Our Portfolio</h1>
+                <p>Explore our successful projects and see how we've helped businesses transform their digital presence
+                    and IT infrastructure.</p>
             </div>
 
+        </div>
+    </section>
+    <section class="portfolio-section">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="portfolio-filters">
+                <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
+                <button class="portfolio-filter-btn" data-filter="web">Web Development</button>
+                <button class="portfolio-filter-btn" data-filter="software">Software</button>
+                <button class="portfolio-filter-btn" data-filter="network">Media</button>
+                <button class="portfolio-filter-btn" data-filter="mobile-app">Mobile Apps</button>
+            </div>
+
+            <!-- Grid -->
             <div class="portfolio-grid">
 
-                <!-- Project 1 -->
+                <!-- Item 1 -->
                 <div class="portfolio-item web">
-                    <img src="images/tricityrrent.png" alt="TricityRent Properties Website" loading="lazy">
-                    <div class="portfolio-info">
-                        <h2>TricityRent Website – Find Properties</h2>
-                        <ul class="tech-stack">
-                            <li>Angular</li>
-                            <li>Node.js</li>
-                            <li>MongoDB</li>
-                        </ul>
-                        <a href="#" target="_blank" class="view-project">View Project</a>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="images/tricityrrent.png" alt="TricityRent" loading="lazy">
+                            <span class="portfolio-badge">Web Dev</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <h2 class="portfolio-title">TricityRent Website</h2>
+                            <p class="portfolio-desc">Real estate platform to find properties easily in Mohali.</p>
+                            <ul class="portfolio-tech-stack">
+                                <li>Angular</li>
+                                <li>Node.js</li>
+                                <li>MongoDB</li>
+                            </ul>
+                            <a href="#" class="portfolio-view-btn">View Live <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Item 2 -->
                 <div class="portfolio-item software">
-                    <img src="images/pantika image1.webp" alt="Handmade Paintings Marketplace" loading="lazy">
-                    <div class="portfolio-info">
-                        <h2>Handmade Paintings Marketplace</h2>
-                        <p>Online platform for artists to showcase and sell handmade paintings.</p>
-                        <ul class="tech-stack">
-                            <li>Python</li>
-                            <li>Django</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                        <a href="#" target="_blank" class="view-project">View Project</a>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="images/pantika image1.webp" alt="Paintings" loading="lazy">
+                            <span class="portfolio-badge">Software</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <h2 class="portfolio-title">Art Marketplace</h2>
+                            <p class="portfolio-desc">Online platform for artists to sell handmade paintings.</p>
+                            <ul class="portfolio-tech-stack">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                            <a href="#" class="portfolio-view-btn">View Live <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Item 3 -->
                 <div class="portfolio-item web">
-                    <img src="images/codebank.webp" alt="CodeBank Learning Platform" loading="lazy">
-                    <div class="portfolio-info">
-                        <h2>Codebank Learning Platform</h2>
-                        <p>An advanced e-learning platform for coding education.</p>
-                        <ul class="tech-stack">
-                            <li>React</li>
-                            <li>.Net</li>
-                            <li>SQL Server</li>
-                        </ul>
-                        <a href="https://codebank.in/home" target="_blank" rel="noopener noreferrer">Visit CodeBank</a>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="images/codebank.webp" alt="CodeBank" loading="lazy">
+                            <span class="portfolio-badge">E-Learning</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <h2 class="portfolio-title">CodeBank Platform</h2>
+                            <p class="portfolio-desc">An advanced e-learning platform for coding education.</p>
+                            <ul class="portfolio-tech-stack">
+                                <li>React</li>
+                                <li>.NET</li>
+                                <li>SQL Server</li>
+                            </ul>
+                            <a href="https://codebank.in/home" target="_blank" class="portfolio-view-btn">Visit Site <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
+                <!-- Item 4 -->
                 <div class="portfolio-item network">
-                    <img src="images/techcast-logo.svg" alt="Techcast Punjabi Podcast" loading="lazy">
-                    <div class="portfolio-info">
-                        <h2>Techcast Podcast</h2>
-                        <p>We run our own technology-focused podcast.</p>
-                        <ul class="tech-stack">
-                            <li>Video Editing</li>
-                            <li>Shooting</li>
-                            <li>Podcast Rental</li>
-                        </ul>
-                        <a href="#" class="view-project">Visit Project</a>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="images/techcast-logo.svg" alt="Podcast" loading="lazy">
+                            <span class="portfolio-badge">Media</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <h2 class="portfolio-title">Techcast Podcast</h2>
+                            <p class="portfolio-desc">Technology-focused podcast production & editing.</p>
+                            <ul class="portfolio-tech-stack">
+                                <li>Video Editing</li>
+                                <li>Production</li>
+                            </ul>
+                            <a href="#" class="portfolio-view-btn">Watch <i class="fas fa-play-circle"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
+                <!-- Item 5 -->
                 <div class="portfolio-item mobile-app">
-                    <img src="images/Aviator.webp" alt="Avatar App - React Native Project" loading="lazy">
-                    <div class="portfolio-info">
-                        <h2>Avatar App</h2>
-                        <p>Cross-platform avatar creator built with React Native.</p>
-                        <ul class="tech-stack">
-                            <li>React Native</li>
-                            <li>TypeScript</li>
-                            <li>Redux Toolkit</li>
-                            <li>react-native-svg</li>
-                            <li>AsyncStorage</li>
-                        </ul>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="images/Aviator.webp" alt="App" loading="lazy">
+                            <span class="portfolio-badge">Mobile App</span>
+                        </div>
+                        <div class="portfolio-card-content">
+                            <h2 class="portfolio-title">Avatar Creator</h2>
+                            <p class="portfolio-desc">Cross-platform avatar creator built with React Native.</p>
+                            <ul class="portfolio-tech-stack">
+                                <li>React Native</li>
+                                <li>Redux</li>
+                            </ul>
+                            <a href="#" class="portfolio-view-btn">View App <i class="fas fa-mobile-alt"></i></a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-
     <footer class="footer-section">
         <div class="container">
             <div class="row g-4">
@@ -280,12 +321,12 @@
 
                     <!-- Social Icons (Placed here to fit the layout) -->
                     <div class="social-icons">
-                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank" aria-label="YouTube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -304,11 +345,40 @@
                 </p>
             </div>
         </div>
+        <script>
+            const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        </script>
         <!-- Buttons -->
         <button id="backToTop" onclick="scrollToTop()">&#8679;</button>
-<button id="btn-call" onclick="clicktocall()"></button>
-<button id="btn-wht" onclick="clicktowhatsapp()"></button>
+        <button id="btn-call" onclick="clicktocall()"></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()"></button>
 
     </footer>
     <script src="javascript.js" defer></script>
