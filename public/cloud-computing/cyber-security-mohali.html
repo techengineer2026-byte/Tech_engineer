@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cyber Security & Cloud Defense Course Mohali | Ethical Hacking Training</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Master Cyber Security in Mohali. Learn Ethical Hacking, Cloud Security (AWS/Azure), Penetration Testing, and Network Defense.">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="/style/header.css"> 
+    <link rel="stylesheet" href="style/cyber-theme.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND RADAR -->
+    <div class="radar-bg"></div>
+    <div class="scan-overlay"></div>
+
+    <!-- 🟢 HEADER -->
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100" style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="cyber-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 z-index-2" data-aos="fade-right">
+                    <div class="badge-cyber">
+                        <span class="blink-dot"></span> SYSTEM SECURE
+                    </div>
+                    
+                    <h1 class="display-3 fw-bold mb-3">
+                        Defend the <br>
+                        <span class="text-hacker glitch" data-text="DIGITAL FRONTIER">DIGITAL FRONTIER.</span>
+                    </h1>
+                    
+                    <p class="lead text-gray mb-4 font-mono">
+                        Hackers don't sleep. Neither do we.
+                        Master <strong>Ethical Hacking</strong>, <strong>Cloud Security (AWS/Azure)</strong>, and <strong>Penetration Testing</strong> to become the ultimate defender.
+                    </p>
+                    
+                    <div class="d-flex gap-3">
+                        <a href="#scan-lab" class="btn-cyber shadow-lg">
+                            <i class="fas fa-search me-2"></i> Start Scan
+                        </a>
+                        <a href="https://wa.me/918544884846" class="btn-outline-cyber"><i class="fab fa-whatsapp me-2"></i> Encrypted Chat</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 text-center position-relative" data-aos="zoom-in">
+                    <!-- 3D SHIELD HUD -->
+                    <div class="hud-container">
+                        <div class="shield-core">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="ring r1"></div>
+                        <div class="ring r2"></div>
+                        <div class="scan-line"></div>
+                        <div class="data-point p1">IP: 192.168.0.1</div>
+                        <div class="data-point p2">PORT: 443 [OPEN]</div>
+                        <div class="data-point p3 text-danger">THREAT DETECTED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ AUDIENCE & PREREQUISITES -->
+    <section class="py-5 bg-black border-y-green">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-green">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-user-secret text-hacker me-2"></i> Who Is This For?</h2>
+                    <ul class="list-unstyled text-gray font-mono">
+                        <li class="mb-2">>> Network Engineers</li>
+                        <li class="mb-2">>> IT Admins moving to Security</li>
+                        <li class="mb-0">>> Students interested in Hacking</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-terminal text-blue me-2"></i> Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Networking Basics (IPs, DNS).
+                        <br><span class="text-white small">We teach Linux, Python for Hacking, and Tools from scratch.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO: VULNERABILITY SCANNER -->
+    <section id="scan-lab" class="py-5 bg-darker">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold text-white font-tech">The <span class="text-hacker">Pen-Test</span> Lab</h2>
+                <p class="text-gray">Simulate a cyber attack and patch the vulnerability.</p>
+            </div>
+
+            <div class="terminal-scanner shadow-lg">
+                <div class="term-header">
+                    <span class="icon red"></span><span class="icon yellow"></span><span class="icon green"></span>
+                    <span class="title">root@kali-linux:~</span>
+                </div>
+                
+                <div class="term-body" id="terminalBody">
+                    <div class="input-line">
+                        <span class="prompt">root@kali:~$</span> 
+                        <span class="typing">nmap -sV 10.0.0.5</span>
+                    </div>
+                    <!-- Logs appear here -->
+                </div>
+
+                <div class="term-controls border-top border-secondary p-3 bg-panel d-flex justify-content-between align-items-center">
+                    <div class="status-indicator">
+                        <span class="status-dot"></span> SYSTEM IDLE
+                    </div>
+                    <button id="btnHack" class="btn btn-sm btn-cyber">RUN SCAN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ CURRICULUM (THE SHIELD) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold text-white font-tech">Your <span class="text-blue">Defense</span> Arsenal</h2>
+            </div>
+            
+            <div class="row g-4">
+                
+                <!-- Cloud Security -->
+                <div class="col-md-3 col-6" data-aos="flip-right">
+                    <div class="security-card border-blue">
+                        <i class="fas fa-cloud fa-3x text-blue mb-3"></i>
+                        <h5 class="text-white">Cloud Security</h5>
+                        <p class="small text-gray">AWS IAM, Azure Sentinel, Firewalls.</p>
+                    </div>
+                </div>
+
+                <!-- Ethical Hacking -->
+                <div class="col-md-3 col-6" data-aos="flip-right" data-aos-delay="100">
+                    <div class="security-card border-green">
+                        <i class="fas fa-user-ninja fa-3x text-hacker mb-3"></i>
+                        <h5 class="text-white">Ethical Hacking</h5>
+                        <p class="small text-gray">Kali Linux, Metasploit, Wireshark.</p>
+                    </div>
+                </div>
+
+                <!-- Network Defense -->
+                <div class="col-md-3 col-6" data-aos="flip-right" data-aos-delay="200">
+                    <div class="security-card border-red">
+                        <i class="fas fa-shield-virus fa-3x text-danger mb-3"></i>
+                        <h5 class="text-white">Network Defense</h5>
+                        <p class="small text-gray">IDS/IPS, VPNs, Cryptography.</p>
+                    </div>
+                </div>
+
+                <!-- Web Sec -->
+                <div class="col-md-3 col-6" data-aos="flip-right" data-aos-delay="300">
+                    <div class="security-card border-yellow">
+                        <i class="fas fa-lock fa-3x text-warning mb-3"></i>
+                        <h5 class="text-white">App Security</h5>
+                        <p class="small text-gray">OWASP Top 10, SQL Injection Fixes.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ CAREER & SALARY -->
+    <section class="py-5 bg-darker border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold text-white mb-3 font-tech">High Demand. Low Supply.</h2>
+                    <p class="text-gray">
+                        Cyber attacks are increasing. Companies are desperate for certified security experts.
+                    </p>
+                    
+                    <div class="threat-list mt-4 font-mono">
+                        <div class="threat-item"><i class="fas fa-crosshairs text-danger"></i> Malware Analyst</div>
+                        <div class="threat-item"><i class="fas fa-user-shield text-blue"></i> Security Architect</div>
+                        <div class="threat-item"><i class="fas fa-bug text-hacker"></i> Penetration Tester</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 text-center">
+                    <div class="salary-card p-4 rounded-3 shadow-lg bg-panel">
+                        <div class="text-muted small text-uppercase fw-bold">Security Analyst Salary</div>
+                        <h2 class="display-4 fw-bold text-hacker">₹6L - ₹12L</h2>
+                        <p class="small text-white mb-0">Starting Package</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <footer class="py-5 text-center bg-black text-white border-top border-secondary">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-3 font-tech">Secure Your Future.</h2>
+            <p class="lead text-gray mb-4">Batch starting soon. Become a White Hat Hacker.</p>
+            
+            <a href="tel:+918544884846" class="btn-cyber btn-lg shadow-lg rounded-0 px-5 font-mono">
+                [ INIT_TRAINING ]
+            </a>
+            
+            <div class="mt-5 text-gray small">
+                &copy; 2025 Tech Engineer. Phase 8B, Mohali.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/cyber-logic.js"></script>
+</body>
+</html>

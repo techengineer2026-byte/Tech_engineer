@@ -1,0 +1,118 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #050505;
+    --panel-bg: #0a0a0a;
+    --hacker-green: #00ff41;
+    --hacker-glow: rgba(0, 255, 65, 0.5);
+    --blue: #00d4ff;
+    --red: #ff003c;
+    --text-white: #f0f0f0;
+    --text-gray: #888;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+.font-tech { font-family: 'Share Tech Mono', monospace; letter-spacing: 1px; }
+.font-mono { font-family: monospace; }
+
+/* --- BACKGROUND RADAR --- */
+.radar-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(circle, rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 20, 0, 0.5) 1px, transparent 1px);
+    background-size: 40px 40px, 100% 4px;
+    z-index: -2;
+}
+.scan-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 65, 0.05) 51%, transparent 51%);
+    background-size: 100% 6px; pointer-events: none; z-index: -1; animation: scanDown 10s linear infinite;
+}
+@keyframes scanDown { from { background-position: 0 0; } to { background-position: 0 100%; } }
+
+/* --- UTILS --- */
+.text-hacker { color: var(--hacker-green); text-shadow: 0 0 10px var(--hacker-glow); }
+.text-blue { color: var(--blue); }
+.bg-darker { background-color: #020202; }
+.bg-panel { background-color: #111; }
+.bg-black { background-color: #000; }
+
+.border-y-green { border-top: 1px solid rgba(0, 255, 65, 0.2); border-bottom: 1px solid rgba(0, 255, 65, 0.2); }
+.border-end-green { border-right: 1px solid rgba(0, 255, 65, 0.2); }
+@media (max-width: 768px) { .border-end-green { border-right: none; border-bottom: 1px solid rgba(0,255,65,0.2); padding-bottom: 20px; } }
+
+/* --- HERO --- */
+.cyber-hero { padding: 120px 0 100px; margin-top: 50px; position: relative; }
+.badge-cyber {
+    border: 1px solid var(--hacker-green); color: var(--hacker-green); padding: 5px 15px; border-radius: 0;
+    font-family: 'Share Tech Mono'; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; background: rgba(0, 255, 65, 0.1);
+}
+.blink-dot { width: 10px; height: 10px; background: var(--hacker-green); border-radius: 50%; animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.btn-cyber {
+    background: var(--hacker-green); color: black; padding: 12px 35px; font-weight: bold; text-decoration: none; border: none; font-family: 'Share Tech Mono'; transition: 0.3s;
+}
+.btn-cyber:hover { background: #ccffcc; box-shadow: 0 0 20px var(--hacker-green); transform: translateY(-2px); }
+
+.btn-outline-cyber {
+    border: 1px solid var(--blue); color: var(--blue); padding: 12px 35px; font-weight: bold; text-decoration: none; font-family: 'Share Tech Mono'; transition: 0.3s;
+}
+.btn-outline-cyber:hover { background: var(--blue); color: black; }
+
+/* 3D HUD */
+.hud-container { position: relative; width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.shield-core { font-size: 5rem; color: var(--blue); z-index: 5; text-shadow: 0 0 30px var(--blue); }
+
+.ring { position: absolute; border: 1px dashed rgba(0, 255, 65, 0.3); border-radius: 50%; }
+.r1 { width: 200px; height: 200px; animation: spin 10s linear infinite; }
+.r2 { width: 280px; height: 280px; border-color: rgba(0, 212, 255, 0.3); animation: spin 15s linear infinite reverse; }
+.scan-line {
+    position: absolute; width: 100%; height: 2px; background: var(--hacker-green); top: 50%;
+    animation: radarScan 3s infinite linear; opacity: 0.5; box-shadow: 0 0 10px var(--hacker-green);
+}
+@keyframes radarScan { 0% { top: 0; opacity: 0; } 50% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.data-point { position: absolute; font-family: monospace; font-size: 0.8rem; background: #000; padding: 2px 5px; border: 1px solid #333; }
+.p1 { top: 20px; left: 0; color: var(--blue); }
+.p2 { bottom: 40px; right: 0; color: var(--hacker-green); }
+.p3 { top: 50%; right: -40px; border-color: var(--red); animation: blink 0.5s infinite; }
+
+/* --- TERMINAL SCANNER --- */
+.terminal-scanner { background: #000; border: 1px solid #333; border-radius: 5px; overflow: hidden; max-width: 800px; margin: 0 auto; font-family: 'Share Tech Mono'; }
+.term-header { background: #1a1a1a; padding: 8px 15px; display: flex; align-items: center; border-bottom: 1px solid #333; }
+.icon { width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; display: inline-block; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+.title { margin-left: auto; margin-right: auto; color: #777; font-size: 0.8rem; }
+
+.term-body { height: 250px; padding: 20px; color: #ccc; overflow-y: auto; font-size: 0.9rem; }
+.prompt { color: var(--hacker-green); margin-right: 10px; }
+.log-success { color: var(--hacker-green); }
+.log-warn { color: var(--red); }
+.log-info { color: var(--blue); }
+
+.status-indicator { display: flex; align-items: center; gap: 10px; color: #555; font-size: 0.8rem; }
+.status-dot { width: 8px; height: 8px; background: #555; border-radius: 50%; }
+.scanning .status-dot { background: var(--hacker-green); animation: blink 0.2s infinite; }
+.scanning { color: var(--hacker-green); }
+
+/* --- CARDS --- */
+.security-card {
+    background: #111; padding: 30px; text-align: center; border: 1px solid #333; transition: 0.3s;
+    position: relative; overflow: hidden;
+}
+.security-card:hover { transform: translateY(-5px); background: #151515; }
+.border-blue:hover { border-color: var(--blue); }
+.border-green:hover { border-color: var(--hacker-green); }
+.border-red:hover { border-color: var(--red); }
+.border-yellow:hover { border-color: #ffcc00; }
+
+.threat-item { padding: 10px; border-bottom: 1px solid #222; color: #ccc; }
+.salary-card { border: 1px solid var(--hacker-green); }
