@@ -1,0 +1,106 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #050505;
+    --panel-bg: #0f0f10;
+    --crimson: #f43f5e;
+    --crimson-glow: rgba(244, 63, 94, 0.5);
+    --violet: #7c3aed;
+    --text-white: #ffffff;
+    --text-gray: #a3a3a3;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+/* FONTS */
+.font-tech { font-family: 'Share Tech Mono', monospace; }
+
+/* --- BACKGROUND ANIMATION (Canvas is handled by JS usually, but here simple CSS overlay) --- */
+#neural-canvas {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+    background: radial-gradient(circle, #1a0510 0%, #000 100%);
+}
+.vignette-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(transparent 50%, #000 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- UTILS --- */
+.text-crimson { color: var(--crimson); text-shadow: 0 0 15px var(--crimson-glow); }
+.text-violet { color: var(--violet); }
+.text-gray { color: var(--text-gray); }
+
+.bg-dark-glass { background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(10px); }
+.bg-darker-panel { background: #080808; }
+.bg-black { background: #000; }
+.border-y-crimson { border-top: 1px solid rgba(244, 63, 94, 0.3); border-bottom: 1px solid rgba(244, 63, 94, 0.3); }
+.border-end-crimson { border-right: 1px solid rgba(244, 63, 94, 0.3); }
+.border-crimson { border: 1px solid var(--crimson); }
+
+@media (max-width: 768px) { .border-end-crimson { border-right: none; border-bottom: 1px solid rgba(244,63,94,0.3); padding-bottom: 20px; } }
+input, select, textarea { background: #111; border: 1px solid #333; color: var(--text-white); padding: 10px; border-radius: 4px; transition: 0.3s; }
+/* --- HERO --- */
+.ml-hero { padding: 80px 0; min-height: 90vh; display: flex; align-items: center; }
+.badge-ai { border: 1px solid var(--crimson); color: var(--crimson); display: inline-block; padding: 5px 20px; border-radius: 2px; font-family: 'Share Tech Mono'; text-transform: uppercase; margin-bottom: 20px; font-size: 0.8rem; background: rgba(244, 63, 94, 0.1); }
+
+.btn-crimson {
+    background: var(--crimson); color: #fff; padding: 15px 40px; font-weight: 700; text-decoration: none; border-radius: 0; clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%); transition: 0.3s;
+}
+.btn-crimson:hover { background: #e11d48; box-shadow: 0 0 30px var(--crimson-glow); transform: scale(1.05); color: #fff; }
+
+/* --- BRAIN ANIMATION --- */
+.brain-container { position: relative; width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.brain-core { font-size: 4rem; color: var(--violet); z-index: 2; animation: pulseCore 2s infinite; }
+.brain-ring {
+    position: absolute; width: 100%; height: 100%; border: 1px dashed rgba(244, 63, 94, 0.3); border-radius: 50%;
+    animation: spin 20s linear infinite;
+}
+.data-node {
+    position: absolute; background: #222; padding: 5px 10px; border: 1px solid var(--crimson); font-size: 0.8rem; border-radius: 4px; color: white;
+}
+.node-1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.node-2 { bottom: 20%; right: -10%; }
+.node-3 { bottom: 20%; left: -10%; }
+
+.pulse-ring {
+    position: absolute; width: 100%; height: 100%; border: 2px solid var(--crimson); border-radius: 50%; opacity: 0;
+    animation: ripple 3s infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes pulseCore { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } 100% { transform: scale(1); opacity: 0.8; } }
+@keyframes ripple { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+
+/* --- SENTIMENT LAB --- */
+.ai-console { border: 1px solid #333; background: #111; max-width: 900px; margin: 0 auto; border-radius: 4px; overflow: hidden; }
+.console-header { background: #1a1a1a; padding: 8px 15px; font-family: 'Share Tech Mono'; color: var(--crimson); border-bottom: 1px solid #333; font-size: 0.9rem; }
+.blink { animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.bg-darker { background: #0a0a0a; }
+.prediction-box { font-family: 'Share Tech Mono'; }
+
+/* --- PIPELINE & CARDS --- */
+.pipeline-box { background: rgba(255,255,255,0.02); }
+.step-list { border-left: 2px solid #333; padding-left: 20px; }
+.step-item { color: #555; margin-bottom: 5px; transition: 0.3s; }
+.step-item.active { color: var(--crimson); font-weight: bold; font-size: 1.1rem; }
+.step-num { margin-right: 10px; opacity: 0.5; }
+.step-line { height: 20px; border-left: 1px dashed #333; margin-left: 10px; margin-bottom: 5px; }
+
+.feature-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 4px; border-left: 4px solid var(--crimson); }
+.icon-hexagon { font-size: 1.5rem; color: var(--crimson); margin-right: 15px; }
+
+.algo-card { background: var(--panel-bg); padding: 30px; border-radius: 4px; transition: 0.3s; height: 100%; border: 1px solid transparent; }
+.algo-card:hover { border-color: var(--crimson); transform: translateY(-5px); }
+
+.outcome-node { background: rgba(255,255,255,0.05); padding: 10px 15px; border-radius: 2px; border: 1px solid #333; font-size: 0.9rem; position: relative; }
+.outcome-node::before { content: ''; position: absolute; left: -5px; top: 50%; width: 5px; height: 5px; background: var(--crimson); border-radius: 50%; }
+
+.cert-box { border-radius: 4px; }

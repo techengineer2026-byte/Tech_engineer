@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Game Development Course Mohali | Unity 3D, C#, VR Training</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description"
+        content="Learn to build AAA Games in Mohali. Master Unity 6, C#, AI Navigation, and Multiplayer Networking. Build your own game engine.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Gaming Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Animation Lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/gaming-theme.css">
+</head>
+
+<body>
+
+    <!-- CRT SCREEN EFFECT -->
+    <div class="crt-scanline"></div>
+    <div class="vignette-gaming"></div>
+
+    <!-- 🟢 HEADER -->
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100"
+                            style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="game-hero">
+        <div class="cyber-grid"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 z-index-2" data-aos="fade-right">
+                    <div class="badge-glitch" data-text="LEVEL 1 START">LEVEL 1 START</div>
+
+                    <h1 class="display-2 fw-bold mb-3 text-white font-pixel">
+                        CREATE YOUR <br>
+                        <span class="text-yellow glitch">REALITY.</span>
+                    </h1>
+
+                    <p class="lead text-gray mb-4 font-body">
+                        Gaming is a $200 Billion industry. Don't just play. <strong>Create.</strong>
+                        Master <strong>Unity 6</strong>, <strong>C# Scripting</strong>, and <strong>AI Logic</strong> to
+                        build the next PUBG or Among Us.
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <a href="#game-zone" class="btn-yellow shadow-lg">
+                            <i class="fas fa-gamepad me-2"></i> Play Demo
+                        </a>
+                        <a href="https://wa.me/918544884846" class="btn-outline-yellow"><i
+                                class="fab fa-whatsapp me-2"></i> Discord</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center position-relative" data-aos="zoom-in">
+                    <!-- 3D CHARACTER CARD -->
+                    <div class="char-card">
+                        <div class="char-img"></div>
+                        <div class="char-stats">
+                            <div class="stat"><span>STR</span>
+                                <div class="bar">
+                                    <div style="width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="stat"><span>INT</span>
+                                <div class="bar">
+                                    <div style="width:95%"></div>
+                                </div>
+                            </div>
+                            <div class="stat"><span>C#</span>
+                                <div class="bar">
+                                    <div style="width:100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ INTERACTIVE GAME: SPACE SHOOTER -->
+    <section id="game-zone" class="py-5 bg-black">
+        <div class="container">
+            <div class="section-title text-center mb-4">
+                <h2 class="display-5 fw-bold text-white font-pixel">LIVE <span class="text-yellow">ENGINE</span></h2>
+                <p class="text-gray font-body">We built this game in 300 lines of JavaScript. Imagine what you can do
+                    with Unity.</p>
+            </div>
+
+            <div class="arcade-cabinet shadow-lg">
+                <div class="arcade-screen">
+                    <canvas id="gameCanvas"></canvas>
+
+                    <!-- UI OVERLAY -->
+                    <div id="gameUI" class="game-ui">
+                        <h1 class="text-yellow font-pixel">NEON SHOOTER</h1>
+                        <p class="text-white small mb-4">Click to Shoot. Move Mouse to Fly.</p>
+                        <button id="startBtn" class="btn-start">INSERT COIN (START)</button>
+                    </div>
+
+                    <div id="scoreBoard" class="score-board d-none">
+                        SCORE: <span id="scoreVal">0</span>
+                    </div>
+
+                    <div id="gameOverScreen" class="game-ui d-none">
+                        <h2 class="text-red font-pixel">GAME OVER</h2>
+                        <p class="text-white">Score: <span id="finalScore">0</span></p>
+                        <button id="restartBtn" class="btn-start">RETRY</button>
+                    </div>
+                </div>
+
+                <div class="arcade-controls">
+                    <div class="joystick"></div>
+                    <div class="buttons">
+                        <div class="btn-a">A</div>
+                        <div class="btn-b">B</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ AUDIENCE & REQS -->
+    <section class="py-5 bg-dark-panel border-y-yellow">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-yellow">
+                    <h2 class="h4 fw-bold text-white mb-3 font-body"><i class="fas fa-users text-yellow me-2"></i>
+                        Player Profile</h2>
+                    <ul class="list-unstyled text-gray font-body">
+                        <li class="mb-2">>> Hardcore Gamers wanting a career</li>
+                        <li class="mb-2">>> Artists wanting to make 3D Worlds</li>
+                        <li class="mb-0">>> Coders who find Web Dev boring</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3 font-body"><i class="fas fa-memory text-cyan me-2"></i> System
+                        Reqs</h2>
+                    <p class="text-gray mb-0">
+                        Logic & Creativity.
+                        <br><span class="text-white small">We teach C# Coding and 3D Math from Level 0.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ CURRICULUM (THE SKILL TREE) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold text-white font-pixel">SKILL <span class="text-cyan">TREE</span></h2>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Unity -->
+                <div class="col-md-3 col-6" data-aos="fade-up">
+                    <div class="skill-card border-white">
+                        <div class="icon-box"><i class="fab fa-unity"></i></div>
+                        <h5 class="text-white">Unity Engine</h5>
+                        <p class="small text-gray">Physics, Lighting, UI</p>
+                    </div>
+                </div>
+
+                <!-- C# -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card border-yellow">
+                        <div class="icon-box text-yellow"><i class="fas fa-code"></i></div>
+                        <h5 class="text-white">C# Scripting</h5>
+                        <p class="small text-gray">Player Logic, AI</p>
+                    </div>
+                </div>
+
+                <!-- 3D Assets -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card border-cyan">
+                        <div class="icon-box text-cyan"><i class="fas fa-cube"></i></div>
+                        <h5 class="text-white">3D Assets</h5>
+                        <p class="small text-gray">Importing Blender Models</p>
+                    </div>
+                </div>
+
+                <!-- Multiplayer -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card border-red">
+                        <div class="icon-box text-red"><i class="fas fa-network-wired"></i></div>
+                        <h5 class="text-white">Multiplayer</h5>
+                        <p class="small text-gray">Photon / Mirror Networking</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ CAREER & LOOT -->
+    <section class="py-5 bg-darker border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold text-white mb-3 font-body">Achievements Unlocked</h2>
+                    <p class="text-gray">
+                        Game Devs are paid highly because it's hard. We make it easy.
+                    </p>
+
+                    <div class="loot-list mt-4">
+                        <div class="loot-item text-yellow"><i class="fas fa-trophy"></i> Publish to Play Store</div>
+                        <div class="loot-item text-cyan"><i class="fas fa-trophy"></i> Build VR Experience</div>
+                        <div class="loot-item text-red"><i class="fas fa-trophy"></i> Earn ₹6L - ₹15L / Year</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <div class="salary-card p-4 rounded-3 shadow-lg bg-panel">
+                        <div class="text-muted small text-uppercase fw-bold font-pixel">EXP GAINED</div>
+                        <h2 class="display-4 fw-bold text-yellow">HIGH</h2>
+                        <p class="small text-white mb-0">Demand in Gaming & Metaverse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <footer class="py-5 text-center bg-black text-white border-top border-secondary">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-3 font-pixel">PRESS START.</h2>
+            <p class="lead text-gray mb-4">Batch starting soon. Don't be an NPC.</p>
+
+            <a href="tel:+918544884846" class="btn-yellow btn-lg shadow-lg rounded-0 px-5 font-pixel">
+                JOIN LOBBY <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <div class="mt-5 text-gray small">
+                &copy; 2025 Tech Engineer. Phase 8B, Mohali.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/space-shooter.js"></script>
+</body>
+
+</html>

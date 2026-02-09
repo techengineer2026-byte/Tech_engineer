@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mobile UI/UX Developer Course in Mohali | Tech Engineer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description"
+        content="Master Mobile Frontend Development. Learn React Native UI, Animations (Reanimated), Gestures, and Figma-to-Code in Mohali.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Animation Lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="style/frontend-theme.css">
+    <link rel="stylesheet" href="/style/header.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100"
+                            style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1️⃣ HERO SECTION (Clean & Airy) -->
+    <section class="hero-section">
+        <div class="blob-bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="badge-soft mb-3">🎨 Frontend Specialization</div>
+                    <h1 class="display-3 fw-bold mb-3 text-dark">
+                        Make Apps Look <br>
+                        <span class="text-gradient">Beautiful.</span>
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        Logic is important, but <strong>Design</strong> is what sells.
+                        Learn to build stunning <strong>Animations</strong>, <strong>Gestures</strong>, and
+                        <strong>Pixel-Perfect UIs</strong> in React Native & Flutter.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#ui-lab" class="btn-gradient shadow-lg">Start Designing <i
+                                class="fas fa-paint-brush ms-2"></i></a>
+                        <a href="https://wa.me/918544884846" class="btn btn-white shadow-sm"><i
+                                class="fab fa-whatsapp me-2 text-success"></i> Chat Now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center position-relative" data-aos="fade-left">
+                    <!-- FLOATING UI CARDS -->
+                    <div class="ui-stack">
+                        <div class="ui-card card-1 shadow-lg">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar bg-gradient"></div>
+                                <div>
+                                    <div class="line w-100"></div>
+                                    <div class="line w-50 mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-card card-2 shadow-lg">
+                            <i class="fas fa-heart text-danger fs-4"></i>
+                            <span class="fw-bold ms-2">Liked by You</span>
+                        </div>
+                        <div class="ui-card card-3 shadow-lg">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="small fw-bold">Balance</span>
+                                <span class="text-success fw-bold">₹ 45,000</span>
+                            </div>
+                            <div class="progress mt-2" style="height: 6px;">
+                                <div class="progress-bar bg-gradient w-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ INTERACTIVE DESIGN LAB (The Fun Part) -->
+    <section id="ui-lab" class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">The <span class="text-gradient">UI/UX</span> Lab</h2>
+                <p class="text-muted">Don't just code. Style it. Try the controls below.</p>
+            </div>
+
+            <div class="lab-container shadow-sm bg-white rounded-4 overflow-hidden border">
+                <div class="row g-0">
+                    <!-- CONTROLS -->
+                    <div class="col-md-5 p-5 border-end">
+                        <h5 class="fw-bold mb-4">Style Properties</h5>
+
+                        <div class="mb-4">
+                            <label class="form-label small text-muted fw-bold">BORDER RADIUS</label>
+                            <input type="range" class="form-range" id="radiusRange" min="0" max="50" value="20">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small text-muted fw-bold">SHADOW INTENSITY</label>
+                            <input type="range" class="form-range" id="shadowRange" min="0" max="50" value="20">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small text-muted fw-bold">THEME COLOR</label>
+                            <div class="d-flex gap-2">
+                                <button class="color-btn bg-blue active"
+                                    onclick="setColor('#00e5ff', '#2979ff')"></button>
+                                <button class="color-btn bg-purple" onclick="setColor('#d500f9', '#651fff')"></button>
+                                <button class="color-btn bg-orange" onclick="setColor('#ff9100', '#ff3d00')"></button>
+                            </div>
+                        </div>
+
+                        <div class="code-preview mt-4 p-3 bg-dark rounded-3">
+                            <code class="text-white small" id="cssCode">
+                                borderRadius: 20,<br>
+                                shadowOpacity: 0.2,<br>
+                                backgroundColor: '#00e5ff'
+                            </code>
+                        </div>
+                    </div>
+
+                    <!-- PREVIEW -->
+                    <div class="col-md-7 p-5 d-flex align-items-center justify-content-center bg-dots">
+                        <div id="previewCard" class="preview-card">
+                            <div class="preview-icon"><i class="fas fa-rocket text-white"></i></div>
+                            <h4 class="fw-bold mt-3">Modern UI</h4>
+                            <p class="small text-muted">Learn to build flexible, adaptive layouts.</p>
+                            <button id="previewBtn" class="btn btn-sm text-white w-100 mt-2">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ CURRICULUM (VISUAL) -->
+    <section id="curriculum" class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold mb-4">Master the <span class="text-gradient">Visual Stack</span></h2>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-square bg-soft-blue me-3"><i class="fas fa-layer-group text-primary"></i></div>
+                        <div>
+                            <h5 class="fw-bold">Layout Engines</h5>
+                            <p class="text-muted small">Flexbox & Grid. Make apps look perfect on any screen size.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-square bg-soft-purple me-3"><i class="fas fa-magic text-purple"></i></div>
+                        <div>
+                            <h5 class="fw-bold">Animations</h5>
+                            <p class="text-muted small">Reanimated 2 & Lottie. Create 60fps smooth transitions.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="icon-square bg-soft-pink me-3"><i class="fas fa-fingerprint text-pink"></i></div>
+                        <div>
+                            <h5 class="fw-bold">Gestures</h5>
+                            <p class="text-muted small">Swipe, Pinch, Drag. Make your app feel alive.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="grid-gallery">
+                        <div class="grid-item item-1"><span>Figma</span></div>
+                        <div class="grid-item item-2"><span>React Native</span></div>
+                        <div class="grid-item item-3"><span>Animations</span></div>
+                        <div class="grid-item item-4"><span>Styled Comp</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ PROJECTS (Beautiful Clones) -->
+    <section class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What You Will <span class="text-gradient">Design</span></h2>
+                <p class="text-muted">We don't do boring forms. We build experiences.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="project-showcase shadow-sm" data-aos="zoom-in">
+                        <div class="project-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=500&q=80')">
+                        </div>
+                        <div class="p-4 bg-white">
+                            <h5 class="fw-bold">Instagram Clone</h5>
+                            <p class="small text-muted">Stories, Reels Feed, and Double-tap Like animations.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="project-showcase shadow-sm" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="project-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&q=80')">
+                        </div>
+                        <div class="p-4 bg-white">
+                            <h5 class="fw-bold">Spotify UI</h5>
+                            <p class="small text-muted">Music Player, Gradient Blurs, and Playlist Drag-drop.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="project-showcase shadow-sm" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="project-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1512428559087-560fa0db79b6?w=500&q=80')">
+                        </div>
+                        <div class="p-4 bg-white">
+                            <h5 class="fw-bold">Travel Booking</h5>
+                            <p class="small text-muted">Map integration, Shared Element Transitions, and Glassmorphism.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <div class="py-5 text-center bg-white border-top">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-3">Love Beautiful Apps?</h2>
+            <p class="lead text-muted mb-4">Start your journey as a Frontend Mobile Specialist today.</p>
+            <a href="https://calendly.com/tricity0rent/30min" class="btn-gradient shadow-lg">Book Free Career
+                Counselling</a>
+        </div>
+    </div>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <a href="/" class="d-inline-block mb-3">
+                        <img src="/images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-3">Our Courses</h5>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/web-designing-course-mohali">Web Design</a></li>
+                                <li><a href="/programming-classes-mohali">Programming</a></li>
+                                <li><a href="/graphic-design-course-mohali">Graphic Design</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/digital-marketing-mohali">Digital Marketing</a></li>
+                                <li><a href="/dotnet-asp-course-mohali">Asp.Net</a></li>
+                                <li><a href="/video-editing-course-mohali">Video Editior</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-3">Get in Touch</h5>
+                    <ul class="footer-list contact-info mb-4">
+                        <li>
+                            <i class="fas fa-envelope footer-icon"></i>
+                            <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone footer-icon"></i>
+                            <a href="tel:+918544884846">+91 85448 84846</a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt footer-icon mt-1"></i>
+                            <span class="small">4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineer22" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom mt-5 py-3 border-top border-secondary">
+            <div class="container text-center">
+                <p class="mb-0 text-white-50 small">
+                    &copy; 2025 Tech Engineer. All Rights Reserved. |
+                    <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
+                </p>
+            </div>
+        </div>
+        <button id="backToTop" onclick="scrollToTop()" title="Back to Top">&#8679;</button>
+        <button id="btn-call" onclick="clicktocall()" title="Call Us"><i
+                class="bi bi-telephone-outbound-fill"></i></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()" aria-label="Chat on WhatsApp"><i
+                class="fab fa-whatsapp"></i></button>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Design Lab Logic -->
+    <script>
+        AOS.init({ duration: 800 });
+
+        const card = document.getElementById('previewCard');
+        const icon = document.querySelector('.preview-icon');
+        const btn = document.getElementById('previewBtn');
+        const radiusInput = document.getElementById('radiusRange');
+        const shadowInput = document.getElementById('shadowRange');
+        const codeBlock = document.getElementById('cssCode');
+
+        let currentColor = '#00e5ff';
+        let currentBtnColor = '#2979ff';
+
+        function updateUI() {
+            const r = radiusInput.value;
+            const s = shadowInput.value;
+
+            // Apply Styles
+            card.style.borderRadius = `${r}px`;
+            card.style.boxShadow = `0 10px ${s}px rgba(0,0,0,0.15)`;
+
+            // Apply Colors
+            icon.style.background = `linear-gradient(135deg, ${currentColor}, ${currentBtnColor})`;
+            btn.style.background = `linear-gradient(135deg, ${currentColor}, ${currentBtnColor})`;
+
+            // Update Code Snippet
+            codeBlock.innerHTML = `
+borderRadius: ${r},<br>
+shadowOpacity: ${s / 100},<br>
+background: '${currentColor}'
+            `;
+        }
+
+        window.setColor = function (c1, c2) {
+            currentColor = c1;
+            currentBtnColor = c2;
+            updateUI();
+        }
+
+        radiusInput.addEventListener('input', updateUI);
+        shadowInput.addEventListener('input', updateUI);
+
+        // Init
+        updateUI();
+    </script>
+</body>
+
+</html>

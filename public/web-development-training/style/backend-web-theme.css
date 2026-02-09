@@ -1,0 +1,99 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #0a0a0a;
+    --panel-bg: #111111;
+    --green: #00ff41; /* Matrix Green */
+    --green-glow: rgba(0, 255, 65, 0.4);
+    --blue: #2979ff;
+    --purple: #aa00ff;
+    --leaf: #4caf50;
+    --text-white: #f0f0f0;
+    --text-gray: #888;
+}
+
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
+.font-tech { font-family: 'Share Tech Mono', monospace; }
+.font-mono { font-family: monospace; }
+
+/* --- MATRIX BACKGROUND --- */
+#matrixCanvas {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+}
+.crt-lines {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%; pointer-events: none; z-index: -1;
+}
+
+/* --- UTILS --- */
+.text-green { color: var(--green); text-shadow: 0 0 10px var(--green-glow); }
+.text-blue { color: var(--blue); }
+.text-leaf { color: var(--leaf); }
+.bg-darker { background-color: #050505; }
+.bg-dark-glass { background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(10px); }
+.bg-panel { background: var(--panel-bg); border: 1px solid #333; }
+
+.border-y-green { border-top: 1px solid rgba(0, 255, 65, 0.2); border-bottom: 1px solid rgba(0, 255, 65, 0.2); }
+.border-end-green { border-right: 1px solid rgba(0, 255, 65, 0.2); }
+@media (max-width: 768px) { .border-end-green { border-right: none; border-bottom: 1px solid rgba(0,255,65,0.2); padding-bottom: 20px; } }
+
+/* --- HERO --- */
+.backend-hero { padding: 120px 0 100px;margin-top: 50px; position: relative; }
+.badge-server {
+    border: 1px solid var(--green); color: var(--green); padding: 8px 16px; border-radius: 4px;
+    font-family: 'Share Tech Mono'; display: inline-block; margin-bottom: 20px; background: rgba(0, 255, 65, 0.1);
+}
+
+.btn-green {
+    background: var(--green); color: black; padding: 12px 35px; border-radius: 4px; font-weight: 700; text-decoration: none; border: none; transition: 0.3s;
+}
+.btn-green:hover { background: #ccffcc; box-shadow: 0 0 20px var(--green-glow); transform: translateY(-2px); }
+
+.btn-outline-green {
+    border: 2px solid var(--green); color: var(--green); padding: 12px 35px; border-radius: 4px; font-weight: 700; text-decoration: none; transition: 0.3s;
+}
+.btn-outline-green:hover { background: var(--green); color: black; }
+
+/* 3D SERVER RACK */
+.server-rack { width: 250px; margin: 0 auto; position: relative; perspective: 1000px; }
+.server-blade {
+    background: #1a1a1a; padding: 15px; border: 1px solid #333; margin-bottom: 10px; border-radius: 4px;
+    display: flex; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transform: rotateY(-10deg);
+    font-family: 'Share Tech Mono'; color: #ccc;
+}
+.led { width: 8px; height: 8px; background: var(--green); border-radius: 50%; display: inline-block; margin-right: 10px; box-shadow: 0 0 5px var(--green); }
+.blink { animation: blink 1s infinite; }
+.blink-fast { animation: blink 0.2s infinite; }
+@keyframes blink { 50% { opacity: 0.2; } }
+
+/* --- TERMINAL LAB --- */
+.terminal-console { background: #000; border: 1px solid #333; border-radius: 4px; overflow: hidden; max-width: 800px; margin: 0 auto; }
+.console-header { background: #222; padding: 10px; display: flex; align-items: center; border-bottom: 1px solid #333; }
+.dots span { display: inline-block; width: 10px; height: 10px; background: #555; border-radius: 50%; margin-right: 5px; }
+.title { margin-left: auto; margin-right: auto; color: #777; font-family: monospace; font-size: 0.8rem; }
+
+.console-body { padding: 20px; font-family: 'Share Tech Mono'; min-height: 250px; }
+.input-line { display: flex; align-items: center; border-bottom: 1px solid #333; padding-bottom: 10px; }
+.prompt { color: var(--green); margin-right: 10px; }
+#cmdInput { background: transparent; border: none; color: white; width: 100%; outline: none; font-family: inherit; }
+
+.output-area { margin-top: 15px; color: #ddd; font-size: 0.9rem; line-height: 1.5; }
+.db-query-box { margin-top: 15px; padding: 10px; background: #111; border: 1px dashed #333; font-size: 0.8rem; }
+.loading-bar { height: 2px; background: var(--green); width: 0%; transition: width 1s; }
+
+/* --- TECH BOXES --- */
+.tech-box {
+    background: var(--panel-bg); padding: 30px; border-radius: 4px; border: 1px solid #333; transition: 0.3s; height: 100%; text-align: center;
+}
+.tech-box:hover { transform: translateY(-5px); }
+.border-green:hover { border-color: var(--green); }
+.border-blue:hover { border-color: var(--blue); }
+.border-purple:hover { border-color: var(--purple); }
+.border-leaf:hover { border-color: var(--leaf); }
+
+.text-leaf { color: var(--leaf); }
+
+/* --- CAREER --- */
+.skills-list { display: flex; flex-direction: column; gap: 10px; }
+.skill-item { background: rgba(255,255,255,0.05); padding: 10px 15px; border-radius: 4px; border-left: 2px solid var(--green); color: #ccc; }
+.salary-card { border: 1px solid #333; }

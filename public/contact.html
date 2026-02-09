@@ -14,15 +14,14 @@
     <meta name="ICBM" content="30.7046, 76.7179">
     <meta name="description"
         content="Talk to Tech Engineer, your trusted IT partner in Mohali for web, mobile apps, SEO, and digital transformation. Contact us for projects or career opportunities">
-    <meta name="keywords"
-        content="Contact Tech Engineer, Get in Touch, Tech Engineer Address, Tech Engineer Phone Number, Tech Engineer Email, IT Company in Mohali, Contact IT Services, Request a Quote, Hire Web Developers, Hire App Developers, IT Consultation, Business Enquiry, Customer Support, Tech Support, Tech Engineer Location, Mohali Phase 8B IT Company, Sector 74 Mohali IT Office, R&R Tower Mohali, IT Services Quote, Web Development Cost, App Development Price, Digital Marketing Enquiry, SEO Consultation, Software Development Enquiry, Industrial Training Contact, Internship in Mohali, Tech Engineer HR, Career Enquiry, Project Discussion, Schedule a Meeting, Tech Engineer WhatsApp, Best IT Company Contact, Outsourcing IT Projects, Start a Project, AI Solutions Contact, Cloud Services Enquiry, Client Support, Office Visit, Punjab IT Companies, Software Company Contact Details, IT Helpdesk, Business Collaboration, Technology Consulting, Free IT Consultation, Tech Engineer Office, Connect with Us, Global IT Support, Hire IT Team, Internship Registration, Tech Engineer Map">
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
-
+    <!-- <meta name="keywords"         content="Contact Tech Engineer, Get in Touch, Tech Engineer Address, Tech Engineer Phone Number, Tech Engineer Email, IT Company in Mohali, Contact IT Services, Request a Quote, Hire Web Developers, Hire App Developers, IT Consultation, Business Enquiry, Customer Support, Tech Support, Tech Engineer Location, Mohali Phase 8B IT Company, Sector 74 Mohali IT Office, R&R Tower Mohali, IT Services Quote, Web Development Cost, App Development Price, Digital Marketing Enquiry, SEO Consultation, Software Development Enquiry, Industrial Training Contact, Internship in Mohali, Tech Engineer HR, Career Enquiry, Project Discussion, Schedule a Meeting, Tech Engineer WhatsApp, Best IT Company Contact, Outsourcing IT Projects, Start a Project, AI Solutions Contact, Cloud Services Enquiry, Client Support, Office Visit, Punjab IT Companies, Software Company Contact Details, IT Helpdesk, Business Collaboration, Technology Consulting, Free IT Consultation, Tech Engineer Office, Connect with Us, Global IT Support, Hire IT Team, Internship Registration, Tech Engineer Map"> -->
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <meta property="og:title" content="Contact Tech Engineer | Web & IT Training Institute Mohali">
     <meta property="og:description"
         content="Get in touch with Tech Engineer for admissions, course details, or IT services in Mohali.">
     <meta property="og:image" content="https://techengineer.co/images/logo.webp">
-    <meta property="og:url" content="https://techengineer.co/contact.html">
+    <meta property="og:url" content="https://techengineer.co/contact">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tech Engineer">
 
@@ -30,10 +29,12 @@
     <meta name="twitter:title" content="Contact Tech Engineer">
     <meta name="twitter:description" content="Reach out for IT training or web development services.">
     <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
+    <meta name="twitter:url" content="https://techengineer.co/contact">
+    <meta name="twitter:site" content="@TechEngineer">
 
 
     <meta name="author" content="Tech Engineer">
-    <meta name="canonical" content="https://techengineer.co/contact.html">
+    <meta name="canonical" content="https://techengineer.co/contact">
     <meta name="robots" content="index,follow">
     <!-- Styles -->
 
@@ -43,6 +44,120 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
+    <style>
+        /* Section Background */
+        .section-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* The Card Container */
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            /* Keeps overlay inside */
+            animation: slideUp 0.8s ease-out;
+        }
+
+        /* Input Styling */
+        .form-control,
+        .form-select {
+            border: 2px solid #eef0f3;
+            border-radius: 12px;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+            background-color: white;
+        }
+
+        /* Button Animation */
+        .submit-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+        }
+
+        /* SUCCESS OVERLAY STYLING */
+        .success-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0d6efd, #0a58ca);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            z-index: 10;
+            border-radius: 20px;
+        }
+
+        .success-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 2rem;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        /* Keyframe Animations */
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Floating Labels Fix */
+        .form-floating>label {
+            padding-left: 1.5rem;
+        }
+    </style>
 
     <!-- Structured Data (Schema.org) for Local Business -->
     <script type="application/ld+json">
@@ -51,7 +166,7 @@
     "@type": "LocalBusiness",
     "name": "Tech Engineer",
     "image": "https://techengineer.co/images/logo.webp",
-    "url": "https://techengineer.co/contact.html",
+    "url": "https://techengineer.co/contact",
     "telephone": "+91 85448 84846",
     "address": {
         "@type": "PostalAddress",
@@ -70,26 +185,27 @@
         "https://www.facebook.com/people/TechEngineer/100083472395433/",
         "https://www.linkedin.com/company/tech-eng-ineer/",
         "https://www.instagram.com/tech___engineer?igsh=MWgxanhqcmRxODVvYw==",
-        "https://www.youtube.com/@TechEngineerProgramming"
+        "https://www.youtube.com/@TechEngineer22"
     ]
     }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-MZS1VS07WN');
+    </script>
 
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KPZ2FD2T');</script>
+
     <style>
         /* 1. Contact Banner */
         .contact-banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/contact-bg.webp");
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/contact-bg.webp");
             background-size: cover;
             background-position: center;
             padding: 100px 0;
@@ -357,13 +473,12 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPZ2FD2T" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container nav-wrapper">
-            <a href="index.html" class="logo">
-                <img src="images/logo.webp" alt="Tech Engineer Logo" loading="lazy">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy">
             </a>
 
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
@@ -373,16 +488,16 @@
             </button>
 
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
 
                 <li class="internship">
-                    <a href="https://industrialtraining.codebank.in/">
-                                                <img src="images/icon.webp" alt="Internship" loading="lazy">
+                    <a href="/industrial-training">
+                        <img src="/images/icon.webp" alt="Internship" loading="lazy">
                         <span>Internship</span>
                     </a>
                 </li>
@@ -413,14 +528,14 @@
 
             <div class="client-grid">
                 <!-- Client Items -->
-                <div class="client-item"><img src="images/clients/client1.webp" alt="Client 1"></div>
-                <div class="client-item"><img src="images/clients/client2.webp" alt="Client 2"></div>
-                <div class="client-item"><img src="images/clients/client3.webp" alt="Client 3"></div>
-                <div class="client-item"><img src="images/clients/client4.webp" alt="Client 4"></div>
-                <div class="client-item"><img src="images/clients/client5.webp" alt="Client 5"></div>
-                <div class="client-item"><img src="images/clients/client6.webp" alt="Client 6"></div>
-                <div class="client-item"><img src="images/clients/client7.webp" alt="Client 7"></div>
-                <div class="client-item"><img src="images/clients/client8.webp" alt="Client 8"></div>
+                <div class="client-item"><img src="/images/clients/client1.webp" alt="Client 1"></div>
+                <div class="client-item"><img src="/images/clients/client2.webp" alt="Client 2"></div>
+                <div class="client-item"><img src="/images/clients/client3.webp" alt="Client 3"></div>
+                <div class="client-item"><img src="/images/clients/client4.webp" alt="Client 4"></div>
+                <div class="client-item"><img src="/images/clients/client5.webp" alt="Client 5"></div>
+                <div class="client-item"><img src="/images/clients/client6.webp" alt="Client 6"></div>
+                <div class="client-item"><img src="/images/clients/client7.webp" alt="Client 7"></div>
+                <div class="client-item"><img src="/images/clients/client8.webp" alt="Client 8"></div>
             </div>
         </div>
     </section>
@@ -439,27 +554,26 @@
                 <!-- Card 1: Blog -->
                 <div class="journey-card">
                     <div class="journey-img">
-                        <img src="images/I&T.webp" alt="Insights">
+                        <img src="/images/I&T.webp" alt="Insights">
                         <div class="overlay"></div>
                     </div>
                     <div class="journey-content">
                         <h3><i class="fas fa-lightbulb text-warning"></i> Insights & Trends</h3>
                         <p>Discover the latest expert advice on digital technologies and innovation.</p>
-                        <a href="blog.html" class="btn-journey">Read Our Blog <i class="fas fa-arrow-right"></i></a>
+                        <a href="/blog" class="btn-journey">Read Our Blog <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Card 2: Success Stories -->
                 <div class="journey-card">
                     <div class="journey-img">
-                        <img src="images/Sucess.webp" alt="Success">
+                        <img src="/images/Sucess.webp" alt="Success">
                         <div class="overlay"></div>
                     </div>
                     <div class="journey-content">
                         <h3><i class="fas fa-trophy text-warning"></i> Success Stories</h3>
                         <p>See how we have helped businesses build success stories that inspire.</p>
-                        <a href="about.html" class="btn-journey">View Case Studies <i
-                                class="fas fa-arrow-right"></i></a>
+                        <a href="/about" class="btn-journey">View Case Studies <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -481,15 +595,15 @@
                         <div class="loc-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h5>Address</h5>
+                                <h3>Address</h3>
                                 <p>Tech Engineer, 4th Floor R&R Tower,<br>Plot F-298, Phase 8B, Sector 74, Mohali</p>
                             </div>
                         </div>
 
                         <div class="loc-item">
-                            <i class="fas fa-phone-alt"></i>
+                            <i class="bi bi-telephone-outbound-fill"></i>
                             <div>
-                                <h5>Phone</h5>
+                                <h3>Phone</h3>
                                 <p><a href="tel:+918544884846">+91 85448 84846</a></p>
                             </div>
                         </div>
@@ -497,7 +611,7 @@
                         <div class="loc-item">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <h5>Email</h5>
+                                <h3>Email</h3>
                                 <p><a href="mailto:contact@techengineer.co">contact@techengineer.co</a></p>
                             </div>
                         </div>
@@ -525,55 +639,186 @@
             </div>
         </div>
     </section>
+    <!-- 4️⃣ CONTACT FORM LINKED TO GOOGLE SHEETS -->
+    <section class="py-5 section-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+                    <!-- FORM CARD -->
+                    <div class="contact-card shadow-lg">
+
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold">Join Our <span class="text-primary">Training</span></h2>
+                            <p class="text-muted">Select a course below to get started.</p>
+                        </div>
+
+                        <!-- 
+                        IMPORTANT: 
+                        1. Replace action="" with your Google Form URL ending in /formResponse 
+                        2. Replace name="entry.XXXX" with your specific Google field IDs
+                    -->
+                        <form
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSfSfssR4psM4p0RK1gWMW4dHuJGvUSK-GtTNISMt2s3nnyt5Q/formResponse"
+                            method="POST" target="hidden_iframe" onsubmit="window.submitted = true;"
+                            class="needs-validation">
+
+                            <div class="row g-3">
+
+                                <!-- Name -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="entry.1481617062"
+                                            placeholder="Your Name" required>
+                                        <label for="name">Full Name</label>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="phone" name="entry.1863134025"
+                                            placeholder="Phone" required>
+                                        <label for="phone">Phone Number</label>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="entry.2051739032"
+                                            placeholder="Email" required>
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                </div>
+
+                                <!-- COURSE SELECTION (ANIMATED DROPDOWN) -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="courseSelect" name="entry.1814978086"
+                                            aria-label="Select Course" required>
+                                            <option selected disabled value="">Choose a training program...</option>
+                                            <option value="Web Development Full Stack">💻 Web Development Full Stack
+                                            </option>
+                                            <option value="Graphic Design Masterclass">🎨 Graphic Design Masterclass
+                                            </option>
+                                            <option value="Digital Marketing Pro">📱 Digital Marketing Pro</option>
+                                            <option value="Python for Data Science">🐍 Python for Data Science</option>
+                                            <option value="UI/UX Design Bootcamp">✨ UI/UX Design Bootcamp</option>
+                                        </select>
+                                        <label for="courseSelect">Select Course</label>
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here" id="message"
+                                            name="entry.1561341932" style="height: 120px"></textarea>
+                                        <label for="message">Any specific questions?</label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill submit-btn">
+                                        <i class="fas fa-paper-plane me-2"></i> Enroll Now
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- SUCCESS MESSAGE OVERLAY (Hidden by default) -->
+                        <div id="success-message" class="success-overlay">
+                            <div class="text-center">
+                                <div class="check-icon mb-3">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h3 class="fw-bold">Application Sent!</h3>
+                                <p>We have received your request for the training.<br>We will contact you shortly.</p>
+                                <button class="btn btn-outline-light btn-sm mt-3" onclick="closeSuccess()">Send
+                                    Another</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.submitted = false;
+
+        function showSuccess() {
+            const overlay = document.getElementById('success-message');
+            overlay.classList.add('active');
+            document.querySelector('form').reset();
+        }
+
+        function closeSuccess() {
+            const overlay = document.getElementById('success-message');
+            overlay.classList.remove('active');
+            window.submitted = false;
+        }
+    </script>
+
+    <!-- HIDDEN IFRAME (Tricks the browser to stay on page) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+        onload="if(window.submitted) showSuccess();"></iframe>
+
+
     <footer class="footer-section">
         <div class="container">
             <div class="row g-4">
 
                 <!-- COLUMN 1: Logo & About -->
                 <div class="col-lg-3 col-md-6">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <img src="images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
+                    <a href="/" class="d-inline-block mb-3">
+                        <img src="/images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
                     </a>
 
                 </div>
 
                 <!-- COLUMN 2: Quick Links (Split) -->
+                <!-- COLUMN 2: Quick Links (Split) -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <h2 class="text-white fw-bold mb-3">Quick Links</h2>
                     <div class="row g-0">
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/gallery">Gallery</a></li> <!-- added here -->
                             </ul>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- COLUMN 3: Courses (Split) -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white fw-bold mb-3">Our Courses</h5>
+                    <h3 class="text-white fw-bold mb-3">Our Courses</h3>
                     <div class="row g-0">
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="web-designing-course-mohali.html">Web Design</a></li>
-                                <li><a href="programming-classes-mohali.html">Programming</a></li>
-                                <li><a href="graphic-design-course-mohali.html">Graphic Design</a></li>
+                                <li><a href="/web-designing-course-mohali">Web Design</a></li>
+                                <li><a href="/programming-classes-mohali">Programming</a></li>
+                                <li><a href="/graphic-design-course-mohali">Graphic Design</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="digital-marketing-mohali.html">DigitalMarketing</a></li>
-                                <li><a href="dotnet-asp-course-mohali.html">Asp.Net</a></li>
-                                <li><a href="video-editing-course-mohali.html">Video Editior</a></li>
+                                <li><a href="/digital-marketing-mohali">Digital Marketing</a></li>
+                                <li><a href="/dotnet-asp-course-mohali">Asp.Net</a></li>
+                                <li><a href="/video-editing-course-mohali">Video Editior</a></li>
                             </ul>
                         </div>
                     </div>
@@ -581,35 +826,35 @@
 
                 <!-- COLUMN 4: Contact & Social -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white fw-bold mb-3">Get in Touch</h5>
+                    <h3 class="text-white fw-bold mb-3">Get in Touch</h2>
 
-                    <!-- Contact Info -->
-                    <ul class="footer-list contact-info mb-4">
-                        <li>
-                            <i class="fas fa-envelope footer-icon"></i>
-                            <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone footer-icon"></i>
-                            <a href="tel:+918544884846">+91 85448 84846</a>
-                        </li>
-                        <li class="d-flex align-items-start">
-                            <i class="fas fa-map-marker-alt footer-icon mt-1"></i>
-                            <span class="small">4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
-                        </li>
-                    </ul>
+                        <!-- Contact Info -->
+                        <ul class="footer-list contact-info mb-4">
+                            <li>
+                                <i class="fas fa-envelope footer-icon"></i>
+                                <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone footer-icon"></i>
+                                <a href="tel:+918544884846">+91 85448 84846</a>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-map-marker-alt footer-icon mt-1"></i>
+                                <span class="small">4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
+                            </li>
+                        </ul>
 
-                    <!-- Social Icons (Placed here to fit the layout) -->
-                    <div class="social-icons">
-                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
-                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
+                        <!-- Social Icons (Placed here to fit the layout) -->
+                        <div class="social-icons">
+                            <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                                aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="http://www.youtube.com/@TechEngineer22" target="_blank" aria-label="YouTube"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
                 </div>
 
             </div>
@@ -620,41 +865,27 @@
             <div class="container text-center">
                 <p class="mb-0 text-white-50 small">
                     &copy; 2025 Tech Engineer. All Rights Reserved. |
-                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
-                    <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
+                    <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
                 </p>
             </div>
         </div>
 
         <!-- Buttons -->
         <button id="backToTop" onclick="scrollToTop()" title="Back to Top">&#8679;</button>
-    <button id="btn-call" onclick="clicktocall()" title="Call Us"><i class="fas fa-phone-alt"></i></button>
-    <button id="btn-wht" onclick="clicktowhatsapp()" aria-label="Chat on WhatsApp"><i
-            class="fab fa-whatsapp"></i></button>
+        <button id="btn-call" onclick="clicktocall()" title="Call Us"><i
+                class="bi bi-telephone-outbound-fill"></i></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()" aria-label="Chat on WhatsApp"><i
+                class="fab fa-whatsapp"></i></button>
 
     </footer>
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
 
-            const formData = new FormData(this);
-
-            fetch("https://script.google.com/macros/s/AKfycbw3YgpOYhHj7RFPoYvjXm5ekDc5a1J1jD4Gp7CJns30W1aASVG_5BNfZNddBTmHbadO/exec", {
-                method: "POST",
-                body: formData
-            })
-                .then(res => res.text())
-                .then(() => {
-                    alert("Thank you! Your message has been sent.");
-                    this.reset();
-                })
-                .catch(() => {
-                    alert("Error! Please try again.");
-                });
-        });
-    </script>
 
     <script src="javascript.js" defer></script>
+    <script>
+
+    </script>
+
 
 </body>
 

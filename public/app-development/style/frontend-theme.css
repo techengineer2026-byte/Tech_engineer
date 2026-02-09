@@ -1,0 +1,166 @@
+/* --- VARIABLES (Based on Logo) --- */
+:root {
+    --primary-cyan: #00e5ff;
+    --primary-purple: #d500f9;
+    --gradient-brand: linear-gradient(135deg, #00e5ff 0%, #d500f9 100%);
+    --bg-light: #ffffff;
+    --bg-gray: #f8f9fa;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-light);
+}
+
+/* --- UTILS --- */
+.text-gradient {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-light-gray { background-color: var(--bg-gray); }
+.bg-soft-blue { background: rgba(0, 229, 255, 0.1); }
+.bg-soft-purple { background: rgba(213, 0, 249, 0.1); }
+.bg-soft-pink { background: rgba(255, 64, 129, 0.1); }
+
+.text-primary { color: #2979ff !important; }
+.text-purple { color: #d500f9 !important; }
+.text-pink { color: #ff4081 !important; }
+
+/* --- BRAND LOGO --- */
+.brand-logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- BUTTONS --- */
+.btn-gradient {
+    background: var(--gradient-brand);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(213, 0, 249, 0.3);
+    color: white;
+}
+
+.btn-white {
+    background: white;
+    color: var(--text-dark);
+    border: 1px solid #eee;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.btn-white:hover { border-color: #ccc; background: #f8f9fa; }
+
+/* --- HERO --- */
+.hero-section {
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decoration */
+.blob-bg {
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, rgba(213, 0, 249, 0.05) 50%, transparent 70%);
+    z-index: -1;
+}
+
+.badge-soft {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(0, 229, 255, 0.1);
+    color: #0091ea;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Floating UI Stack */
+.ui-stack { position: relative; height: 400px; width: 350px; margin: 0 auto; }
+.ui-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    position: absolute;
+    width: 260px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.card-1 {
+    top: 50px; left: 0; transform: rotate(-5deg); z-index: 1;
+    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+}
+.card-2 {
+    top: 120px; right: 0; transform: rotate(5deg); z-index: 2;
+    display: flex; align-items: center;
+}
+.card-3 {
+    bottom: 50px; left: 40px; z-index: 3; width: 280px;
+}
+
+.avatar { width: 40px; height: 40px; border-radius: 50%; }
+.bg-gradient { background: var(--gradient-brand); }
+.line { height: 8px; background: #eee; border-radius: 4px; }
+
+/* --- DESIGN LAB --- */
+.bg-dots {
+    background-image: radial-gradient(#dee2e6 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+.color-btn {
+    width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 1px #ddd; cursor: pointer; transition: 0.2s;
+}
+.color-btn:hover, .color-btn.active { transform: scale(1.2); box-shadow: 0 0 0 2px var(--primary-purple); }
+.bg-blue { background: #00e5ff; } .bg-purple { background: #d500f9; } .bg-orange { background: #ff9100; }
+
+.preview-card {
+    width: 250px; padding: 30px; background: white; border-radius: 20px; text-align: center;
+    transition: 0.3s ease; /* Important for smooth slider updates */
+}
+.preview-icon {
+    width: 60px; height: 60px; border-radius: 15px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+}
+
+/* --- ICONS & GRID --- */
+.icon-square {
+    width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+}
+
+.grid-gallery {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.grid-item {
+    height: 150px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: 0.3s; cursor: pointer;
+}
+.grid-item:hover { transform: translateY(-5px); }
+.item-1 { background: #F24E1E; } /* Figma Color */
+.item-2 { background: #61DAFB; } /* React Color */
+.item-3 { background: #d500f9; }
+.item-4 { background: #ff4081; }
+
+/* --- PROJECTS --- */
+.project-showcase {
+    border-radius: 20px; overflow: hidden; background: white; height: 100%; transition: 0.3s;
+}
+.project-showcase:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.project-img { height: 200px; background-size: cover; background-position: center; }

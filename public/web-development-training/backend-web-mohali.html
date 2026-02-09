@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Backend Web Development Course Mohali | Node.js, .NET Core, SQL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description"
+        content="Master Backend Development in Mohali. Learn Node.js, Express, C# (.NET), SQL Server, and MongoDB. Build secure APIs and Scalable Servers.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Animation Lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="style/backend-web-theme.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND MATRIX -->
+    <canvas id="matrixCanvas"></canvas>
+    <div class="crt-lines"></div>
+
+    <!-- 🟢 HEADER -->
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100"
+                            style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="backend-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 z-index-2" data-aos="fade-right">
+                    <div class="badge-server"><i class="fas fa-terminal"></i> Server-Side Module</div>
+
+                    <h1 class="display-3 fw-bold mb-3 text-white">
+                        Power the <br>
+                        <span class="text-green">Internet.</span>
+                    </h1>
+
+                    <p class="lead text-gray mb-4 font-tech">
+                        The frontend is just the skin. The backend is the <strong>Brain</strong>.
+                        Master <strong>Node.js</strong>, <strong>.NET Core</strong>, and <strong>Databases</strong> to
+                        build APIs that handle millions of users.
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <a href="#api-lab" class="btn-green shadow-lg">
+                            <i class="fas fa-plug me-2"></i> Connect API
+                        </a>
+                        <a href="https://wa.me/918544884846" class="btn-outline-green"><i
+                                class="fab fa-whatsapp me-2"></i> Chat</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center position-relative" data-aos="zoom-in">
+                    <!-- 3D SERVER RACK VISUAL -->
+                    <div class="server-rack">
+                        <div class="server-blade blade-1">
+                            <span class="led blink"></span> API Gateway
+                        </div>
+                        <div class="server-blade blade-2">
+                            <span class="led blink-fast"></span> Auth Service
+                        </div>
+                        <div class="server-blade blade-3">
+                            <span class="led"></span> SQL Database
+                        </div>
+                        <div class="cable-mess"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ AUDIENCE & PREREQUISITES -->
+    <section class="py-5 bg-dark-glass border-y-green">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-green">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-user-secret text-green me-2"></i>
+                        Who Is This For?</h2>
+                    <ul class="list-unstyled text-gray font-mono">
+                        <li class="mb-2">>> Logic Lovers & Problem Solvers</li>
+                        <li class="mb-2">>> CS/IT Students wanting Core Tech Jobs</li>
+                        <li class="mb-0">>> Frontend Devs wanting Full Stack</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-code text-blue me-2"></i>
+                        Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Basic programming logic (Loops/If-Else).
+                        <br><span class="text-white small">We teach Database design and API architecture from
+                            scratch.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO: API LAB -->
+    <section id="api-lab" class="py-5 bg-darker">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold text-white font-tech">The <span class="text-green">Logic</span> Lab</h2>
+                <p class="text-gray">Send a request. See how the server processes it.</p>
+            </div>
+
+            <div class="terminal-console shadow-lg">
+                <!-- TOP BAR -->
+                <div class="console-header">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <span class="title">root@server:~</span>
+                </div>
+
+                <div class="console-body">
+                    <div class="input-line">
+                        <span class="prompt">$</span>
+                        <input type="text" id="cmdInput" value="curl GET /api/users" readonly>
+                        <button id="btnSend" class="btn btn-sm btn-green ms-3">EXECUTE</button>
+                    </div>
+
+                    <div id="consoleOutput" class="output-area">
+                        <!-- JS Types here -->
+                    </div>
+
+                    <!-- Visual Database Query -->
+                    <div id="dbVisual" class="db-query-box d-none">
+                        <span class="text-blue">SELECT * FROM Users WHERE active = 1;</span>
+                        <div class="loading-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ CURRICULUM (THE STACK) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold text-white font-tech">The <span class="text-blue">Backend</span> Stack</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- NODE JS -->
+                <div class="col-md-3 col-6" data-aos="fade-up">
+                    <div class="tech-box border-green">
+                        <i class="fab fa-node fa-3x text-green mb-3"></i>
+                        <h5 class="text-white">Node.js</h5>
+                        <p class="small text-gray">Fast, Scalable JS Runtime.</p>
+                    </div>
+                </div>
+
+                <!-- .NET CORE -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-box border-purple">
+                        <i class="fab fa-microsoft fa-3x text-purple mb-3"></i>
+                        <h5 class="text-white">.NET Core</h5>
+                        <p class="small text-gray">Enterprise Grade C# API.</p>
+                    </div>
+                </div>
+
+                <!-- SQL -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-box border-blue">
+                        <i class="fas fa-database fa-3x text-blue mb-3"></i>
+                        <h5 class="text-white">SQL Server</h5>
+                        <p class="small text-gray">Relational Data Management.</p>
+                    </div>
+                </div>
+
+                <!-- MONGODB -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-box border-leaf">
+                        <i class="fas fa-leaf fa-3x text-leaf mb-3"></i>
+                        <h5 class="text-white">MongoDB</h5>
+                        <p class="small text-gray">NoSQL for Modern Apps.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ CAREER & SALARY -->
+    <section class="py-5 bg-darker border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold text-white mb-3 font-tech">Why Backend?</h2>
+                    <p class="text-gray">
+                        Backend devs are the highest paid web developers.
+                        Scalability, Security, and Data are the most critical assets for any company.
+                    </p>
+
+                    <div class="skills-list mt-4">
+                        <div class="skill-item"><i class="fas fa-check text-green"></i> Build Secure APIs (JWT)</div>
+                        <div class="skill-item"><i class="fas fa-check text-green"></i> Optimize Database Queries</div>
+                        <div class="skill-item"><i class="fas fa-check text-green"></i> Cloud Deployment (AWS)</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <div class="salary-card p-4 rounded-3 shadow-lg bg-panel">
+                        <div class="text-muted small text-uppercase fw-bold">Backend Dev Salary</div>
+                        <h2 class="display-4 fw-bold text-green">₹4L - ₹9L</h2>
+                        <p class="small text-white mb-0">Starting Package for Freshers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <footer class="py-5 text-center bg-darker text-white border-top border-secondary">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-3 font-tech">Own the Server.</h2>
+            <p class="lead text-gray mb-4">Batch starting soon. Become a Backend Architect.</p>
+
+            <a href="tel:+918544884846" class="btn-green btn-lg shadow-lg rounded-pill px-5">
+                <i class="fas fa-phone-alt me-2"></i> Call for Fee Details
+            </a>
+
+            <div class="mt-5 text-gray small">
+                &copy; 2025 Tech Engineer. Phase 8B, Mohali.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/backend-logic.js"></script>
+</body>
+
+</html>

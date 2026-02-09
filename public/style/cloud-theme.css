@@ -1,0 +1,98 @@
+/* --- VARIABLES --- */
+:root {
+    --sky: #0ea5e9;
+    --orange: #f97316;
+    --green: #10b981;
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --text-white: #f8fafc;
+    --text-gray: #94a3b8;
+}
+
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-white); }
+.font-tech { font-family: 'Rajdhani', sans-serif; }
+
+/* UTILS */
+.text-sky { color: var(--sky); text-shadow: 0 0 15px rgba(14, 165, 233, 0.5); }
+.text-orange { color: var(--orange); }
+.text-green { color: var(--green); }
+.text-gradient { background: linear-gradient(to right, var(--orange), var(--sky)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.bg-darker { background-color: #020617; }
+
+/* HERO */
+.cloud-hero { padding: 120px 0 80px; position: relative; overflow: hidden; }
+.sky-mesh {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(#1e293b 1px, transparent 1px);
+    background-size: 40px 40px; opacity: 0.3; z-index: -1;
+}
+
+.badge-cloud { border: 1px solid var(--sky); color: var(--sky); padding: 8px 16px; border-radius: 4px; display: inline-block; margin-bottom: 20px; font-weight: 700; background: rgba(14, 165, 233, 0.1); }
+
+.btn-sky {
+    background: var(--sky); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: 700; border: none; transition: 0.3s;
+}
+.btn-sky:hover { background: #0284c7; box-shadow: 0 0 20px rgba(14, 165, 233, 0.4); transform: translateY(-2px); color: white; }
+
+.btn-outline-sky {
+    border: 2px solid var(--sky); color: var(--text-white); padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.3s;
+}
+.btn-outline-sky:hover { background: var(--sky); color: white; }
+
+/* 3D GLOBE ANIMATION */
+.server-globe { position: relative; width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.globe-core { width: 100px; height: 100px; background: radial-gradient(circle, var(--sky), transparent); border-radius: 50%; opacity: 0.5; filter: blur(10px); }
+.shield-icon { position: absolute; font-size: 3rem; color: white; z-index: 5; }
+
+.orbit { position: absolute; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.ring-1 { width: 100%; height: 100%; animation: spin 10s linear infinite; }
+.ring-2 { width: 80%; height: 80%; animation: spin 8s linear infinite reverse; }
+.ring-3 { width: 60%; height: 60%; animation: spin 6s linear infinite; }
+.ring-4 { width: 120%; height: 120%; border-color: rgba(14, 165, 233, 0.2); animation: spin 15s linear infinite; }
+
+.orbit i { font-size: 1.5rem; background: #0f172a; padding: 5px; border-radius: 50%; position: absolute; top: -10px; color: var(--text-white); }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* --- TRACK CARDS --- */
+.track-card {
+    background: var(--panel-bg); border-radius: 12px; overflow: hidden; height: 100%; transition: 0.3s; border: 1px solid #333; position: relative;
+}
+.track-card:hover { transform: translateY(-10px); }
+.scale-up { transform: scale(1.05); z-index: 2; border: 2px solid var(--sky); box-shadow: 0 0 30px rgba(14, 165, 233, 0.1); }
+
+.popular-tag { position: absolute; top: 0; right: 0; background: var(--sky); color: white; padding: 5px 15px; font-size: 0.8rem; font-weight: bold; border-radius: 0 0 0 12px; }
+
+.card-header-gradient { padding: 30px; text-align: center; color: white; }
+.bg-orange-grad { background: linear-gradient(135deg, #f97316, #c2410c); }
+.bg-sky-grad { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+.bg-green-grad { background: linear-gradient(135deg, #10b981, #059669); }
+
+.card-body { padding: 30px; }
+.duration-badge { display: block; text-align: center; background: rgba(255,255,255,0.1); padding: 5px; border-radius: 4px; margin-bottom: 20px; font-size: 0.9rem; }
+
+.spec-list { list-style: none; padding: 0; margin-bottom: 25px; }
+.spec-list li { margin-bottom: 10px; font-size: 0.95rem; border-bottom: 1px solid #333; padding-bottom: 8px; }
+.spec-list i { width: 25px; }
+
+.btn-track { display: block; width: 100%; padding: 10px; text-align: center; border-radius: 4px; font-weight: bold; text-decoration: none; color: white; }
+.btn-orange { background: var(--orange); } .btn-sky { background: var(--sky); } .btn-green { background: var(--green); }
+
+.cloud-logos { display: flex; justify-content: center; gap: 15px; font-size: 2rem; color: var(--text-white); }
+
+/* --- CONSOLE --- */
+.cloud-console { display: flex; background: #000; border: 1px solid #333; border-radius: 8px; overflow: hidden; max-width: 800px; margin: 0 auto; height: 400px; }
+.console-sidebar { width: 60px; background: #111; border-right: 1px solid #333; padding: 15px; display: flex; flex-direction: column; align-items: center; gap: 20px; color: #555; }
+.console-sidebar i.active { color: var(--sky); }
+.dot { width: 10px; height: 10px; border-radius: 50%; margin-bottom: 5px; }
+
+.console-main { flex-grow: 1; padding: 20px; font-family: 'Rajdhani', sans-serif; }
+.server-row { background: #111; padding: 15px; border-radius: 4px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #333; }
+.terminal-log { height: 150px; background: #0a0a0a; border: 1px solid #333; padding: 10px; font-family: monospace; font-size: 0.85rem; color: #4ade80; overflow-y: auto; }
+
+/* --- SALARY GRID --- */
+.salary-grid { display: flex; flex-direction: column; gap: 15px; }
+.salary-item { background: #111; padding: 15px; border-radius: 4px; display: flex; justify-content: space-between; border-left: 3px solid #333; }
+.salary-item:hover { border-left-color: var(--sky); background: #1a1a1a; }
+
+.cert-showcase { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+.cert-card { background: #fff; color: #000; padding: 10px 20px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; }

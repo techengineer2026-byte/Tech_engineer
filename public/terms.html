@@ -15,27 +15,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Keywords (for reference, not ranking factor but helps consistency) -->
-    <meta name="keywords"
-        content="terms and conditions, Tech Engineer Mohali, IT services terms, web development terms, digital marketing terms, mobile app terms, cloud solutions terms, legal terms Mohali, IT company policies.">
+    <!-- <meta name="keywords"         content="terms and conditions, Tech Engineer Mohali, IT services terms, web development terms, digital marketing terms, mobile app terms, cloud solutions terms, legal terms Mohali, IT company policies."> -->
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://techengineer.co/terms.html">
+    <link rel="canonical" href="https://techengineer.co/terms">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-MZS1VS07WN');
+    </script>
 
     <meta property="og:title" content="Terms & Conditions | Tech Engineer">
     <meta property="og:description"
         content="Read the terms and conditions governing the use of Tech Engineer services and website.">
     <meta property="og:image" content="https://techengineer.co/images/logo.webp">
-    <meta property="og:url" content="https://techengineer.co/terms.html">
+    <meta property="og:url" content="https://techengineer.co/terms">
     <meta property="og:type" content="legal">
     <meta property="og:site_name" content="Tech Engineer">
 
@@ -43,6 +50,9 @@
     <meta name="twitter:title" content="Terms & Conditions | Tech Engineer">
     <meta name="twitter:description" content="Rules and policies for using our website and services.">
     <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
+    <meta name="twitter:url" content="https://techengineer.co/terms">
+    <meta name="twitter:site" content="@TechEngineer">
+
     <style>
         /* --- Google Fonts (Optional but recommended) --- */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
@@ -226,7 +236,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Terms & Conditions",
-      "url": "https://techengineer.coterms.html",
+      "url": "https://techengineer.co/terms",
       "description": "Terms & Conditions for Tech Engineer, an IT company in Mohali offering website development, mobile apps, digital marketing, and cloud solutions.",
       "publisher": {
         "@type": "Organization",
@@ -238,27 +248,19 @@
     </script>
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KPZ2FD2T');</script>
+
     <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPZ2FD2T" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container nav-wrapper">
-            <a href="index.html" class="logo">
-                <img src="images/logo.webp" alt="Tech Engineer Logo" loading="lazy">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy">
             </a>
 
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
@@ -268,16 +270,16 @@
             </button>
 
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
 
                 <li class="internship">
-                    <a href="https://industrialtraining.codebank.in/">
-                        <img src="images/icon.webp" alt="Internship" loading="lazy">
+                    <a href="/industrial-training">
+                        <img src="/images/icon.webp" alt="Internship" loading="lazy">
                         <span>Internship</span>
                     </a>
                 </li>
@@ -365,7 +367,7 @@
         <aside class="terms-sidebar">
             <!-- New sidebar content specific to Students -->
             <section class="news-events">
-                <h3>Student Notice Board</h3>
+                <h2>Student Notice Board</h2>
                 <ul>
                     <li>🔴 <strong>Important:</strong> Final Project Submission deadline is 25th of this month.</li>
                     <li>Upcoming Placement Drive: Wipro & HCL (Fresher Hiring)</li>
@@ -374,10 +376,10 @@
             </section>
 
             <section class="photo-gallery">
-                <h3>Campus Life</h3>
+                <h2>Campus Life</h2>
                 <!-- Replace with your actual image paths -->
-                <img src="images/gallery/2025-11-19 (1).webp" alt="Students in Lab">
-                <img src="images/gallery/AF1QipMpLw87OYR5iTIL0X-A7-buQz_X.webp" alt="Certification Day">
+                <img src="/images/gallery/2025-11-19 (1).webp" alt="Students in Lab">
+                <img src="/images/gallery/AF1QipMpLw87OYR5iTIL0X-A7-buQz_X.webp" alt="Certification Day">
             </section>
 
 
@@ -389,49 +391,52 @@
 
                 <!-- COLUMN 1: Logo & About -->
                 <div class="col-lg-3 col-md-6">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <img src="images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
+                    <a href="/" class="d-inline-block mb-3">
+                        <img src="/images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
                     </a>
 
                 </div>
 
                 <!-- COLUMN 2: Quick Links (Split) -->
+                <!-- COLUMN 2: Quick Links (Split) -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <h2 class="text-white fw-bold mb-3">Quick Links</h2>
                     <div class="row g-0">
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/gallery">Gallery</a></li> <!-- added here -->
                             </ul>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- COLUMN 3: Courses (Split) -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white fw-bold mb-3">Our Courses</h5>
+                    <h3 class="text-white fw-bold mb-3">Our Courses</h3>
                     <div class="row g-0">
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="web-designing-course-mohali.html">Web Design</a></li>
-                                <li><a href="programming-classes-mohali.html">Programming</a></li>
-                                <li><a href="graphic-design-course-mohali.html">Graphic Design</a></li>
+                                <li><a href="/web-designing-course-mohali">Web Design</a></li>
+                                <li><a href="/programming-classes-mohali">Programming</a></li>
+                                <li><a href="/graphic-design-course-mohali">Graphic Design</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="footer-list">
-                                <li><a href="digital-marketing-mohali.html">DigitalMarketing</a></li>
-                                <li><a href="dotnet-asp-course-mohali.html">Asp.Net</a></li>
-                                <li><a href="video-editing-course-mohali.html">Video Editior</a></li>
+                                <li><a href="/digital-marketing-mohali">Digital Marketing</a></li>
+                                <li><a href="/dotnet-asp-course-mohali">Asp.Net</a></li>
+                                <li><a href="/video-editing-course-mohali">Video Editior</a></li>
                             </ul>
                         </div>
                     </div>
@@ -439,7 +444,7 @@
 
                 <!-- COLUMN 4: Contact & Social -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white fw-bold mb-3">Get in Touch</h5>
+                    <h3 class="text-white fw-bold mb-3">Get in Touch</h3>
 
                     <!-- Contact Info -->
                     <ul class="footer-list contact-info mb-4">
@@ -461,8 +466,8 @@
                     <div class="social-icons">
                         <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
                             aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="http://www.youtube.com/@TechEngineerProgramming" target="_blank"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineer22" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
                         <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
                             aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
@@ -478,15 +483,16 @@
             <div class="container text-center">
                 <p class="mb-0 text-white-50 small">
                     &copy; 2025 Tech Engineer. All Rights Reserved. |
-                    <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy</a> |
-                    <a href="terms.html" class="text-white-50 text-decoration-none">Terms</a>
+                    <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
                 </p>
             </div>
         </div>
 
         <!-- Buttons -->
         <button id="backToTop" onclick="scrollToTop()" title="Back to Top">&#8679;</button>
-        <button id="btn-call" onclick="clicktocall()" title="Call Us"><i class="fas fa-phone-alt"></i></button>
+        <button id="btn-call" onclick="clicktocall()" title="Call Us"><i
+                class="bi bi-telephone-outbound-fill"></i></button>
         <button id="btn-wht" onclick="clicktowhatsapp()" aria-label="Chat on WhatsApp"><i
                 class="fab fa-whatsapp"></i></button>
 

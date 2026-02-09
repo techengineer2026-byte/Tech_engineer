@@ -4,8 +4,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Updated sitemap -->
-
+  <!-- Core Pages -->
   <url>
     <loc>https://techengineer.co/</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
@@ -13,79 +12,111 @@
   </url>
 
   <url>
-    <loc>https://techengineer.co/about.html</loc>
+    <loc>https://techengineer.co/about</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/services.html</loc>
+    <loc>https://techengineer.co/services</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/portfolio.html</loc>
+    <loc>https://techengineer.co/portfolio</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/blog.html</loc>
+    <loc>https://techengineer.co/gallery</loc>
+    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/blog</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/contact.html</loc>
+    <loc>https://techengineer.co/contact</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/programming-classes-mohali.html</loc>
+    <loc>https://techengineer.co/Social</loc>
+    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Course & Training Pages (High Priority for Growth) -->
+  <url>
+    <loc>https://techengineer.co/programming-classes-mohali</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/digital-marketing-mohali.html</loc>
+    <loc>https://techengineer.co/digital-marketing-mohali</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/web-designing-course-mohali.html</loc>
+    <loc>https://techengineer.co/web-designing-course-mohali</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/dotnet-asp-course-mohali.html</loc>
-    <lastmod>2025-08-07T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/graphic-design-course-mohali.html</loc>
+    <loc>https://techengineer.co/web-development-training</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/video-editing-course-mohali.html</loc>
+    <loc>https://techengineer.co/dotnet-asp-course-mohali</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/privacy-policy.html</loc>
+    <loc>https://techengineer.co/graphic-design-course-mohali</loc>
+    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/video-editing-course-mohali</loc>
+    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/data-analysis-mohali</loc>
+    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/industrial-training</loc>
+    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://techengineer.co/privacy-policy</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.50</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/terms.html</loc>
+    <loc>https://techengineer.co/terms</loc>
     <lastmod>2025-02-12T04:42:17+00:00</lastmod>
     <priority>0.50</priority>
   </url>

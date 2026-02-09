@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Science Course in Mohali | Python, ML, Deep Learning</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description"
+        content="Best Data Science Training in Mohali. Master Python, Machine Learning, Deep Learning, and AI. Build predictive models from scratch.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Animation Lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="style/science-theme.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND NEURAL NET -->
+    <canvas id="neuralCanvas"></canvas>
+    <div class="scifi-overlay"></div>
+
+    <!-- 🟢 HEADER -->
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100"
+                            style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="sci-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 z-index-2" data-aos="fade-right">
+                    <div class="badge-sci"><i class="fas fa-atom"></i> Artificial Intelligence Module</div>
+
+                    <h1 class="display-3 fw-bold mb-3">
+                        Don't Just Analyze.<br>
+                        <span class="text-indigo">Predict the Future.</span>
+                    </h1>
+
+                    <p class="lead text-gray mb-4 font-body">
+                        Data Analytics looks at the past. <strong>Data Science</strong> builds the future.
+                        Master <strong>Python</strong>, <strong>Statistics</strong>, and <strong>Algorithms</strong> to
+                        teach computers how to think.
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <a href="#lab-section" class="btn-sci shadow-lg">
+                            <i class="fas fa-robot me-2"></i> Train Model
+                        </a>
+                        <a href="https://wa.me/918544884846" class="btn-outline-sci"><i
+                                class="fab fa-whatsapp me-2"></i> Chat</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 text-center position-relative" data-aos="zoom-in">
+                    <!-- 3D DNA/DATA STRAND -->
+                    <div class="dna-container">
+                        <div class="dna-strand"></div>
+                        <div class="floating-brain">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="data-particles">
+                            <span class="p1">01</span>
+                            <span class="p2">10</span>
+                            <span class="p3">AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ AUDIENCE & PREREQUISITES -->
+    <section class="py-5 bg-dark-glass border-y-indigo">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-indigo">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-microscope text-indigo me-2"></i>
+                        Who Is This For?</h2>
+                    <ul class="list-unstyled text-gray font-body">
+                        <li class="mb-2">>> Mathematicians & Statisticians</li>
+                        <li class="mb-2">>> Coders wanting to move into AI</li>
+                        <li class="mb-0">>> Problem Solvers</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fab fa-python text-yellow me-2"></i>
+                        Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Curiosity + Logic.
+                        <br><span class="text-white small">We teach Python and Math from absolute zero.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO: PREDICTION LAB -->
+    <section id="lab-section" class="py-5 bg-darker">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold text-white font-tech">The <span class="text-indigo">Prediction</span> Lab
+                </h2>
+                <p class="text-gray">Input data. Let the Machine Learning model predict the outcome.</p>
+            </div>
+
+            <div class="notebook-console shadow-lg">
+                <!-- TOP BAR (JUPYTER STYLE) -->
+                <div class="notebook-header">
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-secondary">Python 3</span>
+                        <span class="text-muted small">salary_predictor.ipynb</span>
+                    </div>
+                    <button id="btnRun" class="btn btn-sm btn-sci"><i class="fas fa-play me-1"></i> RUN CELL</button>
+                </div>
+
+                <div class="notebook-body">
+                    <!-- CODE CELL -->
+                    <div class="cell code-cell">
+                        <span class="prompt-text">In [1]:</span>
+                        <div class="code-area font-tech">
+                            <span class="c-key">import</span> sklearn <span class="c-key">as</span> sk<br>
+                            <span class="c-def">experience</span> = <input type="number" id="expInput"
+                                class="code-input" value="5" min="1" max="20"> <span class="c-comment">#
+                                Years</span><br>
+                            <span class="c-def">model</span> = sk.LinearRegression()<br>
+                            <span class="c-key">print</span>(model.predict(<span class="c-def">experience</span>))
+                        </div>
+                    </div>
+
+                    <!-- OUTPUT CELL -->
+                    <div class="cell output-cell" id="outputCell" style="display:none;">
+                        <span class="prompt-text">Out [1]:</span>
+                        <div class="output-area">
+                            <div class="loading-bar"></div>
+                            <span id="predictionText" class="text-success fw-bold font-tech"></span>
+                            <div class="graph-box mt-3">
+                                <div class="graph-line"></div>
+                                <div class="graph-point"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ CURRICULUM (THE FORMULA) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold text-white font-tech">The <span class="text-yellow">Scientist's</span>
+                    Stack</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Python -->
+                <div class="col-md-3 col-6" data-aos="fade-up">
+                    <div class="element-card border-blue">
+                        <div class="atom-icon bg-blue-soft"><i class="fab fa-python"></i></div>
+                        <h5 class="text-white">Python</h5>
+                        <p class="small text-gray">The Language of AI.</p>
+                    </div>
+                </div>
+
+                <!-- Math -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="element-card border-indigo">
+                        <div class="atom-icon bg-indigo-soft"><i class="fas fa-square-root-alt"></i></div>
+                        <h5 class="text-white">Statistics</h5>
+                        <p class="small text-gray">Probability & Logic.</p>
+                    </div>
+                </div>
+
+                <!-- ML -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="element-card border-yellow">
+                        <div class="atom-icon bg-yellow-soft"><i class="fas fa-brain"></i></div>
+                        <h5 class="text-white">Machine Learning</h5>
+                        <p class="small text-gray">Scikit-Learn Algorithms.</p>
+                    </div>
+                </div>
+
+                <!-- Deep Learning -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="element-card border-red">
+                        <div class="atom-icon bg-red-soft"><i class="fas fa-network-wired"></i></div>
+                        <h5 class="text-white">Deep Learning</h5>
+                        <p class="small text-gray">Neural Networks (TensorFlow).</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ CAREER & SALARY -->
+    <section class="py-5 bg-darker border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold text-white mb-3 font-tech">Sexiest Job of the 21st Century</h2>
+                    <p class="text-gray">
+                        Data Scientists are the highest-paid professionals in the tech industry.
+                    </p>
+
+                    <div class="job-radar mt-4">
+                        <div class="radar-row">
+                            <span class="text-white">Data Scientist</span>
+                            <span class="text-indigo fw-bold">₹8L - ₹15L</span>
+                        </div>
+                        <div class="radar-row">
+                            <span class="text-white">ML Engineer</span>
+                            <span class="text-indigo fw-bold">₹10L - ₹20L</span>
+                        </div>
+                        <div class="radar-row">
+                            <span class="text-white">AI Researcher</span>
+                            <span class="text-indigo fw-bold">₹12L+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <div class="hologram-card p-4 rounded-3 shadow-lg bg-panel">
+                        <i class="fas fa-certificate fa-4x text-indigo mb-3"></i>
+                        <h3 class="h4 text-white">Certified Data Scientist</h3>
+                        <p class="small text-gray">Valid for Top MNCs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <footer class="py-5 text-center bg-darker text-white border-top border-secondary">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-3 font-tech">Invent the Future.</h2>
+            <p class="lead text-gray mb-4">Batch starting soon. Secure your scholarship.</p>
+
+            <a href="tel:+918544884846" class="btn-sci btn-lg shadow-lg rounded-pill px-5">
+                <i class="fas fa-phone-alt me-2"></i> Call for Fee Details
+            </a>
+
+            <div class="mt-5 text-gray small">
+                &copy; 2025 Tech Engineer. Phase 8B, Mohali.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/science-logic.js"></script>
+</body>
+
+</html>

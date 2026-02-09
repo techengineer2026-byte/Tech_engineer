@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MZS1VS07WN');
+    </script>
+    <style>
+        /* Base Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f1014;
+            /* Dark Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container for the buttons */
+        .social-container {
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 Columns for Desktop */
+            gap: 20px;
+        }
+
+        /* The Button Style */
+        .social-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            /* Icons on left */
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+            /* Glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Icon Styling */
+        .social-btn i {
+            font-size: 24px;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Text Styling */
+        .text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .handle {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* --- ANIMATIONS & COLORS --- */
+
+        /* 1. YouTube Animation */
+        .social-btn.yt:hover {
+            background: rgba(255, 0, 0, 0.1);
+            border-color: #ff0000;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(255, 0, 0, 0.4);
+        }
+
+        .social-btn.yt i {
+            color: #ff0000;
+        }
+
+        .social-btn.yt:hover i {
+            transform: scale(1.2) rotate(-10deg);
+            color: #fff;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        /* 2. Instagram Animation */
+        .social-btn.ig:hover {
+            background: linear-gradient(45deg, rgba(64, 93, 230, 0.1), rgba(193, 53, 132, 0.1));
+            border-color: #c13584;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(193, 53, 132, 0.4);
+        }
+
+        .social-btn.ig i {
+            background: -webkit-linear-gradient(#405DE6, #833AB4, #C13584);
+            -webkit-background-clip: text;
+            background-clip: text;              
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-btn.ig:hover i {
+            transform: scale(1.2) rotate(10deg);
+            -webkit-text-fill-color: #fff;
+            text-shadow: 0 0 10px #C13584;
+        }
+
+        /* 3. Website Animation */
+        .social-btn.web:hover {
+            background: rgba(0, 191, 255, 0.1);
+            border-color: #00bfff;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(0, 191, 255, 0.4);
+        }
+
+        .social-btn.web i {
+            color: #00bfff;
+        }
+
+        .social-btn.web:hover i {
+            transform: scale(1.2);
+            color: #fff;
+            text-shadow: 0 0 10px #00bfff;
+        }
+
+
+        /* Shine Effect Overlay */
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+
+        .social-btn:hover::before {
+            left: 100%;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 600px) {
+            .social-container {
+                grid-template-columns: 1fr;
+                /* 1 Column for Mobile */
+            }
+
+            .social-btn {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="social-container">
+
+        <!-- Tech Engineer Website -->
+        <a href="https://techengineer.co/" target="_blank" class="social-btn web">
+            <i class="fa-solid fa-globe"></i>
+            <div class="text-group">
+                <span class="label">Website</span>
+                <span class="handle">techengineer.co</span>
+            </div>
+        </a>
+
+        <!-- Tech Caste Website -->
+        <a href="https://techcast.techengineer.co" target="_blank" class="social-btn web">
+            <i class="fa-solid fa-laptop-code"></i>
+            <div class="text-group">
+                <span class="label">Website</span>
+                <span class="handle">techcast.techengineer.co</span>
+            </div>
+        </a>
+
+        <!-- Tech Engineer Programming YT -->
+        <a href="https://www.youtube.com/@TechEngineer22" target="_blank" class="social-btn yt">
+            <i class="fa-brands fa-youtube"></i>
+            <div class="text-group">
+                <span class="label">YouTube</span>
+                <span class="handle">@TechEngineer22</span>
+            </div>
+        </a>
+
+        <!-- Tech Caste YT -->
+        <a href="https://www.youtube.com/@TechCaste" target="_blank" class="social-btn yt">
+            <i class="fa-brands fa-youtube"></i>
+            <div class="text-group">
+                <span class="label">YouTube</span>
+                <span class="handle">@TechCaste</span>
+            </div>
+        </a>
+
+        <!-- Tech Engineer IG -->
+        <!-- Note: Assuming 3 underscores based on your prompt "tech_ _ _engineer" -->
+        <a href="https://www.instagram.com/tech___engineer/" target="_blank" class="social-btn ig">
+            <i class="fa-brands fa-instagram"></i>
+            <div class="text-group">
+                <span class="label">Instagram</span>
+                <span class="handle">tech_ _ _engineer</span>
+            </div>
+        </a>
+
+        <!-- Tech Caste IG -->
+        <a href="https://www.instagram.com/techcast5/" target="_blank" class="social-btn ig">
+            <i class="fa-brands fa-instagram"></i>
+            <div class="text-group">
+                <span class="label">Instagram</span>
+                <span class="handle">techcast5</span>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

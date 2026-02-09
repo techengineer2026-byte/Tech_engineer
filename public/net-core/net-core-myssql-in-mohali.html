@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Industrial MSSQL Training in Mohali. Master Database Optimization, Stored Procedures, and Backend Architecture for .NET Developers.">
+    <title>Database Module – MSSQL Industrial Training | Tech Engineer</title>
+
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/mssql-theme.css">
+    <link rel="stylesheet" href="/style/header.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100"
+                            style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- BACKGROUND DATA STREAM -->
+    <div class="data-stream-bg"></div>
+    <div class="overlay"></div>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <header class="sql-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="badge-sql"><i class="fas fa-database"></i> Database Module</div>
+
+                    <!-- H1: MAIN TITLE -->
+                    <h1 class="display-3 fw-bold mb-3">
+                        Master the <span class="text-gold">Query.</span><br>
+                        Control the Data.<br>
+                        <span class="text-white fs-3 d-block mt-2">Build Fast, Scalable Applications.</span>
+                    </h1>
+
+                    <p class="lead text-gray mb-4">
+                        In the real world, bad queries kill apps. Learn
+                        <strong>Microsoft SQL Server (MSSQL)</strong>: Stored Procedures, Indexing,
+                        and Optimization aligned with industrial standards.
+                    </p>
+
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <a href="#demo-zone" class="btn-gold">Run Live Query <i class="fas fa-play ms-2"></i></a>
+                        <!-- CONTEXT ADDED -->
+                        <span class="small text-gold"><i class="fas fa-circle text-danger me-1"></i> Interactive Demo:
+                            See how real queries behave under load.</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <!-- 3D SERVER VISUAL -->
+                    <div class="server-rack">
+                        <div class="server-blade">
+                            <span class="blink-light green"></span> <span class="blink-light red"></span>
+                            <span class="label">Primary_DB_01</span>
+                        </div>
+                        <div class="server-blade">
+                            <span class="blink-light green"></span>
+                            <span class="label">Replica_02</span>
+                        </div>
+                        <div class="server-blade">
+                            <span class="blink-light green"></span> <span class="blink-light yellow"></span>
+                            <span class="label">Log_Server_03</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2️⃣ WHO IS THIS FOR (Section H2) -->
+    <section class="py-5 bg-darker-panel border-y-gold">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <!-- Who is this for? -->
+                <div class="col-md-6 border-end-gold">
+                    <h2 class="h4 fw-bold text-white mb-3"><i class="fas fa-user-check text-gold me-2"></i> Who Is This
+                        For?</h2>
+                    <ul class="list-unstyled text-gray">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Beginners in BCA / MCA / B.Tech
+                        </li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Students knowing basic SQL</li>
+                        <li class="mb-0"><i class="fas fa-check text-success me-2"></i> Freshers aiming for Backend /
+                            .NET roles</li>
+                    </ul>
+                </div>
+
+                <!-- Prerequisites -->
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3"><i class="fas fa-info-circle text-info me-2"></i>
+                        Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Just basic knowledge of <code class="text-gold">SELECT</code> and <code
+                            class="text-gold">WHERE</code>.
+                        <br><span class="text-white small">No prior industrial experience required. We start from
+                            scratch.</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO (Section H2) -->
+    <section id="demo-zone" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold">Why <span class="text-gold">Indexing</span> Matters</h2>
+                <p class="text-gray">Toggle the switch to see the difference.</p>
+            </div>
+
+            <div class="demo-console">
+                <div class="console-header">
+                    <span>SQL Server Management Studio (SSMS)</span>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- JUNIOR VS PRO LABEL -->
+                        <span class="small text-muted text-uppercase fw-bold d-none d-md-block">⚖️ Junior Dev vs Pro
+                            Dev</span>
+
+                        <div class="toggle-wrapper">
+                            <span>No Index</span>
+                            <label class="switch">
+                                <input type="checkbox" id="indexToggle">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="text-gold fw-bold">With Index</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="console-body">
+                    <div class="code-line">
+                        <span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> Orders <br>
+                        <span class="sql-keyword">WHERE</span> CustomerID = <span class="sql-var">94821</span>;
+                    </div>
+                    <hr class="border-secondary my-4">
+                    <div class="result-box">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Scanning 1,000,000 Rows...</span>
+                            <span id="timerDisplay">Waiting...</span>
+                        </div>
+                        <div class="progress" style="height: 25px; background: #333;">
+                            <div id="queryProgressBar" class="progress-bar bg-danger" role="progressbar"
+                                style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ REAL PROBLEMS (Section H2) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Real World Problems -->
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold text-white mb-4">Real Problems You'll Solve</h2>
+
+                    <div class="problem-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-warning me-3"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Why is my API slow?</h3>
+                                <p class="small text-gray mb-0">Learn to identify bottlenecks using Execution Plans.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="problem-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-warning me-3"><i class="fas fa-bomb"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Handling Large Data</h3>
+                                <p class="small text-gray mb-0">Process 1 Million+ records without crashing the app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The .NET Connection -->
+                <div class="col-lg-6">
+                    <div class="dotnet-connect-box p-4 border-gold h-100">
+                        <h2 class="h3 fw-bold text-gold mb-3"><i class="fas fa-link"></i> The .NET Connection</h2>
+                        <p class="text-gray">Why learn MSSQL for .NET Development?</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3 d-flex"><i class="fas fa-rocket text-gold me-3 mt-1"></i>
+                                <div><strong>Faster APIs:</strong> Optimized DB means faster .NET Web APIs.</div>
+                            </li>
+                            <li class="mb-3 d-flex"><i class="fas fa-layer-group text-gold me-3 mt-1"></i>
+                                <div><strong>Clean Architecture:</strong> Keep your C# code clean by handling data logic
+                                    in SQL.</div>
+                            </li>
+                            <li class="d-flex"><i class="fas fa-shield-alt text-gold me-3 mt-1"></i>
+                                <div><strong>Security:</strong> Prevent SQL Injection in your ASP.NET Core apps.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ TOOLS & ENVIRONMENT (Section H2) -->
+    <section class="py-5 bg-darker-panel">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-5">Tools & <span class="text-gold">Environment</span></h2>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="tool-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Desktop_computer_clipart_-_Yellow_theme.svg/1200px-Desktop_computer_clipart_-_Yellow_theme.svg.png"
+                            width="50" class="mb-3 grayscale">
+                        <h3 class="h5">MS SQL Server</h3>
+                        <p class="small text-gray">The Engine</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tool-card">
+                        <i class="fas fa-laptop-code fa-3x text-gold mb-3"></i>
+                        <h3 class="h5">SSMS</h3>
+                        <p class="small text-gray">Management Studio</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tool-card">
+                        <i class="fas fa-chart-area fa-3x text-gold mb-3"></i>
+                        <h3 class="h5">Execution Plans</h3>
+                        <p class="small text-gray">Performance Analyzer</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tool-card">
+                        <i class="fas fa-flask fa-3x text-gold mb-3"></i>
+                        <h3 class="h5">Real Datasets</h3>
+                        <p class="small text-gray">1 Million+ Records</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-4 text-gold"><i class="fas fa-vial me-2"></i> <strong>Hands-on Focus:</strong> Every topic
+                includes live queries & debugging.</p>
+        </div>
+    </section>
+
+    <!-- 6️⃣ CURRICULUM GRID (Section H2) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold">Inside the <span class="text-gold">Curriculum</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-box">
+                        <i class="fas fa-code icon-box"></i>
+                        <h3 class="h4">Advanced T-SQL</h3>
+                        <p>Joins, Subqueries, CTEs, and Window Functions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-box">
+                        <i class="fas fa-cogs icon-box"></i>
+                        <h3 class="h4">Stored Procedures</h3>
+                        <p>Pre-compiled logic for security & speed.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-box">
+                        <i class="fas fa-table icon-box"></i>
+                        <h3 class="h4">Normalization</h3>
+                        <p>Designing tables (1NF to 3NF) to avoid redundancy.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-box">
+                        <i class="fas fa-tachometer-alt icon-box"></i>
+                        <h3 class="h4">Performance Tuning</h3>
+                        <p>Execution plans, Indexing, and Profiling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7️⃣ OUTCOMES (Section H2) -->
+    <section class="py-5 border-y-gold">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="h3 fw-bold text-white mb-2">Your Outcomes</h2>
+                    <!-- ROLE MAPPING ADDED -->
+                    <p class="text-gray mb-4 small"><i class="fas fa-briefcase text-gold me-2"></i> Skills aligned with
+                        .NET Developer / Backend Developer roles</p>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="outcome-item"><i class="fas fa-check-circle text-gold me-2"></i> Write queries
+                                optimized for 1M+ rows</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="outcome-item"><i class="fas fa-check-circle text-gold me-2"></i> Improve
+                                Performance by 10x</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="outcome-item"><i class="fas fa-check-circle text-gold me-2"></i> Analyze
+                                Execution Plans</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="outcome-item"><i class="fas fa-check-circle text-gold me-2"></i> Design Scalable
+                                Schemas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="cert-box p-4 bg-darker-panel border-gold">
+                        <i class="fas fa-certificate fa-4x text-gold mb-3"></i>
+                        <h3 class="h4 text-white">Industry Certification</h3>
+                        <p class="small text-gray">Awarded upon project completion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8️⃣ FOOTER & CTA -->
+    <footer class="py-5 text-center">
+        <div class="container">
+            <!-- Soft CTA -->
+            <p class="lead text-gray mb-4">Ready to work with databases like a professional developer?</p>
+
+            <h2 class="display-5 fw-bold mb-4">Stop Writing Bad Queries.</h2>
+
+            <!-- URGENCY CTA -->
+            <a href="tel:+918544884846" class="btn-gold">Start Industrial MSSQL Training Today</a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script/mssql-logic.js"></script>
+</body>
+
+</html>

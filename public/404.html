@@ -1,51 +1,120 @@
-<!-- MANDATORY_REVIEWERS: airbnb/web-platform -->
-<!-- File should be kept in sync with "https://sourcegraph.d.musta.ch/airbnb/airbnb/-/blob/app/views/routes/helpful_404.html.erb" -->
-<!-- and "https://git.musta.ch/airbnb/airbnb/blob/master/frontend/public/404.html" -->
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>404 Page Not Found - Airbnb</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
+        .content {
+            text-align: center;
+            z-index: 2;
+        }
 
-  <!-- CSS style sheets taken from https://sourcegraph.d.musta.ch/airbnb/airbnb/-/blob/app/views/routes/helpful_404.html.erb -->
-  <link
-    href="https://a0.muscache.com/airbnb/static/packages/dls/common_o2.1_cereal-4e0adc51966c85fefe84f5454591ffe2.css"
-    media="all" rel="stylesheet" type="text/css">
-  <link href="https://a0.muscache.com/airbnb/static/error_pages_pretzel-8249b587d67dfc3b37f6db39ec0a80f1.css"
-    media="all" rel="stylesheet" type="text/css">
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
 
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        h3 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
 
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
 
+        .btn {
+            border: 2px solid white;
+            padding: 10px 30px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #1e1e1e;
+        }
+
+        /* Animated Planet */
+        .planet {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to bottom, #feaa5a, #d65c5c);
+            border-radius: 50%;
+            top: 20%;
+            right: 20%;
+            z-index: 1;
+            box-shadow: inset -20px -20px 50px rgba(0,0,0,0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .planet::before {
+            content: '';
+            position: absolute;
+            width: 280px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-20deg);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+            background-size: 550px 550px, 350px 350px, 250px 250px; 
+            background-position: 0 0, 40px 60px, 130px 270px;
+        }
+    </style>
 </head>
-
 <body>
 
+    <div class="stars"></div>
+    <div class="planet"></div>
 
-
-  <div class="page-container page-container-responsive">
-    <div class="row space-top-8 space-8">
-      <div class="col-5 col-middle">
-        <h1 class="text-jumbo text-ginormous">Oops!</h1>
-        <h2>We can't seem to find the page you're looking for.</h2>
-        <h6>Error code: 404</h6>
-        <ul class="list-unstyled">
-          <li>Here are some helpful links instead:</li>
-          <li><a style="color: #008489;" href="/">Home</a></li>
-        </ul>
-      </div>
-      <div class="col-5 col-middle text-center">
-        <img
-          src="https://a0.muscache.com/airbnb/static/error_pages/404-Airbnb_final-d652ff855b1335dd3eedc3baa8dc8b69.gif"
-          width="313" height="428" alt="Girl has dropped her ice cream.">
-      </div>
+    <div class="content">
+        <h1>404</h1>
+        <h3>Houston, we have a problem.</h3>
+        <p>The page you are looking for has drifted into deep space.</p>
+        <a href="/" class="btn">Return to Earth</a>
     </div>
-  </div>
-  </div>
-</body>
 
+</body>
 </html>

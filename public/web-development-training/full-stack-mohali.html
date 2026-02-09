@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Full Stack Development Course Mohali | MERN & .NET Stack</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Become a Full Stack Developer in Mohali. Master Frontend (React), Backend (Node/.NET), Database (SQL/Mongo), and DevOps.">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+    
+    <!-- Animation Lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="/style/header.css"> 
+    <link rel="stylesheet" href="style/fullstack-theme.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND HEX MESH -->
+    <div class="hex-mesh"></div>
+    <div class="spotlight-top"></div>
+
+    <!-- 🟢 HEADER -->
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy" style="height:auto; width:110px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/logo.webp" alt="Internship" width="300" height="100" style="width:75px; height:auto;" loading="lazy" />
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="stack-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 z-index-2" data-aos="fade-right">
+                    <div class="badge-gold"><i class="fas fa-layer-group"></i> Master All Layers</div>
+                    
+                    <h1 class="display-3 fw-bold mb-3 text-white">
+                        Don't Choose Sides.<br>
+                        <span class="text-gradient">Own The Stack.</span>
+                    </h1>
+                    
+                    <p class="lead text-gray mb-4 font-body">
+                        Frontend makes it look good. Backend makes it work. 
+                        <strong>Full Stack Developers</strong> do both. Master <strong>MERN</strong> or <strong>.NET</strong> stack and become the most valuable asset in any tech team.
+                    </p>
+                    
+                    <div class="d-flex gap-3">
+                        <a href="#deploy-lab" class="btn-gold shadow-lg">
+                            <i class="fas fa-rocket me-2"></i> Deploy App
+                        </a>
+                        <a href="https://wa.me/918544884846" class="btn-outline-gold"><i class="fab fa-whatsapp me-2"></i> Chat</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 text-center position-relative" data-aos="zoom-in">
+                    <!-- 3D ISOMETRIC STACK VISUAL -->
+                    <div class="iso-stack">
+                        <div class="iso-layer l-front">
+                            <i class="fab fa-react fa-2x"></i>
+                            <span>Frontend</span>
+                        </div>
+                        <div class="iso-layer l-mid">
+                            <i class="fab fa-node fa-2x"></i>
+                            <span>API / Logic</span>
+                        </div>
+                        <div class="iso-layer l-back">
+                            <i class="fas fa-database fa-2x"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="iso-base"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ AUDIENCE & PREREQUISITES -->
+    <section class="py-5 bg-dark-glass border-y-gold">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-gold">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-users text-gold me-2"></i> Who Is This For?</h2>
+                    <ul class="list-unstyled text-gray font-body">
+                        <li class="mb-2">>> Frontend Devs wanting Backend power</li>
+                        <li class="mb-2">>> Backend Devs wanting UI skills</li>
+                        <li class="mb-0">>> Startup Founders (Build MVP solo)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3 font-tech"><i class="fas fa-code text-blue me-2"></i> Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Dedication.
+                        <br><span class="text-white small">We take you from HTML basics to Cloud Deployment.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO: FULL CYCLE SIMULATOR -->
+    <section id="deploy-lab" class="py-5 bg-darker">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold text-white font-tech">The <span class="text-gradient">Request</span> Cycle</h2>
+                <p class="text-gray">Visualize how data travels from User to Server and back.</p>
+            </div>
+
+            <div class="cycle-console shadow-lg">
+                <!-- DIAGRAM -->
+                <div class="flow-diagram">
+                    <!-- CLIENT -->
+                    <div class="node-box" id="nodeClient">
+                        <i class="fas fa-laptop text-blue"></i>
+                        <span>Client</span>
+                    </div>
+
+                    <div class="pipe p1"></div>
+
+                    <!-- SERVER -->
+                    <div class="node-box" id="nodeServer">
+                        <i class="fas fa-server text-green"></i>
+                        <span>Server</span>
+                    </div>
+
+                    <div class="pipe p2"></div>
+
+                    <!-- DB -->
+                    <div class="node-box" id="nodeDB">
+                        <i class="fas fa-database text-gold"></i>
+                        <span>DB</span>
+                    </div>
+
+                    <!-- Travelling Data Packet -->
+                    <div class="packet" id="dataPacket"></div>
+                </div>
+
+                <!-- CONTROLS -->
+                <div class="console-controls text-center mt-5">
+                    <button id="btnFetch" class="btn btn-gold px-5 fw-bold">SEND REQUEST</button>
+                    <div class="mt-3 text-mono text-gray" id="statusLog">> System Idle.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ CURRICULUM (THE BIG 4) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold text-white font-tech">The <span class="text-gold">Tech</span> Quartet</h2>
+            </div>
+            
+            <div class="row g-4">
+                
+                <!-- FRONTEND -->
+                <div class="col-md-3 col-6" data-aos="fade-up">
+                    <div class="tech-card border-blue">
+                        <div class="icon-circle bg-blue-soft"><i class="fab fa-react"></i></div>
+                        <h5 class="text-white">Frontend</h5>
+                        <p class="small text-gray">React.js / Angular<br>Tailwind CSS</p>
+                    </div>
+                </div>
+
+                <!-- BACKEND -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card border-green">
+                        <div class="icon-circle bg-green-soft"><i class="fab fa-node"></i></div>
+                        <h5 class="text-white">Backend</h5>
+                        <p class="small text-gray">Node.js / Express<br>C# .NET Core</p>
+                    </div>
+                </div>
+
+                <!-- DATABASE -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-card border-gold">
+                        <div class="icon-circle bg-gold-soft"><i class="fas fa-database"></i></div>
+                        <h5 class="text-white">Database</h5>
+                        <p class="small text-gray">MongoDB (NoSQL)<br>SQL Server</p>
+                    </div>
+                </div>
+
+                <!-- DEVOPS -->
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-card border-purple">
+                        <div class="icon-circle bg-purple-soft"><i class="fab fa-aws"></i></div>
+                        <h5 class="text-white">Deployment</h5>
+                        <p class="small text-gray">AWS / Azure<br>Docker & Git</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ CAREER & SALARY -->
+    <section class="py-5 bg-darker border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold text-white mb-3 font-tech">Why Full Stack?</h2>
+                    <p class="text-gray">
+                        Companies prefer hiring <strong>one</strong> person who can do everything over hiring two specialists. 
+                        Full Stack Developers are the highest paid engineers.
+                    </p>
+                    
+                    <div class="career-tags mt-4">
+                        <span class="tag">MERN Stack Dev</span>
+                        <span class="tag">MEAN Stack Dev</span>
+                        <span class="tag">.NET Full Stack</span>
+                        <span class="tag">Technical Lead</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 text-center">
+                    <div class="salary-card p-4 rounded-3 shadow-lg bg-panel">
+                        <div class="text-muted small text-uppercase fw-bold">Average Salary</div>
+                        <h2 class="display-4 fw-bold text-gold">₹5L - ₹12L</h2>
+                        <p class="small text-white mb-0">Starting Package for Freshers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <footer class="py-5 text-center bg-darker text-white border-top border-secondary">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-3 font-tech">Build The Whole Thing.</h2>
+            <p class="lead text-gray mb-4">Batch starting soon. Become an independent developer.</p>
+            
+            <a href="tel:+918544884846" class="btn-gold btn-lg shadow-lg rounded-pill px-5">
+                <i class="fas fa-phone-alt me-2"></i> Call for Fee Details
+            </a>
+            
+            <div class="mt-5 text-gray small">
+                &copy; 2025 Tech Engineer. Phase 8B, Mohali.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/fullstack-logic.js"></script>
+</body>
+</html>

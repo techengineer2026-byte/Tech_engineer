@@ -1,0 +1,233 @@
+/* --- EXISTING CSS VARIABLES (Keep these) --- */
+:root {
+    --bg-dark: #0b0c10;
+    --panel-bg: #1f2833;
+    --gold: #ffc107;
+    --gold-glow: rgba(255, 193, 7, 0.4);
+    --text-main: #c5c6c7;
+    --code-bg: #121212;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- BACKGROUND MATRIX EFFECT --- */
+.data-stream-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(31, 40, 51, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 40, 51, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -2;
+}
+.overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, var(--bg-dark) 90%);
+    z-index: -1;
+}
+
+/* --- HERO --- */
+.sql-hero {
+    padding: 100px 0;
+    min-height: 80vh;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.text-gold { color: var(--gold); text-shadow: 0 0 15px var(--gold-glow); }
+.text-gray { color: #888; }
+
+.badge-sql {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #000;
+    padding: 15px 35px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-gold:hover {
+    background: #ffdb58;
+    box-shadow: 0 0 20px var(--gold-glow);
+    transform: translateY(-2px);
+}
+
+/* --- SERVER RACK VISUAL --- */
+.server-rack {
+    background: #000;
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+.server-blade {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.server-blade:hover { border-color: var(--gold); }
+.blink-light { width: 8px; height: 8px; border-radius: 50%; display: inline-block; animation: blink 0.5s infinite alternate; }
+.green { background: #0f0; box-shadow: 0 0 5px #0f0; }
+.red { background: #f00; animation-duration: 0.2s; }
+.yellow { background: var(--gold); }
+.label { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: #555; margin-left: auto; }
+
+@keyframes blink { from {opacity: 0.3;} to {opacity: 1;} }
+
+/* --- INTERACTIVE CONSOLE --- */
+.demo-console {
+    background: var(--code-bg);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.console-header {
+    background: #1f1f1f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+.console-body { padding: 30px; font-family: 'Fira Code', monospace; }
+
+/* Code Highlight */
+.sql-keyword { color: #569cd6; font-weight: bold; }
+.sql-var { color: #b5cea8; }
+
+/* Progress Bar Custom */
+.progress-bar { transition: width 1s linear; }
+
+/* Switch Toggle */
+.switch { position: relative; display: inline-block; width: 40px; height: 20px; margin: 0 10px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 20px; }
+.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--gold); }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* --- TECH BOXES --- */
+.tech-box {
+    background: var(--panel-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    height: 100%;
+}
+.tech-box:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.icon-box {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+/* Section Utility Colors */
+.bg-darker-panel { background-color: #14161f; }
+.border-y-gold { border-top: 1px solid rgba(255, 193, 7, 0.2); border-bottom: 1px solid rgba(255, 193, 7, 0.2); }
+.border-end-gold { border-right: 1px solid rgba(255, 193, 7, 0.2); }
+
+/* Mobile Adjustment for Borders */
+@media (max-width: 768px) {
+    .border-end-gold { border-right: none; border-bottom: 1px solid rgba(255, 193, 7, 0.2); padding-bottom: 20px; margin-bottom: 20px; }
+}
+
+/* Problem Cards */
+.problem-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+}
+.icon-warning {
+    font-size: 1.5rem;
+    color: var(--gold);
+    background: rgba(255, 193, 7, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* .NET Connect Box */
+.dotnet-connect-box {
+    background: rgba(139, 92, 246, 0.05); /* Slight purple tint */
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+}
+.border-gold { border-color: var(--gold) !important; }
+
+/* Tool Cards */
+.tool-card {
+    background: var(--panel-bg);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    height: 100%;
+    border: 1px solid transparent;
+}
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+.grayscale { filter: grayscale(100%); transition: 0.3s; }
+.tool-card:hover .grayscale { filter: grayscale(0%); }
+
+/* Outcome Items */
+.outcome-item {
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    border-radius: 50px;
+    color: #ddd;
+    font-size: 0.95rem;
+}
+
+/* Certificate Box */
+.cert-box {
+    border-radius: 12px;
+    border: 2px dashed var(--gold);
+    position: relative;
+    overflow: hidden;
+}
+.cert-box::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(rgba(255, 193, 7, 0.1), transparent);
+    animation: rotate 10s linear infinite;
+}
+@keyframes rotate { 100% { transform: rotate(360deg); } }

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master RESTful Web APIs in .NET Core. Learn JWT, Swagger, Microservices communication, and Postman testing in Mohali.">
+    <title>API Module – RESTful Services Training | Tech Engineer</title>
+    
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Outfit:wght@300;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/api-theme.css">
+</head>
+<body>
+
+    <!-- BACKGROUND NETWORK -->
+    <div class="network-bg"></div>
+    <div class="particles"></div>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <header class="api-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="badge-api"><i class="fas fa-cloud"></i> API Module</div>
+                    
+                    <h1 class="display-3 fw-bold mb-3">
+                        The Invisible <span class="text-orange">Engine</span><br>
+                        of the Internet.
+                    </h1>
+                    
+                    <p class="lead text-gray mb-4">
+                        Websites are just the skin. <strong>APIs</strong> are the muscle. 
+                        Master <strong>RESTful Architecture</strong>, <strong>JWT Security</strong>, and connect 
+                        Mobile Apps, React Frontends, and Cloud Servers.
+                    </p>
+                    
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <a href="#postman-lab" class="btn-orange">
+                            <i class="fas fa-paper-plane me-2"></i> Send Request
+                        </a>
+                        <span class="small text-orange mt-2"><i class="fas fa-terminal me-1"></i> Interactive Demo: Postman Simulator Below.</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 text-center">
+                    <!-- FLOATING API NODE VISUAL -->
+                    <div class="api-node-container">
+                        <div class="center-node">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <!-- Orbiting Satellites -->
+                        <div class="satellite sat-1"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="satellite sat-2"><i class="fab fa-react"></i></div>
+                        <div class="satellite sat-3"><i class="fas fa-database"></i></div>
+                        <div class="connection-rings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2️⃣ AUDIENCE & PREREQUISITES -->
+    <section class="py-5 bg-dark-glass border-y-orange">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-orange">
+                    <h2 class="h4 fw-bold text-white mb-3"><i class="fas fa-user-secret text-orange me-2"></i> Who Is This For?</h2>
+                    <ul class="list-unstyled text-gray font-mono">
+                        <li class="mb-2">>> Backend Engineers</li>
+                        <li class="mb-2">>> Mobile App Developers (Flutter/React Native)</li>
+                        <li class="mb-0">>> Architects designing Microservices</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3"><i class="fas fa-code-branch text-blue me-2"></i> Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Knowledge of C# classes. 
+                        <br><span class="text-white small">We teach HTTP Verbs, Status Codes, and JSON serialization from zero.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO: POSTMAN SIMULATOR -->
+    <section id="postman-lab" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold">The <span class="text-orange">Postman</span> Lab</h2>
+                <p class="text-gray">Test endpoints just like a real developer.</p>
+            </div>
+
+            <div class="postman-ui shadow-lg">
+                <!-- TOP BAR -->
+                <div class="ui-header">
+                    <div class="d-flex gap-2">
+                        <span class="dot bg-danger"></span><span class="dot bg-warning"></span><span class="dot bg-success"></span>
+                    </div>
+                    <span class="text-muted small mx-auto">Postman - Untitled Request</span>
+                </div>
+
+                <!-- INPUT BAR -->
+                <div class="ui-bar p-3 d-flex gap-2 flex-wrap">
+                    <select id="httpMethod" class="form-select w-auto bg-dark text-white border-secondary">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                    <input type="text" class="form-control bg-dark text-white border-secondary flex-grow-1 font-mono" value="https://api.techengineer.co/api/products" readonly>
+                    <button id="sendBtn" class="btn btn-primary px-4 fw-bold">SEND</button>
+                </div>
+
+                <!-- BODY / RESPONSE -->
+                <div class="row g-0">
+                    <div class="col-md-4 border-end border-secondary p-3 text-gray small font-mono d-none d-md-block">
+                        <div class="mb-2">PARAMS</div>
+                        <div class="mb-2">AUTH (Bearer)</div>
+                        <div class="mb-2 text-white">HEADERS (12)</div>
+                        <div class="mb-2">BODY</div>
+                    </div>
+                    <div class="col-md-8 p-3 bg-code">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted small">Body</span>
+                            <span id="statusBadge" class="badge bg-secondary">Status: Ready</span>
+                        </div>
+                        <div id="jsonOutput" class="json-display">
+                            // Click SEND to fetch data...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ REAL PROBLEMS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold text-white mb-4">Why APIs Rule the World</h2>
+                    
+                    <div class="data-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-pulse me-3"><i class="fas fa-mobile-alt"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1 text-white">One Backend, Many Apps</h3>
+                                <p class="small text-gray mb-0">Your .NET API powers the Website, iPhone App, and Android App simultaneously.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-pulse me-3"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Security (JWT)</h3>
+                                <p class="small text-gray mb-0">Learn <strong>JSON Web Tokens</strong>. Allow users to login once and stay secure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="connect-box p-4 border-orange h-100">
+                        <h2 class="h3 fw-bold text-orange mb-3"><i class="fas fa-project-diagram"></i> Architecture</h2>
+                        <p class="text-gray">How modern systems talk:</p>
+                        
+                        <div class="flow-diagram mt-4">
+                            <div class="flow-step">
+                                <i class="fas fa-laptop text-white"></i><br><small>Client</small>
+                            </div>
+                            <div class="flow-arrow text-orange">
+                                <i class="fas fa-long-arrow-alt-right"></i><br><span class="tiny">JSON</span>
+                            </div>
+                            <div class="flow-step border-orange">
+                                <i class="fas fa-cogs text-orange"></i><br><small>API</small>
+                            </div>
+                            <div class="flow-arrow text-orange">
+                                <i class="fas fa-long-arrow-alt-right"></i><br><span class="tiny">Data</span>
+                            </div>
+                            <div class="flow-step">
+                                <i class="fas fa-database text-white"></i><br><small>DB</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ TOOLKIT -->
+    <section class="py-5 bg-darker-panel">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Your <span class="text-orange">Arsenal</span></h2>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="tool-icon-box">
+                        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="60" class="mb-3">
+                        <h5>Postman</h5>
+                        <small>Testing</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="tool-icon-box">
+                        <img src="/images/swagger.webp" width="60" class="mb-3">
+                        <h5>Swagger</h5>
+                        <small>Documentation</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="tool-icon-box">
+                        <i class="fas fa-key fa-3x text-warning mb-3"></i>
+                        <h5>JWT Auth</h5>
+                        <small>Security</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="tool-icon-box">
+                        <i class="fas fa-exchange-alt fa-3x text-info mb-3"></i>
+                        <h5>REST</h5>
+                        <small>Architecture</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ OUTCOMES & CTA -->
+    <section class="py-5 border-y-orange">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="h3 fw-bold text-white mb-2">Your Outcomes</h2>
+                    <p class="text-gray mb-4 small"><i class="fas fa-briefcase text-orange me-2"></i> Role: Backend Developer / API Engineer</p>
+
+                    <div class="row g-3 font-mono">
+                        <div class="col-md-6"><div class="outcome-pill"><i class="fas fa-check text-orange me-2"></i> Create Secure Endpoints</div></div>
+                        <div class="col-md-6"><div class="outcome-pill"><i class="fas fa-check text-orange me-2"></i> Connect Frontend to Backend</div></div>
+                        <div class="col-md-6"><div class="outcome-pill"><i class="fas fa-check text-orange me-2"></i> Handle File Uploads</div></div>
+                        <div class="col-md-6"><div class="outcome-pill"><i class="fas fa-check text-orange me-2"></i> Versioning APIs</div></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="cert-box p-4 bg-darker-panel border-orange">
+                        <i class="fas fa-file-contract fa-4x text-orange mb-3"></i>
+                        <h3 class="h4 text-white">API Specialist</h3>
+                        <p class="small text-gray">Certified in REST Architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-5 text-center">
+        <div class="container">
+            <p class="lead text-gray mb-4">Don't just build websites. Connect the world.</p>
+            <h2 class="display-4 fw-bold mb-4">Become a Backend Architect.</h2>
+            <a href="tel:+918544884846" class="btn-orange">Start API Training <i class="fas fa-plug ms-2"></i></a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script/api-logic.js"></script>
+</body>
+</html>

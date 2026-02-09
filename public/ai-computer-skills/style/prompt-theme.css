@@ -1,0 +1,116 @@
+/* --- VARIABLES --- */
+:root {
+    --neon-pink: #d946ef;
+    --neon-violet: #8b5cf6;
+    --dark-bg: #050505;
+    --panel-bg: #0f0f12;
+    --text-white: #ffffff;
+    --text-gray: #a1a1aa;
+    --gradient: linear-gradient(135deg, #d946ef 0%, #8b5cf6 100%);
+}
+
+body { font-family: 'Space Grotesk', sans-serif; background-color: var(--dark-bg); color: var(--text-white); }
+
+/* UTILS */
+.text-neon { color: var(--neon-pink); text-shadow: 0 0 15px rgba(217, 70, 239, 0.6); }
+.text-purple { color: var(--neon-violet); }
+.font-space { font-family: 'Space Grotesk', sans-serif; }
+.bg-darker { background-color: var(--panel-bg); }
+
+/* HERO */
+.prompt-hero { padding: 120px 0 100px; margin-top: 50px; position: relative; overflow: hidden; }
+.stars-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px; opacity: 0.1; z-index: -2;
+}
+.nebula-glow {
+    position: absolute; top: -50%; right: -20%; width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.15) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 70%);
+    z-index: -1; filter: blur(100px);
+}
+
+.badge-ai {
+    background: rgba(217, 70, 239, 0.1); color: var(--neon-pink); padding: 8px 16px; border-radius: 4px;
+    border: 1px solid rgba(217, 70, 239, 0.3); display: inline-block; margin-bottom: 20px; font-weight: 700;
+    font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;
+}
+
+.btn-neon {
+    background: var(--gradient); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; border: none; transition: 0.3s;
+}
+.btn-neon:hover { box-shadow: 0 0 30px rgba(217, 70, 239, 0.5); transform: scale(1.05); color: white; }
+
+.btn-outline-neon {
+    border: 2px solid var(--neon-pink); color: var(--text-white); padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s;
+}
+.btn-outline-neon:hover { background: var(--neon-pink); color: white; }
+
+/* 3D GEN BOX ANIMATION */
+.gen-box-wrapper { position: relative; width: 350px; height: 400px; margin: 0 auto; perspective: 1000px; }
+.gen-box {
+    width: 100%; height: 100%; background: #1a1a1a; border: 2px solid #333; border-radius: 20px;
+    position: absolute; overflow: hidden; transform: rotateY(-10deg) rotateX(5deg);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.gen-image { width: 100%; height: 80%; background: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&q=80') center/cover; opacity: 0.8; transition: 1s; }
+.prompt-bar {
+    position: absolute; bottom: 0; width: 100%; height: 20%; background: rgba(0,0,0,0.8);
+    border-top: 1px solid #333; display: flex; align-items: center; padding: 0 20px;
+}
+.typing-text { font-family: monospace; color: var(--neon-pink); font-size: 0.8rem; }
+.loading-scan {
+    position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink); animation: scan 2s infinite linear;
+}
+@keyframes scan { 0% { top: 0; } 100% { top: 80%; } }
+
+.orb {
+    position: absolute; width: 60px; height: 60px; background: #222; border: 1px solid var(--neon-pink);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+    color: var(--neon-pink); box-shadow: 0 0 20px rgba(217, 70, 239, 0.2); animation: floatOrb 4s infinite ease-in-out;
+}
+.orb-1 { top: -20px; left: -20px; animation-delay: 0s; }
+.orb-2 { bottom: 50px; right: -30px; animation-delay: 1s; }
+.orb-3 { top: 150px; right: -40px; animation-delay: 2s; }
+@keyframes floatOrb { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+/* --- LAB CONSOLE --- */
+.lab-console { max-width: 900px; margin: 0 auto; border-radius: 12px; border: 1px solid #333; overflow: hidden; background: #000; }
+.console-controls { margin-bottom: 20px; }
+.mode-btn {
+    background: transparent; border: 1px solid #333; color: #666; padding: 10px 20px; border-radius: 30px; margin: 0 5px; transition: 0.3s;
+}
+.mode-btn.active { background: var(--neon-pink); color: white; border-color: var(--neon-pink); box-shadow: 0 0 15px rgba(217, 70, 239, 0.4); }
+
+.bg-input { background: #111; border-right: 1px solid #333; }
+.type-area { min-height: 80px; font-family: monospace; font-size: 1.1rem; line-height: 1.5; color: #fff; }
+.cursor { animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.bg-output { background: #0a0a0a; min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
+.output-label { position: absolute; top: 15px; left: 15px; font-size: 0.7rem; color: #444; letter-spacing: 1px; }
+.response-text { font-size: 1rem; color: #ddd; line-height: 1.6; padding: 20px; border-left: 3px solid var(--neon-pink); background: rgba(255,255,255,0.02); border-radius: 0 8px 8px 0; }
+
+.quality-meter { margin-top: auto; }
+.q-label { display: block; font-size: 0.8rem; color: #666; margin-bottom: 5px; }
+
+/* --- TOOLS --- */
+.tool-card {
+    background: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);
+    text-align: center; transition: 0.3s;
+}
+.tool-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.05); border-color: var(--neon-pink); }
+.tool-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 20px; color: white; }
+.bg-green-glow { background: #10b981; box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+.bg-blue-glow { background: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+.bg-orange-glow { background: #f97316; box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+
+/* --- CAREER --- */
+.salary-ticker { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; border: 1px solid #333; }
+.ticker-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+.ticker-item:last-child { border: none; margin: 0; padding: 0; }
+.value { font-weight: bold; font-family: monospace; font-size: 1.2rem; }
+
+.use-case-item { background: #111; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #333; color: #ccc; }
+.border-neon { border-color: var(--neon-pink) !important; }

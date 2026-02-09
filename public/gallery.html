@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo & Video Gallery</title>
+    <!-- Bootstrap CSS -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap 5.3 CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style"
+        onload="this.rel='stylesheet'"
+        integrity="sha384-QWTKw8N44CUHGtnCqwvXFpkoh3XV8LNmumDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </noscript>
+    <!-- Font Awesome (Added: Required for your icon to work) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+
+    <!-- Preloads -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="javascript.js" as="script">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Tech Engineer">
+    <meta name="twitter:description"
+        content="Explore our photo and video gallery showcasing our training programs and student projects.">
+    <meta name="twitter:image" content="https://techengineer.co/images/AnuragStudent.jpg">
+    <meta name="twitter:url" content="https://techengineer.co/gallery">
+    <meta name="twitter:site" content="@TechEngineer">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome (Required for icons) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
+        onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-weight: 800;
+            color: #222;
+            position: relative;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
+        @media (max-width: 991px) {
+            .section-title {
+                font-size: 1.75rem;
+                margin-top: 70px;
+            }
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: #0d6efd;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Gallery Item Card */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: #fff;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Images */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Crucial for beautiful cropping */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        /* Videos */
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Hover Effects */
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Clean spacing helper */
+        .mb-grid {
+            margin-bottom: 1.5rem;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            /* Width of inactive slides */
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            /* Video positioning */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive width for mobile */
+        @media (max-width: 768px) {
+            .swiper-slide {
+                width: 85%;
+                height: 400px;
+            }
+        }
+
+        /* Custom Colors for Swiper Arrows */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #0d6efd;
+            background: rgba(255, 255, 255, 0.8);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #0d6efd;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MZS1VS07WN');
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logo.webp" alt="Tech Engineer Logo" loading="lazy">
+            </a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/icon.webp" alt="Internship" loading="lazy">
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ========================================== -->
+    <!-- SECTION 1: PHOTO GALLERY                   -->
+    <!-- ========================================== -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="text-center">
+                <h1 class="section-title display-5">Photo Gallery</h1>
+            </div>
+
+            <!-- ROW 1: The "Hero" Vertical Shots -->
+            <!-- Tall images used here: IMG_5982, IMG_6029, IMG_6108 -->
+            <div class="row g-3 mb-grid">
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 500px;">
+                        <img src="/images/gallery/IMG_5982 2.webp" alt="Portrait">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 500px;">
+                        <img src="/images/gallery/IMG_6029 2.webp" alt="Portrait">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 500px;">
+                        <img src="/images/gallery/IMG_6108 2.webp" alt="Portrait">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2: Landscape Grid (High Quality Wides) -->
+            <div class="row g-3 mb-grid">
+
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/IMG4.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/IMG2.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/IMG5.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 500px;">
+                        <img src="/images/IMG7.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 500px;">
+                        <img src="/images/IMG1.webp" alt="Landscape">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 500px;">
+                        <img src="/images/IMG3.webp" alt="Landscape">
+                    </div>
+                </div>
+            </div>
+            <!-- Wide images: 5987, 5992, 5995, 6008, 6021, 6036 -->
+            <div class="row g-3 mb-grid">
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/gallery/IMG_5987 2.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/gallery/IMG_5992 2.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/gallery/IMG_5995 2.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/gallery/IMG_6008 2.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/gallery/IMG_6021 2.webp" alt="Landscape">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="/images/gallery/IMG_6036 2.webp" alt="Landscape">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 3: The "Mix" (Square, Skinny, Medium Vertical) -->
+            <!-- Images: IMG_6052 (Square), 2025-06-03 (Skinny), AF1QipMu... (Tall) -->
+            <div class="row g-3 mb-grid">
+                <!-- Square Image -->
+                <div class="col-md-5">
+                    <div class="gallery-item" style="height: 400px;">
+                        <img src="/images/gallery/IMG_6052 2.webp" alt="Square">
+                    </div>
+                </div>
+
+                <!-- The Skinny Image (Narrow Column) -->
+                <div class="col-md-3">
+                    <div class="gallery-item" style="height: 400px;">
+                        <img src="/images/gallery/2025-06-03.webp" alt="Narrow Vertical">
+                    </div>
+                </div>
+
+                <!-- Medium Vertical Image -->
+                <div class="col-md-4">
+                    <div class="gallery-item" style="height: 400px;">
+                        <img src="/images/gallery/AF1QipMuFgkbbThWrDBZvXkznnWDN8XT.webp" alt="Medium Vertical">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 4: The 2025 Collection & Final Wides -->
+            <!-- Remaining Wides: 2025-xx, AF1QipMp..., IMG_6090, 6113, 6125, 6143 -->
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/2025-07-17.webp" alt="Event">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/2025-07-17 (1).webp" alt="Event">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/2025-11-19.webp" alt="Event">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/2025-11-19 (1).webp" alt="Event">
+                    </div>
+                </div>
+                <!-- Row 4 Continued -->
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/AF1QipMpLw87OYR5iTIL0X-A7-buQz_X.webp" alt="Event">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/IMG_6090 2.webp" alt="Event">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/IMG_6113 2.webp" alt="Event">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" style="height: 200px;">
+                        <img src="/images/gallery/IMG_6143 2.webp" alt="Event">
+                    </div>
+                </div>
+                <!-- Final Single Wide Centered -->
+                <div class="col-12">
+                    <div class="gallery-item" style="height: 450px;">
+                        <img src="/images/gallery/IMG_6125 2.webp" alt="Finale">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- COLUMN 1: Logo & About -->
+                <div class="col-lg-3 col-md-6">
+                    <a href="/" class="d-inline-block mb-3">
+                        <img src="/images/logow.png" alt="Tech Engineer Logo" class="footer-logo">
+                    </a>
+
+                </div>
+
+                <!-- COLUMN 2: Quick Links (Split) -->
+                <div class="col-lg-3 col-md-6">
+                    <h2 class="text-white fw-bold mb-3">Quick Links</h2>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/gallery">Gallery</a></li> <!-- added here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- COLUMN 3: Courses (Split) -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white fw-bold mb-3">Our Courses</h3>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/web-designing-course-mohali">Web Design</a></li>
+                                <li><a href="/programming-classes-mohali">Programming</a></li>
+                                <li><a href="/graphic-design-course-mohali">Graphic Design</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="/digital-marketing-mohali">Digital Marketing</a></li>
+                                <li><a href="/dotnet-asp-course-mohali">Asp.Net</a></li>
+                                <li><a href="/video-editing-course-mohali">Video Editior</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMN 4: Contact & Social -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white fw-bold mb-3">Get in Touch</h3>
+
+                    <!-- Contact Info -->
+                    <ul class="footer-list contact-info mb-4">
+                        <li>
+                            <i class="fas fa-envelope footer-icon"></i>
+                            <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone footer-icon"></i>
+                            <a href="tel:+918544884846">+91 85448 84846</a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt footer-icon mt-1"></i>
+                            <span class="small">4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
+                        </li>
+                    </ul>
+
+                    <!-- Social Icons (Placed here to fit the layout) -->
+                    <div class="social-icons">
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineer22" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.instagram.com/tech___engineer" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom mt-5 py-3 border-top border-secondary">
+            <div class="container text-center">
+                <p class="mb-0 text-white-50 small">
+                    &copy; 2025 Tech Engineer. All Rights Reserved. |
+                    <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
+                    <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
+                </p>
+            </div>
+        </div>
+        <script>
+            const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                // Optional: Auto-slide if user doesn't interact
+                // autoplay: {
+                //   delay: 5000,
+                //   disableOnInteraction: false,
+                // },
+            });
+        </script>
+        <!-- Buttons -->
+        <button id="backToTop" onclick="scrollToTop()" title="Back to Top">&#8679;</button>
+        <button id="btn-call" onclick="clicktocall()" title="Call Us"><i
+                class="bi bi-telephone-outbound-fill"></i></button>
+        <button id="btn-wht" onclick="clicktowhatsapp()" aria-label="Chat on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </button>
+
+    </footer>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>

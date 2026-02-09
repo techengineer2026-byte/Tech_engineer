@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master WPF & WinForms in .NET Core. Build Enterprise Desktop Applications, POS Systems, and Dashboards in Mohali.">
+    <title>Desktop Module – WPF & MVVM Training | Tech Engineer</title>
+    
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/desktop-theme.css">
+</head>
+<body>
+
+    <!-- BACKGROUND BLUEPRINT -->
+    <div class="blueprint-grid"></div>
+    <div class="spotlight"></div>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <header class="desktop-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="badge-app"><i class="fas fa-desktop"></i> Desktop Module</div>
+                    
+                    <h1 class="display-3 fw-bold mb-3">
+                        Power on the <span class="text-magenta">Glass.</span><br>
+                        Native Performance.
+                    </h1>
+                    
+                    <p class="lead text-gray mb-4">
+                        Web apps are popular, but <strong>Desktop Apps</strong> run the world. 
+                        Master <strong>WPF (XAML)</strong> and <strong>MVVM</strong> to build high-performance tools for Banking, Healthcare, and Retail.
+                    </p>
+                    
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <a href="#ui-lab" class="btn-magenta">
+                            <i class="fas fa-layer-group me-2"></i> Launch UI Builder
+                        </a>
+                        <span class="small text-magenta mt-2"><i class="fas fa-magic me-1"></i> Interactive Demo: Write XAML without code.</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <!-- 3D WINDOW STACK VISUAL -->
+                    <div class="window-stack">
+                        <!-- Background Window -->
+                        <div class="app-window win-back">
+                            <div class="win-header"><span class="win-title">DatabaseManager.exe</span></div>
+                        </div>
+                        <!-- Middle Window -->
+                        <div class="app-window win-mid">
+                            <div class="win-header"><span class="win-title">InventorySystem.dll</span></div>
+                        </div>
+                        <!-- Front Window -->
+                        <div class="app-window win-front">
+                            <div class="win-header">
+                                <span class="dot bg-danger"></span>
+                                <span class="win-title">TradingDashboard_v2.exe</span>
+                            </div>
+                            <div class="win-body">
+                                <div class="chart-mockup">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                </div>
+                                <div class="btn-mockup mt-3">Execute Order</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2️⃣ AUDIENCE & PREREQUISITES -->
+    <section class="py-5 bg-steel border-y-magenta">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 border-end-magenta">
+                    <h2 class="h4 fw-bold text-white mb-3"><i class="fas fa-briefcase text-magenta me-2"></i> Who Is This For?</h2>
+                    <ul class="list-unstyled text-gray rajdhani">
+                        <li class="mb-2">>> Enterprise Software Developers</li>
+                        <li class="mb-2">>> Tools & Automation Engineers</li>
+                        <li class="mb-0">>> Developers building POS / Inventory Systems</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="h4 fw-bold text-white mb-3"><i class="fas fa-code text-blue me-2"></i> Prerequisites</h2>
+                    <p class="text-gray mb-0">
+                        Understanding of C# Events & Delegates. 
+                        <br><span class="text-white small">We teach XAML layout and Data Binding from scratch.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ INTERACTIVE DEMO: XAML BUILDER -->
+    <section id="ui-lab" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold">The <span class="text-magenta">XAML</span> Architect</h2>
+                <p class="text-gray">Experience the MVVM Pattern. Separate UI from Logic.</p>
+            </div>
+
+            <div class="ide-wrapper shadow-lg">
+                <!-- TOOLBAR -->
+                <div class="ide-toolbar">
+                    <span class="text-muted small fw-bold me-3">TOOLBOX:</span>
+                    <button class="tool-btn" onclick="addComponent('button')"><i class="fas fa-square"></i> Button</button>
+                    <button class="tool-btn" onclick="addComponent('input')"><i class="fas fa-font"></i> Input</button>
+                    <button class="tool-btn" onclick="addComponent('switch')"><i class="fas fa-toggle-on"></i> Switch</button>
+                    <button class="tool-btn btn-clear" onclick="clearCanvas()"><i class="fas fa-trash"></i> Clear</button>
+                </div>
+
+                <div class="row g-0">
+                    <!-- LEFT: VISUAL DESIGNER -->
+                    <div class="col-md-6 bg-designer p-4">
+                        <div class="canvas-header">Design View (Window)</div>
+                        <div id="designCanvas" class="design-canvas">
+                            <!-- JS injects elements here -->
+                            <p class="text-muted placeholder-text">Drag & Drop Controls Here (Click buttons above)</p>
+                        </div>
+                    </div>
+                    <!-- RIGHT: XAML CODE -->
+                    <div class="col-md-6 bg-xaml p-4">
+                        <div class="canvas-header text-magenta">XAML Source Code</div>
+                        <div id="xamlOutput" class="xaml-code">
+                            &lt;<span class="x-tag">Window</span>&gt;<br>
+                            &nbsp;&nbsp;&lt;<span class="x-tag">StackPanel</span>&gt;<br>
+                            <span id="dynamicXaml"></span>
+                            &nbsp;&nbsp;&lt;/<span class="x-tag">StackPanel</span>&gt;<br>
+                            &lt;/<span class="x-tag">Window</span>&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ REAL PROBLEMS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold text-white mb-4">Why Desktop is Still King</h2>
+                    
+                    <div class="feature-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-square me-3"><i class="fas fa-wifi"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Offline Capability</h3>
+                                <p class="small text-gray mb-0">Web apps die without internet. Desktop apps work 24/7 (POS, Factories).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-square me-3"><i class="fas fa-print"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1 text-white">Hardware Access</h3>
+                                <p class="small text-gray mb-0">Directly control Printers, Scanners, and USB devices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="mvvm-box p-4 border-magenta h-100">
+                        <h2 class="h3 fw-bold text-magenta mb-3"><i class="fas fa-project-diagram"></i> The MVVM Pattern</h2>
+                        <p class="text-gray">We teach the industry standard architecture.</p>
+                        
+                        <div class="diagram-stack mt-4">
+                            <div class="layer layer-view">VIEW (XAML)</div>
+                            <div class="arrow-down"><i class="fas fa-arrow-down"></i> Data Binding</div>
+                            <div class="layer layer-vm">VIEW MODEL (C# Logic)</div>
+                            <div class="arrow-down"><i class="fas fa-arrow-down"></i></div>
+                            <div class="layer layer-model">MODEL (Database)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ CURRICULUM -->
+    <section class="py-5 bg-darker-panel">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Enterprise <span class="text-magenta">Toolkit</span></h2>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="tech-tile">
+                        <i class="fab fa-windows fa-3x text-blue mb-3"></i>
+                        <h5>WPF</h5>
+                        <small>Windows Presentation Foundation</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="tech-tile">
+                        <i class="fas fa-code fa-3x text-magenta mb-3"></i>
+                        <h5>XAML</h5>
+                        <small>UI Markup Language</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="tech-tile">
+                        <i class="fas fa-palette fa-3x text-white mb-3"></i>
+                        <h5>Material Design</h5>
+                        <small>Modern UI Libraries</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="tech-tile">
+                        <i class="fas fa-database fa-3x text-success mb-3"></i>
+                        <h5>ADO.NET</h5>
+                        <small>Local Data Storage</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ OUTCOMES & CTA -->
+    <section class="py-5 border-y-magenta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="h3 fw-bold text-white mb-2">Your Outcomes</h2>
+                    <p class="text-gray mb-4 small"><i class="fas fa-briefcase text-magenta me-2"></i> Role: Desktop Application Engineer</p>
+
+                    <div class="row g-3 rajdhani">
+                        <div class="col-md-6"><div class="outcome-bar"><i class="fas fa-check text-magenta me-2"></i> Build POS Systems</div></div>
+                        <div class="col-md-6"><div class="outcome-bar"><i class="fas fa-check text-magenta me-2"></i> Create Dashboards</div></div>
+                        <div class="col-md-6"><div class="outcome-bar"><i class="fas fa-check text-magenta me-2"></i> Master Data Binding</div></div>
+                        <div class="col-md-6"><div class="outcome-bar"><i class="fas fa-check text-magenta me-2"></i> Package .EXE Installers</div></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="cert-box p-4 bg-darker-panel border-magenta">
+                        <i class="fas fa-award fa-4x text-magenta mb-3"></i>
+                        <h3 class="h4 text-white">WPF Specialist</h3>
+                        <p class="small text-gray">Certified in MVVM Architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-5 text-center">
+        <div class="container">
+            <p class="lead text-gray mb-4">Build software that runs businesses.</p>
+            <h2 class="display-4 fw-bold mb-4">Architect Enterprise Solutions.</h2>
+            <a href="tel:+918544884846" class="btn-magenta">Start Desktop Training <i class="fas fa-window-maximize ms-2"></i></a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script/desktop-logic.js"></script>
+</body>
+</html>
