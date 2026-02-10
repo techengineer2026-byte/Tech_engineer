@@ -419,3 +419,138 @@ nav a:hover::after {
 #btn-wht:hover {
     opacity: 0.9;
 }
+/* --- Footer Base --- */
+.footer-bs5 {
+    background-color: #000000; /* Pure Black layout */
+    padding: 80px 0 20px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Typography */
+.footer-bs5 h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* Links Styling */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #b0b0b0; /* Light Gray */
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: #4698a7; /* Tech Engineer Teal */
+    transform: translateX(5px);
+}
+
+/* Contact List */
+.contact-list li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+.contact-list i {
+    color: #5d3eff; /* Purple/Blue accent from screenshot */
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.contact-list a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-list a:hover {
+    color: #fff;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1); /* Subtle circle bg */
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: #4698a7;
+    transform: translateY(-3px);
+}
+
+/* --- Floating Buttons --- */
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    transition: transform 0.3s;
+}
+
+.float-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Left Bottom Corner */
+.floating-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.whatsapp { background-color: #25D366; }
+.phone { background-color: #4698a7; }
+
+/* Right Bottom Corner */
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #333;
+    opacity: 0.9;
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 991px) {
+    .footer-bs5 {
+        text-align: left;
+    }
+    /* Ensure columns have space on tablets/mobile */
+    .footer-bs5 .col-lg-3 {
+        margin-bottom: 40px;
+    }
+}

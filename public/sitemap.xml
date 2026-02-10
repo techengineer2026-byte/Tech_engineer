@@ -1,123 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Pages -->
+  <!-- HOME -->
   <url>
     <loc>https://techengineer.co/</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
+  <!-- MAIN NAV & INFO -->
   <url>
     <loc>https://techengineer.co/about</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-
   <url>
     <loc>https://techengineer.co/services</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-
-  <url>
-    <loc>https://techengineer.co/portfolio</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/gallery</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/blog</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
   <url>
     <loc>https://techengineer.co/contact</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-
   <url>
-    <loc>https://techengineer.co/Social</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <loc>https://techengineer.co/blog</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/portfolio</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/gallery</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
-
-  <!-- Course & Training Pages (High Priority for Growth) -->
-  <url>
-    <loc>https://techengineer.co/programming-classes-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/digital-marketing-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/web-designing-course-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/web-development-training</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/dotnet-asp-course-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/graphic-design-course-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/video-editing-course-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/data-analysis-mohali</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
   <url>
     <loc>https://techengineer.co/industrial-training</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Legal Pages -->
+  <!-- MAIN CATEGORY LANDING PAGES (Root Level) -->
   <url>
-    <loc>https://techengineer.co/privacy-policy</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
-    <priority>0.50</priority>
+    <loc>https://techengineer.co/ai-computer-skills-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/app-development-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/cloud-computing-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/data-science-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/digital-marketing-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/dotnet-course-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/game-development-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/programming-course-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/web-development-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
+  <!-- SUBFOLDER: AI & COMPUTER SKILLS -->
+  <url>
+    <loc>https://techengineer.co/ai-computer-skills/advanced-computer-course-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/ai-computer-skills/prompt-engineering-course-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/ai-computer-skills/ui-ux-design-course-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SUBFOLDER: APP DEVELOPMENT -->
+  <url>
+    <loc>https://techengineer.co/app-development/backend-industrial-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/app-development/mobile-ui-ux-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SUBFOLDER: CLOUD COMPUTING -->
+  <url>
+    <loc>https://techengineer.co/cloud-computing/cloud-computing-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/cloud-computing/cyber-security-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/cloud-computing/devops-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SUBFOLDER: DATA SPECIALIST -->
+  <url>
+    <loc>https://techengineer.co/data-specialist/business-analytics-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/data-specialist/data-analytics-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/data-specialist/data-science-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SUBFOLDER: DIGITAL MARKETING -->
+  <url>
+    <loc>https://techengineer.co/digital-marketing-in-mohali/graphic-design-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/digital-marketing-in-mohali/seo-mastery-in-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/digital-marketing-in-mohali/social-media-marketing-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/digital-marketing-in-mohali/video-editing-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SUBFOLDER: NET CORE -->
+  <url>
+    <loc>https://techengineer.co/net-core/api-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/desktop-development-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/game-development-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/microservices-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/ml-net-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/mobile-app-development-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/mssql-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/net-core/web-development-training-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- SUBFOLDER: WEB DEVELOPMENT TRAINING -->
+  <url>
+    <loc>https://techengineer.co/web-development-training/backend-development-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/web-development-training/frontend-development-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/web-development-training/full-stack-development-mohali</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- LEGAL & SOCIAL -->
+  <url>
+    <loc>https://techengineer.co/privacy-policy</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
   <url>
     <loc>https://techengineer.co/terms</loc>
-    <lastmod>2025-02-12T04:42:17+00:00</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/social</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
 
