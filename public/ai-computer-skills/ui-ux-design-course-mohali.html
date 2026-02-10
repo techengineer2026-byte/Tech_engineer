@@ -9,6 +9,7 @@
     <!-- Optimized Description -->
     <meta name="description"
         content="Best UI/UX Design Course in Mohali. Master Figma, Wireframing, User Research, and Prototyping. Build a professional portfolio with Tech Engineer.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- Critical SEO Tags -->
     <meta name="robots" content="index, follow">
@@ -272,7 +273,7 @@
     </section>
 
     <!-- CTA FOOTER -->
-    <footer class="py-5 text-center bg-darker border-top border-secondary">
+    <section class="py-5 text-center bg-darker border-top border-secondary">
         <div class="container">
             <h2 class="display-6 fw-bold text-white mb-3">Start Creating Today.</h2>
             <p class="lead text-gray mb-4">Build a portfolio that gets you hired.</p>
@@ -281,8 +282,123 @@
                 <i class="fas fa-phone-alt me-2"></i> Call for Fee Details
             </a>
         </div>
-    </footer>
+    </section>
+<!-- Footer with Updated Training Courses -->
+<footer class="footer-bs5">
+    <div class="container">
+        <div class="row gy-5">
+            
+            <!-- Column 1: Logo -->
+            <div class="col-lg-3 col-md-12">
+                <a href="/" class="d-inline-block mb-3">
+                    <img src="/images/logow.png" alt="Tech Engineer" class="img-fluid" style="max-width: 180px;">
+                </a>
+                <p class="text-white-50 small pe-3">
+                    Empowering students with industry-standard training in AI, Coding, and Cloud technologies.
+                </p>
+            </div>
 
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-3 col-md-4">
+                <h4 class="text-white fw-bold mb-4">Quick Links</h4>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: NEW TRAINING COURSES (Updated) -->
+            <div class="col-lg-3 col-md-4">
+                <h4 class="text-white fw-bold mb-4">Training Courses</h4>
+                <div class="row">
+                    <!-- Left Sub-Column -->
+                    <div class="col-6">
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="/web-development-mohali">Full Stack Web</a></li>
+                            <li><a href="/app-development-in-mohali">App Development</a></li>
+                            <li><a href="/ai-computer-skills-in-mohali">AI & Prompt Eng</a></li>
+                        </ul>
+                    </div>
+                    <!-- Right Sub-Column -->
+                    <div class="col-6">
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="/data-science-training-mohali">Data Science</a></li>
+                            <li><a href="/cloud-computing-in-mohali">Cloud & DevOps</a></li>
+                            <li><a href="/digital-marketing-in-mohali">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Get in Touch -->
+            <div class="col-lg-3 col-md-4">
+                <h4 class="text-white fw-bold mb-4">Get in Touch</h4>
+                <ul class="list-unstyled contact-list">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@techengineer.co">contact@techengineer.co</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+918544884846">+91 85448 84846</a>
+                    </li>
+                    <li class="d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt mt-1"></i>
+                        <span>4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
+                    </li>
+                </ul>
+                <div class="social-icons mt-3">
+                    <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com/@TechEngineer22" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="http://www.instagram.com/tech___engineer" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom mt-5">
+        <div class="container  border-secondary pt-3">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2025 Tech Engineer. All Rights Reserved. | 
+                        <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> | 
+                        <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Buttons (As per screenshot layout) -->
+    <div class="floating-left">
+        <button onclick="clicktowhatsapp()" class="float-btn whatsapp mb-3">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <button onclick="clicktocall()" class="float-btn phone">
+            <i class="bi bi-telephone-fill"></i>
+        </button>
+    </div>
+
+    <button id="backToTop" onclick="scrollToTop()" class="float-btn to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
