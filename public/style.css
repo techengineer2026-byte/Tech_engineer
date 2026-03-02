@@ -1920,7 +1920,393 @@ nav a:hover::after {
     display: block;
     animation: fadeIn 0.4s ease;
 }
+/* Section Background */
+.image-service-section {
+    padding: 80px 0;
+    background-color: #f4f7f6;
+}
 
+/* Section Title */
+.section-title {
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Card Container */
+.img-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Keeps image inside borders */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+/* Hover: Lift Card */
+.img-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Image Wrapper */
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Fixed height for uniformity */
+    overflow: hidden; /* Essential for zoom effect */
+}
+
+/* The Image itself */
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image doesn't stretch */
+    transition: transform 0.6s ease;
+}
+
+/* Hover: Zoom Image */
+.img-card:hover .img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Badge on top of image */
+.category-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #4361ee;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+/* Content Area */
+.card-details {
+    padding: 25px;
+}
+
+.card-details h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card-details p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* =========================================
+       SPLIT SCREEN HERO STYLES
+       ========================================= */
+    .split-container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full Screen */
+        background: #111;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .split {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        transition: all 0.8s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    /* Background Images */
+    .split.left {
+        background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center center no-repeat;
+        background-size: cover;
+    }
+    
+    .split.right {
+        background: url('https://images.unsplash.com/photo-1504384308090-c54be3852f92?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center center no-repeat;
+        background-size: cover;
+    }
+
+    /* Dark Overlay */
+    .split::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        transition: background 0.5s ease;
+    }
+
+    .split:hover::before {
+        background: rgba(0, 0, 0, 0.3); /* Brighter on hover */
+    }
+
+    /* Hover Expansion Effect */
+    .split-container:hover .split {
+        width: 30%; /* Shrink non-hovered side */
+    }
+    .split-container .split:hover {
+        width: 70%; /* Expand hovered side */
+    }
+
+    /* Text Animation */
+    .split-content {
+        position: relative;
+        z-index: 10;
+        color: #fff;
+        padding: 2rem;
+        transition: transform 0.5s ease;
+    }
+
+    .split h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    .youtube-section {
+        padding: 80px 0;
+        background: #f9f9f9; /* Light grey background to make videos pop */
+        text-align: center;
+    }
+
+    .youtube-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .youtube-header span {
+        color: #FF0000; /* YouTube Red */
+    }
+
+    .youtube-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* 2 columns on desktop */
+        gap: 30px;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    /* Video Container - Makes YouTube Responsive */
+    .video-card {
+        background: white;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+        transform: translateY(-10px); /* Lifts up on hover */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Beautiful YouTube Button */
+    .btn-youtube {
+        display: inline-flex;
+        align-items: center;
+        background: #FF0000;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+        margin-top: 20px;
+    }
+
+    .btn-youtube:hover {
+        background: #cc0000;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .btn-youtube i {
+        margin-right: 10px;
+    }
+
+    /* Mobile Responsive Fix */
+    @media (max-width: 768px) {
+        .youtube-grid {
+            grid-template-columns: 1fr; /* 1 column on mobile */
+            gap: 20px;
+        }
+        .video-wrapper {
+            padding-bottom: 56.25%; 
+        }
+    }
+    .split p {
+        font-size: 1.2rem;
+        max-width: 400px;
+        margin: 0 auto 30px auto;
+        opacity: 0.8;
+    }
+  /* =========================================
+       WOW MODAL STYLES (Glassmorphism)
+       ========================================= */
+    .custom-modal {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(15px); /* The Blur Effect */
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .custom-modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-box {
+        background: #fff;
+        width: 90%;
+        max-width: 1000px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        transform: scale(0.8);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .custom-modal.active .modal-box {
+        transform: scale(1);
+    }
+
+    .modal-left {
+        width: 40%;
+        padding: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .modal-right {
+        width: 60%;
+        padding: 40px;
+        background: #f8f9fa;
+        position: relative;
+    }
+
+    /* Theme Colors for Modals */
+    .modal-theme-training .modal-left { background: linear-gradient(135deg, #0061f2 0%, #00c6f7 100%); }
+    .modal-theme-services .modal-left { background: linear-gradient(135deg, #6610f2 0%, #d63384 100%); }
+
+    .close-modal {
+        position: absolute;
+        top: 20px; right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.3s;
+    }
+    .close-modal:hover { color: red; }
+
+    .modal-list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    .modal-list-item:hover { transform: translateX(5px); }
+    .modal-list-item i { font-size: 20px; margin-right: 15px; }
+
+    @media(max-width: 768px) {
+        .modal-box { flex-direction: column; }
+        .modal-left, .modal-right { width: 100%; padding: 25px; }
+    }
+    .btn-split {
+        display: inline-block;
+        padding: 15px 40px;
+        border: 2px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+    .split.left .btn-split:hover { background: #007bff; border-color: #007bff; }
+    .split.right .btn-split:hover { background: #6610f2; border-color: #6610f2; }
+
+    /* Mobile Responsive Split */
+    @media(max-width: 768px) {
+        .split-container { flex-direction: column; height: 100vh; }
+        .split { width: 100% !important; height: 50%; }
+        .split-container:hover .split { width: 100% !important; height: 50%; }
+        .split h1 { font-size: 2rem; }
+    }
+
+
+/* Link Button */
+.btn-read-more {
+    color: #4361ee;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+/* Hover: Move Arrow */
+.img-card:hover .btn-read-more {
+    gap: 12px;
+    color: #2b45ba;
+}
 .icon-plus {
     width: 24px;
     height: 24px;
@@ -3387,95 +3773,12 @@ nav a:hover::after {
         font-size: 1em;
     }
 }
-
-.services {
-    padding: 80px 0;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: 700;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.service {
-    background: #fff;
-    padding: 30px 25px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.service:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.service:hover .service-icon {
-    transform: scale(1.08);
-}
-
-.service h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #007bff;
-    font-weight: 600;
-}
-
-.service p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .services {
-        padding: 60px 20px;
-    }
-
-    .bannerservice,
-    .portfolio-section {
-        margin-top: 0px;
-    }
-
-    .services h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-
-    .portfolio-section h1 {
-        margin-top: 150px;
-    }
-
-    .service {
-        padding: 25px;
-    }
-
-    .service h3 {
-        font-size: 1.3rem;
-    }
-
-    .service p {
-        font-size: 0.95rem;
-    }
-}
+.services { padding: 80px 0; background: #f4f6f9; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.service-card { background: white; padding: 30px; border-radius: 10px; text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; }
+    .service-card:hover { border-bottom: 4px solid #007bff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .service-icon { font-size: 40px; color: #007bff; margin-bottom: 20px; }
+    .service-link { color: #007bff; text-decoration: none; font-weight: 600; }
 
 process-section {
     padding: 80px 0;
@@ -5462,7 +5765,9 @@ for .contact-container {
         grid-template-columns: 1fr;
     }
 }
-
+.services .containter h2{
+    font-size:100px;
+}
 .TransJour {
     padding: 50px 0;
     background-color: #fff;

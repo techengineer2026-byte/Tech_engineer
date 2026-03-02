@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Engineer Mohali - Training & Services</title>
+<!-- FontAwesome & Google Fonts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS (Required for your grid layout below) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    /* GLOBAL STYLES */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    /* =========================================
+       SPLIT SCREEN HERO STYLES
+       ========================================= */
+    .split-container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full Screen */
+        background: #111;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .split {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        transition: all 0.8s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    /* Background Images */
+    .split.left {
+        background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center center no-repeat;
+        background-size: cover;
+    }
+    
+    .split.right {
+        background: url('https://images.unsplash.com/photo-1504384308090-c54be3852f92?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center center no-repeat;
+        background-size: cover;
+    }
+
+    /* Dark Overlay */
+    .split::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        transition: background 0.5s ease;
+    }
+
+    .split:hover::before {
+        background: rgba(0, 0, 0, 0.3); /* Brighter on hover */
+    }
+
+    /* Hover Expansion Effect */
+    .split-container:hover .split {
+        width: 30%; /* Shrink non-hovered side */
+    }
+    .split-container .split:hover {
+        width: 70%; /* Expand hovered side */
+    }
+
+    /* Text Animation */
+    .split-content {
+        position: relative;
+        z-index: 10;
+        color: #fff;
+        padding: 2rem;
+        transition: transform 0.5s ease;
+    }
+
+    .split h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+
+    .split p {
+        font-size: 1.2rem;
+        max-width: 400px;
+        margin: 0 auto 30px auto;
+        opacity: 0.8;
+    }
+
+    .btn-split {
+        display: inline-block;
+        padding: 15px 40px;
+        border: 2px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+    .split.left .btn-split:hover { background: #007bff; border-color: #007bff; }
+    .split.right .btn-split:hover { background: #6610f2; border-color: #6610f2; }
+
+    /* Mobile Responsive Split */
+    @media(max-width: 768px) {
+        .split-container { flex-direction: column; height: 100vh; }
+        .split { width: 100% !important; height: 50%; }
+        .split-container:hover .split { width: 100% !important; height: 50%; }
+        .split h1 { font-size: 2rem; }
+    }
+
+    /* =========================================
+       WOW MODAL STYLES (Glassmorphism)
+       ========================================= */
+    .custom-modal {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(15px); /* The Blur Effect */
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .custom-modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-box {
+        background: #fff;
+        width: 90%;
+        max-width: 1000px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        transform: scale(0.8);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .custom-modal.active .modal-box {
+        transform: scale(1);
+    }
+
+    .modal-left {
+        width: 40%;
+        padding: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .modal-right {
+        width: 60%;
+        padding: 40px;
+        background: #f8f9fa;
+        position: relative;
+    }
+
+    /* Theme Colors for Modals */
+    .modal-theme-training .modal-left { background: linear-gradient(135deg, #0061f2 0%, #00c6f7 100%); }
+    .modal-theme-services .modal-left { background: linear-gradient(135deg, #6610f2 0%, #d63384 100%); }
+
+    .close-modal {
+        position: absolute;
+        top: 20px; right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.3s;
+    }
+    .close-modal:hover { color: red; }
+
+    .modal-list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    .modal-list-item:hover { transform: translateX(5px); }
+    .modal-list-item i { font-size: 20px; margin-right: 15px; }
+
+    @media(max-width: 768px) {
+        .modal-box { flex-direction: column; }
+        .modal-left, .modal-right { width: 100%; padding: 25px; }
+    }
+
+    /* =========================================
+       EXISTING COUNTER & SERVICES STYLES
+       ========================================= */
+    .counter-up { padding: 60px 0; background: #f9f9f9; }
+    .content { display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: auto; }
+    .box { width: 200px; text-align: center; margin: 10px; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .box .icon { font-size: 40px; color: #007bff; margin-bottom: 10px; }
+    .box .counter { font-size: 35px; font-weight: bold; color: #333; }
+    .box .text { font-size: 16px; color: #666; font-weight: 500; }
+
+    .image-service-section { padding: 80px 0; }
+    .img-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s; background: #fff; height: 100%; }
+    .img-card:hover { transform: translateY(-10px); }
+    .img-wrapper { position: relative; height: 200px; overflow: hidden; }
+    .img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .img-card:hover .img-wrapper img { transform: scale(1.1); }
+    .category-badge { position: absolute; top: 15px; right: 15px; background: rgba(0,123,255,0.9); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .card-details { padding: 25px; }
+    .card-details h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .btn-read-more { color: #007bff; text-decoration: none; font-weight: 600; }
+
+    .cta-section { background: #111; padding: 80px 0; color: white; text-align: center; }
+    .cta-primary, .cta-secondary, .cta-whatsapp { display: inline-block; padding: 12px 30px; margin: 10px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .cta-primary { background: #007bff; color: white; }
+    .cta-secondary { background: white; color: #111; }
+    .cta-whatsapp { background: #25D366; color: white; }
+
+    .services { padding: 80px 0; background: #f4f6f9; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .service-card { background: white; padding: 30px; border-radius: 10px; text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; }
+    .service-card:hover { border-bottom: 4px solid #007bff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .service-icon { font-size: 40px; color: #007bff; margin-bottom: 20px; }
+    .service-link { color: #007bff; text-decoration: none; font-weight: 600; }
+
+</style>
+</head>
+<body>
+
+    <!-- ==============================================
+         1. NEW SPLIT HERO SECTION (Replaces hero-index)
+         ============================================== -->
+    <section class="split-container">
+        
+        <!-- LEFT SIDE: STUDENTS -->
+        <div class="split left" onclick="openModal('modal-training')">
+            <div class="split-content">
+                <i class="fas fa-graduation-cap fa-3x mb-3" style="color: #4facfe;"></i>
+                <h1>Industrial<br>Training</h1>
+                <p>6 Weeks / 6 Months Live Project Based Training in Mohali Phase 8B.</p>
+                <a href="/industrial-training" class="btn-split">For Students</a>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: SERVICES -->
+        <div class="split right" onclick="openModal('modal-services')">
+            <div class="split-content">
+                <i class="fas fa-rocket fa-3x mb-3" style="color: #c471ed;"></i>
+                <h1>IT Services<br>For Business</h1>
+                <p>Web Development, App Design & SEO Services for global clients.</p>
+                <a href="/services" class="btn-split">For Clients</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ==============================================
+         2. COUNTER SECTION (Kept from your code)
+         ============================================== -->
+    <section class="counter-up">
+        <div class="content">
+            <div class="box">
+                <div class="icon"><i class="fa fa-clock"></i></div>
+                <div class="counter" data-target="150">150+</div>
+                <div class="text">Working Hours</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-folder-open"></i></div>
+                <div class="counter" data-target="85">500+</div>
+                <div class="text">Live Projects</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-users"></i></div>
+                <div class="counter" data-target="120">200+</div>
+                <div class="text">Happy Clients</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-star"></i></div>
+                <div class="counter" data-target="95">4.9</div>
+                <div class="text">Google Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         3. COURSES SECTION (Kept from your code)
+         ============================================== -->
+    <section class="image-service-section" id="courses-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Explore Our <span class="text-primary">Training Courses</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Accelerate your career with our hands-on specialized training programs in Mohali.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- 1. Full Stack Web -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="img-card">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Web Development">
+                            <div class="category-badge">Web Dev</div>
+                        </div>
+                        <div class="card-details">
+                            <h3>Full Stack Web</h3>
+                            <p>Master frontend and backend technologies (MERN/MEAN) to build complete web applications.</p>
+                            <a href="/web-development-mohali" class="btn-read-more">View Syllabus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Digital Marketing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="img-card">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing">
+                            <div class="category-badge">Marketing</div>
+                        </div>
+                        <div class="card-details">
+                            <h3>Digital Marketing</h3>
+                            <p>Become an expert in SEO, Social Media, and PPC to grow businesses online.</p>
+                            <a href="/digital-marketing-in-mohali" class="btn-read-more">View Syllabus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. App Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="img-card">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="App Development">
+                            <div class="category-badge">Mobile App</div>
+                        </div>
+                        <div class="card-details">
+                            <h3>App Development</h3>
+                            <p>Create stunning mobile applications for Android and iOS using Flutter.</p>
+                            <a href="/app-development-in-mohali" class="btn-read-more">View Syllabus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         4. SERVICES SECTION (Kept from your code)
+         ============================================== -->
+    <section class="services" id="services-section">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Our IT Services for Business</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon"> <i class="fas fa-laptop-code"></i> </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with cutting-edge technologies.</p> 
+                    <a href="/web-designing-course-mohali" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"> <i class="fas fa-mobile-alt"></i> </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android.</p> 
+                    <a href="javascript:void(0);" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"> <i class="fas fa-shield-alt"></i> </div>
+                    <h3>SEO & Marketing</h3>
+                    <p>Boost your brand's online presence with SEO, social media, and targeted advertising strategies.</p> 
+                    <a href="/digital-marketing-mohali" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start?</h2>
+                <p>Contact us for Admission or Business Queries in Mohali.</p>
+                <div class="cta-buttons">
+                    <a href="/contact" class="cta-primary">Contact Us</a>
+                    <a href="tel:+918544884846" class="cta-secondary"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/918544884846" class="cta-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         HIDDEN MODALS (Pop up on click)
+         ============================================== -->
+
+    <!-- Modal 1: Training -->
+    <div id="modal-training" class="custom-modal modal-theme-training" onclick="closeModals(event)">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeAll()">&times;</span>
+            
+            <div class="modal-left">
+                <h2>Industrial Training</h2>
+                <p>Mohali Phase 8B</p>
+                <hr style="border-color: rgba(255,255,255,0.3);">
+                <p style="margin-top: 20px;">
+                    Join <strong>Tech Engineer</strong> for 6 Weeks / 6 Months training. 
+                    We are a development company, not an institute. You will work on Live Projects.
+                </p>
+                <a href="#courses-section" onclick="closeAll()" class="cta-secondary text-center mt-4">View All Courses</a>
+            </div>
+
+            <div class="modal-right">
+                <h4 style="color: #333; margin-bottom: 20px;">Why Learn With Us?</h4>
+                
+                <div class="modal-list-item">
+                    <i class="fas fa-laptop-code text-primary"></i>
+                    <div>
+                        <strong>Live Project Exposure</strong>
+                        <div class="text-muted text-small">Work on UK/US Client Projects</div>
+                    </div>
+                </div>
+
+                <div class="modal-list-item">
+                    <i class="fas fa-user-tie text-primary"></i>
+                    <div>
+                        <strong>100% Job Assistance</strong>
+                        <div class="text-muted text-small">We hire our best students</div>
+                    </div>
+                </div>
+
+                <div class="modal-list-item">
+                    <i class="fas fa-certificate text-primary"></i>
+                    <div>
+                        <strong>Valid Certification</strong>
+                        <div class="text-muted text-small">Experience Certificate from IT Company</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Services -->
+    <div id="modal-services" class="custom-modal modal-theme-services" onclick="closeModals(event)">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeAll()">&times;</span>
+            
+            <div class="modal-left">
+                <h2>IT Services</h2>
+                <p>Grow Your Business</p>
+                <hr style="border-color: rgba(255,255,255,0.3);">
+                <p style="margin-top: 20px;">
+                    We build scalable websites and mobile apps. 
+                    Get enterprise-grade solutions at affordable prices in Mohali.
+                </p>
+                <a href="#services-section" onclick="closeAll()" class="cta-secondary text-center mt-4">View Services</a>
+            </div>
+
+            <div class="modal-right">
+                <h4 style="color: #333; margin-bottom: 20px;">What We Offer</h4>
+                
+                <div class="modal-list-item">
+                    <i class="fas fa-globe" style="color: #6610f2;"></i>
+                    <div>
+                        <strong>Web Development</strong>
+                        <div class="text-muted text-small">Custom PHP, Laravel, ReactJS</div>
+                    </div>
+                </div>
+
+                <div class="modal-list-item">
+                    <i class="fas fa-mobile-alt" style="color: #6610f2;"></i>
+                    <div>
+                        <strong>App Development</strong>
+                        <div class="text-muted text-small">Android & iOS Solutions</div>
+                    </div>
+                </div>
+
+                <div class="modal-list-item">
+                    <i class="fas fa-chart-line" style="color: #6610f2;"></i>
+                    <div>
+                        <strong>Digital Marketing</strong>
+                        <div class="text-muted text-small">SEO, PPC & Social Media</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL LOGIC -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden'; // Stop background scroll
+        }
+
+        function closeAll() {
+            document.querySelectorAll('.custom-modal').forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto'; // Resume scroll
+        }
+
+        function closeModals(event) {
+            // Close only if clicked on the background overlay (not the box itself)
+            if (event.target.classList.contains('custom-modal')) {
+                closeAll();
+            }
+        }
+    </script>
+
+</body>
+</html>
