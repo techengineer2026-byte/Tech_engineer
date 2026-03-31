@@ -1,0 +1,122 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #050505;
+    --panel-bg: #111111;
+    --yellow: #Fcee0a; /* Cyberpunk Yellow */
+    --cyan: #00f3ff;
+    --red: #ff003c;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+.font-pixel { font-family: 'Press Start 2P', cursive; line-height: 1.5; letter-spacing: 1px; }
+.font-body { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; }
+
+/* --- BACKGROUND --- */
+.crt-scanline {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 2px, 3px 100%; pointer-events: none; z-index: 1000;
+}
+.vignette-gaming {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent 50%, #000 100%); pointer-events: none; z-index: 999;
+}
+
+.cyber-grid {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(252, 238, 10, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 238, 10, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px; transform: perspective(500px) rotateX(20deg); transform-origin: top; z-index: -1;
+}
+
+/* --- UTILS --- */
+.text-yellow { color: var(--yellow); text-shadow: 2px 2px 0px #ff003c; }
+.text-cyan { color: var(--cyan); }
+.text-red { color: var(--red); }
+.bg-darker { background-color: #080808; }
+.bg-dark-panel { background-color: #0e0e0e; }
+.bg-black { background: black; }
+
+.border-y-yellow { border-top: 2px solid var(--yellow); border-bottom: 2px solid var(--yellow); }
+.border-end-yellow { border-right: 2px solid var(--yellow); }
+@media (max-width: 768px) { .border-end-yellow { border-right: none; border-bottom: 2px solid var(--yellow); padding-bottom: 20px; } }
+
+/* --- HERO --- */
+.game-hero { padding: 120px 0 100px;margin-top: 50px; position: relative; }
+.badge-glitch {
+    background: var(--yellow); color: black; padding: 5px 15px; font-family: 'Press Start 2P'; font-size: 0.7rem; display: inline-block; margin-bottom: 20px;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.btn-yellow {
+    background: var(--yellow); color: black; padding: 15px 30px; font-weight: bold; text-decoration: none; border: none; font-family: 'Rajdhani'; text-transform: uppercase; letter-spacing: 2px;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%); transition: 0.2s;
+}
+.btn-yellow:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0px var(--cyan); }
+
+.btn-outline-yellow {
+    border: 2px solid var(--yellow); color: var(--yellow); padding: 15px 30px; font-weight: bold; text-decoration: none; font-family: 'Rajdhani'; text-transform: uppercase; transition: 0.2s;
+}
+.btn-outline-yellow:hover { background: var(--yellow); color: black; }
+
+/* 3D CHARACTER CARD */
+.char-card {
+    width: 300px; height: 450px; background: #1a1a1a; border: 4px solid var(--yellow); margin: 0 auto;
+    position: relative; box-shadow: -10px 10px 0px var(--cyan); transform: rotateY(-10deg); transition: 0.5s;
+}
+.char-card:hover { transform: rotateY(0deg) scale(1.05); }
+.char-img { height: 70%; background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=80') center/cover; filter: grayscale(100%) contrast(1.2); }
+.char-stats { padding: 20px; font-family: 'Press Start 2P'; font-size: 0.6rem; color: var(--yellow); }
+.stat { margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+.bar { width: 60%; height: 10px; background: #333; border: 1px solid white; }
+.bar div { height: 100%; background: var(--cyan); }
+
+/* --- ARCADE CABINET --- */
+.arcade-cabinet {
+    width: 100%; max-width: 800px; margin: 0 auto; background: #222; border: 10px solid #111; border-radius: 20px; padding: 20px; position: relative;
+    box-shadow: 0 0 50px rgba(252, 238, 10, 0.2);
+}
+.arcade-screen {
+    width: 100%; height: 400px; background: #000; border: 4px solid #444; border-radius: 4px; position: relative; overflow: hidden;
+    cursor: crosshair;
+}
+canvas { display: block; width: 100%; height: 100%; }
+
+.game-ui { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.8); z-index: 10; }
+.btn-start { background: transparent; color: white; border: 2px solid white; padding: 10px 20px; font-family: 'Press Start 2P'; font-size: 0.8rem; cursor: pointer; animation: pulse 1s infinite; }
+.btn-start:hover { background: white; color: black; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+.score-board { position: absolute; top: 10px; left: 10px; color: white; font-family: 'Press Start 2P'; font-size: 0.8rem; z-index: 5; }
+
+.arcade-controls { margin-top: 20px; display: flex; justify-content: space-between; padding: 0 50px; }
+.joystick { width: 60px; height: 60px; background: #333; border-radius: 50%; border: 4px solid #111; box-shadow: 5px 5px 10px black inset; }
+.buttons { display: flex; gap: 15px; }
+.btn-a, .btn-b { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: rgba(0,0,0,0.5); font-family: sans-serif; box-shadow: 0 5px 0 #000; cursor: pointer; }
+.btn-a { background: var(--red); } .btn-a:active { transform: translateY(5px); box-shadow: none; }
+.btn-b { background: var(--cyan); } .btn-b:active { transform: translateY(5px); box-shadow: none; }
+
+/* --- CARDS --- */
+.skill-card {
+    background: #111; padding: 30px; text-align: center; border: 1px solid #333; transition: 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+.skill-card:hover { transform: translateY(-5px); background: #1a1a1a; }
+.border-white:hover { border-color: white; }
+.border-yellow:hover { border-color: var(--yellow); }
+.border-cyan:hover { border-color: var(--cyan); }
+.border-red:hover { border-color: var(--red); }
+
+.icon-box { font-size: 2.5rem; margin-bottom: 15px; color: white; }
+
+/* --- LOOT --- */
+.loot-item { font-size: 1.2rem; margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+.salary-card { border: 2px solid var(--yellow); background: #000; }

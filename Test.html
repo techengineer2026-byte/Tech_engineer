@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WVS64XS5');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <title>Syllabus Sender Test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            background: #fff;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input,
+        select,
+        button,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            /* Ensures padding doesn't break width */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVS64XS5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="box">
+        <h2>Get Course Syllabus</h2>
+
+        <!-- Name (Added this because your script supports it) -->
+        <input type="text" id="name" placeholder="Enter your Name" required>
+
+        <!-- Email -->
+        <input type="email" id="email" placeholder="Enter your Email" required>
+
+        <!-- Message (Optional query) -->
+        <textarea id="message" rows="2" placeholder="Any questions? (Optional)"></textarea>
+
+        <!-- Course Selection (UPDATED VALUES to match your script) -->
+        <select id="course">
+            <option value="" disabled selected>Select a Course</option>
+
+            <optgroup label="C# / .NET (3 Months)">
+                <option value="csharp_api_dotnet_3m">C# API & .NET</option>
+                <option value="csharp_webdev_3m">C# Web Development</option>
+                <option value="csharp_desktop_3m">C# Desktop Dev</option>
+            </optgroup>
+
+            <optgroup label="Python Courses">
+                <option value="python_6m">Python Professional (6 Months)</option>
+                <option value="python_3m">Python Basics (3 Months)</option>
+                <option value="python_6w">Python Crash Course (6 Weeks)</option>
+            </optgroup>
+
+            <optgroup label="Design & Editing">
+                <option value="uiux_6m">UI/UX Design (6 Months)</option>
+                <option value="uiux_3m">UI/UX Design (3 Months)</option>
+                <option value="video_editing_6m">Video Editing (6 Months)</option>
+                <option value="graphic_design_3m">Graphic Design (3 Months)</option>
+            </optgroup>
+
+            <optgroup label="Other Tech">
+                <option value="fullstack_6m">Full Stack Web Dev (6 Months)</option>
+                <option value="cyber_security_6m">Cyber Security (6 Months)</option>
+                <option value="digital_marketing_6m">Digital Marketing (6 Months)</option>
+            </optgroup>
+        </select>
+
+        <button onclick="sendSyllabus()">Send Syllabus</button>
+
+        <p id="status"></p>
+    </div>
+
+    <script>
+        function sendSyllabus() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const course = document.getElementById("course").value;
+            const status = document.getElementById("status");
+
+            if (!email || !course) {
+                alert("Please enter email and select a course");
+                return;
+            }
+
+            status.innerText = "⏳ Sending...";
+            status.style.color = "blue";
+
+            // ⚠️ PASTE YOUR NEW "ANYONE" URL HERE
+            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx034tdHGi8P2fn_SMNNjqbYG4Jso1m3sbddH-8dLMUWU2_JS3rwzv0-ymG4x72Q9dG5Q/exec";
+
+            fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // <--- THIS STOPS THE RED ERROR
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message,
+                    course: course
+                })
+            })
+                .then(() => {
+                    // With 'no-cors', we can't read the response, but if we get here, it sent!
+                    status.innerText = "✅ Syllabus Sent! Check your inbox.";
+                    status.style.color = "green";
+
+                    // Clear fields
+                    document.getElementById("email").value = "";
+                    document.getElementById("name").value = "";
+                })
+                .catch(err => {
+                    console.error(err);
+                    status.innerText = "❌ Something went wrong.";
+                    status.style.color = "red";
+                });
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+http://www.instagram.com/tech___engineer
+https://in.pinterest.com/techengineerai/
+http://x.com/TechEngineer115
+https://www.youtube.com/@TechEngineerai
+91 8544884846
+https://www.facebook.com/people/Tech-Engineer/61588374936232/
+https://github.com/techengineer2026-byte
+http://www.linkedin.com/company/tech-eng-ineer/
+https://www.tumblr.com/techengineerai
+ -->
