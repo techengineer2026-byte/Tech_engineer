@@ -546,7 +546,7 @@
 
 
     </footer>
-    <section class="AIbotchatModal">
+<section class="AIbotchatModal">
 
         <!-- YOUR WEBSITE -->
         <div class="demo-page">
@@ -557,6 +557,8 @@
 
         <!-- FLOATING BUTTON -->
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+            <div class="btn-ripple"></div>
+            <div class="btn-ripple delay"></div>
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
@@ -565,55 +567,105 @@
         <!-- CHAT WINDOW -->
         <div class="chat-window" id="chatWindow">
 
-            <!-- LEAD FORM -->
+            <!-- ========== LEAD FORM ========== -->
             <div id="leadForm" class="lead-card">
-                <!-- ✅ X button on lead form -->
                 <button class="form-close-btn" onclick="toggleChat()">
                     <i class="bi bi-x-lg"></i>
                 </button>
 
-                <div class="logo-area">
-                    <div class="icon-circle"><i class="bi bi-robot"></i></div>
-                    <h3>Tech Engineer AI</h3>
-                    <p>Enter your details to start chatting</p>
-                </div>
+                <div class="lead-card-inner">
+                    <!-- Top glow decoration -->
+                    <div class="card-glow"></div>
 
-                <div class="form-floating position-relative">
-                    <i class="bi bi-person input-icon"></i>
-                    <input type="text" class="form-control" id="userName" placeholder="Name" required>
-                    <label>Your Name</label>
-                </div>
-                <div class="form-floating position-relative">
-                    <i class="bi bi-envelope input-icon"></i>
-                    <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
-                    <label>Your Email</label>
-                </div>
-                <div class="form-floating position-relative">
-                    <i class="bi bi-whatsapp input-icon"></i>
-                    <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
-                    <label>WhatsApp Number</label>
-                </div>
-                <div class="form-floating position-relative">
-                    <i class="bi bi-grid input-icon"></i>
-                    <select class="form-select" id="userCategory">
-                        <option value="training">AI & IT Training</option>
-                        <option value="service">IT Services & Automation</option>
-                    </select>
-                    <label>I'm interested in</label>
-                </div>
+                    <div class="logo-area">
+                        <div class="icon-circle-wrap">
+                            <div class="icon-circle">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                            <svg class="icon-ring-svg" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="36" />
+                            </svg>
+                        </div>
+                        <h3>Tech Engineer AI</h3>
+                        <p>Enter your details to start chatting</p>
+                    </div>
 
-                <button class="btn-start" id="btnStart" onclick="submitLead()">
-                    <i class="bi bi-chat-dots me-2"></i> Start Chatting
-                </button>
+                    <!-- NAME -->
+                    <div class="field-group">
+                        <div class="field-box">
+                            <i class="bi bi-person-fill field-icon"></i>
+                            <input type="text" class="field-input" id="userName" placeholder=" " required>
+                            <label class="field-label">Your Name</label>
+                            <span class="field-focus-line"></span>
+                        </div>
+                        <span class="field-error" id="nameError"></span>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="field-group">
+                        <div class="field-box">
+                            <i class="bi bi-envelope-fill field-icon"></i>
+                            <input type="email" class="field-input" id="userEmail" placeholder=" " required>
+                            <label class="field-label">Your Email</label>
+                            <span class="field-focus-line"></span>
+                        </div>
+                        <span class="field-error" id="emailError"></span>
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="field-group">
+                        <div class="field-box">
+                            <i class="bi bi-whatsapp field-icon"></i>
+                            <input type="tel" class="field-input" id="userPhone" placeholder=" " required
+                                maxlength="15">
+                            <label class="field-label">WhatsApp Number</label>
+                            <span class="field-focus-line"></span>
+                        </div>
+                        <span class="field-error" id="phoneError"></span>
+                    </div>
+
+                    <!-- CATEGORY -->
+                    <div class="field-group">
+                        <div class="field-box select-box">
+                            <i class="bi bi-grid-fill field-icon"></i>
+                            <select class="field-input field-select" id="userCategory">
+                                <option value="training">AI & IT Training</option>
+                                <option value="service">IT Services & Automation</option>
+                            </select>
+                            <label class="field-label label-up">I'm interested in</label>
+                            <span class="field-focus-line"></span>
+                            <i class="bi bi-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <button class="btn-start" id="btnStart" onclick="validateAndSubmit()">
+                        <span class="btn-text">
+                            <i class="bi bi-chat-dots me-2"></i>Start Chatting
+                        </span>
+                        <span class="btn-loader" style="display:none;">
+                            <span class="spinner"></span> Connecting...
+                        </span>
+                        <div class="btn-shine"></div>
+                    </button>
+
+                    <div class="form-secured">
+                        <i class="bi bi-shield-lock-fill"></i> Your data is secure & encrypted
+                    </div>
+                </div>
             </div>
 
-            <!-- CHAT -->
+            <!-- ========== CHAT INTERFACE ========== -->
             <div id="chatInterface" class="chat-card" style="display:none;">
                 <div class="chat-header">
-                    <div class="avatar"><i class="bi bi-robot"></i></div>
+                    <div class="header-glow"></div>
+                    <div class="avatar">
+                        <i class="bi bi-robot"></i>
+                        <span class="avatar-ring"></span>
+                    </div>
                     <div class="info">
                         <h5>Tech Engineer AI</h5>
-                        <small><span class="status-dot"></span>Online</small>
+                        <small><span class="status-dot"></span> Online — ready to help</small>
                     </div>
                     <button class="chat-close-btn" onclick="toggleChat()">
                         <i class="bi bi-x-lg"></i>
@@ -632,9 +684,9 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </section>
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>document.addEventListener("DOMContentLoaded", function () {

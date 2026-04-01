@@ -243,3 +243,93 @@ s.textContent = `@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:
 document.head.appendChild(s);
 
 console.log('Chatbot ready. Webhook:', WEBHOOK_URL);
+
+// ============ FORM VALIDATION ============
+function validateAndSubmit() {
+    let valid = true;
+
+    const name = document.getElementById('userName');
+    const email = document.getElementById('userEmail');
+    const phone = document.getElementById('userPhone');
+
+    // Clear errors
+    clearError('nameError', name);
+    clearError('emailError', email);
+    clearError('phoneError', phone);
+
+    // Name validation
+    if (name.value.trim() === '') {
+        showError('nameError', name, 'Name is required');
+        valid = false;
+    } else if (name.value.trim().length < 2) {
+        showError('nameError', name, 'Name must be at least 2 characters');
+        valid = false;
+    } else if (!/^[a-zA-Z\s]+$/.test(name.value.trim())) {
+        showError('nameError', name, 'Name can only contain letters');
+        valid = false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.value.trim() === '') {
+        showError('emailError', email, 'Email is required');
+        valid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+        showError('emailError', email, 'Enter a valid email address');
+        valid = false;
+    }
+
+    // Phone validation — ONLY numbers allowed
+    const phoneVal = phone.value.trim();
+    if (phoneVal === '') {
+        showError('phoneError', phone, 'WhatsApp number is required');
+        valid = false;
+    } else if (!/^\d+$/.test(phoneVal)) {
+        showError('phoneError', phone, '❌ Only numbers allowed (e.g. 9876543210)');
+        valid = false;
+    } else if (phoneVal.length < 10) {
+        showError('phoneError', phone, 'Enter at least 10 digits');
+        valid = false;
+    }
+
+    if (valid) {
+        submitLead(); // Call YOUR existing JS function
+    } else {
+        // Shake animation on button
+        const btn = document.getElementById('btnStart');
+        btn.classList.add('shake');
+        setTimeout(() => btn.classList.remove('shake'), 600);
+    }
+}
+
+function showError(id, input, msg) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.style.display = 'block';
+    input.closest('.input-wrapper').classList.add('has-error');
+}
+
+function clearError(id, input) {
+    const el = document.getElementById(id);
+    el.textContent = '';
+    el.style.display = 'none';
+    input.closest('.input-wrapper').classList.remove('has-error');
+}
+
+// Real-time phone filtering — block non-numbers while typing
+document.getElementById('userPhone').addEventListener('input', function (e) {
+    this.value = this.value.replace(/[^0-9+]/g, '');
+    if (this.value.length > 0) {
+        clearError('phoneError', this);
+    }
+});
+
+// Real-time clear errors on typing
+document.getElementById('userName').addEventListener('input', function () {
+    if (this.value.trim().length >= 2) clearError('nameError', this);
+});
+
+document.getElementById('userEmail').addEventListener('input', function () {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(this.value.trim())) clearError('emailError', this);
+});

@@ -266,39 +266,6 @@ body {
     color: #fff;
 }
 
-/* ===== FIX: Floating label white background ===== */
-
-/* Label background when floating — match dark card background */
-.form-floating>.form-control:focus~label,
-.form-floating>.form-control:not(:placeholder-shown)~label,
-.form-floating>.form-select~label {
-    background-color: rgba(22, 33, 62, 0.97);
-    /* matches .lead-card bg */
-    padding: 0 6px;
-    height: auto;
-    color: var(--primary);
-    opacity: 1;
-}
-
-/* Default label — remove any white bg */
-.form-floating>label {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.35);
-}
-
-/* Fix select text color (also appears dark) */
-.form-floating .form-select {
-    color: #fff;
-}
-
-/* Fix autofill white background (Chrome) */
-.form-floating .form-control:-webkit-autofill,
-.form-floating .form-control:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 1000px rgba(22, 33, 62, 0.97) inset;
-    -webkit-text-fill-color: #fff;
-    transition: background-color 5000s ease-in-out 0s;
-}
-
 .input-icon {
     position: absolute;
     left: 13px;
