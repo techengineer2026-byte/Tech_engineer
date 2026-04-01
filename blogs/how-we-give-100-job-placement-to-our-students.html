@@ -85,7 +85,8 @@
        🔗 ALTERNATE & NAVIGATION
   ════════════════════════════════════════════ -->
   <link rel="alternate" hreflang="en" href="https://techengineer.co/blog/how-we-give-100-job-placement-to-our-students">
-  <link rel="alternate" hreflang="x-default" href="https://techengineer.co/blog/how-we-give-100-job-placement-to-our-students">
+  <link rel="alternate" hreflang="x-default"
+    href="https://techengineer.co/blog/how-we-give-100-job-placement-to-our-students">
 
   <!-- ═══════════════════════════════════════════
        🎨 FAVICON & APP ICONS
@@ -585,7 +586,7 @@
   <noscript>
     <link rel="stylesheet" href="/assets/css/blog.css">
   </noscript>
-
+  <link rel="stylesheet" href="/style/AIchatbot.css">
   <!-- ═══════════════════════════════════════════
        🔒 SECURITY
   ════════════════════════════════════════════ -->
@@ -2449,7 +2450,95 @@
 
     </div>
   </section>
+  <section class="AIbotchatModal">
 
+    <!-- YOUR WEBSITE -->
+    <div class="demo-page">
+      <h2>🚀 Tech Engineer AI</h2>
+      <p>AI & IT Training | IT Services & Automation</p>
+      <p class="mt-3 text-muted">👉 Click the chat icon to talk with our AI</p>
+    </div>
+
+    <!-- FLOATING BUTTON -->
+    <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+      <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
+      <span class="icon-close"><i class="bi bi-x-lg"></i></span>
+      <span class="chat-badge" id="chatBadge"></span>
+    </button>
+
+    <!-- CHAT WINDOW -->
+    <div class="chat-window" id="chatWindow">
+
+      <!-- LEAD FORM -->
+      <div id="leadForm" class="lead-card">
+        <!-- ✅ X button on lead form -->
+        <button class="form-close-btn" onclick="toggleChat()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+        <div class="logo-area">
+          <div class="icon-circle"><i class="bi bi-robot"></i></div>
+          <h3>Tech Engineer AI</h3>
+          <p>Enter your details to start chatting</p>
+        </div>
+
+        <div class="form-floating position-relative">
+          <i class="bi bi-person input-icon"></i>
+          <input type="text" class="form-control" id="userName" placeholder="Name" required>
+          <label>Your Name</label>
+        </div>
+        <div class="form-floating position-relative">
+          <i class="bi bi-envelope input-icon"></i>
+          <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
+          <label>Your Email</label>
+        </div>
+        <div class="form-floating position-relative">
+          <i class="bi bi-whatsapp input-icon"></i>
+          <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
+          <label>WhatsApp Number</label>
+        </div>
+        <div class="form-floating position-relative">
+          <i class="bi bi-grid input-icon"></i>
+          <select class="form-select" id="userCategory">
+            <option value="training">AI & IT Training</option>
+            <option value="service">IT Services & Automation</option>
+          </select>
+          <label>I'm interested in</label>
+        </div>
+
+        <button class="btn-start" id="btnStart" onclick="submitLead()">
+          <i class="bi bi-chat-dots me-2"></i> Start Chatting
+        </button>
+      </div>
+
+      <!-- CHAT -->
+      <div id="chatInterface" class="chat-card" style="display:none;">
+        <div class="chat-header">
+          <div class="avatar"><i class="bi bi-robot"></i></div>
+          <div class="info">
+            <h5>Tech Engineer AI</h5>
+            <small><span class="status-dot"></span>Online</small>
+          </div>
+          <button class="chat-close-btn" onclick="toggleChat()">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages"></div>
+
+        <div class="quick-actions" id="quickActions"></div>
+
+        <div class="chat-input-area">
+          <input type="text" id="chatInput" placeholder="Type your question..."
+            onkeypress="if(event.key==='Enter') sendMessage()">
+          <button class="btn-send" id="btnSend" onclick="sendMessage()">
+            <i class="bi bi-send-fill"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ════════════════════════════════════
        RELATED POSTS

@@ -62,7 +62,6 @@ async function submitLead() {
     globalPhone = phone;
     globalEmail = email;
 
-    // ✅ Lead — send as body (for Excel save)
     const payload = {
         Name: name,
         Phone: phone,
@@ -70,7 +69,7 @@ async function submitLead() {
         category: category,
         isFirstMessage: true,
         QueryCount: 0,
-        query: "",
+        query: "Hi",
         SessionId: currentSessionId
     };
 
