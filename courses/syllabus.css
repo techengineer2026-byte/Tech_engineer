@@ -1,13 +1,16 @@
 .btn {
     font-size: 16px !important;
 }
+
 .border-y-cyan {
     border-top: 2px solid rgb(71 143 171);
     border-bottom: 2px solid rgb(71 143 171);
 }
+
 .border-end-cyan {
     border-right: 1px solid rgb(71 143 171);
 }
+
 .bg-glass {
     background: rgb(114 183 205);
     backdrop-filter: blur(10px);
@@ -16,18 +19,22 @@
 .btn-outline-success {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .btn-outline-success:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
 }
+
 .box1 {
     border: 0px solid #999999;
     border-radius: 15px;
     background-color: lightgray;
 }
+
 .cert-box {
     border-radius: 12px;
 }
+
 .border-cyan {
     border: 1px solid var(--cyan);
 }
@@ -35,22 +42,27 @@
 .bg-darker-panel {
     background: #0b1120;
 }
+
 .bg-darker-panel {
     background: #0b112066;
 }
+
 .outcome-item {
     background: rgb(255, 255, 255);
     padding: 12px 20px;
     border-radius: 50px;
     font-size: 0.9rem;
 }
+
 .text-cyan {
     color: var(--cyan);
     text-shadow: 0 0 10px var(--cyan-glow);
 }
+
 .text-gray {
     color: var(--text-muted);
 }
+
 .text-gray2 {
     color: #333333;
 }
@@ -60,6 +72,7 @@
         margin-top: 0;
     }
 }
+
 @media (max-width: 768px) {
     .separater {
         margin-top: 20px;
@@ -73,33 +86,26 @@
     color: #666666;
 }
 
-/* --- PREMIUM MODAL DESIGN --- */
 .modal {
     z-index: 999999;
 }
-/* 1. The Background Overlay (Blur Effect) */
+
 .modal-backdrop.show {
     opacity: 0.8;
     backdrop-filter: blur(8px);
-    /* This makes the background blurry */
     background-color: rgba(15, 23, 42, 0.6);
-    /* Dark blue-ish tint */
 }
 
-/* 2. The Modal Card (The "Box") */
 .modal-content.premium-modal {
     border: none;
     border-radius: 25px;
-    /* Super rounded corners */
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     transform: scale(0.8);
     opacity: 0;
     animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    /* Bouncy Animation */
 }
 
-/* 3. The Animation (The "Surprise") */
 @keyframes modalPop {
     to {
         transform: scale(1);
@@ -107,7 +113,6 @@
     }
 }
 
-/* 4. The Header (Gradient & Shapes) */
 .modal-header-fancy {
     background: linear-gradient(135deg, #0d6efd 0%, #0099ff 100%);
     padding: 40px 30px;
@@ -117,7 +122,6 @@
     border-bottom: none;
 }
 
-/* Decorative circle in header */
 .modal-header-fancy::after {
     content: '';
     position: absolute;
@@ -127,7 +131,6 @@
     height: 40px;
     background: white;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    /* Creates a curve at bottom */
 }
 
 .modal-header-fancy h3 {
@@ -142,7 +145,6 @@
     margin-top: 5px;
 }
 
-/* Close Button (Floating) */
 .btn-close-white {
     position: absolute;
     top: 20px;
@@ -152,7 +154,6 @@
     padding: 10px;
     transition: all 0.2s;
     filter: invert(1);
-    /* Makes the X white */
     z-index: 10;
 }
 
@@ -161,7 +162,6 @@
     transform: rotate(90deg);
 }
 
-/* 5. The Inputs (Modern & Clean) */
 .input-group-text {
     background: transparent;
     border: none;
@@ -187,12 +187,10 @@
     background: #f8f9fa;
 }
 
-/* Label Animation */
 .form-floating>label {
     padding-left: 10px;
 }
 
-/* 6. The Button (Glow Effect) */
 .btn-fancy {
     background: linear-gradient(90deg, #0d6efd, #0dcaf0);
     border: none;
@@ -210,4 +208,490 @@
     transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(13, 110, 253, 0.4);
     background: linear-gradient(90deg, #0b5ed7, #0aa2c0);
+}
+
+
+.cc-hero-section {
+    background-color: #f8fafc;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.cc-hero-title {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.cc-gradient-text {
+    background: linear-gradient(135deg, #0d6efd, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.cc-hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.cc-badge {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.cc-btn-primary,
+.cc-btn-outline {
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cc-btn-outline:hover {
+    background-color: #f1f5f9 !important;
+    transform: translateY(-2px);
+}
+
+.cc-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2) !important;
+}
+
+.cc-trust-badge {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    color: #1e293b;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.cc-trust-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(13, 110, 253, 0.1) !important;
+    border-color: #0d6efd !important;
+}
+
+.cc-hero-img {
+    width: 70%;
+    max-width: 105%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 8px solid white;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-glow-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(13, 110, 253, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.animate-float {
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.cc-link {
+    color: #0d6efd;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cc-link:hover {
+    text-decoration: underline;
+    color: #0b5ed7;
+}
+
+@media (max-width: 991px) {
+    .cc-hero-title {
+        font-size: 2.8rem;
+    }
+
+    .cc-hero-img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cc-hero-section {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .cc-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .cc-hero-desc {
+        font-size: 1rem;
+    }
+
+    .cc-trust-badge {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cc-hero-img {
+        max-width: 100%;
+        border-width: 5px;
+    }
+
+    .cc-glow-circle {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+.cc-info-section {
+    background-color: #ffffff;
+}
+
+.cc-info-card {
+    background-color: #f8fafc;
+    border-radius: 24px;
+    border-color: #e2e8f0 !important;
+    transition: all 0.3s ease;
+}
+
+.cc-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+    background-color: #ffffff;
+}
+
+.cc-icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.bg-primary-soft {
+    background-color: #eff4ff;
+}
+
+.text-primary {
+    color: #0d6efd !important;
+}
+
+.bg-purple-soft {
+    background-color: #f3e8ff;
+}
+
+.text-purple {
+    color: #8b5cf6 !important;
+}
+
+.cc-check-list li span {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.cc-check-list li strong {
+    color: #0f172a;
+}
+
+
+.cc-curriculum-section {
+    background-color: #f8fafc;
+}
+
+.cc-course-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border-color: #e2e8f0 !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cc-course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(13, 110, 253, 0.1) !important;
+    border-color: #0d6efd !important;
+}
+
+.cc-card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.cc-course-card:hover .cc-card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.bg-warning-soft {
+    background-color: #fff3cd;
+}
+
+.bg-primary-soft {
+    background-color: #eff4ff;
+}
+
+.bg-dark-soft {
+    background-color: #e2e8f0;
+}
+
+.bg-info-soft {
+    background-color: #e0f8f1;
+    color: #0dcaf0 !important;
+}
+
+.bg-purple-soft {
+    background-color: #f3e8ff;
+}
+
+.text-purple {
+    color: #8b5cf6 !important;
+}
+
+.bg-danger-soft {
+    background-color: #ffe3e3;
+}
+
+.bg-secondary-soft {
+    background-color: #f1f5f9;
+    color: #64748b !important;
+}
+
+.bg-success-soft {
+    background-color: #d1e7dd;
+}
+
+.tracking-wider {
+    letter-spacing: 1.5px;
+}
+
+/* ==============================================
+   PREMIUM CTA SECTION
+=============================================== */
+.cc-cta-section {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.cc-cta-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 28px;
+    padding: 50px 30px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+}
+
+.cc-cta-card::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.22);
+    filter: blur(30px);
+    top: -80px;
+    right: -80px;
+}
+
+.cc-cta-card::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(0, 209, 255, 0.12);
+    filter: blur(30px);
+    bottom: -90px;
+    left: -60px;
+}
+
+.cc-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 2;
+}
+
+.cc-cta-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-cta-text {
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.05rem;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-btn {
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.cc-btn:hover {
+    transform: translateY(-3px);
+}
+
+.cc-btn-call {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+}
+
+.cc-btn-call:hover {
+    color: #fff;
+    box-shadow: 0 14px 30px rgba(79, 70, 229, 0.45);
+}
+
+.cc-btn-brochure {
+    background: #fff;
+    color: #0f172a;
+    box-shadow: 0 10px 24px rgba(255, 255, 255, 0.12);
+}
+
+.cc-btn-brochure:hover {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.cc-cta-address {
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cc-cta-card {
+        padding: 36px 18px;
+        border-radius: 22px;
+    }
+
+    .cc-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .cc-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ==============================================
+   YOUR OUTCOMES & CERTIFICATION CSS
+=============================================== */
+
+.cc-outcomes-section {
+    background-color: #f8fafc;
+    /* Seamless transition from the section above */
+}
+
+/* The Main Big Card */
+.cc-outcomes-card {
+    background: #ffffff;
+    border-radius: 28px;
+    border-color: #e2e8f0 !important;
+}
+
+/* Individual Outcome Pills */
+.cc-outcome-item {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.cc-outcome-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06) !important;
+    border-color: #0d6efd !important;
+}
+
+/* The Dark Certification Box */
+.cc-cert-box {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effect behind the award icon */
+.cc-cert-glow {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Reusing the soft primary color from the previous section */
+.bg-primary-soft {
+    background-color: #eff4ff;
 }

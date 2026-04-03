@@ -35,7 +35,119 @@
     <meta name="twitter:url" content="https://techengineer.co/blog">
     <meta name="twitter:site" content="@TechEngineer">
 
+<style>
+    /* =========================================
+   UNIQUE BLOG PAGE STYLES
+========================================= */
 
+.blog-page {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 1. Hero Banner */
+.blog-hero {
+    background: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    padding: 100px 0 80px;
+}
+.blog-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(67, 97, 238, 0.85) 100%);
+}
+.blog-breadcrumb {
+    display: inline-flex; align-items: center; background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px); padding: 8px 24px; border-radius: 50px;
+}
+.blog-breadcrumb a { color: #e2e8f0; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.blog-breadcrumb a:hover { color: #fff; }
+.blog-separator { color: #94a3b8; margin: 0 12px; font-size: 0.7rem; }
+.blog-breadcrumb .active { color: #fff; font-weight: 700; font-size: 0.9rem; }
+.blog-text-gradient { background: linear-gradient(135deg, #a5b4fc, #e0e7ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* 2. Blog Cards (Main Content) */
+.blog-card {
+    background: #fff; border-radius: 20px; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.03);
+    margin-bottom: 40px; transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.blog-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(67, 97, 238, 0.12); }
+
+.blog-card-img { position: relative; height: 320px; overflow: hidden; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.blog-card:hover .blog-card-img img { transform: scale(1.08); }
+
+/* Badges */
+.blog-badge {
+    position: absolute; top: 20px; right: 20px; color: white;
+    padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); backdrop-filter: blur(4px); z-index: 2;
+}
+.bg-primary-gradient { background: linear-gradient(135deg, #4361ee, #3a0ca3); }
+.bg-success-gradient { background: linear-gradient(135deg, #20c997, #12b886); }
+.bg-warning-gradient { background: linear-gradient(135deg, #f77f00, #d62828); }
+.bg-info-gradient { background: linear-gradient(135deg, #0dcaf0, #0aa2c0); color: #000; }
+.bg-purple-gradient { background: linear-gradient(135deg, #7209b7, #560bad); }
+
+.blog-card-body { padding: 35px; }
+.blog-meta { display: flex; gap: 20px; margin-bottom: 15px; color: #64748b; font-size: 0.9rem; font-weight: 500; }
+.blog-meta i { color: #4361ee; margin-right: 6px; }
+.blog-title { font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; line-height: 1.3; }
+.blog-excerpt { color: #475569; line-height: 1.7; margin-bottom: 25px; font-size: 1rem; }
+
+.blog-read-more {
+    display: inline-flex; align-items: center; color: #4361ee; font-weight: 700;
+    text-decoration: none; font-size: 1.05rem; transition: 0.3s;
+}
+.blog-read-more i { margin-left: 8px; transition: margin-left 0.3s; }
+.blog-read-more:hover { color: #3a0ca3; }
+.blog-read-more:hover i { margin-left: 15px; }
+
+/* 3. Sidebar Widgets */
+.sidebar-widget {
+    background: #fff; border-radius: 20px; padding: 30px; margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.03);
+}
+.sidebar-title { font-weight: 700; color: #0f172a; margin-bottom: 25px; position: relative; padding-bottom: 12px; font-size: 1.3rem; }
+.sidebar-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: #4361ee; border-radius: 5px; }
+
+/* Search Box */
+.blog-search-form { position: relative; }
+.blog-search-form .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #94a3b8; }
+.blog-search-form input {
+    width: 100%; padding: 12px 15px 12px 45px; border: 2px solid #e2e8f0; border-radius: 12px;
+    background: #f8fafc; color: #0f172a; transition: 0.3s; outline: none; font-size: 0.95rem;
+}
+.blog-search-form input:focus { border-color: #4361ee; background: #fff; box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1); }
+
+/* Categories */
+.sidebar-category-list { list-style: none; padding: 0; margin: 0; }
+.sidebar-category-list li { margin-bottom: 10px; }
+.sidebar-category-list a {
+    display: flex; justify-content: space-between; padding: 12px 18px;
+    background: #f8fafc; border-radius: 12px; color: #475569; text-decoration: none; font-weight: 500; transition: 0.3s;
+}
+.sidebar-category-list a:hover { background: #4361ee; color: #fff; transform: translateX(5px); }
+.sidebar-category-list a span { background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 20px; font-size: 0.8rem; }
+.sidebar-category-list a:hover span { background: rgba(255,255,255,0.2); }
+
+/* Recent Posts */
+.sidebar-recent-posts { list-style: none; padding: 0; margin: 0; }
+.sidebar-recent-posts li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #f1f5f9; }
+.sidebar-recent-posts li:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+.sidebar-recent-posts a { display: flex; align-items: center; gap: 15px; text-decoration: none; transition: 0.3s; }
+.sidebar-recent-posts img { width: 70px; height: 70px; border-radius: 12px; object-fit: cover; transition: 0.3s; }
+.sidebar-recent-posts a:hover img { transform: scale(1.05); }
+.recent-post-info h5 { font-size: 0.95rem; font-weight: 600; color: #0f172a; margin-bottom: 5px; line-height: 1.4; transition: 0.3s; }
+.sidebar-recent-posts a:hover .recent-post-info h5 { color: #4361ee; }
+.recent-post-info span { font-size: 0.8rem; color: #64748b; }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .blog-card-img { height: 220px; }
+    .blog-title { font-size: 1.4rem; }
+    .blog-card-body { padding: 20px; }
+}
+</style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,14 +164,7 @@
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-MZS1VS07WN');
-    </script>
     <style>
         :root {
             --primary-color: #0d6efd;
@@ -437,184 +542,229 @@
             </ul>
         </nav>
     </header>
+    <main class="blog-page">
+        <!-- 1. PREMIUM HERO BANNER -->
+        <section class="blog-hero position-relative text-center">
+            <div class="blog-hero-overlay"></div>
+            <div class="container position-relative z-2">
 
-    <section class="blog-banner">
-        <div class="container">
-            <nav class="custom-breadcrumb">
-                <a href="./">Home</a>
-                <i class="fas fa-chevron-right"></i>
-                <span class="active">Blog</span>
-            </nav>
-            <div class="banner-content">
-                <h1>Tech Engineer Insights</h1>
-                <p>Stay updated with the latest trends, podcasts, and best practices in IT.</p>
+                <nav class="blog-breadcrumb mx-auto mb-4 fade-in-up">
+                    <a href="./"><i class="fas fa-home me-1"></i> Home</a>
+                    <i class="fas fa-chevron-right blog-separator"></i>
+                    <span class="active">Our Blog</span>
+                </nav>
+
+                <h1 class="display-4 fw-bold text-white mb-3 slide-in-bottom">Tech Engineer <span
+                        class="blog-text-gradient">Insights</span></h1>
+                <p class="text-white-50 lead mx-auto mb-0 slide-in-bottom" style="max-width: 650px;">
+                    Stay updated with the latest industry trends, expert podcasts, development tutorials, and IT best
+                    practices.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="blog-section">
-        <div class="container">
-            <div class="blog-layout">
+        <!-- 2. BLOG CONTENT SECTION -->
+        <section class="blog-content-section py-5">
+            <div class="container py-4">
+                <div class="row g-5">
 
-                <main class="blog-main">
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="./images/blog/ai-2026-featured1.webp" alt="AI Technology 2026 Future">
-                            <span class="category-tag">AI & Technology</span>
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> March 2026</span>
-                                <span><i class="far fa-user"></i> Tech Engineer Team</span>
+                    <!-- MAIN ARTICLES COLUMN -->
+                    <div class="col-lg-8">
+
+                        <!-- Post 1 -->
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="./images/blog/ai-2026-featured1.webp" alt="AI Technology 2026 Future"
+                                    loading="lazy">
+                                <span class="blog-badge bg-primary-gradient"><i class="fas fa-robot me-1"></i> AI &
+                                    Tech</span>
                             </div>
-                            <h2>AI in 2026: What’s Changed and What’s Coming Next</h2>
-                            <p>Explore the future of artificial intelligence, new breakthroughs, and how AI is
-                                transforming industries in 2026.</p>
-                            <a href="/blogs/ai-in-2026-whats-changed-and-whats-coming-next" class="read-more-btn">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="./images/blog/job-placement-og.webp" alt="100% Job Placement Program">
-                            <span class="category-tag">Career</span>
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> March 2026</span>
-                                <span><i class="far fa-user"></i> Tech Engineer Team</span>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> March 15, 2026</span>
+                                    <span><i class="far fa-user-circle"></i> Tech Engineer Team</span>
+                                </div>
+                                <h2 class="blog-title">AI in 2026: What’s Changed and What’s Coming Next</h2>
+                                <p class="blog-excerpt">Explore the future of artificial intelligence, new
+                                    breakthroughs, and how AI is transforming industries, automation, and daily
+                                    workflows in 2026.</p>
+                                <a href="/blogs/ai-in-2026-whats-changed-and-whats-coming-next" class="blog-read-more">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
-                            <h2>How We Give 100% Job Placement to Our Students</h2>
-                            <p>Discover our proven system including training, internships, and placement support that
-                                ensures student success.</p>
-                            <a href="/blogs/how-we-give-100-job-placement-to-our-students" class="read-more-btn">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="./images/techcast-ep3-mr-bhatia-rise.jpg" alt="Mr. Bhatia Rise">
-                            <span class="category-tag"><i class="fas fa-microphone-alt me-2"></i> Podcast</span>
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> April 13, 2025</span>
-                                <span><i class="far fa-user"></i> Puadh punjabi podcast Team</span>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="./images/blog/job-placement-og.webp" alt="100% Job Placement Program"
+                                    loading="lazy">
+                                <span class="blog-badge bg-success-gradient"><i class="fas fa-briefcase me-1"></i>
+                                    Career</span>
                             </div>
-                            <h2>Mr. Bhatia: From IT Groundwork to Sales Leadership</h2>
-                            <p>Mr. Bhatia opens up about his journey — from tackling language barriers in South India to
-                                managing IT and telecom projects across Airtel and Jio.</p>
-                            <a href="https://puadhpunjabipodcast.com/episode/ep3-mr-bhatia" target="_blank"
-                                class="read-more-btn">
-                                Read Full Story <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="./images/techcast-ep15-jobanjeet-singh-coding-journey.jpg" alt="Jobanjeet Singh">
-                            <span class="category-tag"><i class="fas fa-code me-2"></i> Dev Story</span>
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> July 6, 2025</span>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> March 10, 2026</span>
+                                    <span><i class="far fa-user-circle"></i> Placement Cell</span>
+                                </div>
+                                <h2 class="blog-title">How We Give 100% Job Placement to Our Students</h2>
+                                <p class="blog-excerpt">Discover our proven system including industry-standard training,
+                                    hands-on internships, and dedicated placement support that ensures absolute student
+                                    success.</p>
+                                <a href="/blogs/how-we-give-100-job-placement-to-our-students" class="blog-read-more">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
-                            <h2>Journey of a Self-Taught Coder: Jobanjeet Singh</h2>
-                            <p>A motivating Punjabi episode where a self-taught coder shares how college theory failed
-                                him — and how GitHub, LinkedIn, and continuous learning shaped his career.</p>
-                            <a href="https://puadhpunjabipodcast.com/episode/ep15-jobanjeet-singh" target="_blank"
-                                class="read-more-btn">
-                                Read Full Story <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="./images/techcast-ep18-akash-ecommerce-smart-farming.jpg" alt="Akash Ecommerce">
-                            <span class="category-tag"><i class="fas fa-shopping-cart me-2"></i> E-Commerce</span>
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> July 27, 2025</span>
+                        <!-- Post 3 (Podcast) -->
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="./images/techcast-ep3-mr-bhatia-rise.jpg" alt="Mr. Bhatia Rise"
+                                    loading="lazy">
+                                <span class="blog-badge bg-warning-gradient"><i class="fas fa-microphone-alt me-1"></i>
+                                    Podcast</span>
                             </div>
-                            <h2>Akash’s Digital Sales Blueprint</h2>
-                            <p>From village fields to national e-commerce platforms! Akash shares how he built
-                                product-based businesses on Amazon, Meesho & Flipkart.</p>
-                            <a href="https://puadhpunjabipodcast.com/episode/ep18-akash-ecommerce" target="_blank"
-                                class="read-more-btn">
-                                Read Full Story <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="./images/Kamalpreet_singh.jpg" alt="Kamalpreet Singh Doha">
-                            <span class="category-tag"><i class="fas fa-plane-departure me-2"></i> Career</span>
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> Dec 7, 2025</span>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> April 13, 2025</span>
+                                    <span><i class="far fa-play-circle"></i> Puadh Punjabi Podcast</span>
+                                </div>
+                                <h2 class="blog-title">Mr. Bhatia: From IT Groundwork to Sales Leadership</h2>
+                                <p class="blog-excerpt">Mr. Bhatia opens up about his journey — from tackling language
+                                    barriers in South India to managing massive IT and telecom projects across Airtel
+                                    and Jio.</p>
+                                <a href="https://puadhpunjabipodcast.com/episode/ep3-mr-bhatia" target="_blank"
+                                    class="blog-read-more">
+                                    Listen to Episode <i class="fas fa-headphones"></i>
+                                </a>
                             </div>
-                            <h2>Mastering Your IT Career in Doha 🇶🇦</h2>
-                            <p>Thinking of working abroad? This episode breaks down the Software Engineer career in Doha
-                                — from salary expectations to real work culture.</p>
-                            <a href="https://puadhpunjabipodcast.com/episode/ep25-doha-engineer" target="_blank"
-                                class="read-more-btn">
-                                Read Full Story <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
+                        </article>
 
+                        <!-- Post 4 (Dev Story) -->
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="./images/techcast-ep15-jobanjeet-singh-coding-journey.jpg"
+                                    alt="Jobanjeet Singh" loading="lazy">
+                                <span class="blog-badge bg-info-gradient"><i class="fas fa-code me-1"></i> Dev
+                                    Story</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> July 6, 2025</span>
+                                    <span><i class="far fa-play-circle"></i> TechCast Episode 15</span>
+                                </div>
+                                <h2 class="blog-title">Journey of a Self-Taught Coder: Jobanjeet Singh</h2>
+                                <p class="blog-excerpt">A motivating episode where a self-taught coder shares how
+                                    college theory failed him — and how GitHub, LinkedIn, and continuous building shaped
+                                    his career.</p>
+                                <a href="https://puadhpunjabipodcast.com/episode/ep15-jobanjeet-singh" target="_blank"
+                                    class="blog-read-more">
+                                    Watch Full Story <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                </main>
+                        <!-- Post 5 (E-Commerce) -->
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="./images/techcast-ep18-akash-ecommerce-smart-farming.jpg"
+                                    alt="Akash Ecommerce" loading="lazy">
+                                <span class="blog-badge bg-purple-gradient"><i class="fas fa-shopping-cart me-1"></i>
+                                    E-Commerce</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> July 27, 2025</span>
+                                    <span><i class="far fa-play-circle"></i> TechCast Episode 18</span>
+                                </div>
+                                <h2 class="blog-title">Akash’s Digital Sales & E-Commerce Blueprint</h2>
+                                <p class="blog-excerpt">From village fields to national e-commerce platforms! Akash
+                                    shares exactly how he built profitable product-based businesses on Amazon, Meesho,
+                                    and Flipkart.</p>
+                                <a href="https://puadhpunjabipodcast.com/episode/ep18-akash-ecommerce" target="_blank"
+                                    class="blog-read-more">
+                                    Learn the Blueprint <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                <aside class="blog-sidebar">
-
-                    <div class="sidebar-widget">
-                        <h3>Search</h3>
-                        <form class="search-form">
-                            <input type="text" placeholder="Type here...">
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
                     </div>
 
-                    <div class="sidebar-widget">
-                        <h3>Categories</h3>
-                        <ul class="category-list">
-                            <li>TechCast <span>(3)</span></li>
-                            <li>Cloud Computing <span>(5)</span></li>
-                            <li>Cybersecurity <span>(8)</span></li>
-                            <li>Web Development <span>(10)</span></li>
-                            <li>IT Services <span>(4)</span></li>
-                        </ul>
+                    <!-- SIDEBAR COLUMN -->
+                    <div class="col-lg-4">
+                        <aside class="blog-sidebar sticky-top" style="top: 100px; z-index: 10;">
+
+                            <!-- Search Widget -->
+                            <div class="sidebar-widget">
+                                <h4 class="sidebar-title">Search Articles</h4>
+                                <form class="blog-search-form">
+                                    <i class="fas fa-search search-icon"></i>
+                                    <input type="text" placeholder="Search keywords...">
+                                </form>
+                            </div>
+
+                            <!-- Categories Widget -->
+                            <div class="sidebar-widget">
+                                <h4 class="sidebar-title">Categories</h4>
+                                <ul class="sidebar-category-list">
+                                    <li><a href="#">TechCast Podcasts <span>(24)</span></a></li>
+                                    <li><a href="#">Cloud Computing <span>(15)</span></a></li>
+                                    <li><a href="#">Web Development <span>(32)</span></a></li>
+                                    <li><a href="#">Career Advice <span>(18)</span></a></li>
+                                    <li><a href="#">Cyber Security <span>(9)</span></a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Recent Posts Widget -->
+                            <div class="sidebar-widget">
+                                <h4 class="sidebar-title">Trending Now</h4>
+                                <ul class="sidebar-recent-posts">
+                                    <li>
+                                        <a href="https://puadhpunjabipodcast.com/episode/ep25-doha-engineer"
+                                            target="_blank">
+                                            <img src="./images/Kamalpreet_singh.jpg" alt="Doha">
+                                            <div class="recent-post-info">
+                                                <h5>Mastering Your IT Career in Doha 🇶🇦</h5>
+                                                <span><i class="far fa-clock"></i> Dec 7, 2025</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/blog/ai-2026-featured1.webp" alt="AI">
+                                            <div class="recent-post-info">
+                                                <h5>The Impact of 5G on Web Apps</h5>
+                                                <span><i class="far fa-clock"></i> Feb 12, 2026</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Newsletter Widget -->
+                            <div
+                                class="sidebar-widget bg-primary-gradient  text-center rounded-4 border-0 p-4">
+                                <i class="fas fa-envelope-open-text fa-3x mb-3 opacity-75"></i>
+                                <h4 class="fw-bold  mb-2 border-0">Subscribe to Weekly IT Updates</h4>
+                                <p class="small -50 mb-4">Get the latest tutorials, podcasts, and industry
+                                    news right in your inbox.</p>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required
+                                        class="form-control mb-2 rounded-3 border-0 py-2">
+                                    <button type="submit"
+                                        class="btn btn-light w-100 rounded-3 fw-bold text-primary py-2">Subscribe
+                                        Now</button>
+                                </form>
+                            </div>
+
+                        </aside>
                     </div>
 
-
-
-                    <div class="sidebar-widget">
-                        <h3>Recent Posts</h3>
-                        <ul class="recent-posts">
-                            <li>
-                                <span class="post-title">5G Technology Impact</span>
-                                <span class="post-date"><i class="far fa-clock me-1"></i> Jan 20, 2025</span>
-                            </li>
-                            <li>
-                                <span class="post-title">DevOps Best Practices</span>
-                                <span class="post-date"><i class="far fa-clock me-1"></i> Jan 18, 2025</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                </aside>
-
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer class="footer-bs5">
         <div class="container">
             <div class="row gy-5">
@@ -715,19 +865,13 @@
             </button>
         </div>
     </footer>
-<section class="AIbotchatModal">
+    <section class="AIbotchatModal">
 
         <!-- YOUR WEBSITE -->
-        <div class="demo-page">
-            <h2>🚀 Tech Engineer AI</h2>
-            <p>AI & IT Training | IT Services & Automation</p>
-            <p class="mt-3 text-muted">👉 Click the chat icon to talk with our AI</p>
-        </div>
+
 
         <!-- FLOATING BUTTON -->
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
-            <div class="btn-ripple"></div>
-            <div class="btn-ripple delay"></div>
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
@@ -736,105 +880,55 @@
         <!-- CHAT WINDOW -->
         <div class="chat-window" id="chatWindow">
 
-            <!-- ========== LEAD FORM ========== -->
+            <!-- LEAD FORM -->
             <div id="leadForm" class="lead-card">
+                <!-- ✅ X button on lead form -->
                 <button class="form-close-btn" onclick="toggleChat()">
                     <i class="bi bi-x-lg"></i>
                 </button>
 
-                <div class="lead-card-inner">
-                    <!-- Top glow decoration -->
-                    <div class="card-glow"></div>
-
-                    <div class="logo-area">
-                        <div class="icon-circle-wrap">
-                            <div class="icon-circle">
-                                <i class="bi bi-robot"></i>
-                            </div>
-                            <svg class="icon-ring-svg" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36" />
-                            </svg>
-                        </div>
-                        <h3>Tech Engineer AI</h3>
-                        <p>Enter your details to start chatting</p>
-                    </div>
-
-                    <!-- NAME -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-person-fill field-icon"></i>
-                            <input type="text" class="field-input" id="userName" placeholder=" " required>
-                            <label class="field-label">Your Name</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="nameError"></span>
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-envelope-fill field-icon"></i>
-                            <input type="email" class="field-input" id="userEmail" placeholder=" " required>
-                            <label class="field-label">Your Email</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="emailError"></span>
-                    </div>
-
-                    <!-- PHONE -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-whatsapp field-icon"></i>
-                            <input type="tel" class="field-input" id="userPhone" placeholder=" " required
-                                maxlength="15">
-                            <label class="field-label">WhatsApp Number</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="phoneError"></span>
-                    </div>
-
-                    <!-- CATEGORY -->
-                    <div class="field-group">
-                        <div class="field-box select-box">
-                            <i class="bi bi-grid-fill field-icon"></i>
-                            <select class="field-input field-select" id="userCategory">
-                                <option value="training">AI & IT Training</option>
-                                <option value="service">IT Services & Automation</option>
-                            </select>
-                            <label class="field-label label-up">I'm interested in</label>
-                            <span class="field-focus-line"></span>
-                            <i class="bi bi-chevron-down select-arrow"></i>
-                        </div>
-                    </div>
-
-                    <!-- SUBMIT -->
-                    <button class="btn-start" id="btnStart" onclick="validateAndSubmit()">
-                        <span class="btn-text">
-                            <i class="bi bi-chat-dots me-2"></i>Start Chatting
-                        </span>
-                        <span class="btn-loader" style="display:none;">
-                            <span class="spinner"></span> Connecting...
-                        </span>
-                        <div class="btn-shine"></div>
-                    </button>
-
-                    <div class="form-secured">
-                        <i class="bi bi-shield-lock-fill"></i> Your data is secure & encrypted
-                    </div>
+                <div class="logo-area">
+                    <div class="icon-circle"><i class="bi bi-robot"></i></div>
+                    <h3>Tech Engineer AI</h3>
+                    <p>Enter your details to start chatting</p>
                 </div>
+
+                <div class="form-floating position-relative">
+                    <i class="bi bi-person input-icon"></i>
+                    <input type="text" class="form-control" id="userName" placeholder="Name" required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-envelope input-icon"></i>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-whatsapp input-icon"></i>
+                    <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
+                    <label>WhatsApp Number</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-grid input-icon"></i>
+                    <select class="form-select" id="userCategory">
+                        <option value="training">AI & IT Training</option>
+                        <option value="service">IT Services & Automation</option>
+                    </select>
+                    <label>I'm interested in</label>
+                </div>
+
+                <button class="btn-start" id="btnStart" onclick="submitLead()">
+                    <i class="bi bi-chat-dots me-2"></i> Start Chatting
+                </button>
             </div>
 
-            <!-- ========== CHAT INTERFACE ========== -->
+            <!-- CHAT -->
             <div id="chatInterface" class="chat-card" style="display:none;">
                 <div class="chat-header">
-                    <div class="header-glow"></div>
-                    <div class="avatar">
-                        <i class="bi bi-robot"></i>
-                        <span class="avatar-ring"></span>
-                    </div>
+                    <div class="avatar"><i class="bi bi-robot"></i></div>
                     <div class="info">
                         <h5>Tech Engineer AI</h5>
-                        <small><span class="status-dot"></span> Online — ready to help</small>
+                        <small><span class="status-dot"></span>Online</small>
                     </div>
                     <button class="chat-close-btn" onclick="toggleChat()">
                         <i class="bi bi-x-lg"></i>
@@ -853,6 +947,7 @@
                     </button>
                 </div>
             </div>
+
         </div>
     </section>
 

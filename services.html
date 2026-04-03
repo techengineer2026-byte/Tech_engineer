@@ -8,7 +8,6 @@
     <title>IT Services in Mohali — Web Dev, Cloud & AI Automation | Tech Engineer</title>
     <meta name="description"
         content="Professional IT services in Mohali - Web Development, Cloud Solutions, Cybersecurity, Mobile Apps, Data Management & IT Support. Get 24/7 assistance.">
-    <!-- <meta name="keywords"         content="IT Services Mohali, Web Development Company, Mobile App Developers, Digital Marketing Agency, AI Solutions, Cloud Computing, Software Development Punjab, Tech Engineer Services, SEO Services, Custom Software"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -56,7 +55,397 @@
         <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
         <meta name="twitter:url" content="https://techengineer.co/services">
         <meta name="twitter:site" content="@TechEngineer">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .bg-light-gray {
+                background-color: #f8f9fc;
+            }
+
+            /* =========================================
+   1. Banner Section
+========================================= */
+            .bannerservice {
+                position: relative;
+                /* Use a high quality tech background image or dark color */
+                background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') no-repeat center center;
+                background-size: cover;
+                height: 60vh;
+                min-height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #fff;
+                overflow: hidden;
+            }
+
+            .banner-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(67, 97, 238, 0.7) 100%);
+                z-index: 1;
+            }
+
+            .bannerservice .banner-content {
+                position: relative;
+                z-index: 2;
+                max-width: 800px;
+            }
+
+            .bannerservice h1 {
+                font-size: 3.5rem;
+                font-weight: 800;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+
+            .bannerservice p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+                color: #e2e8f0;
+            }
+
+            /* Animations */
+            .slide-in-left {
+                animation: slideInLeft 1s ease forwards;
+            }
+
+            .fade-in-up {
+                animation: fadeInUp 1s ease forwards;
+                animation-delay: 0.3s;
+                opacity: 0;
+            }
+
+            @keyframes slideInLeft {
+                0% {
+                    transform: translateX(-50px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadeInUp {
+                0% {
+                    transform: translateY(30px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            /* =========================================
+   2. Services Section
+========================================= */
+            .text-gradient {
+                background: linear-gradient(135deg, #4361ee, #f72585);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .badge-custom {
+                background: rgba(67, 97, 238, 0.1);
+                color: #4361ee;
+                padding: 8px 16px;
+                border-radius: 50px;
+                font-weight: 700;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+                display: inline-block;
+            }
+
+            .service-card {
+                background: #ffffff;
+                padding: 40px 30px;
+                border-radius: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.03);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(67, 97, 238, 0.1);
+                border-color: rgba(67, 97, 238, 0.2);
+            }
+
+            .icon-wrapper {
+                width: 70px;
+                height: 70px;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+                transition: transform 0.4s ease;
+            }
+
+            .service-card:hover .icon-wrapper {
+                transform: scale(1.1) rotate(5deg);
+            }
+
+            /* Vibrant Icon Colors */
+            .bg-blue {
+                background: #eff4ff;
+                color: #4361ee;
+            }
+
+            .bg-purple {
+                background: #f4efff;
+                color: #7209b7;
+            }
+
+            .bg-orange {
+                background: #fff1e6;
+                color: #f77f00;
+            }
+
+            .bg-green {
+                background: #e6fcf5;
+                color: #20c997;
+            }
+
+            .bg-red {
+                background: #ffe3e3;
+                color: #e63946;
+            }
+
+            .bg-cyan {
+                background: #e3fafc;
+                color: #15aabf;
+            }
+
+            .card-action {
+                margin-top: auto;
+                padding-top: 20px;
+                font-weight: 600;
+                color: #4361ee;
+                font-size: 0.95rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                opacity: 0.7;
+                transition: all 0.3s ease;
+            }
+
+            .service-card:hover .card-action {
+                opacity: 1;
+                gap: 15px;
+                /* Pushes the arrow slightly right on hover */
+            }
+
+            /* =========================================
+   Ultra-Premium Modal UI
+========================================= */
+            .premium-modal {
+                border: none;
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+                background-color: #ffffff;
+            }
+
+            .modal-header-fancy {
+                /* Kept your background, just reduced the padding */
+                background: linear-gradient(135deg, #2b3452 0%, #4361ee 100%);
+                padding: 20px 20px 25px;
+                position: relative;
+            }
+
+            /* Modern Input Fields */
+            .modern-input-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+            .modern-input-wrapper .icon {
+                position: absolute;
+                left: 15px;
+                /* Moved slightly left */
+                color: #8d97ad;
+                font-size: 1rem;
+                /* Slightly smaller icon */
+                transition: all 0.3s ease;
+                z-index: 5;
+            }
+
+            .modern-input-wrapper .textarea-icon {
+                top: 14px;
+                /* Aligns icon to top of textarea */
+            }
+
+            .modern-input {
+                width: 100%;
+                background-color: #f8fafc;
+                border: 2px solid #e2e8f0;
+                border-radius: 12px;
+                padding: 10px 15px 10px 42px;
+                /* Thinner padding top & bottom */
+                font-size: 0.9rem;
+                /* Slightly smaller text */
+                color: #2b3452;
+                transition: all 0.3s ease;
+                box-shadow: none !important;
+            }
+
+            .modern-textarea {
+                min-height: 70px;
+                resize: none;
+                padding-top: 18px;
+            }
+
+            /* Input Focus Effects */
+            .modern-input:focus {
+                background-color: #ffffff;
+                border-color: #4361ee;
+            }
+
+            .modern-input:focus+.icon,
+            .modern-input-wrapper:focus-within .icon {
+                color: #4361ee;
+                transform: scale(1.1);
+            }
+
+            /* Stunning Submit Button */
+            .btn-submit-glow {
+                background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+                color: white;
+                font-weight: 600;
+                font-size: 1rem;
+                padding: 12px 20px;
+                border-radius: 14px;
+                border: none;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 20px rgba(67, 97, 238, 0.25);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-submit-glow:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4);
+                color: white;
+            }
+
+            .btn-submit-glow:active {
+                transform: translateY(0);
+            }
+
+            /* =========================================
+   4. Call To Action (CTA) Section
+========================================= */
+            .cta-wrapper {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+                border-radius: 30px;
+                padding: 70px 40px;
+                box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* Cool glowing orb effect behind text */
+            .cta-wrapper::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -10%;
+                width: 300px;
+                height: 300px;
+                background: #4361ee;
+                border-radius: 50%;
+                filter: blur(100px);
+                opacity: 0.3;
+            }
+
+            .cta-btn {
+                padding: 14px 30px;
+                border-radius: 50px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
+            }
+
+            .cta-primary {
+                background: #4361ee;
+                color: #fff;
+                border: 2px solid #4361ee;
+            }
+
+            .cta-primary:hover {
+                background: #3f37c9;
+                color: #fff;
+                transform: translateY(-3px);
+            }
+
+            .cta-secondary {
+                background: transparent;
+                color: #fff;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .cta-secondary:hover {
+                background: #fff;
+                color: #0f172a;
+                border-color: #fff;
+                transform: translateY(-3px);
+            }
+
+            .cta-whatsapp {
+                background: #25D366;
+                color: #fff;
+                border: 2px solid #25D366;
+            }
+
+            .cta-whatsapp:hover {
+                background: #1ebc5a;
+                color: #fff;
+                transform: translateY(-3px);
+            }
+
+            /* Mobile Adjustments */
+            @media (max-width: 768px) {
+                .bannerservice h1 {
+                    font-size: 2.5rem;
+                }
+
+                .cta-wrapper {
+                    padding: 50px 20px;
+                }
+
+                .cta-buttons {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .cta-btn {
+                    width: 100%;
+                }
+            }
+        </style>
 
         <script type="application/ld+json">
     [
@@ -148,105 +537,8 @@
         }
     ]
     </script>
-        <style>
-            /* Card Container */
-            .service-card {
-                background: #fff;
-                padding: 40px 30px;
-                border-radius: 15px;
-                border: 1px solid #eee;
-                transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                position: relative;
-                overflow: hidden;
-                z-index: 1;
-            }
 
-            /* Hover Effect: Lift and Shadow */
-            .service-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-                border-color: transparent;
-            }
 
-            /* Icon Wrapper Styling */
-            .icon-wrapper {
-                width: 70px;
-                height: 70px;
-                border-radius: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.8rem;
-                margin-bottom: 25px;
-                transition: transform 0.3s ease;
-            }
-
-            /* Icon Animation on Hover */
-            .service-card:hover .icon-wrapper {
-                transform: rotateY(360deg);
-            }
-
-            /* Unique Colors for Icons */
-            .bg-blue {
-                background: rgba(13, 110, 253, 0.1);
-                color: #0d6efd;
-            }
-
-            .bg-purple {
-                background: rgba(111, 66, 193, 0.1);
-                color: #6f42c1;
-            }
-
-            .bg-orange {
-                background: rgba(253, 126, 20, 0.1);
-                color: #fd7e14;
-            }
-
-            .bg-green {
-                background: rgba(25, 135, 84, 0.1);
-                color: #198754;
-            }
-
-            .bg-red {
-                background: rgba(220, 53, 69, 0.1);
-                color: #dc3545;
-            }
-
-            .bg-cyan {
-                background: rgba(13, 202, 240, 0.1);
-                color: #0dcaf0;
-            }
-
-            /* Link Styling */
-            .service-link {
-                text-decoration: none;
-                font-weight: 600;
-                color: #0d6efd;
-                transition: 0.3s;
-            }
-
-            .service-link:hover {
-                color: #0a58ca;
-            }
-
-            .service-link i {
-                transition: transform 0.3s ease;
-            }
-
-            /* Move Arrow on Hover */
-            .service-card:hover .service-link i {
-                transform: translateX(5px);
-            }
-        </style>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-
-            gtag('config', 'G-MZS1VS07WN');
-        </script>
 </head>
 
 
@@ -277,305 +569,232 @@
             </ul>
         </nav>
     </header>
-
-    <section class="bannerservice">
-        <div class="banner-content">
-            <h1 class="slide-in-left">Our Services</h1>
-            <p class="fade-in-up">We are dedicated to developing tailored solutions that enhance productivity, optimize
-                operations, and deliver measurable results.</p>
-        </div>
-    </section>
-    <section class="service-section py-5">
-        <div class="container">
-
-            <!-- Header -->
-            <div class="text-center mb-5">
-                <span class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill fw-bold">WHAT WE
-                    OFFER</span>
-                <h2 class="display-5 fw-bold text-dark mb-3">Our Comprehensive <span class="text-primary">IT
-                        Services</span></h2>
-                <p class="text-muted lead mx-auto" style="max-width: 600px;">
-                    Discover our range of professional IT solutions tailored to streamline operations and drive growth.
-                </p>
+    <main>
+        <!-- Hero Banner -->
+        <section class="bannerservice">
+            <div class="banner-overlay"></div>
+            <div class="banner-content container">
+                <h1 class="slide-in-left">Our Services</h1>
+                <p class="fade-in-up">We are dedicated to developing tailored solutions that enhance productivity,
+                    optimize operations, and deliver measurable results.</p>
             </div>
+        </section>
 
-            <!-- Grid -->
-            <div class="row g-4">
-
-                <!-- Service 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Software Development')">
-                        <div class="icon-wrapper bg-blue">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="mb-3">Software Development</h3>
-                        <p class="text-muted mb-4">Custom software solutions designed to streamline your business
-                            operations and enhance productivity.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
+        <!-- Services Grid -->
+        <section class="service-section py-5 bg-light-gray">
+            <div class="container py-4">
+                <!-- Section Header -->
+                <div class="text-center mb-5 fade-in-up">
+                    <span class="badge-custom mb-2">WHAT WE OFFER</span>
+                    <h2 class="display-6 fw-bold text-dark mb-3">Our Comprehensive <span class="text-gradient">IT
+                            Services</span></h2>
+                    <p class="text-muted lead mx-auto" style="max-width: 650px; font-size: 1.1rem;">
+                        Discover our range of professional IT solutions tailored to streamline operations and drive
+                        growth for your business.
+                    </p>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Cloud Services')">
-                        <div class="icon-wrapper bg-purple">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="mb-3">Cloud Services</h3>
-                        <p class="text-muted mb-4">Secure and scalable cloud solutions to help your business stay agile
-                            and competitive in the digital age.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Cyber Security')">
-                        <div class="icon-wrapper bg-orange">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="mb-3">Cyber Security</h3>
-                        <p class="text-muted mb-4">Comprehensive security solutions to protect your data and
-                            infrastructure from modern cyber threats.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Network Solutions')">
-                        <div class="icon-wrapper bg-green">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3 class="mb-3">Network Solutions</h3>
-                        <p class="text-muted mb-4">Reliable networking infrastructure to keep your business connected
-                            and efficient 24/7.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Data Management')">
-                        <div class="icon-wrapper bg-red">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="mb-3">Data Management</h3>
-                        <p class="text-muted mb-4">Efficient data storage and management solutions for your growing
-                            business intelligence needs.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('IT Support')">
-                        <div class="icon-wrapper bg-cyan">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3 class="mb-3">IT Support</h3>
-                        <p class="text-muted mb-4">Dedicated technical support to ensure your systems run smoothly and
-                            efficiently without downtime.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-
-                <!-- Service 7 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Network Solutions')">
-                        <div class="icon-wrapper bg-green">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="mb-3">Web Development in Mohali</h3>
-                        <p class="text-muted mb-4"><strong>Custom websites & web apps</strong> built with React, Node.js, Laravel & PHP. We create
-                        scalable, secure solutions for startups & enterprises. Fast delivery. 99.9% uptime guarantee.
-                        Free consultation.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-                <!-- Service 8 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('Data Management')">
-                        <div class="icon-wrapper bg-red">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3 class="mb-3">Mobile/Web Apps in Mohali</h3>
-                        <p class="text-muted mb-4"><strong>iOS & Android apps</strong> using Flutter & React Native. From concept to launch, we
-                        build high-performance mobile solutions. Average delivery: 8-12 weeks. 50+ successful apps
-                        delivered.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-                <!-- Service 9 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100" onclick="openModal('IT Support')">
-                        <div class="icon-wrapper bg-cyan">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="mb-3">AI Automation in Mohali</h3>
-                        <p class="text-muted mb-4"><strong>AI-powered automation</strong> for your business processes. Chatbots, data analysis,
-                        workflow automation & machine learning solutions. Reduce costs. Increase efficiency. Custom AI
-                        development.</p>
-                        <!--<div class="service-link stretched-link">Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </div>-->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- THE PREMIUM MODAL -->
-    <div class="modal fade" id="inquiryModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-
-            <!-- Add 'premium-modal' class here -->
-            <div class="modal-content premium-modal">
-
-                <!-- Close Button -->
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-
-                <!-- Beautiful Header -->
-                <div class="modal-header-fancy">
-                    <i class="fas fa-paper-plane fa-2x mb-2 text-white"></i>
-                    <h3 id="modalTitle">Let's Talk!</h3>
-                    <p>Fill out the form below and our team will get back to you within 24 hours.</p>
-                </div>
-
-                <div class="modal-body p-4 pt-2">
-                    <form id="demoForm">
-                        <input type="hidden" name="service" id="serviceInput">
-
-                        <!-- Name Input -->
-                        <div class="mb-4 mt-3">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input type="text" name="name" class="form-control form-control-fancy"
-                                    placeholder="Your Full Name" required>
+                <!-- Cards -->
+                <div class="row g-4">
+                    <!-- Service 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card h-100" onclick="openModal('Software Development')">
+                            <div class="icon-wrapper bg-blue">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Software Development</h4>
+                            <p class="text-muted mb-4">Custom software solutions designed to streamline your business
+                                operations and enhance productivity.</p>
+                            <div class="card-action">
+                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Email Input -->
-                        <div class="mb-4">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input type="email" name="email" class="form-control form-control-fancy"
-                                    placeholder="name@company.com" required>
+                    <!-- Service 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card h-100" onclick="openModal('Cloud Services')">
+                            <div class="icon-wrapper bg-purple">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Cloud Services</h4>
+                            <p class="text-muted mb-4">Secure and scalable cloud solutions to help your business stay
+                                agile and competitive in the digital age.</p>
+                            <div class="card-action">
+                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Message Input -->
-                        <div class="mb-4">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
-                                <textarea name="message" class="form-control form-control-fancy" rows="2"
-                                    placeholder="Tell us about your project..." required></textarea>
+                    <!-- Service 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card h-100" onclick="openModal('Cyber Security')">
+                            <div class="icon-wrapper bg-orange">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Cyber Security</h4>
+                            <p class="text-muted mb-4">Comprehensive security solutions to protect your data and
+                                infrastructure from modern cyber threats.</p>
+                            <div class="card-action">
+                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Submit Button -->
-                        <div class="d-grid mt-4 mb-3">
-                            <button type="submit" class="btn btn-primary btn-fancy" id="submitBtn">
-                                Send Request <i class="fas fa-rocket ms-2"></i>
-                            </button>
+                    <!-- Service 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card h-100" onclick="openModal('Network Solutions')">
+                            <div class="icon-wrapper bg-green">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Network Solutions</h4>
+                            <p class="text-muted mb-4">Reliable networking infrastructure to keep your business
+                                connected and efficient 24/7.</p>
+                            <div class="card-action">
+                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
+                    </div>
 
-                        <p class="text-center text-muted small mb-0" style="font-size: 0.75rem;">
-                            <i class="fas fa-lock me-1"></i> Your data is secure with us.
-                        </p>
-                    </form>
+                    <!-- Service 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card h-100" onclick="openModal('Data Management')">
+                            <div class="icon-wrapper bg-red">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Data Management</h4>
+                            <p class="text-muted mb-4">Efficient data storage and management solutions for your growing
+                                business intelligence needs.</p>
+                            <div class="card-action">
+                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card h-100" onclick="openModal('IT Support')">
+                            <div class="icon-wrapper bg-cyan">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">IT Support</h4>
+                            <p class="text-muted mb-4">Dedicated technical support to ensure your systems run smoothly
+                                and efficiently without downtime.</p>
+                            <div class="card-action">
+                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ultra-Premium Inquiry Modal -->
+        <!-- Ultra-Premium Inquiry Modal (Height Optimized) -->
+        <div class="modal fade" id="inquiryModal" tabindex="-1" aria-hidden="true">
+            <!-- Added modal-dialog-scrollable so it fits on small phones -->
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                <div class="modal-content premium-modal">
+
+                    <!-- Decorative Header -->
+                    <div class="modal-header-fancy">
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center pt-3 pb-1">
+                            <span class="badge bg-white text-primary mb-2 px-3 py-1 rounded-pill fw-bold shadow-sm"
+                                style="font-size: 0.75rem;">
+                                <i class="fas fa-bolt text-warning me-1"></i> Fast Response
+                            </span>
+                            <h3 id="modalTitle" class="fw-bold text-white mb-1">Let's Talk!</h3>
+                            <p class="text-white-50 mb-0 small">Drop your details below and our experts will connect
+                                with you.</p>
+                        </div>
+                    </div>
+
+                    <!-- Form Body (Reduced Padding) -->
+                    <div class="modal-body p-3 p-md-4">
+                        <form id="contactForm" name="contactForm">
+                            <input type="hidden" name="service" id="serviceInput">
+
+                            <div class="row gx-3">
+                                <!-- Full Name -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-dark fw-semibold mb-1"
+                                        style="font-size: 0.85rem;">Full Name</label>
+                                    <div class="modern-input-wrapper">
+                                        <i class="fas fa-user icon"></i>
+                                        <input type="text" name="name" class="form-control modern-input"
+                                            placeholder="John Doe" required>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Number -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-dark fw-semibold mb-1"
+                                        style="font-size: 0.85rem;">Mobile Number</label>
+                                    <div class="modern-input-wrapper">
+                                        <i class="fas fa-mobile-alt icon"></i>
+                                        <input type="tel" name="phone" class="form-control modern-input"
+                                            placeholder="+91 98765 43210" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="mb-3">
+                                <label class="form-label text-dark fw-semibold mb-1" style="font-size: 0.85rem;">Email
+                                    Address</label>
+                                <div class="modern-input-wrapper">
+                                    <i class="fas fa-envelope icon"></i>
+                                    <input type="email" name="email" class="form-control modern-input"
+                                        placeholder="name@company.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="mb-3">
+                                <label class="form-label text-dark fw-semibold mb-1" style="font-size: 0.85rem;">Project
+                                    Details</label>
+                                <div class="modern-input-wrapper">
+                                    <i class="fas fa-comment-dots icon textarea-icon"></i>
+                                    <textarea name="message" class="form-control modern-input modern-textarea" rows="2"
+                                        placeholder="Tell us about your requirements..." required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="mt-4 mb-1">
+                                <button type="submit" class="btn btn-submit-glow w-100 py-2" id="submitBtn">
+                                    <span>Send Request</span> <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+
+                            <p class="text-center text-muted mt-3 mb-0" style="font-size: 0.75rem;">
+                                <i class="fas fa-shield-alt text-success me-1"></i> Your information is 100% secure.
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- CTA Section -->
+        <section class="container my-5" style="background: transparent; padding: 0;">
+            <div class="cta-wrapper text-center">
+                <h2 class="fw-bold text-white mb-3">Ready to Transform Your Business?</h2>
+                <p class="text-white-50 mb-5 lead">Let's discuss how our technology solutions can help you achieve your
+                    goals and scale faster.</p>
 
-    <!--<section class="process-section">
-        <div class="container position-relative">
-            <div class="text-center mb-5 process-header">
-                <h2 class="display-5">Our <span class="text-highlight">Learning Journey</span></h2>
-                <p class="text-muted lead">From enrollment to placement, here is how we build your career</p>
-            </div>
-
-            <svg class="path-container d-none d-lg-block" viewbox="0 0 1200 100" preserveaspectratio="none">
-                <path class="dashed-path" d="M50,100 C250,0 350,160, 550,50 C750,0 850,100 1150,50" fill="none"
-                    stroke="#cbd5e1" stroke-width="3" stroke-dasharray="10,10" />
-            </svg>
-
-            <div class="process-flow">
-                <div class="process-step">
-                    <div class="step-icon orange">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="step-title">Counseling</h3>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon pink">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3 class="step-title">Enrollment</h3>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon blue">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3 class="step-title">Training</h3>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon purple">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="step-title">Live Projects</h3>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon magenta">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3 class="step-title">Certification</h3>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon green">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="step-title">Placement</h3>
+                <div class="cta-buttons d-flex justify-content-center flex-wrap gap-3">
+                    <a href="./contact" class="btn cta-btn cta-primary"><i class="fas fa-arrow-right me-2"></i> Get
+                        Started</a>
+                    <a href="tel:+918544884846" class="btn cta-btn cta-secondary"><i class="fas fa-phone-alt me-2"></i>
+                        Call Us Now</a>
+                    <a href="https://wa.me/8544884846" class="btn cta-btn cta-whatsapp"><i
+                            class="fab fa-whatsapp me-2"></i> WhatsApp Us</a>
                 </div>
             </div>
-        </div>
-    </section>-->
-
-    <section class="cta-section">
-        <div class="container" style="padding: 0px;">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Let's discuss how our technology solutions can help you achieve your goals</p>
-                <div class="cta-buttons">
-                    <a href="./contact" class="cta-primary">Get Started <i class="fas fa-arrow-right"></i></a>
-                    <a href="tel:+918544884846" class="cta-secondary"><i class="fas fa-phone"></i> Call Us Now</a>
-                    <a href="https://wa.me/8544884846" class="cta-whatsapp">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer with Updated Training Courses -->
+        </section>
+    </main>
     <footer class="footer-bs5">
         <div class="container">
             <div class="row gy-5">
@@ -609,7 +828,6 @@
                 <div class="col-lg-3 col-md-4">
                     <h4 class="text-white fw-bold mb-4">Training Courses</h4>
                     <div class="row">
-                        <!-- Left Sub-Column -->
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
                                 <li><a href="./courses/fullstack-course">Full Stack Web</a></li>
@@ -617,7 +835,6 @@
                                 <li><a href="./courses/prompt-engineering-course">AI & Prompt Eng</a></li>
                             </ul>
                         </div>
-                        <!-- Right Sub-Column -->
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
                                 <li><a href="./courses/video-editing-course">Video Editing</a></li>
@@ -678,126 +895,64 @@
             </button>
         </div>
     </footer>
-<section class="AIbotchatModal">
+    <section class="AIbotchatModal">
 
-        <!-- YOUR WEBSITE -->
-        <div class="demo-page">
-            <h2>🚀 Tech Engineer AI</h2>
-            <p>AI & IT Training | IT Services & Automation</p>
-            <p class="mt-3 text-muted">👉 Click the chat icon to talk with our AI</p>
-        </div>
 
-        <!-- FLOATING BUTTON -->
+
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
-            <div class="btn-ripple"></div>
-            <div class="btn-ripple delay"></div>
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
         </button>
 
-        <!-- CHAT WINDOW -->
         <div class="chat-window" id="chatWindow">
 
-            <!-- ========== LEAD FORM ========== -->
             <div id="leadForm" class="lead-card">
                 <button class="form-close-btn" onclick="toggleChat()">
                     <i class="bi bi-x-lg"></i>
                 </button>
 
-                <div class="lead-card-inner">
-                    <!-- Top glow decoration -->
-                    <div class="card-glow"></div>
-
-                    <div class="logo-area">
-                        <div class="icon-circle-wrap">
-                            <div class="icon-circle">
-                                <i class="bi bi-robot"></i>
-                            </div>
-                            <svg class="icon-ring-svg" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36" />
-                            </svg>
-                        </div>
-                        <h3>Tech Engineer AI</h3>
-                        <p>Enter your details to start chatting</p>
-                    </div>
-
-                    <!-- NAME -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-person-fill field-icon"></i>
-                            <input type="text" class="field-input" id="userName" placeholder=" " required>
-                            <label class="field-label">Your Name</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="nameError"></span>
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-envelope-fill field-icon"></i>
-                            <input type="email" class="field-input" id="userEmail" placeholder=" " required>
-                            <label class="field-label">Your Email</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="emailError"></span>
-                    </div>
-
-                    <!-- PHONE -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-whatsapp field-icon"></i>
-                            <input type="tel" class="field-input" id="userPhone" placeholder=" " required
-                                maxlength="15">
-                            <label class="field-label">WhatsApp Number</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="phoneError"></span>
-                    </div>
-
-                    <!-- CATEGORY -->
-                    <div class="field-group">
-                        <div class="field-box select-box">
-                            <i class="bi bi-grid-fill field-icon"></i>
-                            <select class="field-input field-select" id="userCategory">
-                                <option value="training">AI & IT Training</option>
-                                <option value="service">IT Services & Automation</option>
-                            </select>
-                            <label class="field-label label-up">I'm interested in</label>
-                            <span class="field-focus-line"></span>
-                            <i class="bi bi-chevron-down select-arrow"></i>
-                        </div>
-                    </div>
-
-                    <!-- SUBMIT -->
-                    <button class="btn-start" id="btnStart" onclick="validateAndSubmit()">
-                        <span class="btn-text">
-                            <i class="bi bi-chat-dots me-2"></i>Start Chatting
-                        </span>
-                        <span class="btn-loader" style="display:none;">
-                            <span class="spinner"></span> Connecting...
-                        </span>
-                        <div class="btn-shine"></div>
-                    </button>
-
-                    <div class="form-secured">
-                        <i class="bi bi-shield-lock-fill"></i> Your data is secure & encrypted
-                    </div>
+                <div class="logo-area">
+                    <div class="icon-circle"><i class="bi bi-robot"></i></div>
+                    <h3>Tech Engineer AI</h3>
+                    <p>Enter your details to start chatting</p>
                 </div>
+
+                <div class="form-floating position-relative">
+                    <i class="bi bi-person input-icon"></i>
+                    <input type="text" class="form-control" id="userName" placeholder="Name" required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-envelope input-icon"></i>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-whatsapp input-icon"></i>
+                    <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
+                    <label>WhatsApp Number</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-grid input-icon"></i>
+                    <select class="form-select" id="userCategory">
+                        <option value="training">AI & IT Training</option>
+                        <option value="service">IT Services & Automation</option>
+                    </select>
+                    <label>I'm interested in</label>
+                </div>
+
+                <button class="btn-start" id="btnStart" onclick="submitLead()">
+                    <i class="bi bi-chat-dots me-2"></i> Start Chatting
+                </button>
             </div>
 
-            <!-- ========== CHAT INTERFACE ========== -->
             <div id="chatInterface" class="chat-card" style="display:none;">
                 <div class="chat-header">
-                    <div class="header-glow"></div>
-                    <div class="avatar">
-                        <i class="bi bi-robot"></i>
-                        <span class="avatar-ring"></span>
-                    </div>
+                    <div class="avatar"><i class="bi bi-robot"></i></div>
                     <div class="info">
                         <h5>Tech Engineer AI</h5>
-                        <small><span class="status-dot"></span> Online — ready to help</small>
+                        <small><span class="status-dot"></span>Online</small>
                     </div>
                     <button class="chat-close-btn" onclick="toggleChat()">
                         <i class="bi bi-x-lg"></i>
@@ -816,6 +971,7 @@
                     </button>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -823,7 +979,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="javascript.js" defer></script>
-    <script src="modal.js" defer></script>
+    <script src="/modal.js" defer></script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/02/14/18/20260214184230-UQRERNBF.js" defer></script>
 </body>

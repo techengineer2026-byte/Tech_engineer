@@ -1,0 +1,16 @@
+[
+    {
+        "title": "AI in 2026: What’s Changed and What’s Coming Next",
+        "image": "./images/blog/ai-2026-featured1.webp",
+        "category": "AI & Tech",
+        "badgeClass": "bg-primary-gradient",
+        "badgeIcon": "fas fa-robot",
+        "date": "March 15, 2026",
+        "author": "Tech Engineer Team",
+        "excerpt": "Explore the future of artificial intelligence, new breakthroughs, and how AI is transforming industries, automation, and daily workflows in 2026.",
+        "link": "/blogs/ai-in-2026-whats-changed-and-whats-coming-next",
+        "target": "_self",
+        "btnText": "Read Article",
+        "btnIcon": "fas fa-arrow-right"
+    }
+]

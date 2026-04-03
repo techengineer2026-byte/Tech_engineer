@@ -150,6 +150,318 @@
     transform: rotate(15deg) scale(1.1);
 }
 
+.solution-card {
+    background: lightblue;
+    border-radius: 8px;
+    padding: 2.5rem 1.5rem 1.5rem;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: normal;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.solution-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -20px;
+    margin-left: -8px;
+}
+
+.parallax-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.mockup {
+    overflow: hidden;
+    background: #111;
+    padding: 12px;
+    min-height: 290px;
+    max-height: 300px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.mockup img {
+    overflow: hidden;
+    min-height: 280px;
+    width: 100%;
+    max-height: 280px;
+    border-radius: 8px;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.client-item img {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+.client-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Section Background */
+.bg-soft {
+    background-color: #f9fbfd;
+    /* Very soft blue-grey */
+}
+
+/* Stat Numbers */
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #534AB7;
+    /* Your Purple */
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+/* White Boxes */
+.feature-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    /* Soft Shadow */
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    /* Lift effect */
+}
+
+/* List Styling */
+.custom-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* Icons replacing Emojis */
+.icon-box {
+    min-width: 25px;
+    /* Ensures text aligns perfectly */
+    margin-right: 10px;
+    margin-top: 4px;
+    /* Aligns icon with text top */
+}
+
+/* Unique Section Style */
+.why-us-section {
+    background-color: #f8f9fa;
+    /* Light Gray Background */
+    padding: 80px 0;
+}
+
+/* The White Cards */
+.why-us-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.why-us-card:hover {
+    transform: translateY(-5px);
+    /* Small lift on hover */
+    box-shadow: 0 15px 30px rgba(83, 74, 183, 0.1);
+}
+
+/* Big Numbers */
+.why-stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #534AB7;
+    /* Your Purple Brand Color */
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* List Items */
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-list li {
+    position: relative;
+    padding-left: 35px;
+    /* Space for icon */
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Icons for the list */
+.why-list li i {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 18px;
+}
+
+/* Unique Section Wrapper */
+.tech-advantage-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+/* Section Title */
+.tech-advantage-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0F1035;
+    /* Dark Navy Blue */
+}
+
+/* Blue Feature Cards */
+.advantage-card {
+    background-color: #AECDE1;
+    /* The exact Light Blue from image */
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    min-height: 350px;
+    /* Ensures equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    /* Subtle lift effect */
+}
+
+/* Typography inside cards */
+.adv-card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0F1035;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.adv-card-desc {
+    font-size: 1rem;
+    color: #333333;
+    /* Dark Grey for readability */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Icons at bottom */
+.adv-icon-wrapper {
+    font-size: 3.5rem;
+    color: #000000;
+    /* Solid Black icons */
+    margin-top: auto;
+    /* Pushes icon to bottom */
+}
+
+/* Custom Button */
+.btn-schedule-call {
+    background-color: #0d6efd;
+    /* Bright Blue */
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn-schedule-call:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+/* Recent Activity Section */
+.recent-activity-section {
+    padding: 80px 0;
+}
+
+.activity-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 5px solid #fff;
+}
+
+.activity-image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.activity-list li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.activity-list li::before {
+    content: "●";
+    color: #534AB7;
+    /* Your Brand Purple */
+    margin-right: 15px;
+    font-size: 0.8rem;
+}
+
 .bg-blue {
     background: #e0f2fe;
     color: #0284c7;
@@ -8061,4 +8373,107 @@ h6 {
 .services p {
     color: #555;
     line-height: 1.6;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Section Background */
+.team-section {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f8f9fc;
+    /* Soft light background so white cards stand out */
+}
+
+/* Header Styling */
+.section-header h2 {
+    color: #2b3452;
+    font-weight: 700;
+}
+
+.section-header p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Modern Card Design */
+.team-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Card Hover Lift Effect */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Styling */
+.image-wrapper {
+    margin-bottom: 20px;
+}
+
+.image-wrapper img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Image Scale on Hover */
+.team-card:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Text Styling inside Card */
+.team-content .name {
+    color: #2b3452;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.team-content .role {
+    color: #4361ee;
+    /* Beautiful modern blue/purple accent */
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.team-content .description {
+    color: #7b8597;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #f0f3ff;
+    color: #4361ee;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: #4361ee;
+    color: #ffffff;
+    transform: translateY(-3px);
 }

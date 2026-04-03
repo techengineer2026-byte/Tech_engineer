@@ -61,15 +61,201 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <style>
+        /* =========================================
+   1. PORTFOLIO HERO
+========================================= */
+        .portfolio-hero {
+            background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0 80px;
+        }
 
-        gtag('config', 'G-MZS1VS07WN');
-    </script>
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(67, 97, 238, 0.8) 100%);
+        }
+
+        .text-gradient-light {
+            background: linear-gradient(135deg, #a5b4fc, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .custom-breadcrumb a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .custom-breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .custom-breadcrumb .separator {
+            color: #94a3b8;
+            margin: 0 10px;
+            font-size: 0.8rem;
+        }
+
+        .custom-breadcrumb .active {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================
+   2. PORTFOLIO FILTERS
+========================================= */
+        .filter-btn {
+            background: #ffffff;
+            color: #64748b;
+            font-weight: 500;
+            border: 2px solid #e2e8f0;
+            padding: 8px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .filter-btn:hover {
+            border-color: #4361ee;
+            color: #4361ee;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: #4361ee;
+            border-color: #4361ee;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        /* =========================================
+   3. PORTFOLIO CARDS
+========================================= */
+        .portfolio-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(67, 97, 238, 0.1);
+        }
+
+        /* Standardize Image Height */
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .portfolio-card:hover .card-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #4361ee;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .bg-purple {
+            background: #7209b7;
+        }
+
+        .bg-cyan {
+            background: #0dcaf0;
+            color: #000;
+        }
+
+        .bg-orange {
+            background: #f77f00;
+        }
+
+        .bg-green {
+            background: #20c997;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-stack span {
+            background: #f1f5f9;
+            color: #475569 !important;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        .view-project-btn {
+            margin-top: auto;
+            color: #4361ee;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .portfolio-card:hover .view-project-btn {
+            color: #3a0ca3;
+            letter-spacing: 0.5px;
+        }
+    </style>
 
 </head>
 
@@ -100,150 +286,255 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <!-- 1. PORTFOLIO HERO BANNER -->
+        <section class="portfolio-hero position-relative">
+            <div class="hero-overlay"></div>
+            <div class="container position-relative z-2 text-center pt-5 pb-4">
 
-    <!-- 1. PORTFOLIO HERO BANNER -->
-    <section class="portfolio-banner">
-        <div class="container">
+                <!-- Breadcrumb Navigation -->
+                <nav class="custom-breadcrumb mb-4 fade-in-up">
+                    <a href="./"><i class="fas fa-home me-1"></i> Home</a>
+                    <i class="fas fa-chevron-right separator"></i>
+                    <span class="active">Portfolio</span>
+                </nav>
 
-            <!-- Breadcrumb Navigation -->
-            <nav class="custom-breadcrumb">
-                <a href="./">Home</a>
-                <i class="fas fa-chevron-right"></i>
-                <span class="active">Portfolio</span>
-            </nav>
-
-            <!-- Banner Content -->
-            <div class="banner-content">
-                <h1>Our Portfolio</h1>
-                <p>Explore our successful projects and see how we've helped businesses transform their digital presence
-                    and IT infrastructure.</p>
+                <!-- Banner Content -->
+                <div class="banner-content mx-auto slide-in-bottom" style="max-width: 700px;">
+                    <h1 class="display-4 fw-bold text-white mb-3">Our Work & <span class="text-gradient-light">Success
+                            Stories</span></h1>
+                    <p class="text-white-50 lead mb-0">Explore our successful projects and see how we've helped
+                        businesses transform their digital presence and IT infrastructure.</p>
+                </div>
             </div>
+        </section>
 
+        <!-- 2. PORTFOLIO GRID & FILTERS -->
+        <section class="portfolio-section py-5 bg-light-gray">
+            <div class="container py-4">
+
+                <!-- Filters -->
+                <div class="portfolio-filters d-flex justify-content-center flex-wrap gap-2 mb-5 fade-in-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="mobile-app">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                    <button class="filter-btn" data-filter="network">Media & Podcast</button>
+                </div>
+
+                <!-- Grid -->
+                <div class="row g-4" id="portfolio-grid">
+
+                    <!-- Item 1: Web -->
+                    <div class="col-lg-4 col-md-6 portfolio-item web">
+                        <div class="portfolio-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="./images/tricityrrent.png" alt="TricityRent" loading="lazy">
+                                <span class="category-badge">Web Dev</span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="fw-bold mb-2">TricityRent Website</h4>
+                                <p class="text-muted small mb-3">Real estate platform to find properties easily in
+                                    Mohali. Designed for speed and high conversion.</p>
+
+                                <div class="tech-stack mb-4">
+                                    <span>HTML</span><span>CSS</span><span>JS</span><span>JSON</span>
+                                </div>
+
+                                <a href="http://www.tricityrent.com" target="_blank" class="view-project-btn">
+                                    View Live Site <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Software -->
+                    <div class="col-lg-4 col-md-6 portfolio-item software">
+                        <div class="portfolio-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="./images/pantika-image1.webp" alt="Paintings" loading="lazy">
+                                <span class="category-badge bg-purple">Software</span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="fw-bold mb-2">Art Marketplace</h4>
+                                <p class="text-muted small mb-3">Custom online platform and inventory software for
+                                    artists to sell handmade paintings globally.</p>
+
+                                <div class="tech-stack mb-4">
+                                    <span>React Native</span><span>Django</span><span>PostgreSQL</span>
+                                </div>
+
+                                <a href="./contact" class="view-project-btn">
+                                    View Case Study <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Web -->
+                    <div class="col-lg-4 col-md-6 portfolio-item web">
+                        <div class="portfolio-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="./images/codebank.webp" alt="CodeBank" loading="lazy">
+                                <span class="category-badge bg-cyan">E-Learning</span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="fw-bold mb-2">CodeBank Platform</h4>
+                                <p class="text-muted small mb-3">An advanced e-learning and course management platform
+                                    specifically built for coding education.</p>
+
+                                <div class="tech-stack mb-4">
+                                    <span>React</span><span>.NET</span><span>SQL Server</span>
+                                </div>
+
+                                <a href="https://codebank.in/home" target="_blank" class="view-project-btn">
+                                    Visit Platform <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Media -->
+                    <div class="col-lg-4 col-md-6 portfolio-item network">
+                        <div class="portfolio-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="./images/techcast-logo.svg" alt="Podcast" loading="lazy"
+                                    style="background: #111; padding: 20px;">
+                                <span class="category-badge bg-orange">Media</span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="fw-bold mb-2">Techcast Podcast</h4>
+                                <p class="text-muted small mb-3">Technology-focused podcast production, professional
+                                    video editing, and social media clips.</p>
+
+                                <div class="tech-stack mb-4">
+                                    <span>Video Editing</span><span>Production</span><span>Audio</span>
+                                </div>
+
+                                <a href="https://techcast.techengineer.co" target="_blank" class="view-project-btn">
+                                    Watch Episodes <i class="fas fa-play-circle ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Mobile App -->
+                    <div class="col-lg-4 col-md-6 portfolio-item mobile-app">
+                        <div class="portfolio-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="./images/Aviator.webp" alt="App" loading="lazy">
+                                <span class="category-badge bg-green">Mobile App</span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="fw-bold mb-2">Avatar Creator</h4>
+                                <p class="text-muted small mb-3">Cross-platform mobile application allowing users to
+                                    build and customize detailed digital avatars.</p>
+
+                                <div class="tech-stack mb-4">
+                                    <span>React Native</span><span>Redux</span><span>Firebase</span>
+                                </div>
+
+                                <a href="./contact" class="view-project-btn">
+                                    View App Details <i class="fas fa-mobile-alt ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CALL TO ACTION (CTA) -->
+        <section class="container my-5" style="background: transparent; padding: 0;">
+            <div class="cta-wrapper text-center">
+                <h2 class="fw-bold  mb-3">Have a Project in Mind?</h2>
+                <p class=" mb-4 lead">Let's turn your vision into a reality. Get a free consultation and
+                    project estimate today.</p>
+
+                <div class="cta-buttons d-flex justify-content-center flex-wrap gap-3">
+                    <button type="button" class="btn cta-btn cta-primary" onclick="openModal('New Project Inquiry')">
+                        <i class="fas fa-rocket me-2"></i> Start Your Project
+                    </button>
+                    <a href="https://wa.me/918544884846" class="btn cta-btn cta-whatsapp"><i
+                            class="fab fa-whatsapp me-2"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. OPTIMIZED PREMIUM INQUIRY MODAL -->
+        <div class="modal fade" id="inquiryModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                <div class="modal-content premium-modal">
+                    <div class="modal-header-fancy">
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center pt-3 pb-1">
+                            <span class="badge bg-white text-primary mb-2 px-3 py-1 rounded-pill fw-bold shadow-sm"
+                                style="font-size: 0.75rem;">
+                                <i class="fas fa-bolt text-warning me-1"></i> Fast Response
+                            </span>
+                            <h3 id="modalTitle" class="fw-bold text-white mb-1">Start Your Project</h3>
+                            <p class="text-white-50 mb-0 small">Drop your details below and our experts will connect
+                                with you.</p>
+                        </div>
+                    </div>
+                    <div class="modal-body p-3 p-md-4">
+                        <form id="contactForm" name="contactForm">
+                            <input type="hidden" name="service" id="serviceInput" value="Portfolio Project Inquiry">
+                            <div class="row gx-3">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-dark fw-semibold mb-1"
+                                        style="font-size: 0.85rem;">Full Name</label>
+                                    <div class="modern-input-wrapper">
+                                        <i class="fas fa-user icon"></i>
+                                        <input type="text" name="name" class="form-control modern-input"
+                                            placeholder="John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-dark fw-semibold mb-1"
+                                        style="font-size: 0.85rem;">Mobile Number</label>
+                                    <div class="modern-input-wrapper">
+                                        <i class="fas fa-mobile-alt icon"></i>
+                                        <input type="tel" name="phone" class="form-control modern-input"
+                                            placeholder="+91 98765 43210" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-dark fw-semibold mb-1" style="font-size: 0.85rem;">Email
+                                    Address</label>
+                                <div class="modern-input-wrapper">
+                                    <i class="fas fa-envelope icon"></i>
+                                    <input type="email" name="email" class="form-control modern-input"
+                                        placeholder="name@company.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-dark fw-semibold mb-1" style="font-size: 0.85rem;">Project
+                                    Details</label>
+                                <div class="modern-input-wrapper">
+                                    <i class="fas fa-comment-dots icon textarea-icon"></i>
+                                    <textarea name="message" class="form-control modern-input modern-textarea" rows="2"
+                                        placeholder="Tell us about your idea, requirements, or goals..."
+                                        required></textarea>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-1">
+                                <button type="submit" class="btn btn-submit-glow w-100 py-2" id="submitBtn">
+                                    <span>Send Request</span> <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                            <p class="text-center text-muted mt-3 mb-0" style="font-size: 0.75rem;">
+                                <i class="fas fa-shield-alt text-success me-1"></i> Your information is 100% secure.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <section class="portfolio-section">
-        <div class="container">
-
-            <!-- Filters -->
-            <div class="portfolio-filters">
-                <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
-                <button class="portfolio-filter-btn" data-filter="web">Web Development</button>
-                <button class="portfolio-filter-btn" data-filter="software">Software</button>
-                <button class="portfolio-filter-btn" data-filter="network">Media</button>
-                <button class="portfolio-filter-btn" data-filter="mobile-app">Mobile Apps</button>
-            </div>
-
-            <!-- Grid -->
-            <div class="portfolio-grid">
-
-                <!-- Item 1 -->
-                <div class="portfolio-item web">
-                    <div class="portfolio-card-inner">
-                        <div class="portfolio-card-image">
-                            <img src="./images/tricityrrent.png" alt="TricityRent" loading="lazy">
-                            <span class="portfolio-badge">Web Dev</span>
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h2 class="portfolio-title">TricityRent Website</h2>
-                            <p class="portfolio-desc">Real estate platform to find properties easily in Mohali.</p>
-                            <ul class="portfolio-tech-stack">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>JSON</li>
-                            </ul>
-                            <a href="http://www.tricityrent.com" target="_blank" class="portfolio-view-btn">View Live <i
-                                    class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="portfolio-item software">
-                    <div class="portfolio-card-inner">
-                        <div class="portfolio-card-image">
-                            <img src="./images/pantika-image1.webp" alt="Paintings" loading="lazy">
-                            <span class="portfolio-badge">Software</span>
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h2 class="portfolio-title">Art Marketplace</h2>
-                            <p class="portfolio-desc">Online platform for artists to sell handmade paintings.</p>
-                            <ul class="portfolio-tech-stack">
-                                <li>React Native </li>
-                                <li>Django</li>
-                                <li>PostgreSQL</li>
-                            </ul>
-                            <a href="./contact" class="portfolio-view-btn">View Live <i
-                                    class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="portfolio-item web">
-                    <div class="portfolio-card-inner">
-                        <div class="portfolio-card-image">
-                            <img src="./images/codebank.webp" alt="CodeBank" loading="lazy">
-                            <span class="portfolio-badge">E-Learning</span>
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h2 class="portfolio-title">CodeBank Platform</h2>
-                            <p class="portfolio-desc">An advanced e-learning platform for coding education.</p>
-                            <ul class="portfolio-tech-stack">
-                                <li>React</li>
-                                <li>.NET</li>
-                                <li>SQL Server</li>
-                            </ul>
-                            <a href="https://codebank.in/home" target="_blank" class="portfolio-view-btn">Visit Site <i
-                                    class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="portfolio-item network">
-                    <div class="portfolio-card-inner">
-                        <div class="portfolio-card-image">
-                            <img src="./images/techcast-logo.svg" alt="Podcast" loading="lazy">
-                            <span class="portfolio-badge">Media</span>
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h2 class="portfolio-title">Techcast Podcast</h2>
-                            <p class="portfolio-desc">Technology-focused podcast production & editing.</p>
-                            <ul class="portfolio-tech-stack">
-                                <li>Video Editing</li>
-                                <li>Production</li>
-                            </ul>
-                            <a href="https://techcast.techengineer.co" target="_blank" class="portfolio-view-btn">Watch
-                                <i class="fas fa-play-circle"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="portfolio-item mobile-app">
-                    <div class="portfolio-card-inner">
-                        <div class="portfolio-card-image">
-                            <img src="./images/Aviator.webp" alt="App" loading="lazy">
-                            <span class="portfolio-badge">Mobile App</span>
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h2 class="portfolio-title">Avatar Creator</h2>
-                            <p class="portfolio-desc">Cross-platform avatar creator built with React Native.</p>
-                            <ul class="portfolio-tech-stack">
-                                <li>React Native</li>
-                                <li>Redux</li>
-                            </ul>
-                            <a href="./contact" class="portfolio-view-btn">View App <i
-                                    class="fas fa-mobile-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
+    </main>
     <!-- Footer with Updated Training Courses -->
     <footer class="footer-bs5">
         <div class="container">
@@ -347,126 +638,64 @@
             </button>
         </div>
     </footer>
-<section class="AIbotchatModal">
+    <section class="AIbotchatModal">
 
-        <!-- YOUR WEBSITE -->
-        <div class="demo-page">
-            <h2>🚀 Tech Engineer AI</h2>
-            <p>AI & IT Training | IT Services & Automation</p>
-            <p class="mt-3 text-muted">👉 Click the chat icon to talk with our AI</p>
-        </div>
 
-        <!-- FLOATING BUTTON -->
+
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
-            <div class="btn-ripple"></div>
-            <div class="btn-ripple delay"></div>
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
         </button>
 
-        <!-- CHAT WINDOW -->
         <div class="chat-window" id="chatWindow">
 
-            <!-- ========== LEAD FORM ========== -->
             <div id="leadForm" class="lead-card">
                 <button class="form-close-btn" onclick="toggleChat()">
                     <i class="bi bi-x-lg"></i>
                 </button>
 
-                <div class="lead-card-inner">
-                    <!-- Top glow decoration -->
-                    <div class="card-glow"></div>
-
-                    <div class="logo-area">
-                        <div class="icon-circle-wrap">
-                            <div class="icon-circle">
-                                <i class="bi bi-robot"></i>
-                            </div>
-                            <svg class="icon-ring-svg" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36" />
-                            </svg>
-                        </div>
-                        <h3>Tech Engineer AI</h3>
-                        <p>Enter your details to start chatting</p>
-                    </div>
-
-                    <!-- NAME -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-person-fill field-icon"></i>
-                            <input type="text" class="field-input" id="userName" placeholder=" " required>
-                            <label class="field-label">Your Name</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="nameError"></span>
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-envelope-fill field-icon"></i>
-                            <input type="email" class="field-input" id="userEmail" placeholder=" " required>
-                            <label class="field-label">Your Email</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="emailError"></span>
-                    </div>
-
-                    <!-- PHONE -->
-                    <div class="field-group">
-                        <div class="field-box">
-                            <i class="bi bi-whatsapp field-icon"></i>
-                            <input type="tel" class="field-input" id="userPhone" placeholder=" " required
-                                maxlength="15">
-                            <label class="field-label">WhatsApp Number</label>
-                            <span class="field-focus-line"></span>
-                        </div>
-                        <span class="field-error" id="phoneError"></span>
-                    </div>
-
-                    <!-- CATEGORY -->
-                    <div class="field-group">
-                        <div class="field-box select-box">
-                            <i class="bi bi-grid-fill field-icon"></i>
-                            <select class="field-input field-select" id="userCategory">
-                                <option value="training">AI & IT Training</option>
-                                <option value="service">IT Services & Automation</option>
-                            </select>
-                            <label class="field-label label-up">I'm interested in</label>
-                            <span class="field-focus-line"></span>
-                            <i class="bi bi-chevron-down select-arrow"></i>
-                        </div>
-                    </div>
-
-                    <!-- SUBMIT -->
-                    <button class="btn-start" id="btnStart" onclick="validateAndSubmit()">
-                        <span class="btn-text">
-                            <i class="bi bi-chat-dots me-2"></i>Start Chatting
-                        </span>
-                        <span class="btn-loader" style="display:none;">
-                            <span class="spinner"></span> Connecting...
-                        </span>
-                        <div class="btn-shine"></div>
-                    </button>
-
-                    <div class="form-secured">
-                        <i class="bi bi-shield-lock-fill"></i> Your data is secure & encrypted
-                    </div>
+                <div class="logo-area">
+                    <div class="icon-circle"><i class="bi bi-robot"></i></div>
+                    <h3>Tech Engineer AI</h3>
+                    <p>Enter your details to start chatting</p>
                 </div>
+
+                <div class="form-floating position-relative">
+                    <i class="bi bi-person input-icon"></i>
+                    <input type="text" class="form-control" id="userName" placeholder="Name" required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-envelope input-icon"></i>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-whatsapp input-icon"></i>
+                    <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
+                    <label>WhatsApp Number</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-grid input-icon"></i>
+                    <select class="form-select" id="userCategory">
+                        <option value="training">AI & IT Training</option>
+                        <option value="service">IT Services & Automation</option>
+                    </select>
+                    <label>I'm interested in</label>
+                </div>
+
+                <button class="btn-start" id="btnStart" onclick="submitLead()">
+                    <i class="bi bi-chat-dots me-2"></i> Start Chatting
+                </button>
             </div>
 
-            <!-- ========== CHAT INTERFACE ========== -->
             <div id="chatInterface" class="chat-card" style="display:none;">
                 <div class="chat-header">
-                    <div class="header-glow"></div>
-                    <div class="avatar">
-                        <i class="bi bi-robot"></i>
-                        <span class="avatar-ring"></span>
-                    </div>
+                    <div class="avatar"><i class="bi bi-robot"></i></div>
                     <div class="info">
                         <h5>Tech Engineer AI</h5>
-                        <small><span class="status-dot"></span> Online — ready to help</small>
+                        <small><span class="status-dot"></span>Online</small>
                     </div>
                     <button class="chat-close-btn" onclick="toggleChat()">
                         <i class="bi bi-x-lg"></i>
@@ -485,45 +714,81 @@
                     </button>
                 </div>
             </div>
+
         </div>
     </section>
-
-
-
     <script>
-        const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        // 1. Portfolio Filtering Logic
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
 
-                const filterValue = button.getAttribute('data-filter');
+                    const filterValue = this.getAttribute('data-filter');
 
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.9)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
+                    portfolioItems.forEach(item => {
+                        // Show animation logic
+                        item.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = "block";
+                            setTimeout(() => { item.style.opacity = "1"; item.style.transform = "scale(1)"; }, 50);
+                        } else {
+                            item.style.opacity = "0";
+                            item.style.transform = "scale(0.8)";
+                            setTimeout(() => { item.style.display = "none"; }, 400); // Wait for animation
+                        }
+                    });
                 });
             });
+        });
+
+        // 2. Modal Open Logic
+        function openModal(serviceName) {
+            document.getElementById('serviceInput').value = serviceName;
+            var myModal = new bootstrap.Modal(document.getElementById('inquiryModal'));
+            myModal.show();
+        }
+
+        // 3. Google Form Submit Logic
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyLpwY-VP32Lri4bSkY6ViHURSqcpn0BL9zyBmloYM95tgmCCvEkq7ZzDEWo2DQzUnu/exec'; // <-- PASTE YOUR URL HERE!
+        const form = document.forms['contactForm'];
+        const btn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert("Thank you! Your project inquiry was sent successfully.");
+                    btn.disabled = false;
+                    btn.innerHTML = '<span>Send Request</span> <i class="fas fa-arrow-right ms-2"></i>';
+                    form.reset();
+                    var modalEl = document.getElementById('inquiryModal');
+                    var modal = bootstrap.Modal.getInstance(modalEl);
+                    modal.hide();
+                })
+                .catch(error => {
+                    alert('Error! ' + error.message);
+                    btn.disabled = false;
+                    btn.innerHTML = '<span>Send Request</span> <i class="fas fa-arrow-right ms-2"></i>';
+                });
         });
     </script>
 
     <script src="javascript.js" defer></script>
     <script src="./script/aichatbot.js" defer></script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <!-- Bootstrap JS (Required for the Modal to open) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://files.bpcontent.cloud/2026/02/14/18/20260214184230-UQRERNBF.js" defer></script>
 </body>
 

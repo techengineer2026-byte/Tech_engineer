@@ -1,38 +1,97 @@
-// 1. Function to Open Modal and Set Service Name
+// =======================================================
+// THE MASTER URL (Handles BOTH Sheet 1 and Sheet 2)
+// =======================================================
+const MASTER_URL =
+  "https://script.google.com/macros/s/AKfycbxdSLbUgQQcB5xm3C6QM8lOrLBYym17AzAhNDIobq-YUbyWp0-H3xit3wRXR-AJ6GG3/exec";
+
+// =======================================================
+// 1. GENERAL INQUIRY MODAL LOGIC (Goes to Sheet 1)
+// =======================================================
+
 function openModal(serviceName) {
-    // Set the visible title
-    document.getElementById('modalTitle').innerText = 'Inquire: ' + serviceName;
-    // Set the hidden input value so it goes to Google Sheet
-    document.getElementById('serviceInput').value = serviceName;
-    // Open the modal using Bootstrap API
-    var myModal = new bootstrap.Modal(document.getElementById('inquiryModal'));
-    myModal.show();
+  document.getElementById("modalTitle").innerText = "Inquire: " + serviceName;
+  document.getElementById("serviceInput").value = serviceName;
+  var myModal = new bootstrap.Modal(document.getElementById("inquiryModal"));
+  myModal.show();
 }
 
-// 2. Script to Send Data to Google Sheet
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyEXg2yuWTR7DrwdjZcdlVoz_95kgiySTah7EEohI2aQ6uhMvOPcj68Q9RTotSkcNg/exec'; // <--- YOU WILL PASTE URL HERE LATER
-const form = document.forms['contactForm'];
-const btn = document.getElementById('submitBtn');
+const inquiryForm = document.forms["contactForm"];
+const inquiryBtn = document.getElementById("submitBtn");
 
-form.addEventListener('submit', e => {
+// Only run this if the Inquiry Form exists on the page
+if (inquiryForm) {
+  inquiryForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    btn.disabled = true;
-    btn.innerText = "Sending...";
+    inquiryBtn.disabled = true;
+    inquiryBtn.innerHTML =
+      'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            alert("Thank you! Your message sent successfully.");
-            btn.disabled = false;
-            btn.innerText = "Send Inquiry";
-            form.reset();
-            // Close modal
-            var modalEl = document.getElementById('inquiryModal');
-            var modal = bootstrap.Modal.getInstance(modalEl);
-            modal.hide();
-        })
-        .catch(error => {
-            alert('Error!', error.message);
-            btn.disabled = false;
-            btn.innerText = "Send Inquiry";
-        });
-});
+    fetch(MASTER_URL, { method: "POST", body: new FormData(inquiryForm) })
+      .then((response) => {
+        alert("Thank you! Your message was sent successfully.");
+        inquiryBtn.disabled = false;
+        inquiryBtn.innerHTML =
+          'Send Request <i class="fas fa-rocket ms-2"></i>';
+        inquiryForm.reset();
+
+        var modalEl = document.getElementById("inquiryModal");
+        var modal = bootstrap.Modal.getInstance(modalEl);
+        if (modal) modal.hide();
+      })
+      .catch((error) => {
+        alert("Error! " + error.message);
+        inquiryBtn.disabled = false;
+        inquiryBtn.innerHTML =
+          'Send Request <i class="fas fa-rocket ms-2"></i>';
+      });
+  });
+}
+
+// =======================================================
+// 2. SYLLABUS DOWNLOAD LOGIC (Goes to Sheet 2 & Sends Auto-Email)
+// =======================================================
+
+const pdfForm = document.getElementById("pdfForm");
+const pdfBtn = document.getElementById("pdfSubmitBtn");
+
+// Only run this if the Syllabus PDF Form exists on the page
+if (pdfForm) {
+  pdfForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Change button state
+    pdfBtn.disabled = true;
+    pdfBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+
+    // Send to Sheet 2
+    fetch(MASTER_URL, { method: "POST", body: new FormData(pdfForm) })
+      .then((response) => response.json()) // <-- ADDED THIS TO READ THE JSON
+      .then((data) => {
+        if (data.result === "success") {
+          // It actually worked!
+          alert(
+            "Success! We have received your request. The syllabus will be sent to your email.",
+          );
+          pdfBtn.disabled = false;
+          pdfBtn.innerHTML =
+            'Get Syllabus Now <i class="fas fa-download ms-2"></i>';
+          pdfForm.reset();
+          var modalEl = document.getElementById("pdfModal");
+          var modal = bootstrap.Modal.getInstance(modalEl);
+          if (modal) modal.hide();
+        } else {
+          // The script crashed, show the REAL error!
+          alert("Google Script Error: " + data.error);
+          pdfBtn.disabled = false;
+          pdfBtn.innerHTML =
+            'Get Syllabus Now <i class="fas fa-download ms-2"></i>';
+        }
+      })
+      .catch((error) => {
+        alert("Network Error! " + error.message);
+        pdfBtn.disabled = false;
+        pdfBtn.innerHTML =
+          'Get Syllabus Now <i class="fas fa-download ms-2"></i>';
+      });
+  });
+}

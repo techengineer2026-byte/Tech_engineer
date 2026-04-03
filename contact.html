@@ -8,7 +8,6 @@
     <title>Contact Tech Engineer - IT Training & Web Development in Mohali</title>
     <meta name="description"
         content="Contact Tech Engineer in Mohali - Phone: +91 85448 84846, Email: contact@techengineer.co. Free consultation. Location: Phase 8B, Mohali.">
-    <!-- ✅ Geo Tags for Local SEO (Crucial for "Mohali" searches) -->
     <meta name="geo.region" content="IN-PB">
     <meta name="geo.placename" content="Sahibzada Ajit Singh Nagar">
     <meta name="geo.position" content="30.7046;76.7179">
@@ -40,7 +39,6 @@
     <meta name="author" content="Tech Engineer">
     <meta name="canonical" content="https://techengineer.co/contact">
     <meta name="robots" content="index,follow">
-    <!-- Styles -->
     <link rel="stylesheet" href="./style/header.css">
     <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca" . />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -48,121 +46,355 @@
 
 
     <style>
-        /* Section Background */
-        .section-bg {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+        /* =========================================
+   UNIQUE CONTACT PAGE STYLES (Prefix: cu-)
+========================================= */
+
+        /* 1. Hero Section */
+        .cu-hero {
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop') center/cover no-repeat;
+            padding: 120px 0 160px;
+            /* Extra bottom padding for overlapping cards */
         }
 
-        /* The Card Container */
-        .contact-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-            /* Keeps overlay inside */
-            animation: slideUp 0.8s ease-out;
-        }
-
-        /* Input Styling */
-        .form-control,
-        .form-select {
-            border: 2px solid #eef0f3;
-            border-radius: 12px;
-            padding: 1rem;
-            background-color: #f8f9fa;
-            transition: all 0.3s;
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            border-color: #0d6efd;
-            box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
-            background-color: white;
-        }
-
-        /* Button Animation */
-        .submit-btn {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
-        }
-
-        /* SUCCESS OVERLAY STYLING */
-        .success-overlay {
+        .cu-hero-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(67, 97, 238, 0.85) 100%);
+        }
+
+        .cu-breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 24px;
+            border-radius: 50px;
+        }
+
+        .cu-breadcrumb a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .cu-breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .cu-separator {
+            color: #94a3b8;
+            margin: 0 12px;
+            font-size: 0.7rem;
+        }
+
+        .cu-breadcrumb .active {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .cu-text-gradient {
+            background: linear-gradient(135deg, #a5b4fc, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cu-text-gradient-dark {
+            background: linear-gradient(135deg, #4361ee, #f72585);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 2. Overlapping Journey Cards */
+        .cu-cards-wrapper {
+            margin-top: -100px;
+            /* Pulls cards up over the hero */
+            position: relative;
+            z-index: 10;
+        }
+
+        .cu-journey-card {
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .cu-journey-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .cu-card-img {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .cu-card-img img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0d6efd, #0a58ca);
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .cu-journey-card:hover .cu-card-img img {
+            transform: scale(1.05);
+        }
+
+        .cu-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+        }
+
+        .cu-card-body {
+            padding: 30px;
+            position: relative;
+        }
+
+        .cu-icon-float {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 4px solid #fff;
+        }
+
+        .bg-warning-light {
+            background: #fff3cd;
+        }
+
+        .bg-success-light {
+            background: #d1e7dd;
+        }
+
+        .cu-btn-outline {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            color: #475569;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .cu-btn-outline:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #0f172a;
+        }
+
+        /* 3. Location & Map */
+        .cu-info-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .cu-info-icon {
+            width: 50px;
+            height: 50px;
+            background: #eff4ff;
+            color: #4361ee;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .cu-info-text h5 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #1e293b;
+            font-size: 1.1rem;
+        }
+
+        .cu-info-text p,
+        .cu-info-text a {
+            color: #64748b;
+            margin: 0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .cu-info-text a:hover {
+            color: #4361ee;
+        }
+
+        .cu-review-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cu-btn-google {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 1px solid #f1f5f9;
+        }
+
+        .cu-btn-google img {
+            width: 20px;
+        }
+
+        .cu-btn-google:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            color: #000;
+        }
+
+        .cu-map-wrapper {
+            border-radius: 24px;
+            overflow: hidden;
+            height: 450px;
+            border: 8px solid #fff;
+        }
+
+        .cu-map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 4. Training Form */
+        .cu-training-section {
+            background-color: #f8f9fc;
+        }
+
+        .cu-form-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 50px 40px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        /* Clean, Modern Input Styling (Replaces buggy floating labels) */
+        .cu-standard-input {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 20px;
+            font-size: 0.95rem;
+            color: #1e293b;
+            box-shadow: none !important;
+            transition: all 0.3s ease;
+        }
+
+        .cu-standard-input:focus {
+            background: #ffffff;
+            border-color: #4361ee;
+            outline: none;
+        }
+
+        .cu-standard-input::placeholder {
+            color: #94a3b8;
+            opacity: 1;
+        }
+
+        /* Fixes dropdown arrow padding */
+        select.cu-standard-input {
+            padding-right: 40px;
+        }
+
+        .cu-btn-glow {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
             color: white;
+            border: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.25);
+        }
+
+        .cu-btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4);
+            color: white;
+        }
+
+        /* Success Message Overlay */
+        .cu-success-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.5s ease;
-            z-index: 10;
-            border-radius: 20px;
+            transition: all 0.4s ease;
+            z-index: 100;
         }
 
-        .success-overlay.active {
+        .cu-success-overlay.active {
             opacity: 1;
             visibility: visible;
         }
 
-        .check-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
+        .cu-success-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .cu-success-overlay.active .cu-success-box {
+            transform: translateY(0);
+        }
+
+        .cu-check-icon {
+            width: 70px;
+            height: 70px;
+            background: #20c997;
+            color: #fff;
             border-radius: 50%;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto;
             font-size: 2rem;
-            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            box-shadow: 0 10px 20px rgba(32, 201, 151, 0.3);
         }
 
-        /* Keyframe Animations */
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .cu-form-card {
+                padding: 30px 20px;
             }
 
-            to {
-                transform: translateY(0);
-                opacity: 1;
+            .cu-map-wrapper {
+                height: 350px;
             }
-        }
-
-        @keyframes popIn {
-            from {
-                transform: scale(0);
-            }
-
-            to {
-                transform: scale(1);
-            }
-        }
-
-        /* Floating Labels Fix */
-        .form-floating>label {
-            padding-left: 1.5rem;
         }
     </style>
 
-    <!-- Structured Data (Schema.org) for Local Business -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
@@ -192,286 +424,8 @@
     ]
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZS1VS07WN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-MZS1VS07WN');
-    </script>
 
 
-    <!-- Google Tag Manager -->
-
-    <style>
-        /* 1. Contact Banner */
-        .contact-banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/contact-bg.webp");
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            text-align: center;
-            color: white;
-            margin-top: 70px;
-            /* Space for fixed header */
-        }
-
-        .contact-banner h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        /* Breadcrumb Styling */
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ddd;
-        }
-
-        .breadcrumb .active {
-            color: #007bff;
-            font-weight: 600;
-        }
-
-        .breadcrumb i {
-            font-size: 0.7rem;
-        }
-
-        /* --- Common Styles --- */
-        .section-header {
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            font-weight: 700;
-            color: #1e1b4b;
-            font-size: 2.5rem;
-        }
-
-        .section-header p {
-            color: #64748b;
-            font-size: 1.1rem;
-        }
-
-        .highlight {
-            color: #4f46e5;
-        }
-
-        /* Tech Blue */
-
-        /* --- 1. Clients Section --- */
-        .section-clients {
-            padding: 60px 0;
-            background-color: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .client-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            /* Responsive Grid */
-            gap: 30px;
-            align-items: center;
-            justify-items: center;
-        }
-
-        .client-item img {
-            max-width: 140px;
-            height: auto;
-            filter: grayscale(100%);
-            opacity: 0.6;
-            transition: all 0.4s ease;
-        }
-
-        .client-item:hover img {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        /* --- 2. Transformation Journey --- */
-        .section-journey {
-            padding: 80px 0;
-            background-color: #f8fafc;
-            /* Light Gray */
-        }
-
-        .journey-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .journey-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s ease;
-            border: 1px solid #f1f5f9;
-        }
-
-        .journey-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .journey-img {
-            height: 220px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .journey-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .journey-card:hover .journey-img img {
-            transform: scale(1.05);
-        }
-
-        .journey-content {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .journey-content h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e1b4b;
-            margin-bottom: 15px;
-        }
-
-        .journey-content p {
-            color: #64748b;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-        }
-
-        .btn-journey {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: #4f46e5;
-            color: #fff;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn-journey:hover {
-            background-color: #3730a3;
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
-        }
-
-        /* --- 3. Location Section --- */
-        .section-location {
-            padding: 40px 0;
-            background: #ffffff;
-        }
-
-        .location-details h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #1e1b4b;
-        }
-
-        .loc-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-
-        .loc-item i {
-            font-size: 1.2rem;
-            color: #4f46e5;
-            background: rgba(79, 70, 229, 0.1);
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-
-        .loc-item h5 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #334155;
-        }
-
-        .loc-item p,
-        .loc-item a {
-            margin: 0;
-            color: #64748b;
-            text-decoration: none;
-            line-height: 1.5;
-        }
-
-        .loc-item a:hover {
-            color: #4f46e5;
-        }
-
-        .review-box {
-            background: #f1f5f9;
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid #4f46e5;
-        }
-
-        .btn-review {
-            color: #4f46e5;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 1.05rem;
-        }
-
-        .btn-review:hover {
-            text-decoration: underline;
-            color: #3730a3;
-        }
-
-        .map-wrapper {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            height: 400px;
-            /* Fixed height for consistency */
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .map-wrapper {
-                height: 300px;
-            }
-        }
-    </style>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -501,271 +455,243 @@
             </ul>
         </nav>
     </header>
+    <main class="cu-main">
+        <!-- 1. PREMIUM HERO BANNER -->
+        <section class="cu-hero position-relative text-center">
+            <div class="cu-hero-overlay"></div>
+            <div class="container position-relative z-2">
 
-    <!-- 1. HERO BANNER -->
-    <section class="contact-banner">
-        <div class="container">
-            <div class="breadcrumb">
-                <span>Home</span> <i class="fas fa-chevron-right"></i> <span class="active">Contact Us</span>
+                <nav class="cu-breadcrumb mx-auto mb-4 fade-in-up">
+                    <a href="./"><i class="fas fa-home me-1"></i> Home</a>
+                    <i class="fas fa-chevron-right cu-separator"></i>
+                    <span class="active">Contact Us</span>
+                </nav>
+
+                <h1 class="display-4 fw-bold text-white mb-3 slide-in-bottom">Get In <span
+                        class="cu-text-gradient">Touch</span></h1>
+                <p class="text-white-50 lead mx-auto mb-0 slide-in-bottom" style="max-width: 600px;">
+                    We are here to help you grow your business. Reach out to our team of experts to start your digital
+                    transformation.
+                </p>
             </div>
-            <h1>Get In Touch</h1>
-            <p>We are here to help you grow your business.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- =======================
-         1. CLIENTS SECTION
-    ======================== -->
-    <!--<section class="section-clients">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Trusted by <span class="highlight">Industry Leaders</span></h2>
-                <p>Empowering high-value businesses globally with cutting-edge tech solutions.</p>
-            </div>
+        <!-- 2. OVERLAPPING JOURNEY CARDS -->
+        <section class="cu-journey-section container">
+            <div class="row g-4 justify-content-center cu-cards-wrapper">
 
-            <div class="client-grid">
-                <div class="client-item"><img src="./images/clients/client1.webp" alt="Client 1"></div>
-                <div class="client-item"><img src="./images/clients/client2.webp" alt="Client 2"></div>
-                <div class="client-item"><img src="./images/clients/client3.webp" alt="Client 3"></div>
-                <div class="client-item"><img src="./images/clients/client4.webp" alt="Client 4"></div>
-                <div class="client-item"><img src="./images/clients/client5.webp" alt="Client 5"></div>
-                <div class="client-item"><img src="./images/clients/client6.webp" alt="Client 6"></div>
-                <div class="client-item"><img src="./images/clients/client7.webp" alt="Client 7"></div>
-                <div class="client-item"><img src="./images/clients/client8.webp" alt="Client 8"></div>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- =======================
-         2. TRANSFORMATION JOURNEY
-    ======================== -->
-    <section class="section-journey">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Start Your <span class="highlight">Transformation Journey</span></h2>
-                <p>Choose your path to digital excellence.</p>
-            </div>
-
-            <div class="journey-row">
-                <!-- Card 1: Blog -->
-                <div class="journey-card">
-                    <div class="journey-img">
-                        <img src="./images/I&T.webp" alt="Insights">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="journey-content">
-                        <h3><i class="fas fa-lightbulb text-warning"></i> Insights & Trends</h3>
-                        <p>Discover the latest expert advice on digital technologies and innovation.</p>
-                        <a href="./blog" class="btn-journey">Read Our Blog <i class="fas fa-arrow-right"></i></a>
+                <!-- Card 1 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="cu-journey-card">
+                        <div class="cu-card-img">
+                            <img src="./images/I&T.webp" alt="Insights" loading="lazy">
+                            <div class="cu-img-overlay"></div>
+                        </div>
+                        <div class="cu-card-body text-center">
+                            <div class="cu-icon-float bg-warning-light text-warning">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2 mt-3">Insights & Trends</h4>
+                            <p class="text-muted small mb-4">Discover the latest expert advice on digital technologies
+                                and innovation.</p>
+                            <a href="./blog" class="cu-btn-outline w-100">Read Our Blog <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2: Success Stories -->
-                <div class="journey-card">
-                    <div class="journey-img">
-                        <img src="./images/Sucess.webp" alt="Success">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="journey-content">
-                        <h3><i class="fas fa-trophy text-warning"></i> Success Stories</h3>
-                        <p>See how we have helped businesses build success stories that inspire.</p>
-                        <a href="./about" class="btn-journey">View Case Studies <i class="fas fa-arrow-right"></i></a>
+                <!-- Card 2 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="cu-journey-card">
+                        <div class="cu-card-img">
+                            <img src="./images/Sucess.webp" alt="Success" loading="lazy">
+                            <div class="cu-img-overlay"></div>
+                        </div>
+                        <div class="cu-card-body text-center">
+                            <div class="cu-icon-float bg-success-light text-success">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2 mt-3">Success Stories</h4>
+                            <p class="text-muted small mb-4">See how we have helped businesses build success stories
+                                that inspire.</p>
+                            <a href="./about" class="cu-btn-outline w-100">View Case Studies <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- =======================
-         3. LOCATION / MAP
-    ======================== -->
-    <section class="section-location">
-        <div class="container">
-            <div class="row align-items-center">
+        <!-- 3. LOCATION & MAP SECTION -->
+        <section class="cu-location-section py-5 my-4">
+            <div class="container">
+                <div class="row align-items-center g-5">
 
-                <!-- Left: Contact Details -->
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <div class="location-details">
-                        <h2 class="mb-4">Visit Our <span class="highlight">HQ</span></h2>
+                    <!-- Contact Details -->
+                    <div class="col-lg-5">
+                        <h2 class="fw-bold mb-4">Visit Our <span class="cu-text-gradient-dark">HQ</span></h2>
+                        <p class="text-muted mb-5">Prefer to meet in person? Drop by our office. We'd love to host you
+                            for a cup of coffee and a great conversation.</p>
 
-                        <div class="loc-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Address</h3>
+                        <div class="cu-info-box mb-4">
+                            <div class="cu-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="cu-info-text">
+                                <h5>Head Office</h5>
                                 <p>Tech Engineer, 4th Floor R&R Tower,<br>Plot F-298, Phase 8B, Sector 74, Mohali</p>
                             </div>
                         </div>
 
-                        <div class="loc-item">
-                            <i class="bi bi-telephone-outbound-fill"></i>
-                            <div>
-                                <h3>Phone</h3>
+                        <div class="cu-info-box mb-4">
+                            <div class="cu-info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="cu-info-text">
+                                <h5>Call Us</h5>
                                 <p><a href="tel:+918544884846">+91 85448 84846</a></p>
                             </div>
                         </div>
 
-                        <div class="loc-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>Email</h3>
+                        <div class="cu-info-box mb-5">
+                            <div class="cu-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="cu-info-text">
+                                <h5>Email Us</h5>
                                 <p><a href="mailto:contact@techengineer.co">contact@techengineer.co</a></p>
                             </div>
                         </div>
 
-                        <div class="review-box mt-4">
-                            <p class="mb-2">Loved working with us?</p>
+                        <div class="cu-review-card text-center p-4">
+                            <p class="fw-semibold mb-3">Loved working with us?</p>
                             <a href="https://www.google.com/search?q=Tech+Engineer+Reviews" target="_blank"
-                                class="btn-review">
-                                <i class="fab fa-google"></i> Write a Google Review
+                                class="cu-btn-google">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                                    alt="Google">
+                                Write a Google Review
                             </a>
                         </div>
                     </div>
-                </div>
 
-                <!-- Right: Map -->
-                <div class="col-lg-7">
-                    <div class="map-wrapper">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.2522126161134!2d76.68759957544081!3d30.711309286667856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefb734292bc9%3A0xe8d5a561abf59757!2sTech%20Engineer!5e0!3m2!1sen!2sin!4v1738736686230!5m2!1sen!2sin"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- 4️⃣ CONTACT FORM LINKED TO GOOGLE SHEETS -->
-    <section class="py-5 section-bg">
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-lg-8">
-                    <!-- FORM CARD -->
-                    <div class="contact-card shadow-lg">
-
-                        <div class="text-center mb-4">
-                            <h2 class="fw-bold">Join Our <span class="text-primary">Training</span></h2>
-                            <p class="text-muted">Select a course below to get started.</p>
+                    <!-- Google Map -->
+                    <div class="col-lg-7">
+                        <div class="cu-map-wrapper shadow-lg">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.2522126161134!2d76.68759957544081!3d30.711309286667856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefb734292bc9%3A0xe8d5a561abf59757!2sTech%20Engineer!5e0!3m2!1sen!2sin!4v1738736686230!5m2!1sen!2sin"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
+                    </div>
 
-                        <!-- 
-                        IMPORTANT: 
-                        1. Replace action="" with your Google Form URL ending in /formResponse 
-                        2. Replace name="entry.XXXX" with your specific Google field IDs
-                    -->
-                        <form
-                            action="https://docs.google.com/forms/d/e/1FAIpQLSfSfssR4psM4p0RK1gWMW4dHuJGvUSK-GtTNISMt2s3nnyt5Q/formResponse"
-                            method="POST" target="hidden_iframe" onsubmit="window.submitted = true;"
-                            class="needs-validation">
+                </div>
+            </div>
+        </section>
 
-                            <div class="row g-3">
+        <!-- 4. TRAINING REGISTRATION FORM -->
+        <section class="cu-training-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="cu-form-card shadow-lg position-relative">
 
-                                <!-- Name -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="entry.1481617062"
-                                            placeholder="Your Name" required>
-                                        <label for="name">Full Name</label>
+                            <div class="text-center mb-5">
+                                <span
+                                    class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill fw-bold">ENROLL
+                                    TODAY</span>
+                                <h2 class="fw-bold">Join Our <span class="cu-text-gradient-dark">Training</span></h2>
+                                <p class="text-muted">Select a course below to jumpstart your career.</p>
+                            </div>
+
+                            <form id="cuContactForm">
+                                <div class="row gx-3 gy-4"> <!-- gy-4 adds perfect vertical spacing -->
+
+                                    <!-- Name -->
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-bold small mb-2">Full Name</label>
+                                        <input type="text" class="form-control cu-standard-input" id="cuName"
+                                            name="name" placeholder="John Doe" required>
                                     </div>
-                                </div>
 
-                                <!-- Phone -->
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" name="entry.1863134025"
-                                            placeholder="Phone" required>
-                                        <label for="phone">Phone Number</label>
+                                    <!-- Phone -->
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-bold small mb-2">Mobile Number</label>
+                                        <input type="tel" class="form-control cu-standard-input" id="cuPhone"
+                                            name="phone" placeholder="+91 98765 43210" required>
                                     </div>
-                                </div>
 
-                                <!-- Email -->
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="entry.2051739032"
-                                            placeholder="Email" required>
-                                        <label for="email">Email Address</label>
+                                    <!-- Email -->
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-bold small mb-2">Email Address</label>
+                                        <input type="email" class="form-control cu-standard-input" id="cuEmail"
+                                            name="email" placeholder="name@company.com" required>
                                     </div>
-                                </div>
 
-                                <!-- COURSE SELECTION (ANIMATED DROPDOWN) -->
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="courseSelect" name="entry.1814978086"
-                                            aria-label="Select Course" required>
-                                            <option selected disabled value="">Choose a training program...</option>
-                                            <option value="Web Development Full Stack">Web Development Full Stack
-                                            </option>
-                                            <option value="Graphic Design Masterclass">Graphic Design Masterclass
-                                            </option>
-                                            <option value="Digital Marketing Pro">Digital Marketing Pro</option>
-                                            <option value="Python for Data Science">Python for Data Science</option>
-                                            <option value="UI/UX Design Bootcamp">UI/UX Design Bootcamp</option>
-                                            <option value="AI Prompt Engineering">AI Prompt Engineering</option>
+                                    <!-- Service/Course Dropdown -->
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-bold small mb-2">Select Course /
+                                            Service</label>
+                                        <select class="form-select cu-standard-input" id="cuService" name="service"
+                                            required>
+                                            <option selected disabled value="">Choose a program...</option>
+                                            <option value="Web Development">Web Development Full Stack</option>
+                                            <option value="Graphic Design">Graphic Design Masterclass</option>
+                                            <option value="Digital Marketing">Digital Marketing Pro</option>
+                                            <option value="Python Data Science">Python for Data Science</option>
                                             <option value="Cloud Computing">Cloud Computing</option>
-                                            <option value="Cyber Security">Cyber Security</option>
+                                            <option value="General Inquiry">Other / General Inquiry</option>
                                         </select>
-                                        <label for="courseSelect">Select Course</label>
                                     </div>
-                                </div>
 
-                                <!-- Message -->
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here" id="message"
-                                            name="entry.1561341932" style="height: 120px"></textarea>
-                                        <label for="message">Any specific questions?</label>
+                                    <!-- Message -->
+                                    <div class="col-12">
+                                        <label class="form-label text-dark fw-bold small mb-2">Any specific
+                                            questions?</label>
+                                        <textarea class="form-control cu-standard-input" id="cuMessage" name="message"
+                                            rows="4" placeholder="Tell us about your requirements or goals..."
+                                            required></textarea>
                                     </div>
-                                </div>
 
-                                <!-- Submit Button -->
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill submit-btn">
-                                        <i class="fas fa-paper-plane me-2"></i> Enroll Now
-                                    </button>
+                                    <!-- Submit Button -->
+                                    <div class="col-12 text-center mt-2">
+                                        <button type="submit" class="btn cu-btn-glow w-100 py-3 rounded-3 fw-bold fs-5"
+                                            id="cuSubmitBtn">
+                                            Submit Application <i class="fas fa-paper-plane ms-2"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <!-- Success Overlay -->
+                            <div id="cu-success-message" class="cu-success-overlay">
+                                <div class="cu-success-box text-center">
+                                    <div class="cu-check-icon mb-3"><i class="fas fa-check"></i></div>
+                                    <h3 class="fw-bold text-dark">Application Sent!</h3>
+                                    <p class="text-muted mb-4">We have received your request for the training.<br>Our
+                                        team will contact you shortly.</p>
+                                    <button class="btn btn-dark px-4 rounded-pill"
+                                        onclick="closeSuccess()">Close</button>
                                 </div>
                             </div>
-                        </form>
 
-                        <!-- SUCCESS MESSAGE OVERLAY (Hidden by default) -->
-                        <div id="success-message" class="success-overlay">
-                            <div class="text-center">
-                                <div class="check-icon mb-3">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <h3 class="fw-bold">Application Sent!</h3>
-                                <p>We have received your request for the training.<br>We will contact you shortly.</p>
-                                <button class="btn btn-outline-light btn-sm mt-3" onclick="closeSuccess()">Send
-                                    Another</button>
-                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <script>
-        window.submitted = false;
+        </section>
 
-        function showSuccess() {
-            const overlay = document.getElementById('success-message');
-            overlay.classList.add('active');
-            document.querySelector('form').reset();
-        }
+        <!-- Hidden iframe for Google Forms -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+            onload="if(window.submitted) showSuccess();"></iframe>
 
-        function closeSuccess() {
-            const overlay = document.getElementById('success-message');
-            overlay.classList.remove('active');
+        <script>
             window.submitted = false;
-        }
-    </script>
-
-    <!-- HIDDEN IFRAME (Tricks the browser to stay on page) -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-        onload="if(window.submitted) showSuccess();"></iframe>
-
-    <!-- Footer with Updated Training Courses -->
+            function showSuccess() {
+                document.getElementById('cu-success-message').classList.add('active');
+                document.querySelector('form').reset();
+            }
+            function closeSuccess() {
+                document.getElementById('cu-success-message').classList.remove('active');
+                window.submitted = false;
+            }
+        </script>
+    </main>
     <footer class="footer-bs5">
         <div class="container">
             <div class="row gy-5">
@@ -799,7 +725,6 @@
                 <div class="col-lg-3 col-md-4">
                     <h4 class="text-white fw-bold mb-4">Training Courses</h4>
                     <div class="row">
-                        <!-- Left Sub-Column -->
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
                                 <li><a href="./courses/fullstack-course">Full Stack Web</a></li>
@@ -807,7 +732,6 @@
                                 <li><a href="./courses/prompt-engineering-course">AI & Prompt Eng</a></li>
                             </ul>
                         </div>
-                        <!-- Right Sub-Column -->
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
                                 <li><a href="./courses/video-editing-course">Video Editing</a></li>
@@ -868,16 +792,10 @@
             </button>
         </div>
     </footer>
-<section class="AIbotchatModal">
+    <section class="AIbotchatModal">
 
-        <!-- YOUR WEBSITE -->
-        <div class="demo-page">
-            <h2>🚀 Tech Engineer AI</h2>
-            <p>AI & IT Training | IT Services & Automation</p>
-            <p class="mt-3 text-muted">👉 Click the chat icon to talk with our AI</p>
-        </div>
 
-        <!-- FLOATING BUTTON -->
+
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
             <div class="btn-ripple"></div>
             <div class="btn-ripple delay"></div>
@@ -886,17 +804,14 @@
             <span class="chat-badge" id="chatBadge"></span>
         </button>
 
-        <!-- CHAT WINDOW -->
         <div class="chat-window" id="chatWindow">
 
-            <!-- ========== LEAD FORM ========== -->
             <div id="leadForm" class="lead-card">
                 <button class="form-close-btn" onclick="toggleChat()">
                     <i class="bi bi-x-lg"></i>
                 </button>
 
                 <div class="lead-card-inner">
-                    <!-- Top glow decoration -->
                     <div class="card-glow"></div>
 
                     <div class="logo-area">
@@ -912,7 +827,6 @@
                         <p>Enter your details to start chatting</p>
                     </div>
 
-                    <!-- NAME -->
                     <div class="field-group">
                         <div class="field-box">
                             <i class="bi bi-person-fill field-icon"></i>
@@ -923,7 +837,6 @@
                         <span class="field-error" id="nameError"></span>
                     </div>
 
-                    <!-- EMAIL -->
                     <div class="field-group">
                         <div class="field-box">
                             <i class="bi bi-envelope-fill field-icon"></i>
@@ -934,7 +847,6 @@
                         <span class="field-error" id="emailError"></span>
                     </div>
 
-                    <!-- PHONE -->
                     <div class="field-group">
                         <div class="field-box">
                             <i class="bi bi-whatsapp field-icon"></i>
@@ -946,7 +858,6 @@
                         <span class="field-error" id="phoneError"></span>
                     </div>
 
-                    <!-- CATEGORY -->
                     <div class="field-group">
                         <div class="field-box select-box">
                             <i class="bi bi-grid-fill field-icon"></i>
@@ -960,7 +871,6 @@
                         </div>
                     </div>
 
-                    <!-- SUBMIT -->
                     <button class="btn-start" id="btnStart" onclick="validateAndSubmit()">
                         <span class="btn-text">
                             <i class="bi bi-chat-dots me-2"></i>Start Chatting
@@ -977,7 +887,6 @@
                 </div>
             </div>
 
-            <!-- ========== CHAT INTERFACE ========== -->
             <div id="chatInterface" class="chat-card" style="display:none;">
                 <div class="chat-header">
                     <div class="header-glow"></div>
@@ -1011,7 +920,45 @@
 
 
     <script src="./script/aichatbot.js"></script>
+    <script>
+        // PASTE YOUR GOOGLE SCRIPT URL HERE!
+        const cuScriptURL = 'https://script.google.com/macros/s/AKfycbyLpwY-VP32Lri4bSkY6ViHURSqcpn0BL9zyBmloYM95tgmCCvEkq7ZzDEWo2DQzUnu/exec';
 
+        const cuContactForm = document.getElementById('cuContactForm');
+        const cuSubmitBtn = document.getElementById('cuSubmitBtn');
+
+        if (cuContactForm) {
+            cuContactForm.addEventListener('submit', e => {
+                e.preventDefault();
+
+                // Change button to show loading state
+                cuSubmitBtn.disabled = true;
+                cuSubmitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+
+                // Send data to Google Sheets
+                fetch(cuScriptURL, { method: 'POST', body: new FormData(cuContactForm) })
+                    .then(response => {
+                        // Show the beautiful success overlay
+                        document.getElementById('cu-success-message').classList.add('active');
+
+                        // Reset button and form
+                        cuSubmitBtn.disabled = false;
+                        cuSubmitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane ms-2"></i>';
+                        cuContactForm.reset();
+                    })
+                    .catch(error => {
+                        alert('Error! ' + error.message);
+                        cuSubmitBtn.disabled = false;
+                        cuSubmitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane ms-2"></i>';
+                    });
+            });
+        }
+
+        // Logic to close the success popup
+        function closeSuccess() {
+            document.getElementById('cu-success-message').classList.remove('active');
+        }
+    </script>
 
     <script src="./javascript.js" defer></script>
     <script>
