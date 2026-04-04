@@ -1,139 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-
+  <!-- MAIN PAGES -->
   <url>
     <loc>https://techengineer.co/</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>1.00</priority>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://techengineer.co/about</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://techengineer.co/services</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://techengineer.co/portfolio</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://techengineer.co/blog</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+
   <url>
     <loc>https://techengineer.co/contact</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://techengineer.co/industrial-training</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
+    <loc>https://techengineer.co/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://techengineer.co/gallery</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-mobile-app-development-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-maui-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/python-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/cloud-computing-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/digital-marketing-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/privacy-policy</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/terms</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/cyber-security-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/ui-ux-design-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/game-development-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/fullstack-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/prompt-engineering-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-mssql-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-api-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-desktop-development-course</loc>
-    <lastmod>2026-03-24T07:04:50+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/blogs/ai-in-2026-whats-changed-and-whats-coming-next.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://techengineer.co/blogs/how-we-give-100-job-placement-to-our-students.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://techengineer.co/industrial-training</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- COURSES -->
+  <url>
+    <loc>https://techengineer.co/courses/python-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/fullstack-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/digital-marketing-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/cloud-computing-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/cyber-security-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/game-development-course</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/ui-ux-design-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/video-editing-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/prompt-engineering-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-api-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-mssql-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-maui-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-mobile-app-development-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-desktop-development-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- BLOG POSTS -->
+  <url>
+    <loc>https://techengineer.co/blogs/ai-in-2026-whats-changed-and-whats-coming-next</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/blogs/how-we-give-100-job-placement-to-our-students</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- LEGAL -->
+  <url>
+    <loc>https://techengineer.co/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://techengineer.co/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

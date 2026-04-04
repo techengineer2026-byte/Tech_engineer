@@ -1,41 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
     <title>Tech Engineer Blog – Web, Mobile, AI & IT Insights</title>
-    <meta name="description"
-        content="Tech Engineer Blog - Web development tutorials, IT training guides, AI insights, cybersecurity tips & career advice for developers in Mohali.">
+    <meta name="description" content="Tech Engineer Blog - Web development tutorials, IT training guides, AI insights, cybersecurity tips & career advice for developers in Mohali.">
     <meta name="author" content="Tech Engineer">
     <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://techengineer.co/blog">
-    <link rel="stylesheet" href="./style/header.css">
-    <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca">
-    <link rel="icon" type="image/x-icon" href="./images/logo.webp">
+
+    <!-- GEO TAGS -->
     <meta name="geo.region" content="IN-PB">
     <meta name="geo.placename" content="Sahibzada Ajit Singh Nagar">
     <meta name="geo.position" content="30.7046;76.7179">
     <meta name="ICBM" content="30.7046, 76.7179">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <meta property="og:title" content="Tech Engineer Blog | Tutorials, IT Courses & Career Tips">
-    <meta property="og:description"
-        content="Read blogs on web development, digital marketing, programming, design, and IT career growth.">
-    <meta property="og:image" content="https://techengineer.co/images/logo.webp">
-    <meta property="og:url" content="https://techengineer.co/blog">
+    <!-- Domain Verification -->
+    <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca">
+
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tech Engineer">
-    <link rel="stylesheet" href="style/AIchatbot.css">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tech Engineer Blog | Learn & Grow">
-    <meta name="twitter:description" content="Sharpen your IT skills with tutorials, guides, and career tips.">
-    <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
-    <meta name="twitter:url" content="https://techengineer.co/blog">
-    <meta name="twitter:site" content="@TechEngineer">
+    <meta property="og:url" content="https://techengineer.co/blog">
+    <meta property="og:title" content="Tech Engineer Blog | Tutorials, IT Courses & Career Tips">
+    <meta property="og:description" content="Read blogs on web development, digital marketing, programming, design, and IT career growth in Mohali.">
+    <meta property="og:image" content="https://techengineer.co/images/logo.webp">
 
-<style>
+    <!-- Twitter Cards (Fixed Handle) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TechEngineer115">
+    <meta name="twitter:url" content="https://techengineer.co/blog">
+    <meta name="twitter:title" content="Tech Engineer Blog | Learn & Grow">
+    <meta name="twitter:description" content="Sharpen your IT skills with tutorials, guides, and career tips from industry experts.">
+    <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.webp">
+
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/AIchatbot.css">
+
+    <!-- ========================================== -->
+    <!-- 🟠 PHASE 2: SCHEMA MARKUP FOR AEO (SEO)  -->
+    <!-- ========================================== -->
+
+    <!-- 1. Blog & Organization Schema (WITH YOUR SOCIAL LINKS) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://techengineer.co/blog"
+      },
+      "name": "Tech Engineer Blog",
+      "description": "Expert articles, tutorials on web development, mobile apps, AI, IT training, and digital marketing insights.",
+      "url": "https://techengineer.co/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tech Engineer",
+        "url": "https://techengineer.co",
+        "logo": { 
+          "@type": "ImageObject", 
+          "url": "https://techengineer.co/images/logo.webp" 
+        },
+        "sameAs": [
+          "https://www.facebook.com/people/Tech-Engineer/61588374936232/",
+          "http://www.instagram.com/tech___engineer",
+          "http://x.com/TechEngineer115",
+          "http://www.linkedin.com/company/tech-eng-ineer/",
+          "https://www.youtube.com/@TechEngineerai",
+          "https://in.pinterest.com/techengineerai/",
+          "https://github.com/techengineer2026-byte",
+          "https://www.tumblr.com/techengineerai"
+        ]
+      }
+    }
+    </script>
+
+    <!-- 2. BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://techengineer.co"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://techengineer.co/blog"
+        }
+      ]
+    }
+    </script>
+    <style>
     /* =========================================
    UNIQUE BLOG PAGE STYLES
 ========================================= */
@@ -148,371 +227,6 @@
     .blog-card-body { padding: 20px; }
 }
 </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "url": "https://techengineer.co/blog",
-      "name": "Tech Engineer Blog",
-      "description": "Expert articles and tutorials on web, mobile, AI, IT and digital marketing topics.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Tech Engineer",
-        "logo": { "@type": "ImageObject", "url": "https://techengineer.co/images/logo.webp" }
-      }
-    }
-    </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        :root {
-            --primary-color: #0d6efd;
-            --dark-bg: #0f172a;
-            --light-bg: #f8f9fa;
-            --text-color: #333;
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        body {
-            background-color: var(--light-bg);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-
-        .blog-banner {
-            background: linear-gradient(135deg, #0d6efd 0%, #0099ff 100%);
-            padding: 80px 0 100px;
-            color: white;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            margin-bottom: 50px;
-        }
-
-        .custom-breadcrumb {
-            background: rgba(255, 255, 255, 0.1);
-            display: inline-flex;
-            padding: 8px 20px;
-            border-radius: 30px;
-            backdrop-filter: blur(5px);
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .custom-breadcrumb a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .custom-breadcrumb a:hover {
-            color: white;
-        }
-
-        .custom-breadcrumb i {
-            font-size: 0.7rem;
-            opacity: 0.6;
-        }
-
-        .custom-breadcrumb .active {
-            color: white;
-            font-weight: 600;
-        }
-
-        .banner-content h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .banner-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .blog-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            margin-bottom: 80px;
-        }
-
-        @media (max-width: 992px) {
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .blog-post {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-            margin-bottom: 40px;
-            border: 1px solid rgba(0, 0, 0, 0.02);
-        }
-
-        .blog-post:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--hover-shadow);
-        }
-
-        .post-image {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .post-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .blog-post:hover .post-image img {
-            transform: scale(1.1);
-        }
-
-        .category-tag {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--primary-color);
-            padding: 6px 15px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .post-content {
-            padding: 35px;
-        }
-
-        .post-meta {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .post-meta i {
-            color: var(--primary-color);
-            margin-right: 5px;
-        }
-
-        .post-content h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #2c3e50;
-            line-height: 1.3;
-        }
-
-        .post-content p {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-
-        .read-more-btn {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            transition: 0.3s;
-        }
-
-        .read-more-btn i {
-            margin-left: 8px;
-            transition: margin-left 0.3s;
-        }
-
-        .read-more-btn:hover {
-            color: #004494;
-        }
-
-        .read-more-btn:hover i {
-            margin-left: 15px;
-        }
-
-
-        .blog-sidebar {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .sidebar-widget {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 30px;
-        }
-
-        .sidebar-widget h4 {
-            font-weight: 700;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .sidebar-widget h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        .search-form {
-            display: flex;
-            gap: 10px;
-        }
-
-        .search-form input {
-            width: 100%;
-            padding: 10px 15px;
-            border: 2px solid #eee;
-            border-radius: 8px;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        .search-form input:focus {
-            border-color: var(--primary-color);
-        }
-
-        .search-form button {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0 15px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .category-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .category-list li {
-            margin-bottom: 12px;
-        }
-
-        .category-list a {
-            text-decoration: none;
-            color: #555;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border-radius: 8px;
-            transition: 0.3s;
-            background: #f8f9fa;
-        }
-
-        .category-list a:hover {
-            background: var(--primary-color);
-            color: white;
-            padding-left: 15px;
-        }
-
-        .category-list span {
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-
-        .recent-posts {
-            list-style: none;
-            padding: 0;
-        }
-
-        .recent-posts li {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-
-        .recent-posts li:last-child {
-            border: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .recent-posts a {
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .recent-posts .post-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-            transition: 0.2s;
-        }
-
-        .recent-posts a:hover .post-title {
-            color: var(--primary-color);
-        }
-
-        .recent-posts .post-date {
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        .newsletter-widget {
-            background: #0d6efd;
-            color: white;
-            text-align: center;
-        }
-
-        .newsletter-widget h4 {
-            color: white;
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .newsletter-widget button {
-            background: white;
-            color: var(--primary-color);
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            margin-top: 10px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .newsletter-widget button:hover {
-            background: #eee;
-        }
-
-        .subscribe-form input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: none;
-        }
-    </style>
 </head>
 
 <body>
