@@ -156,7 +156,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
+  <url>
+    <loc>https://techengineer.co/blogs/mwc-2026-future-of-smartphones-and-ai</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <!-- LEGAL -->
   <url>
     <loc>https://techengineer.co/privacy-policy</loc>

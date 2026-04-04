@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>🤖 AI Agents Are Stealing Your Job: What Software Engineers Need to Do NOW</title>
+    <meta name="title" content="🤖 AI Agents Are Stealing Your Job: What Software Engineers Need to Do NOW">
+    <meta name="description"
+        content="AI agents are replacing developers faster than expected. Discover the truth about agentic AI, the future of coding, and the exact steps software engineers must take NOW to survive.">
+    <meta name="keywords"
+        content="AI agents replacing developers, future of coding, agentic AI, software engineering jobs, Devin AI, AutoGPT, AI coding assistants, prompt engineering, tech careers">
+    <meta name="author" content="Tech Engineer - AI & Tech Education Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs">
+    <meta property="og:title" content="🤖 AI Agents Are Stealing Your Job: What Software Engineers Need to Do NOW">
+    <meta property="og:description"
+        content="The era of autocomplete is over. Autonomous AI agents are here to take Jira tickets and push code. Here is your survival guide.">
+    <meta property="og:image" content="https://techengineer.co/images/blog/ai-agents-takeover.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Tech Engineer">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs">
+    <meta name="twitter:title" content="🤖 AI Agents Are Stealing Your Job: What Software Engineers Need to Do NOW">
+    <meta name="twitter:description"
+        content="The era of autocomplete is over. Autonomous AI agents are here to take Jira tickets and push code. Here is your survival guide.">
+    <meta name="twitter:image" content="https://techengineer.co/images/blog/ai-agents-takeover.webp">
+
+    <!-- Article Specific Meta -->
+    <meta property="article:published_time" content="2024-10-25T08:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-25T08:00:00+00:00">
+    <meta property="article:author" content="Tech Engineer Team">
+    <meta property="article:section" content="Software Engineering & AI">
+    <meta property="article:tag" content="AI Agents, Software Engineering, Career Advice, Agentic AI">
+    <link rel="stylesheet" href="/style/AIchatbot.css">
+
+    <!-- Schema.org JSON-LD for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "AI Agents Are Stealing Your Job: What Software Engineers Need to Do NOW",
+      "description": "AI agents are replacing developers faster than expected. Discover the truth about agentic AI, the future of coding, and the exact steps software engineers must take NOW to survive.",
+      "image": "https://techengineer.co/images/blog/ai-agents-takeover.webp",
+      "datePublished": "2024-10-25T08:00:00+00:00",
+      "dateModified": "2024-10-25T08:00:00+00:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Tech Engineer",
+        "url": "https://techengineer.co"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tech Engineer",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://techengineer.co/images/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs"
+      }
+    }
+    </script>
+    <style>
+        /* Reading Progress */
+        #readingBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 0%;
+            background: linear-gradient(90deg, #ef4444, #f97316);
+            z-index: 9999;
+            transition: width 0.1s;
+        }
+
+        /* Hero gradient */
+        .blog-hero-bg {
+            background: linear-gradient(160deg, #111827, #374151, #1f2937);
+            min-height: 420px;
+            margin-top: 50px;
+
+        }
+
+        /* Gradient text - Danger/Warning */
+        .text-gradient {
+            background: linear-gradient(135deg, #f87171, #fcd34d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Drop cap */
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 0.8;
+            margin: 6px 12px 0 0;
+            color: #ef4444;
+            font-family: Georgia, serif;
+        }
+
+        /* Article body */
+        .article-body {
+            font-size: 1.08rem;
+            line-height: 1.9;
+            color: #374151;
+        }
+
+        .article-body h2 {
+            border-left: 4px solid #ef4444;
+            padding-left: 16px;
+        }
+
+        /* Dot list */
+        .dot-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .dot-list li {
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .dot-list li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background: #ef4444;
+            border-radius: 50%;
+        }
+
+        /* Quote card */
+        .quote-mark {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 4.5rem;
+            color: #e5e7eb;
+            font-family: Georgia, serif;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* Stat top border hover */
+        .stat-hover {
+            transition: all 0.3s;
+            border-top: 3px solid transparent;
+        }
+
+        .stat-hover:hover {
+            border-top-color: #ef4444;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Share btn hover colors */
+        .share-li:hover {
+            background: #0A66C2 !important;
+            color: #fff !important;
+            border-color: #0A66C2 !important;
+        }
+
+        .share-tw:hover {
+            background: #1DA1F2 !important;
+            color: #fff !important;
+            border-color: #1DA1F2 !important;
+        }
+
+        .share-fb:hover {
+            background: #1877F2 !important;
+            color: #fff !important;
+            border-color: #1877F2 !important;
+        }
+
+        .share-cp:hover {
+            background: #ef4444 !important;
+            color: #fff !important;
+            border-color: #ef4444 !important;
+        }
+
+        /* Back to top */
+        #backToTop {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            width: 46px;
+            height: 46px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(16px);
+            transition: all 0.3s;
+        }
+
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Toast */
+        #toast {
+            position: fixed;
+            bottom: 90px;
+            right: 28px;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.3s;
+        }
+
+        #toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* TOC links */
+        .toc-link {
+            transition: padding-left 0.2s;
+        }
+
+        .toc-link:hover {
+            padding-left: 8px;
+            color: #ef4444 !important;
+        }
+
+        /* Card hover lift */
+        .card-lift {
+            transition: all 0.3s;
+        }
+
+        .card-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- FAQ Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are AI agents actually replacing software developers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI agents are not replacing all developers, but they are rapidly replacing 'code monkeys'—junior developers whose primary job is writing boilerplate code, doing basic CRUD operations, or manual QA. To survive, developers must transition into system architects and AI orchestrators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between AI Copilots and AI Agents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Copilots (like GitHub Copilot) act as advanced autocomplete; they help you write lines of code. Agentic AI (like Devin or AutoGPT) is autonomous. You give an Agent a Jira ticket or a prompt, and it can plan, write, debug, and deploy the entire feature by itself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should software engineers learn right now to survive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Software engineers need to master System Design, Prompt Engineering, API integrations, and Agent frameworks like LangChain, CrewAI, and Semantic Kernel. Shift your focus from writing syntax to solving high-level business problems."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://techengineer.co"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://techengineer.co/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Agents Are Stealing Your Job",
+          "item": "https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Your Existing Stylesheets -->
+    <link rel="stylesheet" href="/style/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+    <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TL6BSHN5');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+        <nav class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="/images/logow.png" alt="Tech Engineer Logo" loading="lazy">
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li class="internship">
+                    <a href="/industrial-training">
+                        <img src="/images/icon.webp" alt="Internship" loading="lazy">
+                        <span>Internship</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Reading Progress -->
+    <div id="readingBar"></div>
+
+    <!-- Back to Top -->
+    <button id="backToTop"
+        class="btn btn-danger rounded-circle shadow-lg d-flex align-items-center justify-content-center"
+        aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast -->
+    <div id="toast" class="bg-dark text-white px-4 py-3 rounded-3 shadow-lg d-flex align-items-center gap-2">
+        <i class="fas fa-check-circle text-success"></i>
+        <span class="fw-semibold small">Link copied!</span>
+    </div>
+
+
+    <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+    <section class="blog-hero-bg text-white d-flex align-items-end pb-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+
+                    <!-- Badge -->
+                    <span
+                        class="badge rounded-pill bg-danger bg-opacity-25 border border-danger border-opacity-50 px-3 py-2 mb-3 fw-semibold">
+                        <i class="fas fa-exclamation-triangle text-warning me-1"></i> Urgent Career Alert
+                    </span>
+
+                    <!-- Title -->
+                    <h1 class="display-4 fw-bold mb-3 lh-sm">
+                        🤖 AI Agents Are Stealing Your Job: What Software Engineers Need to Do <span
+                            class="text-gradient">NOW</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="fs-5 text-white-50 mb-4" style="max-width:650px;">
+                        The era of AI "autocomplete" is dead. Autonomous agents are taking Jira tickets, writing code,
+                        and deploying apps. Here is your self-preservation guide to survive the future of coding.
+                    </p>
+
+                    <!-- Meta -->
+                    <div class="d-flex flex-wrap align-items-center gap-3 text-white-50 small">
+                        <span><i class="fas fa-calendar-alt text-info me-1"></i> <span id="publishDate">Trending
+                                Now</span></span>
+                        <span class="d-none d-sm-inline opacity-25">|</span>
+                        <span><i class="fas fa-clock text-info me-1"></i> 6 min read</span>
+                        <span class="d-none d-sm-inline opacity-25">|</span>
+                        <span><i class="fas fa-fire text-danger me-1"></i> High Priority</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+       MAIN ARTICLE
+  ══════════════════════════════════════ -->
+    <article class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb small">
+                            <li class="breadcrumb-item"><a href="/" class="text-decoration-none text-muted">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="/blog" class="text-decoration-none text-muted">Blog</a>
+                            </li>
+                            <li class="breadcrumb-item active fw-semibold text-danger" aria-current="page">AI Agent
+                                Takeover</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Featured Image -->
+                    <figure class="mb-5">
+                        <img src="/images/blog/ai-agents-takeover.webp"
+                            alt="AI Robot taking over software developer job"
+                            class="img-fluid rounded-4 shadow w-100 border border-danger border-opacity-25"
+                            style="max-height:460px; object-fit:cover;" loading="eager">
+                        <figcaption class="text-muted small text-center mt-2 fst-italic">
+                            Agentic AI isn't just assisting—it's executing end-to-end development.
+                        </figcaption>
+                    </figure>
+
+                    <!-- Table of Contents -->
+                    <div class="bg-light rounded-4 p-4 mb-5 border border-secondary border-opacity-25">
+                        <h2 class="h6 fw-bold mb-3 text-dark">
+                            <i class="fas fa-list-ul text-danger me-2"></i>Survival Guide: Table of Contents
+                        </h2>
+                        <ul class="list-unstyled mb-0 small d-flex flex-column gap-2">
+                            <li><a href="#reality-check" class="text-decoration-none text-secondary toc-link d-block">1.
+                                    The Reality Check: Copilots vs. Agents</a></li>
+                            <li><a href="#at-risk" class="text-decoration-none text-secondary toc-link d-block">2. Who
+                                    is Actually Losing Their Job?</a></li>
+                            <li><a href="#new-role" class="text-decoration-none text-secondary toc-link d-block">3. The
+                                    Evolution: From "Coder" to "Orchestrator"</a></li>
+                            <li><a href="#survival-toolkit"
+                                    class="text-decoration-none text-secondary toc-link d-block">4. Your Survival
+                                    Toolkit (Do This NOW)</a></li>
+                            <li><a href="#faq" class="text-decoration-none text-secondary toc-link d-block">5. FAQs:
+                                    Will I Survive?</a></li>
+                        </ul>
+                    </div>
+
+
+                    <!-- ═══ ARTICLE BODY ═══ -->
+                    <div class="article-body">
+
+                        <!-- Intro / Reality Check -->
+                        <section id="reality-check" class="mb-5">
+                            <h2 class="h3 fw-bold mb-3">🚨 The Reality Check: Autocomplete is Dead. Agents are Here.
+                            </h2>
+                            <p class="drop-cap">
+                                <strong>Let's stop sugarcoating it.</strong> If your primary skill is translating basic
+                                logic into JavaScript, Python, or C#, your job is on the line.
+                            </p>
+                            <p>
+                                A year ago, we marveled at GitHub Copilot writing a few lines of boilerplate. Today, we
+                                have <strong>Agentic AI</strong>. Systems like <em>Devin, AutoGPT, and Cursor</em>
+                                aren’t just giving you suggestions. You assign them a Jira ticket, and they <strong>read
+                                    the docs, write the code, debug the errors, and submit a Pull Request.</strong>
+                            </p>
+
+                            <!-- Quick Alert -->
+                            <div class="alert alert-danger border-0 bg-danger bg-opacity-10 rounded-3 my-4"
+                                role="alert">
+                                <div class="d-flex gap-3 align-items-start">
+                                    <i class="fas fa-skull-crossbones text-danger mt-1 fa-lg"></i>
+                                    <div>
+                                        <strong>The Scary Truth:</strong> AI agents are already successfully resolving
+                                        real-world GitHub issues unassisted. They don't need bathroom breaks, they don't
+                                        get tired, and they cost a fraction of a Junior Dev's salary.
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Who is at risk? -->
+                        <section id="at-risk" class="mb-5">
+                            <h2 class="h3 fw-bold mb-4">🎯 Who is Actually Losing Their Job?</h2>
+                            <p>Not every software engineer is doomed, but specific roles are facing a massive extinction
+                                event. If your day-to-day falls into these categories, you need to pivot immediately:
+                            </p>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="card h-100 border-0 shadow-sm rounded-4 card-lift bg-light">
+                                        <div class="card-body p-4">
+                                            <i class="fas fa-keyboard fa-2x text-secondary mb-3"></i>
+                                            <h3 class="h6 fw-bold">1. The "Code Monkeys"</h3>
+                                            <p class="text-muted small mb-0">
+                                                Developers who just blindly type out CRUD (Create, Read, Update, Delete)
+                                                operations without understanding system architecture.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="card h-100 border-0 shadow-sm rounded-4 card-lift bg-light">
+                                        <div class="card-body p-4">
+                                            <i class="fas fa-bug fa-2x text-secondary mb-3"></i>
+                                            <h3 class="h6 fw-bold">2. Manual QA Testers</h3>
+                                            <p class="text-muted small mb-0">
+                                                If you are writing basic unit tests or manually clicking through web
+                                                apps, AI agents can generate and run comprehensive test suites in
+                                                seconds.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="card h-100 border-0 shadow-sm rounded-4 card-lift bg-light">
+                                        <div class="card-body p-4">
+                                            <i class="fas fa-paint-brush fa-2x text-secondary mb-3"></i>
+                                            <h3 class="h6 fw-bold">3. Boilerplate UI Devs</h3>
+                                            <p class="text-muted small mb-0">
+                                                Converting Figma designs to basic HTML/CSS/React components is a solved
+                                                problem for AI. V0 by Vercel does it instantly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="card h-100 border-0 shadow-sm rounded-4 card-lift bg-light">
+                                        <div class="card-body p-4">
+                                            <i class="fas fa-copy fa-2x text-secondary mb-3"></i>
+                                            <h3 class="h6 fw-bold">4. StackOverflow Paster</h3>
+                                            <p class="text-muted small mb-0">
+                                                If your troubleshooting method is copying error logs into Google and
+                                                pasting the top answer, an AI agent does this inherently, but better.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- The New Role -->
+                        <section id="new-role" class="mb-5">
+                            <h2 class="h3 fw-bold mb-3">🧠 The Evolution: From "Coder" to "Orchestrator"</h2>
+                            <p>
+                                The software engineer of tomorrow doesn't write every line of code. They are
+                                <strong>System Architects and AI Orchestrators.</strong>
+                            </p>
+
+                            <ul class="list-group list-group-flush rounded-3 border mb-4 shadow-sm">
+                                <li class="list-group-item d-flex gap-3 align-items-center py-3">
+                                    <i class="fas fa-times text-danger fa-lg"></i>
+                                    <span><strong>Old Way:</strong> Spending 4 hours writing a sorting algorithm and
+                                        basic API endpoints.</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex gap-3 align-items-center py-3 bg-success bg-opacity-10">
+                                    <i class="fas fa-check text-success fa-lg"></i>
+                                    <span><strong>New Way:</strong> Spending 1 hour designing the database schema,
+                                        prompting the AI to build the API, and 3 hours reviewing the AI's code for
+                                        security and performance.</span>
+                                </li>
+                            </ul>
+
+                            <!-- Expert Quote -->
+                            <div
+                                class="position-relative bg-light rounded-4 p-4 border border-secondary border-opacity-25 mt-4">
+                                <span class="quote-mark">"</span>
+                                <h4 class="h6 fw-bold mb-2 text-dark">
+                                    <i class="fas fa-quote-left text-danger me-2 small"></i>Industry Consensus
+                                </h4>
+                                <blockquote class="mb-2 fst-italic text-secondary">
+                                    "AI won't replace software engineers. But a software engineer using AI will
+                                    completely replace the one who doesn't."
+                                </blockquote>
+                            </div>
+                        </section>
+
+
+                        <!-- Survival Toolkit -->
+                        <section id="survival-toolkit" class="mb-5">
+                            <h2 class="h3 fw-bold mb-4">🛠️ Your Survival Toolkit (Do This NOW)</h2>
+                            <p>Stop panicking and start upskilling. Here is exactly what you need to master to make
+                                yourself irreplaceable in the age of agentic AI.</p>
+
+                            <div class="accordion rounded-4 overflow-hidden mb-4 shadow-sm" id="survivalAccordion">
+
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fw-bold text-dark" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#step1">
+                                            1. Master System Design & Architecture
+                                        </button>
+                                    </h2>
+                                    <div id="step1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#survivalAccordion">
+                                        <div class="accordion-body text-muted small">
+                                            AI struggles with high-level, complex system architecture. Learn how
+                                            microservices connect, how to scale databases, cloud infrastructure
+                                            (AWS/Azure), and security. <strong>You must be the brain; let the AI be the
+                                                hands.</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#step2">
+                                            2. Learn Prompt Engineering Deeply
+                                        </button>
+                                    </h2>
+                                    <div id="step2" class="accordion-collapse collapse"
+                                        data-bs-parent="#survivalAccordion">
+                                        <div class="accordion-body text-muted small">
+                                            Talking to AI is the new programming language. You need to know how to
+                                            structure complex prompts, provide context windows, and guide models to
+                                            generate zero-bug, production-ready code.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#step3">
+                                            3. Build with AI Agent Frameworks
+                                        </button>
+                                    </h2>
+                                    <div id="step3" class="accordion-collapse collapse"
+                                        data-bs-parent="#survivalAccordion">
+                                        <div class="accordion-body text-muted small">
+                                            Don't just use AI; build it. Learn frameworks like <strong>LangChain,
+                                                CrewAI, AutoGen, and Semantic Kernel.</strong> Companies are desperate
+                                            for devs who can integrate custom AI agents into their existing software.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#step4">
+                                            4. Focus on Code Review & Security
+                                        </button>
+                                    </h2>
+                                    <div id="step4" class="accordion-collapse collapse"
+                                        data-bs-parent="#survivalAccordion">
+                                        <div class="accordion-body text-muted small">
+                                            Since AI will write 80% of the code, your job is to read it. Enhance your
+                                            skills in code reviewing, spotting hallucinated logic, and identifying
+                                            security vulnerabilities.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <!-- FAQ -->
+                        <section id="faq" class="mb-5">
+                            <h2 class="h3 fw-bold mb-4">❓ FAQs: Will I Survive?</h2>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div class="p-3 border rounded-3 bg-white shadow-sm stat-hover">
+                                        <h4 class="h6 fw-bold text-dark"><i
+                                                class="fas fa-question-circle text-danger me-2"></i> Are AI agents
+                                            actually replacing developers?</h4>
+                                        <p class="text-muted small mb-0 mt-2">They are replacing tasks, not necessarily
+                                            whole jobs—yet. However, companies are realizing they need fewer junior
+                                            developers to get the same amount of work done. You must elevate your skills
+                                            to a senior/architect level.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="p-3 border rounded-3 bg-white shadow-sm stat-hover">
+                                        <h4 class="h6 fw-bold text-dark"><i
+                                                class="fas fa-question-circle text-danger me-2"></i> I'm a CS
+                                            Student/Fresh Grad. Should I give up?</h4>
+                                        <p class="text-muted small mb-0 mt-2">Absolutely not. But you must change how
+                                            you learn. Stop memorizing syntax. Start building full-stack projects using
+                                            AI tools, and learn Cloud deployment, DevOps, and Prompt Engineering
+                                            alongside your degree.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="p-3 border rounded-3 bg-white shadow-sm stat-hover">
+                                        <h4 class="h6 fw-bold text-dark"><i
+                                                class="fas fa-question-circle text-danger me-2"></i> What is the
+                                            difference between Copilot and Agents?</h4>
+                                        <p class="text-muted small mb-0 mt-2">Copilot is an assistant; it types what you
+                                            tell it to type. An Agent is autonomous; you give it a goal (e.g., "Build a
+                                            login page connecting to Firebase"), and it plans, writes, and fixes the
+                                            code on its own.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Urgent CTA -->
+                        <section
+                            class="rounded-4 text-white text-center p-4 p-md-5 mb-5 position-relative overflow-hidden"
+                            style="background: linear-gradient(135deg, #ef4444, #991b1b);">
+                            <div class="position-relative" style="z-index:2;">
+                                <h2 class="h3 fw-bold mb-2">⚡ Adapt Now or Get Left Behind</h2>
+                                <p class="text-white-75 mb-4 mx-auto" style="max-width: 500px;">
+                                    Stop writing boilerplate. Start commanding AI. Join our specialized courses to
+                                    become the 10x Developer companies are looking for.
+                                </p>
+                                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                    <a href="/courses/prompt-engineering-course"
+                                        class="btn btn-light text-danger btn-lg px-4 fw-bold rounded-3 shadow-sm">
+                                        <i class="fas fa-robot me-2"></i>Master Prompt Engineering
+                                    </a>
+                                    <a href="/courses/fullstack-course"
+                                        class="btn btn-outline-light btn-lg px-4 fw-bold rounded-3">
+                                        <i class="fas fa-laptop-code me-2"></i>Advanced Full Stack Web
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Final Thoughts -->
+                        <section class="mb-5">
+                            <h2 class="h3 fw-bold mb-3">🏁 Final Thoughts: Be the Threat</h2>
+                            <p>
+                                <strong>Don't let AI be a threat to you. Become a threat by mastering AI.</strong>
+                            </p>
+                            <p class="mb-0">
+                                The future of software engineering is incredibly bright for those willing to adapt. Let
+                                the AI do the boring, repetitive typing. You are the engineer—step up, orchestrate the
+                                systems, and lead the next era of technology.
+                            </p>
+                        </section>
+
+
+                        <!-- Share -->
+                        <div class="border-top border-bottom py-4 my-5">
+                            <div class="row align-items-center">
+                                <div class="col-md-5 mb-3 mb-md-0">
+                                    <span class="text-danger text-uppercase small fw-bold letter-spacing-1">Warn Your
+                                        Fellow Devs -> Share This</span>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="d-flex gap-2 justify-content-md-end flex-wrap">
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs"
+                                            class="btn btn-sm btn-outline-secondary rounded-3 share-li" target="_blank"
+                                            rel="noopener">
+                                            <i class="fab fa-linkedin-in me-1"></i> LinkedIn
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?text=AI+Agents+are+Stealing+Dev+Jobs.+What+to+do+NOW.&url=https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs"
+                                            class="btn btn-sm btn-outline-secondary rounded-3 share-tw" target="_blank"
+                                            rel="noopener">
+                                            <i class="fab fa-twitter me-1"></i> Twitter
+                                        </a>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs"
+                                            class="btn btn-sm btn-outline-secondary rounded-3 share-fb" target="_blank"
+                                            rel="noopener">
+                                            <i class="fab fa-facebook-f me-1"></i> Facebook
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-3 share-cp"
+                                            onclick="copyLink()">
+                                            <i class="fas fa-link me-1"></i> Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- End article-body -->
+
+                </div><!-- End col-lg-8 -->
+            </div><!-- End row -->
+        </div>
+    </article>
+
+
+    <!-- ══════════════════════════════════════
+       BOTTOM CTA
+  ══════════════════════════════════════ -->
+    <section class="blog-hero-bg text-white text-center py-5">
+        <div class="container py-4">
+            <div style="font-size:3rem;" class="mb-3">🛡️</div>
+            <h2 class="h3 fw-bold mb-2">Future-Proof Your Tech Career</h2>
+            <p class="text-white-50 mb-4 mx-auto" style="max-width:450px;">
+                Learn the skills that AI can't replace. Join Tech Engineer and build the systems of tomorrow.
+            </p>
+            <a href="/contact" class="btn btn-danger btn-lg px-5 fw-bold rounded-3 shadow">
+                Talk to an Expert <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bs5">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-3 col-md-12">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img src="/images/logow.png" alt="Tech Engineer" class="img-fluid" style="max-width: 180px;">
+                    </a>
+                    <p class="text-white-50 small pe-3">
+                        Empowering students with industry-standard training in AI, Coding, and Cloud technologies.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="text-white fw-bold mb-4">Quick Links</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="text-white fw-bold mb-4">Training Courses</h4>
+                    <div class="row">
+                        <!-- Left Sub-Column -->
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="/courses/fullstack-course">Full Stack Web</a></li>
+                                <li><a href="/courses/dotnet-mobile-app-development-course">App Development</a></li>
+                                <li><a href="/courses/prompt-engineering-course">AI & Prompt Eng</a></li>
+                            </ul>
+                        </div>
+                        <!-- Right Sub-Column -->
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="/courses/video-editing-course">Video Editing</a></li>
+                                <li><a href="/courses/cloud-computing-course">Cloud & DevOps</a></li>
+                                <li><a href="/courses/digital-marketing-course">Digital Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="text-white fw-bold mb-4">Get in Touch</h4>
+                    <ul class="list-unstyled contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:hr@techengineer.co">hr@techengineer.co</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+918544884846">+91 85448 84846</a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span>4th Floor, R&R Tower, Sector 74, Mohali, Punjab</span>
+                        </li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="http://www.facebook.com/people/TechEngineer/100083472395433/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.youtube.com/@TechEngineerAI" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="http://www.instagram.com/tech___engineer" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container  border-secondary">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <p class="text-white-50 small mb-0">
+                            &copy; 2025 Tech Engineer. All Rights Reserved. |
+                            <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
+                            <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-left gap-3">
+            <button onclick="clicktowhatsapp()" class="float-btn whatsapp mb-3">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button onclick="clicktocall()" class="float-btn phone">
+                <i class="bi bi-telephone-fill"></i>
+            </button>
+        </div>
+    </footer>
+    <section class="AIbotchatModal">
+
+        <!-- YOUR WEBSITE -->
+
+
+        <!-- FLOATING BUTTON -->
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+            <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
+            <span class="icon-close"><i class="bi bi-x-lg"></i></span>
+            <span class="chat-badge" id="chatBadge"></span>
+        </button>
+
+        <!-- CHAT WINDOW -->
+        <div class="chat-window" id="chatWindow">
+
+            <!-- LEAD FORM -->
+            <div id="leadForm" class="lead-card">
+                <button class="form-close-btn" onclick="toggleChat()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <div class="logo-area">
+                    <div class="icon-circle"><i class="bi bi-robot"></i></div>
+                    <h3>Tech Engineer AI</h3>
+                    <p>Enter your details to start chatting</p>
+                </div>
+
+                <div class="form-floating position-relative">
+                    <i class="bi bi-person input-icon"></i>
+                    <input type="text" class="form-control" id="userName" placeholder="Name" required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-envelope input-icon"></i>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-whatsapp input-icon"></i>
+                    <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
+                    <label>WhatsApp Number</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-grid input-icon"></i>
+                    <select class="form-select" id="userCategory">
+                        <option value="training">AI & IT Training</option>
+                        <option value="service">IT Services & Automation</option>
+                    </select>
+                    <label>I'm interested in</label>
+                </div>
+
+                <button class="btn-start" id="btnStart" onclick="submitLead()">
+                    <i class="bi bi-chat-dots me-2"></i> Start Chatting
+                </button>
+            </div>
+
+            <!-- CHAT -->
+            <div id="chatInterface" class="chat-card" style="display:none;">
+                <div class="chat-header">
+                    <div class="avatar"><i class="bi bi-robot"></i></div>
+                    <div class="info">
+                        <h5>Tech Engineer AI</h5>
+                        <small><span class="status-dot"></span>Online</small>
+                    </div>
+                    <button class="chat-close-btn" onclick="toggleChat()">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+
+                <div class="chat-messages" id="chatMessages"></div>
+
+                <div class="quick-actions" id="quickActions"></div>
+
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your question..."
+                        onkeypress="if(event.key==='Enter') sendMessage()">
+                    <button class="btn-send" id="btnSend" onclick="sendMessage()">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JavaScript for Copy Link -->
+    <script>
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="/script/aichatbot.js" defer></script>
+    <script src="javascript.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
