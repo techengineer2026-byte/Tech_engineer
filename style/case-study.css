@@ -1,0 +1,162 @@
+/* =============================================
+   BEAUTIFUL CASE STUDY STYLES (case-study-premium.css)
+   ============================================= */
+
+/* 1. HERO */
+.case-study-hero-premium {
+    padding: 4rem 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.bg-primary-soft {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+.text-primary {
+    color: #007bff !important;
+}
+
+/* 2. PROJECT OVERVIEW */
+.project-overview-section {
+    background-color: #fff;
+}
+.overview-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+}
+.overview-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+.overview-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0;
+}
+
+/* 3. STORY SECTION */
+.section-title-alt {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.fa-ul {
+    padding-left: 1.5em; /* Adjust for better alignment */
+}
+.fa-ul li {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+.challenge-visual, .solution-text {
+    padding-right: 2rem;
+}
+
+@media (max-width: 991.98px) {
+    .challenge-visual, .solution-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .row.flex-row-reverse {
+        flex-direction: column-reverse !important;
+    }
+}
+
+/* 4. KEY RESULTS */
+.key-results-section {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+.metric-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.metric-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.metric-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.metric-value-large {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    color: #212529;
+}
+.metric-label-large {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* 5. PREMIUM TESTIMONIAL */
+.testimonial-premium-section {
+    background-color: #fff;
+}
+.testimonial-card {
+    background-color: #0d1a2e; /* Dark, premium background */
+    color: #fff;
+    border-radius: 15px;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(13, 26, 46, 0.2);
+}
+.client-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+}
+.testimonial-card .quote-icon {
+    font-size: 2.5rem;
+    color: rgba(0, 123, 255, 0.5);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.testimonial-card blockquote {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+    border: none;
+    padding: 0;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonial-card .cite {
+    margin-top: 2rem;
+}
+.client-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+}
+.client-title {
+    color: #adb5bd;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}

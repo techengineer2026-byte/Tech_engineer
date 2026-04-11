@@ -20,14 +20,12 @@
     <meta name="ICBM" content="30.7046, 76.7179">
     <link rel="stylesheet" href="style/AIchatbot.css">
 
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="canonical" href="https://techengineer.co/services">
 
     <link rel="icon" href="./images/icon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./images/icon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./style/header.css">
     <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -55,32 +53,20 @@
         <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
         <meta name="twitter:url" content="https://techengineer.co/services">
         <meta name="twitter:site" content="@TechEngineer">
+
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+            /* ===================================
+   SERVICES PAGE STYLES
+   =================================== */
 
-            body {
-                font-family: 'Poppins', sans-serif;
-            }
-
-            .bg-light-gray {
-                background-color: #f8f9fc;
-            }
-
-            /* =========================================
-   1. Banner Section
-========================================= */
+            /* Hero Banner */
             .bannerservice {
                 position: relative;
-                /* Use a high quality tech background image or dark color */
-                background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') no-repeat center center;
-                background-size: cover;
-                height: 60vh;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 min-height: 400px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
-                color: #fff;
                 overflow: hidden;
             }
 
@@ -88,365 +74,480 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(67, 97, 238, 0.7) 100%);
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
                 z-index: 1;
             }
 
-            .bannerservice .banner-content {
+            .banner-content {
                 position: relative;
                 z-index: 2;
-                max-width: 800px;
+                text-align: center;
+                color: white;
+                padding: 80px 20px;
             }
 
-            .bannerservice h1 {
+            .banner-content h1 {
                 font-size: 3.5rem;
                 font-weight: 800;
-                margin-bottom: 20px;
-                letter-spacing: 1px;
+                margin-bottom: 1.5rem;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
             }
 
-            .bannerservice p {
-                font-size: 1.2rem;
-                line-height: 1.6;
-                color: #e2e8f0;
+            .banner-content p {
+                font-size: 1.25rem;
+                max-width: 700px;
+                margin: 0 auto;
+                line-height: 1.8;
+                opacity: 0.95;
             }
 
             /* Animations */
             .slide-in-left {
-                animation: slideInLeft 1s ease forwards;
+                animation: slideInLeft 0.8s ease-out;
             }
 
             .fade-in-up {
-                animation: fadeInUp 1s ease forwards;
-                animation-delay: 0.3s;
-                opacity: 0;
+                animation: fadeInUp 1s ease-out;
             }
 
             @keyframes slideInLeft {
-                0% {
-                    transform: translateX(-50px);
+                from {
                     opacity: 0;
+                    transform: translateX(-50px);
                 }
 
-                100% {
-                    transform: translateX(0);
+                to {
                     opacity: 1;
+                    transform: translateX(0);
                 }
             }
 
             @keyframes fadeInUp {
-                0% {
-                    transform: translateY(30px);
+                from {
                     opacity: 0;
+                    transform: translateY(30px);
                 }
 
-                100% {
-                    transform: translateY(0);
+                to {
                     opacity: 1;
+                    transform: translateY(0);
                 }
             }
 
-            /* =========================================
-   2. Services Section
-========================================= */
-            .text-gradient {
-                background: linear-gradient(135deg, #4361ee, #f72585);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+            /* Service Section */
+            .service-section {
+                background: #f8f9ff;
+                position: relative;
             }
 
-            .badge-custom {
-                background: rgba(67, 97, 238, 0.1);
-                color: #4361ee;
-                padding: 8px 16px;
-                border-radius: 50px;
-                font-weight: 700;
-                font-size: 0.85rem;
-                letter-spacing: 1px;
+            .service-section-label {
                 display: inline-block;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 0.5rem 1.5rem;
+                border-radius: 50px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
             }
 
+            .service-section-title {
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #1e293b;
+                margin-bottom: 1rem;
+            }
+
+            .service-section-desc {
+                font-size: 1.1rem;
+                color: #64748b;
+                max-width: 700px;
+                line-height: 1.8;
+            }
+
+            /* Service Cards */
             .service-card {
-                background: #ffffff;
-                padding: 40px 30px;
-                border-radius: 20px;
-                border: 1px solid rgba(0, 0, 0, 0.03);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-                cursor: pointer;
+                background: white;
+                border-radius: 16px;
+                padding: 2.5rem 2rem;
+                text-align: center;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                border: 2px solid transparent;
                 position: relative;
                 overflow: hidden;
-                display: flex;
-                flex-direction: column;
+            }
+
+            .service-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .service-card:hover::before {
+                left: 100%;
             }
 
             .service-card:hover {
                 transform: translateY(-10px);
-                box-shadow: 0 20px 40px rgba(67, 97, 238, 0.1);
-                border-color: rgba(67, 97, 238, 0.2);
+                box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25);
+                border-color: #6366f1;
             }
 
-            .icon-wrapper {
-                width: 70px;
-                height: 70px;
-                border-radius: 16px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.8rem;
-                margin-bottom: 25px;
+            /* Service Card Images */
+            .service-card-img {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 1.5rem;
+                object-fit: contain;
+                background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+                padding: 20px;
+                border-radius: 50%;
                 transition: transform 0.4s ease;
             }
 
-            .service-card:hover .icon-wrapper {
-                transform: scale(1.1) rotate(5deg);
+            .service-card:hover .service-card-img {
+                transform: scale(1.15) rotate(5deg);
             }
 
-            /* Vibrant Icon Colors */
-            .bg-blue {
-                background: #eff4ff;
-                color: #4361ee;
+            .service-card h4 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 1rem;
             }
 
-            .bg-purple {
-                background: #f4efff;
-                color: #7209b7;
+            .service-card p {
+                font-size: 1rem;
+                color: #64748b;
+                line-height: 1.7;
+                margin-bottom: 1.5rem;
             }
 
-            .bg-orange {
-                background: #fff1e6;
-                color: #f77f00;
-            }
-
-            .bg-green {
-                background: #e6fcf5;
-                color: #20c997;
-            }
-
-            .bg-red {
-                background: #ffe3e3;
-                color: #e63946;
-            }
-
-            .bg-cyan {
-                background: #e3fafc;
-                color: #15aabf;
-            }
-
-            .card-action {
-                margin-top: auto;
-                padding-top: 20px;
+            /* Inquire Button */
+            .btn-inquire {
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 0.75rem 2rem;
+                background: linear-gradient(135deg, #6366f1, #a855f7);
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
                 font-weight: 600;
-                color: #4361ee;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-inquire:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+            .btn-inquire i {
+                margin-left: 0.5rem;
+                transition: transform 0.3s ease;
+            }
+
+            .btn-inquire:hover i {
+                transform: translateX(5px);
+            }
+
+            /* Remove link styling from cards */
+            .service-card-link {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+            }
+
+            .service-card-link:hover {
+                text-decoration: none;
+            }
+
+            /* Contact Form Section */
+            .contact-form-section {
+                background: linear-gradient(135deg, #f8f9ff, #fff);
+                position: relative;
+                padding: 80px 0;
+            }
+
+            .contact-form {
+                background: white;
+                padding: 3rem 2.5rem;
+                border-radius: 20px;
+                box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+                border: 1px solid #e2e8f0;
+            }
+
+            .form-label {
+                font-weight: 600;
+                color: #1e293b;
+                margin-bottom: 0.5rem;
                 font-size: 0.95rem;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                opacity: 0.7;
-                transition: all 0.3s ease;
             }
 
-            .service-card:hover .card-action {
-                opacity: 1;
-                gap: 15px;
-                /* Pushes the arrow slightly right on hover */
-            }
-
-            /* =========================================
-   Ultra-Premium Modal UI
-========================================= */
-            .premium-modal {
-                border: none;
-                border-radius: 24px;
-                overflow: hidden;
-                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-                background-color: #ffffff;
-            }
-
-            .modal-header-fancy {
-                /* Kept your background, just reduced the padding */
-                background: linear-gradient(135deg, #2b3452 0%, #4361ee 100%);
-                padding: 20px 20px 25px;
-                position: relative;
-            }
-
-            /* Modern Input Fields */
-            .modern-input-wrapper {
-                position: relative;
-                display: flex;
-                align-items: center;
-            }
-
-            .modern-input-wrapper .icon {
-                position: absolute;
-                left: 15px;
-                /* Moved slightly left */
-                color: #8d97ad;
-                font-size: 1rem;
-                /* Slightly smaller icon */
-                transition: all 0.3s ease;
-                z-index: 5;
-            }
-
-            .modern-input-wrapper .textarea-icon {
-                top: 14px;
-                /* Aligns icon to top of textarea */
-            }
-
-            .modern-input {
-                width: 100%;
-                background-color: #f8fafc;
+            .form-control,
+            .form-select {
+                padding: 0.85rem 1.2rem;
                 border: 2px solid #e2e8f0;
-                border-radius: 12px;
-                padding: 10px 15px 10px 42px;
-                /* Thinner padding top & bottom */
-                font-size: 0.9rem;
-                /* Slightly smaller text */
-                color: #2b3452;
+                border-radius: 10px;
                 transition: all 0.3s ease;
-                box-shadow: none !important;
-            }
-
-            .modern-textarea {
-                min-height: 70px;
-                resize: none;
-                padding-top: 18px;
-            }
-
-            /* Input Focus Effects */
-            .modern-input:focus {
-                background-color: #ffffff;
-                border-color: #4361ee;
-            }
-
-            .modern-input:focus+.icon,
-            .modern-input-wrapper:focus-within .icon {
-                color: #4361ee;
-                transform: scale(1.1);
-            }
-
-            /* Stunning Submit Button */
-            .btn-submit-glow {
-                background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-                color: white;
-                font-weight: 600;
                 font-size: 1rem;
-                padding: 12px 20px;
-                border-radius: 14px;
-                border: none;
-                position: relative;
-                overflow: hidden;
-                transition: all 0.3s ease;
-                box-shadow: 0 10px 20px rgba(67, 97, 238, 0.25);
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                background: #f8fafc;
             }
 
-            .btn-submit-glow:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4);
+            .form-control:focus,
+            .form-select:focus {
+                border-color: #6366f1;
+                box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+                background: white;
+                outline: none;
+            }
+
+            .form-control::placeholder {
+                color: #94a3b8;
+            }
+
+            textarea.form-control {
+                resize: vertical;
+                min-height: 120px;
+            }
+
+            /* CTA Section */
+            .cta-section {
+                background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+                padding: 80px 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .cta-glow {
+                position: absolute;
+                width: 600px;
+                height: 600px;
+                background: radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent);
+                border-radius: 50%;
+                top: -300px;
+                right: -200px;
+                pointer-events: none;
+            }
+
+            .cta-section .service-section-label {
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+                backdrop-filter: blur(10px);
+            }
+
+            .cta-section .service-section-title {
                 color: white;
             }
 
-            .btn-submit-glow:active {
-                transform: translateY(0);
+            .cta-section .service-section-desc {
+                color: rgba(255, 255, 255, 0.8);
             }
 
-            /* =========================================
-   4. Call To Action (CTA) Section
-========================================= */
-            .cta-wrapper {
-                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-                border-radius: 30px;
-                padding: 70px 40px;
-                box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
-                position: relative;
-                overflow: hidden;
-            }
-
-            /* Cool glowing orb effect behind text */
-            .cta-wrapper::before {
-                content: '';
-                position: absolute;
-                top: -50%;
-                left: -10%;
-                width: 300px;
-                height: 300px;
-                background: #4361ee;
-                border-radius: 50%;
-                filter: blur(100px);
-                opacity: 0.3;
-            }
-
-            .cta-btn {
-                padding: 14px 30px;
-                border-radius: 50px;
+            /* Primary Button */
+            .btn-primary-te {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 1rem 2rem;
+                background: linear-gradient(135deg, #6366f1, #a855f7);
+                color: white;
+                text-decoration: none;
+                border-radius: 10px;
                 font-weight: 600;
-                letter-spacing: 0.5px;
+                font-size: 1.05rem;
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-primary-te:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+            /* Outline Button */
+            .btn-outline-te {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 1rem 2rem;
+                background: transparent;
+                color: white;
+                text-decoration: none;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 1.05rem;
+                border: 2px solid white;
                 transition: all 0.3s ease;
             }
 
-            .cta-primary {
-                background: #4361ee;
-                color: #fff;
-                border: 2px solid #4361ee;
-            }
-
-            .cta-primary:hover {
-                background: #3f37c9;
-                color: #fff;
+            .btn-outline-te:hover {
+                background: white;
+                color: #1e293b;
                 transform: translateY(-3px);
+                text-decoration: none;
             }
 
-            .cta-secondary {
-                background: transparent;
-                color: #fff;
-                border: 2px solid rgba(255, 255, 255, 0.3);
+            /* Reveal Animation */
+            .reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                animation: revealAnimation 0.8s ease forwards;
             }
 
-            .cta-secondary:hover {
-                background: #fff;
-                color: #0f172a;
-                border-color: #fff;
-                transform: translateY(-3px);
+            @keyframes revealAnimation {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
-            .cta-whatsapp {
-                background: #25D366;
-                color: #fff;
-                border: 2px solid #25D366;
+            /* Stagger delay for cards */
+            .reveal:nth-child(1) {
+                animation-delay: 0.1s;
             }
 
-            .cta-whatsapp:hover {
-                background: #1ebc5a;
-                color: #fff;
-                transform: translateY(-3px);
+            .reveal:nth-child(2) {
+                animation-delay: 0.2s;
             }
 
-            /* Mobile Adjustments */
+            .reveal:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+
+            .reveal:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+
+            .reveal:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+
+            .reveal:nth-child(6) {
+                animation-delay: 0.6s;
+            }
+
+            .reveal:nth-child(7) {
+                animation-delay: 0.7s;
+            }
+
+            .reveal:nth-child(8) {
+                animation-delay: 0.8s;
+            }
+
+            .reveal:nth-child(9) {
+                animation-delay: 0.9s;
+            }
+
+            /* Smooth Scroll */
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Responsive Design */
             @media (max-width: 768px) {
-                .bannerservice h1 {
+                .banner-content h1 {
                     font-size: 2.5rem;
                 }
 
-                .cta-wrapper {
-                    padding: 50px 20px;
+                .banner-content p {
+                    font-size: 1.1rem;
                 }
 
-                .cta-buttons {
-                    flex-direction: column;
-                    width: 100%;
+                .service-section-title {
+                    font-size: 2rem;
                 }
 
-                .cta-btn {
+                .service-card {
+                    padding: 2rem 1.5rem;
+                }
+
+                .contact-form {
+                    padding: 2rem 1.5rem;
+                }
+
+                .btn-primary-te,
+                .btn-outline-te {
                     width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .banner-content h1 {
+                    font-size: 2rem;
+                }
+
+                .service-section-title {
+                    font-size: 1.75rem;
+                }
+
+                .service-card h4 {
+                    font-size: 1.3rem;
+                }
+
+                .service-card-img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            /* Form Alert Messages */
+            .alert {
+                padding: 1rem 1.25rem;
+                border-radius: 10px;
+                font-size: 1rem;
+                border: none;
+                animation: slideDown 0.4s ease;
+            }
+
+            .alert-success {
+                background: linear-gradient(135deg, #10b981, #059669);
+                color: white;
+            }
+
+            .alert-danger {
+                background: linear-gradient(135deg, #ef4444, #dc2626);
+                color: white;
+            }
+
+            .alert i {
+                margin-right: 0.5rem;
+            }
+
+            .btn-close {
+                filter: brightness(0) invert(1);
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             }
         </style>
-
         <script type="application/ld+json">
     [
         {
@@ -539,21 +640,24 @@
     </script>
 
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TL6BSHN5');</script>
-<!-- End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TL6BSHN5');</script>
+        <!-- End Google Tag Manager -->
 </head>
 
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container nav-wrapper">
             <a href="index.html" class="logo">
@@ -580,232 +684,220 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </ul>
         </nav>
     </header>
-    <main>
-        <!-- Hero Banner -->
-        <section class="bannerservice">
-            <div class="banner-overlay"></div>
-            <div class="banner-content container">
-                <h1 class="slide-in-left">Our Services</h1>
-                <p class="fade-in-up">We are dedicated to developing tailored solutions that enhance productivity,
-                    optimize operations, and deliver measurable results.</p>
-            </div>
-        </section>
+<main>
+    <!-- Hero Banner -->
+    <section class="bannerservice">
+        <div class="banner-overlay"></div>
+        <div class="banner-content container">
+            <h1 class="slide-in-left">Our Services</h1>
+            <p class="fade-in-up">We build tailored solutions that connect with your audience, automate your processes, and deliver measurable results.</p>
+        </div>
+    </section>
 
-        <!-- Services Grid -->
-        <section class="service-section py-5 bg-light-gray">
-            <div class="container py-4">
-                <!-- Section Header -->
-                <div class="text-center mb-5 fade-in-up">
-                    <span class="badge-custom mb-2">WHAT WE OFFER</span>
-                    <h2 class="display-6 fw-bold text-dark mb-3">Our Comprehensive <span class="text-gradient">IT
-                            Services</span></h2>
-                    <p class="text-muted lead mx-auto" style="max-width: 650px; font-size: 1.1rem;">
-                        Discover our range of professional IT solutions tailored to streamline operations and drive
-                        growth for your business.
-                    </p>
+    <!-- Services Grid -->
+    <section class="service-section py-5">
+        <div class="container py-4">
+            <!-- Section Header -->
+            <div class="text-center mb-5 reveal">
+                <div class="service-section-label">What We Offer</div>
+                <h2 class="service-section-title">Our Suite of Digital & AI Services</h2>
+                <p class="service-section-desc mx-auto">
+                    From stunning websites to intelligent automation, discover our range of professional solutions designed to drive growth.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="row g-4">
+                <!-- Service 1: Web Design -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-code-slash service-icon"></i>
+                        </div>
+                        <h4>Web Design & Development</h4>
+                        <p>Fast, modern, and SEO-friendly websites that rank on Google and convert visitors into customers.</p>
+                        <a href="web-design-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
                 </div>
 
-                <!-- Cards -->
-                <div class="row g-4">
-                    <!-- Service 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100" onclick="openModal('Software Development')">
-                            <div class="icon-wrapper bg-blue">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h4 class="fw-bold mb-3">Software Development</h4>
-                            <p class="text-muted mb-4">Custom software solutions designed to streamline your business
-                                operations and enhance productivity.</p>
-                            <div class="card-action">
-                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
-                            </div>
+                <!-- Service 2: Mobile App Development -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-phone-fill service-icon"></i>
                         </div>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100" onclick="openModal('Cloud Services')">
-                            <div class="icon-wrapper bg-purple">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <h4 class="fw-bold mb-3">Cloud Services</h4>
-                            <p class="text-muted mb-4">Secure and scalable cloud solutions to help your business stay
-                                agile and competitive in the digital age.</p>
-                            <div class="card-action">
-                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100" onclick="openModal('Cyber Security')">
-                            <div class="icon-wrapper bg-orange">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4 class="fw-bold mb-3">Cyber Security</h4>
-                            <p class="text-muted mb-4">Comprehensive security solutions to protect your data and
-                                infrastructure from modern cyber threats.</p>
-                            <div class="card-action">
-                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100" onclick="openModal('Network Solutions')">
-                            <div class="icon-wrapper bg-green">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <h4 class="fw-bold mb-3">Network Solutions</h4>
-                            <p class="text-muted mb-4">Reliable networking infrastructure to keep your business
-                                connected and efficient 24/7.</p>
-                            <div class="card-action">
-                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100" onclick="openModal('Data Management')">
-                            <div class="icon-wrapper bg-red">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h4 class="fw-bold mb-3">Data Management</h4>
-                            <p class="text-muted mb-4">Efficient data storage and management solutions for your growing
-                                business intelligence needs.</p>
-                            <div class="card-action">
-                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100" onclick="openModal('IT Support')">
-                            <div class="icon-wrapper bg-cyan">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <h4 class="fw-bold mb-3">IT Support</h4>
-                            <p class="text-muted mb-4">Dedicated technical support to ensure your systems run smoothly
-                                and efficiently without downtime.</p>
-                            <div class="card-action">
-                                <span>Inquire Now</span> <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
+                        <h4>Mobile App Development</h4>
+                        <p>User-friendly mobile apps for iOS & Android that engage users and grow your business.</p>
+                        <a href="mobile-app-development-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Ultra-Premium Inquiry Modal -->
-        <!-- Ultra-Premium Inquiry Modal (Height Optimized) -->
-        <div class="modal fade" id="inquiryModal" tabindex="-1" aria-hidden="true">
-            <!-- Added modal-dialog-scrollable so it fits on small phones -->
-            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-                <div class="modal-content premium-modal">
-
-                    <!-- Decorative Header -->
-                    <div class="modal-header-fancy">
-                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
-                            data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="text-center pt-3 pb-1">
-                            <span class="badge bg-white text-primary mb-2 px-3 py-1 rounded-pill fw-bold shadow-sm"
-                                style="font-size: 0.75rem;">
-                                <i class="fas fa-bolt text-warning me-1"></i> Fast Response
-                            </span>
-                            <h3 id="modalTitle" class="fw-bold text-white mb-1">Let's Talk!</h3>
-                            <p class="text-white-50 mb-0 small">Drop your details below and our experts will connect
-                                with you.</p>
+                <!-- Service 3: Digital Marketing -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-graph-up-arrow service-icon"></i>
                         </div>
+                        <h4>Digital Marketing</h4>
+                        <p>Results-driven SEO, Google Ads, and content strategies to increase traffic and revenue.</p>
+                        <a href="digital-marketing-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
                     </div>
+                </div>
 
-                    <!-- Form Body (Reduced Padding) -->
-                    <div class="modal-body p-3 p-md-4">
-                        <form id="contactForm" name="contactForm">
-                            <input type="hidden" name="service" id="serviceInput">
+                <!-- Service 4: AI Chatbot Development -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-robot service-icon"></i>
+                        </div>
+                        <h4>AI Chatbot Development</h4>
+                        <p>Smart chatbots for websites and WhatsApp to automate support and generate leads 24/7.</p>
+                        <a href="ai-chatbot-development-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
 
-                            <div class="row gx-3">
-                                <!-- Full Name -->
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-dark fw-semibold mb-1"
-                                        style="font-size: 0.85rem;">Full Name</label>
-                                    <div class="modern-input-wrapper">
-                                        <i class="fas fa-user icon"></i>
-                                        <input type="text" name="name" class="form-control modern-input"
-                                            placeholder="John Doe" required>
-                                    </div>
-                                </div>
+                <!-- Service 5: Social Media Management -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-instagram service-icon"></i>
+                        </div>
+                        <h4>Social Media Management</h4>
+                        <p>Engaging content and community management for Instagram, Facebook, and LinkedIn.</p>
+                        <a href="social-media-management-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
 
-                                <!-- Mobile Number -->
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-dark fw-semibold mb-1"
-                                        style="font-size: 0.85rem;">Mobile Number</label>
-                                    <div class="modern-input-wrapper">
-                                        <i class="fas fa-mobile-alt icon"></i>
-                                        <input type="tel" name="phone" class="form-control modern-input"
-                                            placeholder="+91 98765 43210" required>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Service 6: Video Editing -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-camera-video-fill service-icon"></i>
+                        </div>
+                        <h4>Video Editing Services</h4>
+                        <p>Professional video editing for YouTube, Instagram Reels, social media ads, and corporate content.</p>
+                        <a href="video-editing-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 7: WhatsApp Marketing -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-whatsapp service-icon"></i>
+                        </div>
+                        <h4>WhatsApp Marketing</h4>
+                        <p>Official WhatsApp Business API setup for bulk messaging, campaigns, and automation.</p>
+                        <a href="whatsapp-marketing-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 8: n8n Automation -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-diagram-3-fill service-icon"></i>
+                        </div>
+                        <h4>n8n Automation</h4>
+                        <p>Custom workflows to connect your apps, eliminate manual tasks, and scale your business.</p>
+                        <a href="n8n-automation-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
 
-                            <!-- Email Address -->
-                            <div class="mb-3">
-                                <label class="form-label text-dark fw-semibold mb-1" style="font-size: 0.85rem;">Email
-                                    Address</label>
-                                <div class="modern-input-wrapper">
-                                    <i class="fas fa-envelope icon"></i>
-                                    <input type="email" name="email" class="form-control modern-input"
-                                        placeholder="name@company.com" required>
-                                </div>
-                            </div>
-
-                            <!-- Message -->
-                            <div class="mb-3">
-                                <label class="form-label text-dark fw-semibold mb-1" style="font-size: 0.85rem;">Project
-                                    Details</label>
-                                <div class="modern-input-wrapper">
-                                    <i class="fas fa-comment-dots icon textarea-icon"></i>
-                                    <textarea name="message" class="form-control modern-input modern-textarea" rows="2"
-                                        placeholder="Tell us about your requirements..." required></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <div class="mt-4 mb-1">
-                                <button type="submit" class="btn btn-submit-glow w-100 py-2" id="submitBtn">
-                                    <span>Send Request</span> <i class="fas fa-arrow-right ms-2"></i>
-                                </button>
-                            </div>
-
-                            <p class="text-center text-muted mt-3 mb-0" style="font-size: 0.75rem;">
-                                <i class="fas fa-shield-alt text-success me-1"></i> Your information is 100% secure.
-                            </p>
-                        </form>
+                <!-- Service 9: AI Voice Agents -->
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card h-100">
+                        <div class="service-icon-wrapper">
+                            <i class="bi bi-telephone-outbound-fill service-icon"></i>
+                        </div>
+                        <h4>AI Voice Agents</h4>
+                        <p>Intelligent voice bots to handle inbound and outbound calls, bookings, and support automatically.</p>
+                        <a href="ai-voice-agents-india.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- CTA Section -->
-        <section class="container my-5" style="background: transparent; padding: 0;">
-            <div class="cta-wrapper text-center">
-                <h2 class="fw-bold text-white mb-3">Ready to Transform Your Business?</h2>
-                <p class="text-white-50 mb-5 lead">Let's discuss how our technology solutions can help you achieve your
-                    goals and scale faster.</p>
+    </section>
 
-                <div class="cta-buttons d-flex justify-content-center flex-wrap gap-3">
-                    <a href="./contact" class="btn cta-btn cta-primary"><i class="fas fa-arrow-right me-2"></i> Get
-                        Started</a>
-                    <a href="tel:+918544884846" class="btn cta-btn cta-secondary"><i class="fas fa-phone-alt me-2"></i>
-                        Call Us Now</a>
-                    <a href="https://wa.me/8544884846" class="btn cta-btn cta-whatsapp"><i
-                            class="fab fa-whatsapp me-2"></i> WhatsApp Us</a>
+    <!-- Let's Talk Contact Form Section -->
+    <section class="contact-form-section py-2" id="contact-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5 reveal">
+                        <div class="service-section-label">Let's Talk</div>
+                        <h2 class="service-section-title">Get a Free Consultation</h2>
+                        <p class="service-section-desc">Tell us about your project and we'll get back to you within 24 hours.</p>
+                    </div>
+
+                    <form class="contact-form reveal" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="mobile" class="form-label">Mobile Number *</label>
+                                <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="service" class="form-label">Service Interested In</label>
+                                <select class="form-select" id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="Web Design & Development">Web Design & Development</option>
+                                    <option value="Mobile App Development">Mobile App Development</option>
+                                    <option value="Digital Marketing">Digital Marketing</option>
+                                    <option value="AI Chatbot Development">AI Chatbot Development</option>
+                                    <option value="Social Media Management">Social Media Management</option>
+                                    <option value="Video Editing">Video Editing</option>
+                                    <option value="WhatsApp Marketing">WhatsApp Marketing</option>
+                                    <option value="n8n Automation">n8n Automation</option>
+                                    <option value="AI Voice Agents">AI Voice Agents</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Project Details *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn-primary-te" id="submitBtn">
+                                    <i class="bi bi-send-fill"></i> Submit Inquiry
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <div id="formMessage" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <div class="text-center reveal">
+                <div class="service-section-label">Have a Project in Mind?</div>
+                <h2 class="service-section-title">Let's Build Something Great Together</h2>
+                <p class="service-section-desc mx-auto mb-5">Talk to our team for free. No commitment, no pressure — just honest advice on what your business needs to succeed.</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="#contact-form" class="btn-primary-te scroll-to-form">
+                        <i class="bi bi-chat-dots-fill"></i> Get a Free Quote
+                    </a>
+                    <a href="https://wa.me/918544884846?text=Hi,%20I%20have%20a%20project%20idea" class="btn-outline-te" target="_blank" rel="noopener">
+                        <i class="bi bi-whatsapp"></i> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
     <footer class="footer-bs5">
         <div class="container">
             <div class="row gy-5">
@@ -825,6 +917,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="./about">About Us</a></li>
                                 <li><a href="./portfolio">Portfolio</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
@@ -990,7 +1083,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/javascript.js" defer></script>
-    <script src="/modal.js" defer></script>
+    <script>
+        // Smooth scroll to contact form
+        document.querySelectorAll('.scroll-to-form').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector('#contact-form').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+        // ====================================
+        // GOOGLE SHEETS FORM SUBMISSION
+        // ====================================
+
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWo-5V5Rcmv0YGxgJRB_DwkkXOKC0GFDBvvpXdh1i7pzFUfL82KKJLEtfSVhucZjEi/exec'; // Paste your Google Script URL here
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            const form = e.target;
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+
+            // Get form data
+            const formData = new FormData(form);
+
+            // Send to Google Sheets
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        // Success message
+                        formMessage.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="bi bi-check-circle-fill"></i> 
+                    <strong>Success!</strong> Your inquiry has been submitted. We'll contact you within 24 hours.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+
+                        // Reset form
+                        form.reset();
+
+                        // Optional: Redirect to thank you page
+                        // setTimeout(() => {
+                        //     window.location.href = '/thank-you.html';
+                        // }, 2000);
+
+                    } else {
+                        throw new Error(data.message || 'Submission failed');
+                    }
+                })
+                .catch(error => {
+                    // Error message
+                    formMessage.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="bi bi-exclamation-triangle-fill"></i> 
+                <strong>Error!</strong> Something went wrong. Please try again or contact us directly.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="bi bi-send-fill"></i> Submit Inquiry';
+                });
+        });
+    </script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/02/14/18/20260214184230-UQRERNBF.js" defer></script>
 </body>

@@ -391,3 +391,5 @@ function sendSyllabus() {
         status.style.color = "red";
     });
 }
+
+

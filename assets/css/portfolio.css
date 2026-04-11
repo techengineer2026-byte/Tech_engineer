@@ -1,0 +1,418 @@
+/* =============================================
+   0. UTILITY & GENERAL STYLES
+   ============================================= */
+
+:root {
+    --primary-color: #007bff;
+    --light-gray: #f8f9fa;
+    --dark-blue: #0d1a2e;
+    --text-muted: #6c757d;
+}
+
+body {
+    background-color: #fff;
+}
+
+.bg-light-gray {
+    background-color: var(--light-gray) !important;
+}
+
+.text-gradient-light {
+    background: linear-gradient(90deg, #fff, #b3d7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* =============================================
+   1. PORTFOLIO HERO BANNER
+   ============================================= */
+
+.portfolio-hero {
+    background: url('../images/hero-background.webp') no-repeat center center/cover;
+    /* Make sure you have a background image */
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 25, 47, 0.8);
+    z-index: 1;
+}
+
+.container.z-2 {
+    z-index: 2;
+}
+
+/* Breadcrumb Navigation */
+.custom-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.custom-breadcrumb a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.custom-breadcrumb a:hover {
+    color: #fff;
+}
+
+.custom-breadcrumb .separator {
+    margin: 0 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-breadcrumb .active {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* =============================================
+   🔥 2. FEATURED PROJECT
+   ============================================= */
+
+.featured-project-section {
+    background-color: #fff;
+}
+
+.portfolio-card.featured-card {
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-card.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper.featured {
+    height: 100%;
+}
+
+.card-img-wrapper.featured img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =============================================
+   3. PORTFOLIO GRID & FILTERS
+   ============================================= */
+
+/* Filters */
+.portfolio-filters .filter-btn {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.portfolio-filters .filter-btn:hover {
+    background-color: #e9ecef;
+}
+
+.portfolio-filters .filter-btn.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.category-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Custom Badge Colors */
+.bg-cyan {
+    background-color: #17a2b8 !important;
+}
+
+.bg-orange {
+    background-color: #fd7e14 !important;
+}
+
+.bg-green {
+    background-color: #28a745 !important;
+}
+
+.bg-purple {
+    background-color: #6f42c1 !important;
+}
+
+.card-content {
+    padding: 20px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ Fix: Added styles for Proof/Results and Client Name */
+.card-content .small.text-muted {
+    margin-bottom: 0.25rem;
+}
+
+.card-content .text-success {
+    font-weight: 600;
+}
+
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    /* Pushes stack to bottom before button */
+}
+
+.tech-stack span {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.view-project-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.view-project-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* =============================================
+   4. CTA SECTION
+   ============================================= */
+.cta-wrapper {
+    background: linear-gradient(45deg, var(--dark-blue), #1d3557);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.3);
+}
+
+.cta-btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-primary {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.cta-primary:hover {
+    background-color: #f0f0f0;
+    color: var(--primary-color);
+}
+
+.cta-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.cta-whatsapp:hover {
+    background-color: #1DAE56;
+    color: white;
+}
+
+
+/* =============================================
+   5. PREMIUM INQUIRY MODAL
+   ============================================= */
+
+.premium-modal {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header-fancy {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+    position: relative;
+    border-bottom: none;
+    padding: 1.5rem 1rem;
+}
+
+.modal-body {
+    background-color: #f8f9fa;
+}
+
+.modern-input-wrapper {
+    position: relative;
+}
+
+.modern-input-wrapper .icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+.modern-input-wrapper .textarea-icon {
+    top: 18px;
+    transform: none;
+}
+
+.modern-input {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 45px !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    outline: none;
+}
+
+.modern-input:focus+.icon,
+.modern-input-wrapper:focus-within .icon {
+    color: var(--primary-color);
+}
+
+.modern-textarea {
+    height: auto !important;
+    padding-top: 12px;
+}
+
+.btn-submit-glow {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-submit-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* =============================================
+   6. ANIMATIONS
+   ============================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-bottom {
+    animation: slideInBottom 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+    /* Start hidden */
+}

@@ -2,10 +2,24 @@
   "hosting": {
     "public": ".",
     "cleanUrls": true,
+    "trailingSlash": false,
+
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "index, follow"
+          }
+        ]
+      }
     ]
   }
 }

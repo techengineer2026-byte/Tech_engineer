@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Links</title>
+    <title>Social Links - Tech Engineer</title>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style/AIchatbot.css">
@@ -19,23 +19,117 @@
         }
 
         body {
-            background-color: #0f1014;
-            /* Dark Background */
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Animated Background Particles */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: particleMove 20s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes particleMove {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-50px, -50px);
+            }
+        }
+
+        /* Main Container */
+        .main-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #00d4ff, #7b2ff7, #ff006e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            font-weight: 300;
         }
 
         /* Container for the buttons */
         .social-container {
             width: 100%;
-            max-width: 800px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* 2 Columns for Desktop */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* The Button Style */
@@ -44,54 +138,56 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            /* Icons on left */
-            padding: 15px 25px;
+            padding: 18px 25px;
             text-decoration: none;
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.05);
-            /* Glass effect */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
         /* Icon Styling */
         .social-btn i {
-            font-size: 24px;
-            margin-right: 15px;
-            width: 30px;
+            font-size: 28px;
+            margin-right: 18px;
+            width: 35px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 2;
         }
 
         /* Text Styling */
         .text-group {
             display: flex;
             flex-direction: column;
+            z-index: 2;
         }
 
         .label {
-            font-size: 0.8rem;
-            opacity: 0.7;
+            font-size: 0.75rem;
+            opacity: 0.6;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            margin-bottom: 3px;
         }
 
         .handle {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
         }
 
-        /* --- ANIMATIONS & COLORS --- */
+        /* --- PLATFORM-SPECIFIC ANIMATIONS & COLORS --- */
 
         /* 1. YouTube Animation */
         .social-btn.yt:hover {
-            background: rgba(255, 0, 0, 0.1);
+            background: rgba(255, 0, 0, 0.15);
             border-color: #ff0000;
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 20px -5px rgba(255, 0, 0, 0.4);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px -5px rgba(255, 0, 0, 0.5);
         }
 
         .social-btn.yt i {
@@ -99,38 +195,38 @@
         }
 
         .social-btn.yt:hover i {
-            transform: scale(1.2) rotate(-10deg);
+            transform: scale(1.3) rotate(-15deg);
             color: #fff;
-            text-shadow: 0 0 10px #ff0000;
+            filter: drop-shadow(0 0 12px #ff0000);
         }
 
         /* 2. Instagram Animation */
         .social-btn.ig:hover {
-            background: linear-gradient(45deg, rgba(64, 93, 230, 0.1), rgba(193, 53, 132, 0.1));
+            background: linear-gradient(45deg, rgba(64, 93, 230, 0.15), rgba(193, 53, 132, 0.15));
             border-color: #c13584;
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 20px -5px rgba(193, 53, 132, 0.4);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px -5px rgba(193, 53, 132, 0.5);
         }
 
         .social-btn.ig i {
-            background: -webkit-linear-gradient(#405DE6, #833AB4, #C13584);
+            background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .social-btn.ig:hover i {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.3) rotate(15deg);
             -webkit-text-fill-color: #fff;
-            text-shadow: 0 0 10px #C13584;
+            filter: drop-shadow(0 0 12px #C13584);
         }
 
         /* 3. Website Animation */
         .social-btn.web:hover {
-            background: rgba(0, 191, 255, 0.1);
+            background: rgba(0, 191, 255, 0.15);
             border-color: #00bfff;
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 20px -5px rgba(0, 191, 255, 0.4);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px -5px rgba(0, 191, 255, 0.5);
         }
 
         .social-btn.web i {
@@ -138,11 +234,45 @@
         }
 
         .social-btn.web:hover i {
-            transform: scale(1.2);
+            transform: scale(1.3) rotate(360deg);
             color: #fff;
-            text-shadow: 0 0 10px #00bfff;
+            filter: drop-shadow(0 0 12px #00bfff);
         }
 
+        /* 4. WhatsApp Animation */
+        .social-btn.wa:hover {
+            background: rgba(37, 211, 102, 0.15);
+            border-color: #25D366;
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px -5px rgba(37, 211, 102, 0.5);
+        }
+
+        .social-btn.wa i {
+            color: #25D366;
+        }
+
+        .social-btn.wa:hover i {
+            transform: scale(1.3);
+            color: #fff;
+            filter: drop-shadow(0 0 12px #25D366);
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: scale(1.3) rotate(0deg);
+            }
+
+            25% {
+                transform: scale(1.3) rotate(-10deg);
+            }
+
+            75% {
+                transform: scale(1.3) rotate(10deg);
+            }
+        }
 
         /* Shine Effect Overlay */
         .social-btn::before {
@@ -152,101 +282,262 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.6s;
+            z-index: 1;
         }
 
         .social-btn:hover::before {
             left: 100%;
         }
 
+        /* Ripple Effect on Click */
+        .social-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .social-btn:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            animation: fadeIn 1s ease 0.5s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 0.95rem;
+            }
+
             .social-container {
                 grid-template-columns: 1fr;
-                /* 1 Column for Mobile */
+                gap: 15px;
             }
 
             .social-btn {
-                padding: 12px 20px;
+                padding: 15px 20px;
+            }
+
+            .social-btn i {
+                font-size: 24px;
+                margin-right: 15px;
+            }
+
+            .handle {
+                font-size: 0.95rem;
             }
         }
+
+        /* Loading Animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .social-btn {
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        .social-btn:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .social-btn:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .social-btn:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .social-btn:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .social-btn:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .social-btn:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .social-btn:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .social-btn:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .social-btn:nth-child(9) {
+            animation-delay: 0.9s;
+        }
     </style>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TL6BSHN5');</script>
-<!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TL6BSHN5');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <div class="social-container">
+    <div class="main-wrapper">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 Tech Engineer Links</h1>
+            <p>Connect with us across all platforms</p>
+        </div>
 
-        <!-- Tech Engineer Website -->
-        <a href="https://techengineer.co/" target="_blank" class="social-btn web">
-            <i class="fa-solid fa-globe"></i>
-            <div class="text-group">
-                <span class="label">Website</span>
-                <span class="handle">techengineer.co</span>
-            </div>
-        </a>
+        <div class="social-container">
 
-        <!-- Tech Caste Website -->
-        <a href="https://techcast.techengineer.co" target="_blank" class="social-btn web">
-            <i class="fa-solid fa-laptop-code"></i>
-            <div class="text-group">
-                <span class="label">Website</span>
-                <span class="handle">techcast.techengineer.co</span>
-            </div>
-        </a>
+            <!-- Tech Engineer Website -->
+            <a href="https://techengineer.co/" target="_blank" class="social-btn web">
+                <i class="fa-solid fa-globe"></i>
+                <div class="text-group">
+                    <span class="label">Website</span>
+                    <span class="handle">techengineer.co</span>
+                </div>
+            </a>
 
-        <!-- Tech Engineer Programming YT -->
-        <a href="https://www.youtube.com/@TechEngineerAI" target="_blank" class="social-btn yt">
-            <i class="fa-brands fa-youtube"></i>
-            <div class="text-group">
-                <span class="label">YouTube</span>
-                <span class="handle">@TechEngineerAI</span>
-            </div>
-        </a>
+            <!-- Tech Caste Website -->
+            <a href="https://techcast.techengineer.co" target="_blank" class="social-btn web">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div class="text-group">
+                    <span class="label">Tech Cast</span>
+                    <span class="handle">techcast.techengineer.co</span>
+                </div>
+            </a>
 
-        <!-- Tech Caste YT -->
-        <a href="https://www.youtube.com/@TechCaste" target="_blank" class="social-btn yt">
-            <i class="fa-brands fa-youtube"></i>
-            <div class="text-group">
-                <span class="label">YouTube</span>
-                <span class="handle">@TechCaste</span>
-            </div>
-        </a>
+            <!-- Puadh Punjabi Podcast Website -->
+            <a href="https://puadhpunjabipodcast.com/" target="_blank" class="social-btn web">
+                <i class="fa-solid fa-microphone-lines"></i>
+                <div class="text-group">
+                    <span class="label">Podcast</span>
+                    <span class="handle">puadhpunjabipodcast.com</span>
+                </div>
+            </a>
 
-        <!-- Tech Engineer IG -->
-        <!-- Note: Assuming 3 underscores based on your prompt "tech_ _ _engineer" -->
-        <a href="https://www.instagram.com/tech___engineer/" target="_blank" class="social-btn ig">
-            <i class="fa-brands fa-instagram"></i>
-            <div class="text-group">
-                <span class="label">Instagram</span>
-                <span class="handle">tech_ _ _engineer</span>
-            </div>
-        </a>
+            <!-- WhatsApp Contact -->
+            <a href="https://api.whatsapp.com/send/?phone=918360769451" target="_blank" class="social-btn wa">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div class="text-group">
+                    <span class="label">Contact Us</span>
+                    <span class="handle">WhatsApp Chat</span>
+                </div>
+            </a>
 
-        <!-- Tech Caste IG -->
-        <a href="https://www.instagram.com/techcast5/" target="_blank" class="social-btn ig">
-            <i class="fa-brands fa-instagram"></i>
-            <div class="text-group">
-                <span class="label">Instagram</span>
-                <span class="handle">techcast5</span>
-            </div>
-        </a>
+            <!-- Tech Engineer Programming YT -->
+            <a href="https://www.youtube.com/@TechEngineerAI" target="_blank" class="social-btn yt">
+                <i class="fa-brands fa-youtube"></i>
+                <div class="text-group">
+                    <span class="label">YouTube</span>
+                    <span class="handle">@TechEngineerAI</span>
+                </div>
+            </a>
 
+            <!-- Puadh Punjabi Podcast YT -->
+            <a href="https://www.youtube.com/@puadhpunjabipodcast" target="_blank" class="social-btn yt">
+                <i class="fa-brands fa-youtube"></i>
+                <div class="text-group">
+                    <span class="label">YouTube</span>
+                    <span class="handle">@PuadhPunjabiPodcast</span>
+                </div>
+            </a>
+
+            <!-- Tricity Rents YT -->
+            <a href="https://www.youtube.com/@TricityRents" target="_blank" class="social-btn yt">
+                <i class="fa-brands fa-youtube"></i>
+                <div class="text-group">
+                    <span class="label">YouTube</span>
+                    <span class="handle">@TricityRents</span>
+                </div>
+            </a>
+
+            <!-- Tech Engineer IG -->
+            <a href="https://www.instagram.com/tech___engineer/" target="_blank" class="social-btn ig">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="text-group">
+                    <span class="label">Instagram</span>
+                    <span class="handle">@tech___engineer</span>
+                </div>
+            </a>
+
+            <!-- Puadh Punjabi Podcast IG -->
+            <a href="https://www.instagram.com/puadhpunjabipodcast/" target="_blank" class="social-btn ig">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="text-group">
+                    <span class="label">Instagram</span>
+                    <span class="handle">@puadhpunjabipodcast</span>
+                </div>
+            </a>
+
+            <!-- Tricity Rents IG -->
+            <a href="https://www.instagram.com/tricityrents/" target="_blank" class="social-btn ig">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="text-group">
+                    <span class="label">Instagram</span>
+                    <span class="handle">@tricityrents</span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>✨ Crafted with passion by Tech Engineer | © 2024 All Rights Reserved</p>
+        </div>
     </div>
-    <script src="./script/aichatbot.js"></script>
 
+    <script src="./script/aichatbot.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/02/14/18/20260214184230-UQRERNBF.js" defer></script>
 </body>

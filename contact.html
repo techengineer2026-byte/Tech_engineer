@@ -430,20 +430,23 @@
     </script>
 
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TL6BSHN5');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TL6BSHN5');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container nav-wrapper">
             <a href="index.html" class="logo">
@@ -529,7 +532,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h4 class="fw-bold mb-2 mt-3">Success Stories</h4>
                             <p class="text-muted small mb-4">See how we have helped businesses build success stories
                                 that inspire.</p>
-                            <a href="./about" class="cu-btn-outline w-100">View Case Studies <i
+                            <a href="/portfolio" class="cu-btn-outline w-100">View Case Studies <i
                                     class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -565,18 +568,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <div class="cu-info-box mb-5">
+
+                        <div class="cu-info-box mb-4">
                             <div class="cu-info-icon"><i class="fas fa-envelope"></i></div>
                             <div class="cu-info-text">
                                 <h5>Email Us</h5>
                                 <p><a href="mailto:hr@techengineer.co">hr@techengineer.co</a></p>
                             </div>
-                        </div>
 
+                        </div>
+                        <div class="cu-info-box mb-5">
+                            <a href="https://maps.google.com?q=Tech Engineer Mohali" target="_blank"
+                                class="btn btn-dark w-100">
+                                Open in Google Maps
+                            </a>
+                        </div>
                         <div class="cu-review-card text-center p-4">
                             <p class="fw-semibold mb-3">Loved working with us?</p>
                             <a href="https://www.google.com/search?q=Tech+Engineer+Reviews" target="_blank"
                                 class="cu-btn-google">
+
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/40px-Google_%22G%22_logo.svg.png"
                                     alt="Google">
                                 Write a Google Review
@@ -598,95 +609,167 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- 4. TRAINING REGISTRATION FORM -->
-        <section class="cu-training-section py-5">
+        <!-- ✅ 4. DUAL INQUIRY SECTION (Left & Right) -->
+        <section class="dual-form-section py-5 bg-light">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="cu-form-card shadow-lg position-relative">
 
-                            <div class="text-center mb-5">
+                <!-- Master Title for the Section -->
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-5">Let's Get Started</h2>
+                    <p class="lead text-muted">Whether you're looking to learn or build, we're ready to help.</p>
+                </div>
+
+                <div class="row g-4 g-lg-5 justify-content-center">
+
+                    <!-- ============================================= -->
+                    <!--   LEFT COLUMN: TRAINING REGISTRATION          -->
+                    <!-- ============================================= -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="cu-form-card shadow-lg h-100">
+                            <div class="text-center mb-4">
                                 <span
-                                    class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill fw-bold">ENROLL
-                                    TODAY</span>
-                                <h2 class="fw-bold">Join Our <span class="cu-text-gradient-dark">Training</span></h2>
-                                <p class="text-muted">Select a course below to jumpstart your career.</p>
+                                    class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill fw-bold">FOR
+                                    STUDENTS</span>
+                                <h3 class="fw-bold">Join Our <span class="cu-text-gradient-dark">Training</span></h3>
+                                <p class="text-muted small">Select a course below to jumpstart your career.</p>
                             </div>
 
                             <form id="cuContactForm">
-                                <div class="row gx-3 gy-4"> <!-- gy-4 adds perfect vertical spacing -->
-
+                                <div class="row gx-3 gy-3">
                                     <!-- Name -->
                                     <div class="col-md-6">
-                                        <label class="form-label text-dark fw-bold small mb-2">Full Name</label>
+                                        <label class="form-label text-dark fw-bold small mb-1">Full Name</label>
                                         <input type="text" class="form-control cu-standard-input" id="cuName"
                                             name="name" placeholder="John Doe" required>
                                     </div>
-
                                     <!-- Phone -->
                                     <div class="col-md-6">
-                                        <label class="form-label text-dark fw-bold small mb-2">Mobile Number</label>
+                                        <label class="form-label text-dark fw-bold small mb-1">Mobile Number</label>
                                         <input type="tel" class="form-control cu-standard-input" id="cuPhone"
                                             name="phone" placeholder="+91 98765 43210" required>
                                     </div>
-
                                     <!-- Email -->
-                                    <div class="col-md-6">
-                                        <label class="form-label text-dark fw-bold small mb-2">Email Address</label>
+                                    <div class="col-12">
+                                        <label class="form-label text-dark fw-bold small mb-1">Email Address</label>
                                         <input type="email" class="form-control cu-standard-input" id="cuEmail"
                                             name="email" placeholder="name@company.com" required>
                                     </div>
-
                                     <!-- Service/Course Dropdown -->
-                                    <div class="col-md-6">
-                                        <label class="form-label text-dark fw-bold small mb-2">Select Course /
+                                    <div class="col-12">
+                                        <label class="form-label text-dark fw-bold small mb-1">Select Course /
                                             Service</label>
                                         <select class="form-select cu-standard-input" id="cuService" name="service"
                                             required>
                                             <option selected disabled value="">Choose a program...</option>
-                                            <option value="Web Development">Web Development Full Stack</option>
-                                            <option value="Graphic Design">Graphic Design Masterclass</option>
-                                            <option value="Digital Marketing">Digital Marketing Pro</option>
-                                            <option value="Python Data Science">Python for Data Science</option>
-                                            <option value="Cloud Computing">Cloud Computing</option>
+                                            <option value="Full Stack Web Development">Full Stack Web Development
+                                            </option>
+                                            <option value="App Development">Mobile App Development</option>
+                                            <option value="Python Data Science">Python Data Science</option>
+                                            <option value="AI & Prompt Engineering">AI & Prompt Engineering</option>
+                                            <option value="Graphic Design">Graphic Design</option>
+                                            <option value="Video Editing">Video Editing</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Cloud Computing">Cloud & DevOps</option>
+                                            <option value="Cyber Security">Cyber Security</option>
+                                            <option value="UI UX Design">UI/UX Design</option>
+                                            <option value="SEO Mastery">SEO Mastery</option>
                                             <option value="General Inquiry">Other / General Inquiry</option>
                                         </select>
                                     </div>
+                                    <!-- Submit Button -->
+                                    <div class="col-12 text-center mt-3">
+                                        <button type="submit" class="btn cu-btn-glow w-100 py-2 fw-bold"
+                                            id="cuSubmitBtn">
+                                            Submit Application <i class="fas fa-paper-plane ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-                                    <!-- Message -->
+                    <!-- ============================================= -->
+                    <!--   RIGHT COLUMN: BUSINESS INQUIRY              -->
+                    <!-- ============================================= -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="cu-form-card shadow-lg h-100">
+                            <div class="text-center mb-4">
+                                <span
+                                    class="badge bg-dark bg-opacity-10 text-dark mb-2 px-3 py-2 rounded-pill fw-bold">FOR
+                                    BUSINESSES</span>
+                                <h3 class="fw-bold">Build Your <span class="text-dark">Project</span></h3>
+                                <p class="text-muted small">Let's discuss your website, app, or automation needs.</p>
+                            </div>
+
+                            <!-- ✅ This ID is CRITICAL. It connects this form to the JavaScript. -->
+                            <form id="cuBusinessForm">
+                                <div class="row gx-3 gy-3">
+
+                                    <!-- Name -->
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-bold small mb-1">Your Name</label>
+                                        <input type="text" class="form-control cu-standard-input" name="name"
+                                            placeholder="Jane Smith" required>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark fw-bold small mb-1">Phone</label>
+                                        <input type="tel" class="form-control cu-standard-input" name="phone"
+                                            placeholder="Your Contact Number" required>
+                                    </div>
+
+                                    <!-- Email -->
                                     <div class="col-12">
-                                        <label class="form-label text-dark fw-bold small mb-2">Any specific
-                                            questions?</label>
-                                        <textarea class="form-control cu-standard-input" id="cuMessage" name="message"
-                                            rows="4" placeholder="Tell us about your requirements or goals..."
-                                            required></textarea>
+                                        <label class="form-label text-dark fw-bold small mb-1">Email</label>
+                                        <input type="email" class="form-control cu-standard-input" name="email"
+                                            placeholder="Your Business Email" required>
+                                    </div>
+
+                                    <!-- Service Dropdown -->
+                                    <div class="col-12">
+                                        <label class="form-label text-dark fw-bold small mb-1">What are you looking
+                                            for?</label>
+                                        <select class="form-select cu-standard-input" name="service" required>
+                                            <option value="">Select a service...</option>
+                                            <option>Website Development</option>
+                                            <option>Mobile App Development</option>
+                                            <option>CRM / ERP System</option>
+                                            <option>Automation (n8n, APIs)</option>
+                                            <option>UI/UX Design</option>
+                                            <option>Other Business Solution</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Message (Optional but good to have) -->
+                                    <div class="col-12">
+                                        <label class="form-label text-dark fw-bold small mb-1">Project Details
+                                            (Optional)</label>
+                                        <textarea class="form-control cu-standard-input" name="message" rows="3"
+                                            placeholder="Tell us about your project idea..."></textarea>
                                     </div>
 
                                     <!-- Submit Button -->
-                                    <div class="col-12 text-center mt-2">
-                                        <button type="submit" class="btn cu-btn-glow w-100 py-3 rounded-3 fw-bold fs-5"
-                                            id="cuSubmitBtn">
-                                            Submit Application <i class="fas fa-paper-plane ms-2"></i>
+                                    <div class="col-12 text-center mt-3">
+                                        <button type="submit" class="btn btn-dark w-100 py-2 fw-bold">
+                                            Submit Business Inquiry <i class="fas fa-briefcase ms-2"></i>
                                         </button>
                                     </div>
 
                                 </div>
                             </form>
-
-                            <!-- Success Overlay -->
-                            <div id="cu-success-message" class="cu-success-overlay">
-                                <div class="cu-success-box text-center">
-                                    <div class="cu-check-icon mb-3"><i class="fas fa-check"></i></div>
-                                    <h3 class="fw-bold text-dark">Application Sent!</h3>
-                                    <p class="text-muted mb-4">We have received your request for the training.<br>Our
-                                        team will contact you shortly.</p>
-                                    <button class="btn btn-dark px-4 rounded-pill"
-                                        onclick="closeSuccess()">Close</button>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- The Success message overlay remains unchanged, it will work for the training form -->
+            <div id="cu-success-message" class="cu-success-overlay">
+                <div class="cu-success-box text-center">
+                    <div class="cu-check-icon mb-3"><i class="fas fa-check"></i></div>
+                    <h3 class="fw-bold text-dark">Application Sent!</h3>
+                    <p class="text-muted mb-4">We have received your request.<br>Our team will contact you shortly.</p>
+                    <button class="btn btn-dark px-4 rounded-pill" onclick="closeSuccess()">Close</button>
                 </div>
             </div>
         </section>
@@ -726,6 +809,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="./about">About Us</a></li>
                                 <li><a href="./portfolio">Portfolio</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
@@ -895,42 +979,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="./script/aichatbot.js"></script>
     <script>
-        // PASTE YOUR GOOGLE SCRIPT URL HERE!
-        const cuScriptURL = 'https://script.google.com/macros/s/AKfycbyLpwY-VP32Lri4bSkY6ViHURSqcpn0BL9zyBmloYM95tgmCCvEkq7ZzDEWo2DQzUnu/exec';
+        // =======================================================
+        // 1. CONFIGURATION
+        // =======================================================
+        // URL for the TRAINING form submissions
+        const trainingScriptURL = 'https://script.google.com/macros/s/AKfycbyLpwY-VP32Lri4bSkY6ViHURSqcpn0BL9zyBmloYM95tgmCCvEkq7ZzDEWo2DQzUnu/exec';
 
-        const cuContactForm = document.getElementById('cuContactForm');
-        const cuSubmitBtn = document.getElementById('cuSubmitBtn');
+        // ✅ PASTE YOUR SECOND GOOGLE SCRIPT URL HERE for the BUSINESS form
+        const businessScriptURL = 'https://script.google.com/macros/s/AKfycbw8sp_PYbUtogUFNF6H2Kc3BDHARhe_XmCMCank5IQiSeqcr4JEQJwtkJh6uL7xePiqtA/exec';
+        // ^ IMPORTANT: Create a separate Google Sheet & Script for business leads.
 
-        if (cuContactForm) {
-            cuContactForm.addEventListener('submit', e => {
-                e.preventDefault();
+        // =======================================================
+        // 2. GET DOM ELEMENTS
+        // =======================================================
+        const trainingForm = document.getElementById('cuContactForm');
+        const trainingSubmitBtn = document.getElementById('cuSubmitBtn');
 
-                // Change button to show loading state
-                cuSubmitBtn.disabled = true;
-                cuSubmitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+        const businessForm = document.getElementById('cuBusinessForm');
+        // Note: The business submit button doesn't have an ID, which is fine as we can find it.
 
-                // Send data to Google Sheets
-                fetch(cuScriptURL, { method: 'POST', body: new FormData(cuContactForm) })
-                    .then(response => {
-                        // Show the beautiful success overlay
-                        document.getElementById('cu-success-message').classList.add('active');
+        const successOverlay = document.getElementById('cu-success-message');
 
-                        // Reset button and form
-                        cuSubmitBtn.disabled = false;
-                        cuSubmitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane ms-2"></i>';
-                        cuContactForm.reset();
-                    })
-                    .catch(error => {
-                        alert('Error! ' + error.message);
-                        cuSubmitBtn.disabled = false;
-                        cuSubmitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane ms-2"></i>';
-                    });
+        // =======================================================
+        // 3. REUSABLE SUBMISSION HANDLER (The "Smart" Function)
+        // =======================================================
+        function handleFormSubmit(event, form, scriptURL, successCallback) {
+            event.preventDefault(); // Stop the form from reloading the page
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalButtonHTML = submitBtn.innerHTML;
+
+            // Show loading state on the button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    if (response.ok) {
+                        successCallback(); // Run the specific success action
+                    } else {
+                        throw new Error('Network response was not ok.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('An error occurred. Please try again.');
+                })
+                .finally(() => {
+                    // Always reset the button and form
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalButtonHTML;
+                    form.reset();
+                });
+        }
+
+        // =======================================================
+        // 4. ATTACH EVENT LISTENERS
+        // =======================================================
+
+        // Listener for the TRAINING FORM
+        if (trainingForm) {
+            trainingForm.addEventListener('submit', (e) => {
+                // Define the success action for THIS form
+                const showTrainingSuccess = () => {
+                    if (successOverlay) {
+                        successOverlay.classList.add('active');
+                    }
+                };
+                // Call the handler
+                handleFormSubmit(e, trainingForm, trainingScriptURL, showTrainingSuccess);
             });
         }
 
-        // Logic to close the success popup
+        // Listener for the BUSINESS FORM
+        if (businessForm) {
+            businessForm.addEventListener('submit', (e) => {
+                // Define the success action for THIS form
+                const showBusinessSuccess = () => {
+                    alert('Business inquiry sent successfully! Our team will contact you soon.');
+                };
+                // Call the handler
+                handleFormSubmit(e, businessForm, businessScriptURL, showBusinessSuccess);
+            });
+        }
+
+        // =======================================================
+        // 5. SUCCESS MESSAGE LOGIC (for the training overlay)
+        // =======================================================
         function closeSuccess() {
-            document.getElementById('cu-success-message').classList.remove('active');
+            if (successOverlay) {
+                successOverlay.classList.remove('active');
+            }
         }
     </script>
 

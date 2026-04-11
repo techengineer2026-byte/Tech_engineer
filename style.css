@@ -421,47 +421,6 @@ svg {
     color: white;
 }
 
-/* Recent Activity Section */
-.recent-activity-section {
-    padding: 80px 0;
-}
-
-.activity-image-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    border: 5px solid #fff;
-}
-
-.activity-image-wrapper img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease;
-}
-
-.activity-list {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0;
-}
-
-.activity-list li {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.activity-list li::before {
-    content: "●";
-    color: #534AB7;
-    /* Your Brand Purple */
-    margin-right: 15px;
-    font-size: 0.8rem;
-}
-
 .bg-blue {
     background: #e0f2fe;
     color: #0284c7;
@@ -475,6 +434,45 @@ svg {
 .bg-green {
     background: #dcfce7;
     color: #16a34a;
+}
+
+/* --- Professional Google Reviews --- */
+#student-reviews {
+    background: #f8fafc;
+}
+
+.review-badge {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    color: #1e3c72;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.reviews-wrapper {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(30, 60, 114, 0.08);
+    border: 1px solid #eef2f7;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Make SociableKit blend with your site */
+.sk-ww-google-reviews {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+@media (max-width: 768px) {
+    .reviews-wrapper {
+        padding: 1rem;
+        border-radius: 16px;
+    }
 }
 
 .bg-purple {

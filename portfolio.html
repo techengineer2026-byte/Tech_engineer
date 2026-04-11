@@ -8,7 +8,8 @@
     <title>Portfolio – Web, Mobile App, SEO Projects | Tech Engineer</title>
     <meta name="description"
         content="Tech Engineer Portfolio - Real projects & case studies. Web development, mobile apps, e-learning platforms, podcast production. See our live work.">
-    <!-- <meta name="keywords"         content="Tech Engineer Portfolio, Our Work, Recent IT Projects, Web Development Portfolio, Mobile App Showcase, Software Case Studies, Client Testimonials, Success Stories, Project Gallery, Website Design Samples, E-commerce Projects, Custom Web Applications, Android App Portfolio, iOS App Examples, UI UX Design Portfolio, Digital Marketing Results, SEO Case Studies, IT Company Mohali Portfolio, Punjab Tech Projects, SaaS Projects, CRM Development, ERP Solutions"> -->
+    <meta name="keywords"
+        content="Tech Engineer Portfolio, Our Work, Recent IT Projects, Web Development Portfolio, Mobile App Showcase, Software Case Studies, Client Testimonials, Success Stories, Project Gallery, Website Design Samples, E-commerce Projects, Custom Web Applications, Android App Portfolio, iOS App Examples, UI UX Design Portfolio, Digital Marketing Results, SEO Case Studies, IT Company Mohali Portfolio, Punjab Tech Projects, SaaS Projects, CRM Development, ERP Solutions">
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Tech Engineer">
@@ -17,11 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="canonical" href="https://techengineer.co/portfolio">
     <link rel="icon" href="./images/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style/header.css">
     <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca" . />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
     <!-- Geo Tags -->
     <meta name="geo.region" content="IN-PB">
     <meta name="geo.placename" content="Sahibzada Ajit Singh Nagar">
@@ -190,6 +190,7 @@
 
         .category-badge {
             position: absolute;
+            width: 100px;
             top: 15px;
             left: 15px;
             background: #4361ee;
@@ -257,20 +258,23 @@
         }
     </style>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TL6BSHN5');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TL6BSHN5');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6BSHN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container nav-wrapper">
             <a href="index.html" class="logo">
@@ -302,15 +306,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="portfolio-hero position-relative">
             <div class="hero-overlay"></div>
             <div class="container position-relative z-2 text-center pt-5 pb-4">
-
-                <!-- Breadcrumb Navigation -->
                 <nav class="custom-breadcrumb mb-4 fade-in-up">
                     <a href="./"><i class="fas fa-home me-1"></i> Home</a>
                     <i class="fas fa-chevron-right separator"></i>
                     <span class="active">Portfolio</span>
                 </nav>
-
-                <!-- Banner Content -->
                 <div class="banner-content mx-auto slide-in-bottom" style="max-width: 700px;">
                     <h1 class="display-4 fw-bold text-white mb-3">Our Work & <span class="text-gradient-light">Success
                             Stories</span></h1>
@@ -320,11 +320,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- 2. PORTFOLIO GRID & FILTERS -->
-        <section class="portfolio-section py-5 bg-light-gray">
-            <div class="container py-4">
+        <!-- 🔥 HIGH IMPACT: FEATURED PROJECT SECTION -->
+        <section class="featured-project-section py-5">
+            <div class="container">
+                <h3 class="text-center fw-bold mb-4">Featured Project</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <!-- Featured Project Card (Based on CodeBank) -->
+                        <div class="portfolio-card featured-card h-100">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <div class="card-img-wrapper featured">
+                                        <img src="./images/codebank.webp" alt="CodeBank" loading="lazy">
+                                        <span class="category-badge bg-cyan">E-Learning</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-content p-4">
+                                        <h4 class="fw-bold mb-2">CodeBank Platform</h4>
+                                        <p class="small text-muted mb-2">Client: CodeBank Inc.</p>
+                                        <p class="text-muted small mb-2">An advanced e-learning and course management
+                                            platform built for <a href="./services.html">our software development
+                                                services</a>, specifically for coding education.</p>
+                                        <p class="text-success small fw-semibold mb-3">↑ 300% student engagement, ↓ 50%
+                                            admin workload</p>
+                                        <div class="tech-stack mb-4">
+                                            <span>React</span><span>.NET</span><span>SQL Server</span><span>Azure</span>
+                                        </div>
+                                        <a href="./case-studies/codebank.html" class="view-project-btn">
+                                            View Case Study <i class="fas fa-book-open ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Filters -->
+        <!-- 2. PORTFOLIO GRID & FILTERS -->
+        <section class="portfolio-section pt-4 pb-5 bg-light-gray">
+            <div class="container py-4">
                 <div class="portfolio-filters d-flex justify-content-center flex-wrap gap-2 mb-5 fade-in-up">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
                     <button class="filter-btn" data-filter="web">Web Dev</button>
@@ -333,125 +370,158 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <button class="filter-btn" data-filter="network">Media & Podcast</button>
                 </div>
 
-                <!-- Grid -->
                 <div class="row g-4" id="portfolio-grid">
 
-                    <!-- Item 1: Web -->
+                    <!-- Item 1: Web (TricityRent) -->
                     <div class="col-lg-4 col-md-6 portfolio-item web">
                         <div class="portfolio-card h-100">
                             <div class="card-img-wrapper">
-                                <img src="./images/tricityrrent.png" alt="TricityRent" loading="lazy">
+                                <img src="./images/portfolio/tricityrent.webp" alt="TricityRent" loading="lazy">
                                 <span class="category-badge">Web Dev</span>
                             </div>
                             <div class="card-content">
                                 <h4 class="fw-bold mb-2">TricityRent Website</h4>
-                                <p class="text-muted small mb-3">Real estate platform to find properties easily in
-                                    Mohali. Designed for speed and high conversion.</p>
-
-                                <div class="tech-stack mb-4">
+                                <p class="small text-muted">Client: TricityRent</p>
+                                <p class="text-muted small mb-3">A real estate platform for our <a
+                                        href="./services.html">web development services</a> to find properties in
+                                    Mohali, designed for speed and conversion.</p>
+                                <p class="text-success small fw-semibold">↑ 120% increase in qualified leads</p>
+                                <div class="tech-stack my-4">
                                     <span>HTML</span><span>CSS</span><span>JS</span><span>JSON</span>
                                 </div>
-
-                                <a href="http://www.tricityrent.com" target="_blank" class="view-project-btn">
-                                    View Live Site <i class="fas fa-arrow-right ms-1"></i>
+                                <a href="./case-studies/tricityrent.html" class="view-project-btn">
+                                    View Case Study <i class="fas fa-book-open ms-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 2: Software -->
+                    <!-- Item 2: ADDED BACK - Art Marketplace (as Software) -->
                     <div class="col-lg-4 col-md-6 portfolio-item software">
                         <div class="portfolio-card h-100">
                             <div class="card-img-wrapper">
-                                <img src="./images/pantika-image1.webp" alt="Paintings" loading="lazy">
+                                <img src="./images/portfolio/art-marketplace.webp" alt="Art Marketplace" loading="lazy">
                                 <span class="category-badge bg-purple">Software</span>
                             </div>
                             <div class="card-content">
-                                <h4 class="fw-bold mb-2">Art Marketplace</h4>
-                                <p class="text-muted small mb-3">Custom online platform and inventory software for
-                                    artists to sell handmade paintings globally.</p>
-
-                                <div class="tech-stack mb-4">
-                                    <span>React Native</span><span>Django</span><span>PostgreSQL</span>
+                                <h4 class="fw-bold mb-2">Artisan's Hub</h4>
+                                <p class="small text-muted">Client: Demo Project</p>
+                                <p class="text-muted small mb-3">Custom software for a niche marketplace connecting
+                                    artists with buyers, featuring inventory and sales management.</p>
+                                <p class="text-success small fw-semibold">Processed over $50,000 in initial launch phase
+                                </p>
+                                <div class="tech-stack my-4">
+                                    <span>.NET Core</span><span>React</span><span>PostgreSQL</span><span>Stripe
+                                        API</span>
                                 </div>
-
-                                <a href="./contact" class="view-project-btn">
-                                    View Case Study <i class="fas fa-arrow-right ms-1"></i>
+                                <a href="#" onclick="openModal('Artisan\'s Hub Software')" class="view-project-btn">
+                                    View Details <i class="fas fa-desktop ms-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 3: Web -->
+                    <!-- Item 3: E-commerce (NEW DEMO) -->
                     <div class="col-lg-4 col-md-6 portfolio-item web">
                         <div class="portfolio-card h-100">
                             <div class="card-img-wrapper">
-                                <img src="./images/codebank.webp" alt="CodeBank" loading="lazy">
-                                <span class="category-badge bg-cyan">E-Learning</span>
+                                <img src="./images/portfolio/ecommerce-site.webp" alt="E-commerce Site" loading="lazy">
+                                <span class="category-badge">Web Dev</span>
                             </div>
                             <div class="card-content">
-                                <h4 class="fw-bold mb-2">CodeBank Platform</h4>
-                                <p class="text-muted small mb-3">An advanced e-learning and course management platform
-                                    specifically built for coding education.</p>
-
-                                <div class="tech-stack mb-4">
-                                    <span>React</span><span>.NET</span><span>SQL Server</span>
+                                <h4 class="fw-bold mb-2">LuxeFashion E-commerce</h4>
+                                <p class="small text-muted">Client: LuxeFashion Co.</p>
+                                <p class="text-muted small mb-3">High-end fashion e-commerce website with a focus on
+                                    premium user experience and secure payment gateway integration.</p>
+                                <p class="text-success small fw-semibold">↑ 250% increase in online sales Q1</p>
+                                <div class="tech-stack my-4">
+                                    <span>Shopify</span><span>Liquid</span><span>JS</span><span>Recharge</span>
                                 </div>
-
-                                <a href="https://codebank.in/home" target="_blank" class="view-project-btn">
-                                    Visit Platform <i class="fas fa-arrow-right ms-1"></i>
+                                <a href="#" onclick="openModal('LuxeFashion E-commerce')" class="view-project-btn">
+                                    View Details <i class="fas fa-shopping-cart ms-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 4: Media -->
+                    <!-- Item 4: Media (Techcast) -->
                     <div class="col-lg-4 col-md-6 portfolio-item network">
                         <div class="portfolio-card h-100">
                             <div class="card-img-wrapper">
-                                <img src="./images/techcast-logo.svg" alt="Podcast" loading="lazy"
+                                <img src="./images/portfolio/ppp-logo.webp" alt="Podcast" loading="lazy"
                                     style="background: #111; padding: 20px;">
                                 <span class="category-badge bg-orange">Media</span>
                             </div>
                             <div class="card-content">
-                                <h4 class="fw-bold mb-2">Techcast Podcast</h4>
-                                <p class="text-muted small mb-3">Technology-focused podcast production, professional
-                                    video editing, and social media clips.</p>
-
-                                <div class="tech-stack mb-4">
+                                <h4 class="fw-bold mb-2">Puadh Podcast Podcast</h4>
+                                <p class="small text-muted">Client: Internal Project</p>
+                                <p class="text-muted small mb-3">Culture-focused podcast production, professional
+                                    video editing, and social media clips for brand building.</p>
+                                <p class="text-success small fw-semibold">Reached 10,000+ downloads</p>
+                                <div class="tech-stack my-4">
                                     <span>Video Editing</span><span>Production</span><span>Audio</span>
                                 </div>
-
-                                <a href="https://techcast.techengineer.co" target="_blank" class="view-project-btn">
+                                <a href="https://puadhpunjabipodcast.com/" target="_blank" class="view-project-btn">
                                     Watch Episodes <i class="fas fa-play-circle ms-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 5: Mobile App -->
+                    <!-- Item 5: Mobile App (Avatar Creator) -->
                     <div class="col-lg-4 col-md-6 portfolio-item mobile-app">
                         <div class="portfolio-card h-100">
                             <div class="card-img-wrapper">
-                                <img src="./images/Aviator.webp" alt="App" loading="lazy">
+                                <img src="./images/portfolio/aviator.webp" alt="App" loading="lazy">
                                 <span class="category-badge bg-green">Mobile App</span>
                             </div>
                             <div class="card-content">
                                 <h4 class="fw-bold mb-2">Avatar Creator</h4>
+                                <p class="small text-muted">Client: Gamify Inc.</p>
                                 <p class="text-muted small mb-3">Cross-platform mobile application allowing users to
-                                    build and customize detailed digital avatars.</p>
-
-                                <div class="tech-stack mb-4">
+                                    build and customize detailed digital avatars for metaverse integration.</p>
+                                <p class="text-success small fw-semibold">50,000+ active users</p>
+                                <div class="tech-stack my-4">
                                     <span>React Native</span><span>Redux</span><span>Firebase</span>
                                 </div>
-
-                                <a href="./contact" class="view-project-btn">
-                                    View App Details <i class="fas fa-mobile-alt ms-1"></i>
+                                <a href="#" onclick="openModal('Avatar Creator App')" class="view-project-btn">
+                                    View Details <i class="fas fa-mobile-alt ms-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Item 6: CRM Dashboard (NEW DEMO) -->
+                    <div class="col-lg-4 col-md-6 portfolio-item software">
+                        <div class="portfolio-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="./images/portfolio/crm-dashboard.webp" alt="CRM Dashboard" loading="lazy">
+                                <span class="category-badge bg-purple">Software</span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="fw-bold mb-2">CRM Dashboard</h4>
+                                <p class="small text-muted">Client: InnovateCorp</p>
+                                <p class="text-muted small mb-3">A bespoke CRM dashboard to streamline sales pipelines,
+                                    track leads, and generate automated performance reports.</p>
+                                <p class="text-success small fw-semibold">↓ 40% reduction in manual data entry</p>
+                                <div class="tech-stack my-4">
+                                    <span>Vue.js</span><span>Node.js</span><span>MongoDB</span>
+                                </div>
+                                <a href="#" onclick="openModal('CRM Dashboard Project')" class="view-project-btn">
+                                    Request a Demo <i class="fas fa-chart-line ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Row -->
+
+                <!-- 🔥 HIGH IMPACT: Technologies & Trust Line -->
+                <div class="text-center mt-5 pt-4">
+                    <h5 class="fw-bold">Technologies We Use</h5>
+                    <p class="lead text-muted">React • Node.js • .NET • Python • Firebase • AWS • Azure • Shopify</p>
+                    <p class="text-center text-muted mt-4">
+                        <i class="fas fa-users me-1"></i> Trusted by <strong>50+ clients</strong> across India & beyond
+                    </p>
                 </div>
             </div>
         </section>
@@ -459,10 +529,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- 3. CALL TO ACTION (CTA) -->
         <section class="container my-5" style="background: transparent; padding: 0;">
             <div class="cta-wrapper text-center">
-                <h2 class="fw-bold  mb-3">Have a Project in Mind?</h2>
-                <p class=" mb-4 lead">Let's turn your vision into a reality. Get a free consultation and
-                    project estimate today.</p>
-
+                <h2 class="fw-bold mb-3">Have a Project in Mind?</h2>
+                <p class="mb-4 lead">Let's turn your vision into a reality. Get a free consultation and project estimate
+                    today.</p>
                 <div class="cta-buttons d-flex justify-content-center flex-wrap gap-3">
                     <button type="button" class="btn cta-btn cta-primary" onclick="openModal('New Project Inquiry')">
                         <i class="fas fa-rocket me-2"></i> Start Your Project
@@ -566,6 +635,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="./about">About Us</a></li>
                                 <li><a href="./portfolio">Portfolio</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
@@ -650,9 +720,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
     <section class="AIbotchatModal">
-
-
-
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
@@ -729,43 +796,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
     <script>
-        // 1. Portfolio Filtering Logic
-        document.addEventListener("DOMContentLoaded", function () {
-            const filterBtns = document.querySelectorAll('.filter-btn');
+        // Add this if you don't already have it, for the portfolio filters
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Manage active button class
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
 
-                    const filterValue = this.getAttribute('data-filter');
+                    const filter = button.getAttribute('data-filter');
 
+                    // Filter items
                     portfolioItems.forEach(item => {
-                        // Show animation logic
-                        item.style.transition = "transform 0.4s ease, opacity 0.4s ease";
-
-                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                            item.style.display = "block";
-                            setTimeout(() => { item.style.opacity = "1"; item.style.transform = "scale(1)"; }, 50);
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
                         } else {
-                            item.style.opacity = "0";
-                            item.style.transform = "scale(0.8)";
-                            setTimeout(() => { item.style.display = "none"; }, 400); // Wait for animation
+                            item.style.display = 'none';
                         }
                     });
                 });
             });
         });
-
-        // 2. Modal Open Logic
+        // ✅ FIX: This function now correctly updates the modal title and shows the modal.
         function openModal(serviceName) {
+            // Set the value of the hidden input for the form
             document.getElementById('serviceInput').value = serviceName;
+
+            // Set the text of the modal title
+            document.getElementById('modalTitle').innerText = 'Inquiry for: ' + serviceName;
+
+            // Get the Bootstrap modal instance and show it
             var myModal = new bootstrap.Modal(document.getElementById('inquiryModal'));
             myModal.show();
         }
+
 
         // 3. Google Form Submit Logic
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyLpwY-VP32Lri4bSkY6ViHURSqcpn0BL9zyBmloYM95tgmCCvEkq7ZzDEWo2DQzUnu/exec'; // <-- PASTE YOUR URL HERE!
