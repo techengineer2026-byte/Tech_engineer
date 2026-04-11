@@ -1,7 +1,7 @@
 [
     {
         "title": "AI in 2026: What’s Changed and What’s Coming Next",
-        "image": "./images/blog/ai-2026-featured1.webp",
+        "image": "/images/blog/ai-2026-featured1.webp",
         "category": "AI & Tech",
         "badgeClass": "bg-primary-gradient",
         "badgeIcon": "fas fa-robot",

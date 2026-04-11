@@ -22,11 +22,10 @@
 
     <link rel="canonical" href="https://techengineer.co/services">
 
-    <link rel="icon" href="./images/icon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./images/icon.ico">
+    <link rel="icon" href="/images/icon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/icon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="/style/header.css">
     <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -46,7 +45,6 @@
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Tech Engineer">
 
-        <link rel="stylesheet" href="./style/AIchatbot.css">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Our IT Services | Web & Marketing Solutions">
         <meta name="twitter:description" content="Professional web development, marketing, and IT solutions in Mohali.">
@@ -140,6 +138,15 @@
             .service-section {
                 background: #f8f9ff;
                 position: relative;
+            }
+
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+                margin-bottom: 24px;
+                font-size: 28px;
+                flex-shrink: 0;
             }
 
             .service-section-label {
@@ -660,8 +667,8 @@
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container nav-wrapper">
-            <a href="index.html" class="logo">
-                <img src="./images/logow.png" alt="Tech Engineer Logo" loading="lazy">
+            <a href="/" class="logo">
+                <img src="/images/logow.png" alt="Tech Engineer Logo" loading="lazy">
             </a>
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
                 <span></span>
@@ -669,241 +676,262 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./about">About Us</a></li>
-                <li><a href="./services">Services</a></li>
-                <li><a href="./portfolio">Portfolio</a></li>
-                <li><a href="./blog">Blog</a></li>
-                <li><a href="./contact">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
                 <li class="internship">
-                    <a href="./industrial-training">
-                        <img src="./images/icon.webp" alt="Internship" loading="lazy">
+                    <a href="/industrial-training">
+                        <img src="/images/icon.webp" alt="Internship" loading="lazy">
                         <span>Internship</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-<main>
-    <!-- Hero Banner -->
-    <section class="bannerservice">
-        <div class="banner-overlay"></div>
-        <div class="banner-content container">
-            <h1 class="slide-in-left">Our Services</h1>
-            <p class="fade-in-up">We build tailored solutions that connect with your audience, automate your processes, and deliver measurable results.</p>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="service-section py-5">
-        <div class="container py-4">
-            <!-- Section Header -->
-            <div class="text-center mb-5 reveal">
-                <div class="service-section-label">What We Offer</div>
-                <h2 class="service-section-title">Our Suite of Digital & AI Services</h2>
-                <p class="service-section-desc mx-auto">
-                    From stunning websites to intelligent automation, discover our range of professional solutions designed to drive growth.
-                </p>
+    <main>
+        <!-- Hero Banner -->
+        <section class="bannerservice">
+            <div class="banner-overlay"></div>
+            <div class="banner-content container">
+                <h1 class="slide-in-left">Our Services</h1>
+                <p class="fade-in-up">We build tailored solutions that connect with your audience, automate your
+                    processes, and deliver measurable results.</p>
             </div>
+        </section>
 
-            <!-- Cards -->
-            <div class="row g-4">
-                <!-- Service 1: Web Design -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-code-slash service-icon"></i>
-                        </div>
-                        <h4>Web Design & Development</h4>
-                        <p>Fast, modern, and SEO-friendly websites that rank on Google and convert visitors into customers.</p>
-                        <a href="web-design-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
+        <!-- Services Grid -->
+        <section class="service-section py-5">
+            <div class="container py-4">
+                <!-- Section Header -->
+                <div class="text-center mb-5 reveal">
+                    <div class="service-section-label">What We Offer</div>
+                    <h2 class="service-section-title">Our Suite of Digital & AI Services</h2>
+                    <p class="service-section-desc mx-auto">
+                        From stunning websites to intelligent automation, discover our range of professional solutions
+                        designed to drive growth.
+                    </p>
                 </div>
 
-                <!-- Service 2: Mobile App Development -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-phone-fill service-icon"></i>
-                        </div>
-                        <h4>Mobile App Development</h4>
-                        <p>User-friendly mobile apps for iOS & Android that engage users and grow your business.</p>
-                        <a href="mobile-app-development-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 3: Digital Marketing -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-graph-up-arrow service-icon"></i>
-                        </div>
-                        <h4>Digital Marketing</h4>
-                        <p>Results-driven SEO, Google Ads, and content strategies to increase traffic and revenue.</p>
-                        <a href="digital-marketing-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 4: AI Chatbot Development -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-robot service-icon"></i>
-                        </div>
-                        <h4>AI Chatbot Development</h4>
-                        <p>Smart chatbots for websites and WhatsApp to automate support and generate leads 24/7.</p>
-                        <a href="ai-chatbot-development-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 5: Social Media Management -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-instagram service-icon"></i>
-                        </div>
-                        <h4>Social Media Management</h4>
-                        <p>Engaging content and community management for Instagram, Facebook, and LinkedIn.</p>
-                        <a href="social-media-management-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 6: Video Editing -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-camera-video-fill service-icon"></i>
-                        </div>
-                        <h4>Video Editing Services</h4>
-                        <p>Professional video editing for YouTube, Instagram Reels, social media ads, and corporate content.</p>
-                        <a href="video-editing-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Service 7: WhatsApp Marketing -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-whatsapp service-icon"></i>
-                        </div>
-                        <h4>WhatsApp Marketing</h4>
-                        <p>Official WhatsApp Business API setup for bulk messaging, campaigns, and automation.</p>
-                        <a href="whatsapp-marketing-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Service 8: n8n Automation -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-diagram-3-fill service-icon"></i>
-                        </div>
-                        <h4>n8n Automation</h4>
-                        <p>Custom workflows to connect your apps, eliminate manual tasks, and scale your business.</p>
-                        <a href="n8n-automation-mohali.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 9: AI Voice Agents -->
-                <div class="col-lg-4 col-md-6 reveal">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrapper">
-                            <i class="bi bi-telephone-outbound-fill service-icon"></i>
-                        </div>
-                        <h4>AI Voice Agents</h4>
-                        <p>Intelligent voice bots to handle inbound and outbound calls, bookings, and support automatically.</p>
-                        <a href="ai-voice-agents-india.html" class="btn-inquire">Learn More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Let's Talk Contact Form Section -->
-    <section class="contact-form-section py-2" id="contact-form">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center mb-5 reveal">
-                        <div class="service-section-label">Let's Talk</div>
-                        <h2 class="service-section-title">Get a Free Consultation</h2>
-                        <p class="service-section-desc">Tell us about your project and we'll get back to you within 24 hours.</p>
-                    </div>
-
-                    <form class="contact-form reveal" id="contactForm">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label">Full Name *</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                <!-- Cards -->
+                <div class="row g-4">
+                    <!-- Service 1: Web Design -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-code-slash service-icon"></i>
                             </div>
-                            <div class="col-md-6">
-                                <label for="mobile" class="form-label">Mobile Number *</label>
-                                <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="service" class="form-label">Service Interested In</label>
-                                <select class="form-select" id="service" name="service">
-                                    <option value="">Select a service</option>
-                                    <option value="Web Design & Development">Web Design & Development</option>
-                                    <option value="Mobile App Development">Mobile App Development</option>
-                                    <option value="Digital Marketing">Digital Marketing</option>
-                                    <option value="AI Chatbot Development">AI Chatbot Development</option>
-                                    <option value="Social Media Management">Social Media Management</option>
-                                    <option value="Video Editing">Video Editing</option>
-                                    <option value="WhatsApp Marketing">WhatsApp Marketing</option>
-                                    <option value="n8n Automation">n8n Automation</option>
-                                    <option value="AI Voice Agents">AI Voice Agents</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Project Details *</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn-primary-te" id="submitBtn">
-                                    <i class="bi bi-send-fill"></i> Submit Inquiry
-                                </button>
-                            </div>
-                            <div class="col-12">
-                                <div id="formMessage" class="mt-3"></div>
-                            </div>
+                            <h4>Web Design & Development</h4>
+                            <p>Fast, modern, and SEO-friendly websites that rank on Google and convert visitors into
+                                customers.</p>
+                            <a href="services/web-design-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
                         </div>
-                    </form>
+                    </div>
+
+                    <!-- Service 2: Mobile App Development -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-phone-fill service-icon"></i>
+                            </div>
+                            <h4>Mobile App Development</h4>
+                            <p>User-friendly mobile apps for iOS & Android that engage users and grow your business.</p>
+                            <a href="services/mobile-app-development-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Digital Marketing -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-graph-up-arrow service-icon"></i>
+                            </div>
+                            <h4>Digital Marketing</h4>
+                            <p>Results-driven SEO, Google Ads, and content strategies to increase traffic and revenue.
+                            </p>
+                            <a href="services/digital-marketing-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: AI Chatbot Development -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-robot service-icon"></i>
+                            </div>
+                            <h4>AI Chatbot Development</h4>
+                            <p>Smart chatbots for websites and WhatsApp to automate support and generate leads 24/7.</p>
+                            <a href="services/ai-chatbot-development-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: Social Media Management -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-instagram service-icon"></i>
+                            </div>
+                            <h4>Social Media Management</h4>
+                            <p>Engaging content and community management for Instagram, Facebook, and LinkedIn.</p>
+                            <a href="services/social-media-management-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 6: Video Editing -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-camera-video-fill service-icon"></i>
+                            </div>
+                            <h4>Video Editing Services</h4>
+                            <p>Professional video editing for YouTube, Instagram Reels, social media ads, and corporate
+                                content.</p>
+                            <a href="services/video-editing-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 7: WhatsApp Marketing -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-whatsapp service-icon"></i>
+                            </div>
+                            <h4>WhatsApp Marketing</h4>
+                            <p>Official WhatsApp Business API setup for bulk messaging, campaigns, and automation.</p>
+                            <a href="services/whatsapp-marketing-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 8: n8n Automation -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-diagram-3-fill service-icon"></i>
+                            </div>
+                            <h4>n8n Automation</h4>
+                            <p>Custom workflows to connect your apps, eliminate manual tasks, and scale your business.
+                            </p>
+                            <a href="services/n8n-automation-mohali" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 9: AI Voice Agents -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-telephone-outbound-fill service-icon"></i>
+                            </div>
+                            <h4>AI Voice Agents</h4>
+                            <p>Intelligent voice bots to handle inbound and outbound calls, bookings, and support
+                                automatically.</p>
+                            <a href="services/ai-voice-agents-india" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-glow"></div>
-        <div class="container">
-            <div class="text-center reveal">
-                <div class="service-section-label">Have a Project in Mind?</div>
-                <h2 class="service-section-title">Let's Build Something Great Together</h2>
-                <p class="service-section-desc mx-auto mb-5">Talk to our team for free. No commitment, no pressure — just honest advice on what your business needs to succeed.</p>
-                <div class="d-flex gap-3 justify-content-center flex-wrap">
-                    <a href="#contact-form" class="btn-primary-te scroll-to-form">
-                        <i class="bi bi-chat-dots-fill"></i> Get a Free Quote
-                    </a>
-                    <a href="https://wa.me/918544884846?text=Hi,%20I%20have%20a%20project%20idea" class="btn-outline-te" target="_blank" rel="noopener">
-                        <i class="bi bi-whatsapp"></i> WhatsApp Us
-                    </a>
+        <!-- Let's Talk Contact Form Section -->
+        <section class="contact-form-section py-2" id="contact-form">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5 reveal">
+                            <div class="service-section-label">Let's Talk</div>
+                            <h2 class="service-section-title">Get a Free Consultation</h2>
+                            <p class="service-section-desc">Tell us about your project and we'll get back to you within
+                                24 hours.</p>
+                        </div>
+
+                        <form class="contact-form reveal" id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="mobile" class="form-label">Mobile Number *</label>
+                                    <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="service" class="form-label">Service Interested In</label>
+                                    <select class="form-select" id="service" name="service">
+                                        <option value="">Select a service</option>
+                                        <option value="Web Design & Development">Web Design & Development</option>
+                                        <option value="Mobile App Development">Mobile App Development</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="AI Chatbot Development">AI Chatbot Development</option>
+                                        <option value="Social Media Management">Social Media Management</option>
+                                        <option value="Video Editing">Video Editing</option>
+                                        <option value="WhatsApp Marketing">WhatsApp Marketing</option>
+                                        <option value="n8n Automation">n8n Automation</option>
+                                        <option value="AI Voice Agents">AI Voice Agents</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Project Details *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn-primary-te" id="submitBtn">
+                                        <i class="bi bi-send-fill"></i> Submit Inquiry
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <div id="formMessage" class="mt-3"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-glow"></div>
+            <div class="container">
+                <div class="text-center reveal">
+                    <div class="service-section-label">Have a Project in Mind?</div>
+                    <h2 class="service-section-title">Let's Build Something Great Together</h2>
+                    <p class="service-section-desc mx-auto mb-5">Talk to our team for free. No commitment, no pressure —
+                        just honest advice on what your business needs to succeed.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="#contact-form" class="btn-primary-te scroll-to-form">
+                            <i class="bi bi-chat-dots-fill"></i> Get a Free Quote
+                        </a>
+                        <a href="https://wa.me/918544884846?text=Hi,%20I%20have%20a%20project%20idea"
+                            class="btn-outline-te" target="_blank" rel="noopener">
+                            <i class="bi bi-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer-bs5">
         <div class="container">
             <div class="row gy-5">
                 <div class="col-lg-3 col-md-12">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <img src="./images/logow.png" alt="Tech Engineer" class="img-fluid" style="max-width: 180px;">
+                    <a href="/" class="d-inline-block mb-3">
+                        <img src="/images/logow.png" alt="Tech Engineer" class="img-fluid" style="max-width: 180px;">
                     </a>
                     <p class="text-white-50 small pe-3">
                         Empowering students with industry-standard training in AI, Coding, and Cloud technologies.
@@ -914,17 +942,17 @@
                     <div class="row">
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="./about">About Us</a></li>
-                                <li><a href="./portfolio">Portfolio</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
                                 <li><a href="/gallery">Gallery</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li><a href="./blog">Blog</a></li>
-                                <li><a href="./services">Services</a></li>
-                                <li><a href="./contact">Contact</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -934,16 +962,16 @@
                     <div class="row">
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li><a href="./courses/fullstack-course">Full Stack Web</a></li>
-                                <li><a href="./courses/dotnet-mobile-app-development-course">App Development</a></li>
-                                <li><a href="./courses/prompt-engineering-course">AI & Prompt Eng</a></li>
+                                <li><a href="/courses/fullstack-course">Full Stack Web</a></li>
+                                <li><a href="/courses/dotnet-mobile-app-development-course">App Development</a></li>
+                                <li><a href="/courses/prompt-engineering-course">AI & Prompt Eng</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li><a href="./courses/video-editing-course">Video Editing</a></li>
-                                <li><a href="./courses/cloud-computing-course">Cloud & DevOps</a></li>
-                                <li><a href="./courses/digital-marketing-course">Digital Marketing</a></li>
+                                <li><a href="/courses/video-editing-course">Video Editing</a></li>
+                                <li><a href="/courses/cloud-computing-course">Cloud & DevOps</a></li>
+                                <li><a href="/courses/digital-marketing-course">Digital Marketing</a></li>
                             </ul>
                         </div>
                     </div>
@@ -983,8 +1011,8 @@
                     <div class="col-12">
                         <p class="text-white-50 small mb-0">
                             &copy; 2025 Tech Engineer. All Rights Reserved. |
-                            <a href="./privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
-                            <a href="./terms" class="text-white-50 text-decoration-none">Terms</a>
+                            <a href="/privacy-policy" class="text-white-50 text-decoration-none">Privacy</a> |
+                            <a href="/terms" class="text-white-50 text-decoration-none">Terms</a>
                         </p>
                     </div>
                 </div>
@@ -1079,7 +1107,7 @@
         </div>
     </section>
 
-    <script src="./script/aichatbot.js"></script>
+    <script src="/script/aichatbot.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/javascript.js" defer></script>

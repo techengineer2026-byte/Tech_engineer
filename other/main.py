@@ -919,7 +919,7 @@ class BlogManagerApp:
         self.blog_data = [
             {
                 "title": "AI in 2026: What's Changed and What's Coming Next",
-                "image": "./images/blog/ai-2026-featured1.webp",
+                "image": "/images/blog/ai-2026-featured1.webp",
                 "category": "AI & Tech",
                 "badgeClass": "bg-primary-gradient",
                 "badgeIcon": "fas fa-robot",
@@ -933,7 +933,7 @@ class BlogManagerApp:
             },
             {
                 "title": "Mr. Bhatia: From IT Groundwork to Sales Leadership",
-                "image": "./images/techcast-ep3-mr-bhatia-rise.jpg",
+                "image": "/images/techcast-ep3-mr-bhatia-rise.jpg",
                 "category": "Podcast",
                 "badgeClass": "bg-warning-gradient",
                 "badgeIcon": "fas fa-microphone-alt",
@@ -947,7 +947,7 @@ class BlogManagerApp:
             },
             {
                 "title": "Akash's Digital Sales & E-Commerce Blueprint",
-                "image": "./images/techcast-ep18-akash-ecommerce-smart-farming.jpg",
+                "image": "/images/techcast-ep18-akash-ecommerce-smart-farming.jpg",
                 "category": "E-Commerce",
                 "badgeClass": "bg-purple-gradient",
                 "badgeIcon": "fas fa-shopping-cart",
