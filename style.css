@@ -5023,16 +5023,18 @@ process-section {
     }
 }
 
+/* --- Main Section Background --- */
 .vision-main {
     background-image: url("/images/mission_vision_bg.webp");
+    /* Your background image */
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    padding: 60px 0;
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
     position: relative;
+    padding: 80px 0;
 }
 
+/* Dark overlay for text readability */
 .vision-main::before {
     content: "";
     position: absolute;
@@ -5040,95 +5042,126 @@ process-section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
     z-index: 1;
 }
 
+/* Ensure container content is above the overlay */
 .vision-main .container {
+    position: relative;
     z-index: 2;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.vision-main h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 
-.vision-sub {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+/* --- The "Wow" Card Styling --- */
+.v-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 3px;
+    /* Space for the gradient border */
     position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* This creates the 3D space for the hover effect */
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-.vision-sub:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(153, 37, 37, 0.2);
+.v-card-content {
+    background: rgba(10, 10, 20, 0.7);
+    /* Dark inner background */
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    color: #f0f0f0;
+    height: 100%;
 }
 
-.vision-sub span {
+/* --- The Hover Effect --- */
+.v-card:hover {
+    transform: translateY(-15px) rotateX(5deg) rotateY(-3deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* --- The Animated Gradient Border --- */
+.v-card::before {
+    content: '';
     position: absolute;
-    left: 1%;
-    top: 50%;
-    transform: translateY(-50%) skewX(-10deg);
-    background-color: #e9f4ff;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 40px;
-    color: #383838;
-    border-radius: 8px;
-    transition: background 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-.vision-sub:hover span {
-    background-color: #00bcd4;
-    color: white;
+.v-card:hover::before {
+    opacity: 1;
 }
 
-.vision-sub h3,
-.vision-sub p {
-    margin-left: 100px;
-    text-align: left;
-    color: white;
-    animation: fadeIn 1s ease-in-out;
+
+/* --- Card Internals (Icon, Text) --- */
+.icon-box {
+    margin-bottom: 20px;
+}
+
+.icon-box i {
+    font-size: 50px;
+    color: #00c6ff;
+    /* A vibrant icon color */
+    transition: transform 0.4s ease, color 0.4s ease;
+    text-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+}
+
+.v-card:hover .icon-box i {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.v-card h3 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.v-card p {
+    font-size: 0.95rem;
+    color: #c7c7c7;
+    /* Slightly dimmer for contrast */
+    line-height: 1.6;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .v-card {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        /* Constrain width on tablets */
+    }
 }
 
 @media (max-width: 768px) {
-    .vision-sub {
-        text-align: center;
-        padding: 20px;
+    .vision-main h2 {
+        font-size: 2rem;
     }
 
-    .vision-sub span {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        margin: 0 auto 15px;
-        display: none;
-    }
-
-    .vision-sub h3,
-    .vision-sub p {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .ourservice {
-        padding: 35px 0px;
+    .v-card:hover {
+        /* Disable 3D tilt on mobile for better performance/usability */
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
 }
 

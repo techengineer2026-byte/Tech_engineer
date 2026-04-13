@@ -1,248 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- MAIN PAGES -->
+  <!-- ============================================= -->
+  <!-- MAIN & LEGAL PAGES -->
+  <!-- ============================================= -->
   <url>
     <loc>https://techengineer.co/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://techengineer.co/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://techengineer.co/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- SERVICES -->
   <url>
-    <loc>https://techengineer.co/services/ai-chatbot-development-mohali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/ai-voice-agents-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/digital-marketing-mohali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/mobile-app-development-mohali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/n8n-automation-mohali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/social-media-management-mohali</loc>
+    <loc>https://techengineer.co/industrial-training</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://techengineer.co/services/video-editing-mohali</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://techengineer.co/blog</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/web-design-mohali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/services/whatsapp-marketing-mohali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://techengineer.co/portfolio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://techengineer.co/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <url>
-    <loc>https://techengineer.co/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://techengineer.co/gallery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://techengineer.co/industrial-training</loc>
+    <loc>https://techengineer.co/Social</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
-
-  <!-- COURSES -->
-  <url>
-    <loc>https://techengineer.co/courses/python-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/fullstack-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/digital-marketing-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/cloud-computing-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/cyber-security-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/game-development-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/ui-ux-design-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/video-editing-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/prompt-engineering-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-api-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-mssql-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-maui-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-mobile-app-development-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/courses/dotnet-desktop-development-course</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- BLOG POSTS -->
-  <url>
-    <loc>https://techengineer.co/blogs/ai-in-2026-whats-changed-and-whats-coming-next</loc>
-    <lastmod>2026-03-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://techengineer.co/blogs/how-we-give-100-job-placement-to-our-students</loc>
-    <lastmod>2026-03-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/blogs/mwc-2026-future-of-smartphones-and-ai</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- LEGAL -->
   <url>
     <loc>https://techengineer.co/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://techengineer.co/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- ============================================= -->
+  <!-- SERVICES -->
+  <!-- ============================================= -->
+  <url>
+    <loc>https://techengineer.co/services/web-design-mohali</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/ai-chatbot-development-mohali</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/ai-voice-agents-india</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/digital-marketing-mohali</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/mobile-app-development-mohali</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/n8n-automation-mohali</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/whatsapp-marketing-mohali</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/social-media-management-mohali</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/services/video-editing-mohali</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================= -->
+  <!-- COURSES -->
+  <!-- ============================================= -->
+  <url>
+    <loc>https://techengineer.co/courses/fullstack-course</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/python-course</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-course</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/digital-marketing-course</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/cloud-computing-course</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/cyber-security-course</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-api-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-maui-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-mssql-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-desktop-development-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/dotnet-mobile-app-development-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/game-development-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/prompt-engineering-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/ui-ux-design-course</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/courses/video-editing-course</loc>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- ============================================= -->
+  <!-- BLOG POSTS & CASE STUDIES -->
+  <!-- ============================================= -->
+  <url>
+    <loc>https://techengineer.co/blogs/ai-agents-stealing-software-engineering-jobs</loc>
+    <lastmod>2026-04-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/blogs/mwc-2026-future-of-smartphones-and-ai</loc>
+    <lastmod>2026-04-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/blogs/ai-in-2026-whats-changed-and-whats-coming-next</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/blogs/how-we-give-100-job-placement-to-our-students</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- NEW: Podcast Show Notes Pages -->
+  <url>
+    <loc>https://techengineer.co/blogs/mr-bhatia-sales-leadership-podcast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/blogs/journey-of-self-taught-coder-jobanjeet-singh</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/blogs/akash-ecommerce-blueprint-podcast</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- CASE STUDIES -->
   <url>
     <loc>https://techengineer.co/case-studies/codebank</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://techengineer.co/case-studies/tricityrent</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>
