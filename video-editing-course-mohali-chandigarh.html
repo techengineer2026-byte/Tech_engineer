@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Video Editing Course in Mohali & Chandigarh | Premiere Pro Training</title>
-    <meta name="description" content="Learn professional video editing in Mohali & Chandigarh. Master Adobe Premiere Pro, DaVinci Resolve & 4+ tools. 100% hands-on training, expert instructors, job assistance. 
+    <title>Professional Video Editing Training | 100% Job Assistance</title>
+    <meta name="description" content="Learn professional video editing in Mohali/Chandigarh with Adobe 
+Premiere Pro & DaVinci Resolve. 100% hands-on training, expert 
+instructors, 100% job assistance. Enroll in our 3-month course today! 
 Enroll now! Free syllabus.
 ">
     <meta name="keywords"
@@ -30,7 +32,7 @@ Enroll now! Free syllabus.
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+    <link rel="stylesheet" href="/style/AIchatbot.css">
     <!-- Schemas -->
     <script type="application/ld+json">{/* Your Schema JSON here */}</script>
 
@@ -54,6 +56,11 @@ Enroll now! Free syllabus.
             --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
+        /* ✅ FIX: REMOVED overflow-x: hidden; */
+        main {
+            overflow-x: hidden;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -63,12 +70,12 @@ Enroll now! Free syllabus.
             color: var(--text-dark);
             line-height: 1.6;
             background: var(--white);
-            overflow-x: hidden;
+            /* overflow-x: hidden; <-- THIS WAS ALSO THE PROBLEM */
             -webkit-font-smoothing: antialiased;
         }
 
         .section {
-            padding: 50px 0;
+            padding: 25px 0;
             position: relative;
             overflow: hidden;
         }
@@ -142,6 +149,7 @@ Enroll now! Free syllabus.
         .hero-section {
             padding: 30px 0;
             position: relative;
+
             background: linear-gradient(110deg, #1A202C 40%, #2D3748 100%);
         }
 
@@ -254,6 +262,50 @@ Enroll now! Free syllabus.
             list-style: none;
             padding-left: 0;
             margin: 0;
+        }
+
+        /* SOCIAL PROOF BAR */
+        .social-proof-bar {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .social-proof-bar span {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .social-proof-bar span strong {
+            color: var(--warning);
+        }
+
+        .social-proof-bar .divider {
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 400;
+        }
+
+        /* On mobile, hide the dividers for a cleaner look */
+        @media (max-width: 767.98px) {
+            .social-proof-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .social-proof-bar .divider {
+                display: none;
+            }
         }
 
         .location-benefits li {
@@ -419,13 +471,6 @@ Enroll now! Free syllabus.
             margin-top: 5px;
         }
 
-        .faq-item {
-            border-radius: 12px;
-            margin-bottom: 10px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            overflow: hidden;
-        }
 
         .faq-question {
             font-weight: 500;
@@ -434,6 +479,42 @@ Enroll now! Free syllabus.
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .faq-wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #faq-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px auto;
+            /* row gap 20px, column gap bigger */
+            align-items: start;
+            /* fix empty space issue */
+        }
+
+        .faq-item {
+            display: inline-block;
+            /* ✅ important for column layout */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+
+        @media (max-width: 992px) {
+            #faq-container {
+                column-count: 2;
+                /* tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            #faq-container {
+                column-count: 1;
+                /* mobile */
+            }
         }
 
         .faq-answer {
@@ -480,6 +561,102 @@ Enroll now! Free syllabus.
             color: var(--primary);
         }
 
+        /* CONSULTATION CTA SECTION */
+        .consultation-cta {
+            background: linear-gradient(110deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle background pattern for texture */
+        .consultation-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="%23ffffff" fill-opacity="0.05" d="M0 40L40 0H20L0 20M40 40V20L20 40"></path></svg>');
+            background-repeat: repeat;
+        }
+
+        .consultation-cta .cta-content {
+            position: relative;
+            /* To stay above the ::before pseudo-element */
+            z-index: 1;
+        }
+
+        .consultation-cta h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .consultation-cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 15px auto 40px;
+            opacity: 0.9;
+        }
+
+        .consultation-cta .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Base style for the new custom buttons */
+        .btn-consult {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-consult i {
+            font-size: 1.2em;
+        }
+
+        /* Style for the "Call Now" button */
+        .btn-consult-light {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-consult-light:hover {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the "WhatsApp" button */
+        .btn-consult-whatsapp {
+            background: var(--success);
+            color: var(--white);
+            border-color: var(--success);
+        }
+
+        .btn-consult-whatsapp:hover {
+            background: #2f855a;
+            /* A darker shade of green */
+            border-color: #2f855a;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
         /* FINAL CTA */
         .final-cta {
             background: var(--dark);
@@ -511,6 +688,65 @@ Enroll now! Free syllabus.
         .final-cta .phone-number:hover {
             color: var(--white);
             letter-spacing: 2px;
+        }
+
+        /* CONTACT & MAP SECTION */
+        .contact-section {
+            background: var(--light);
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            /* Ensures the iframe corners are rounded */
+            height: 450px;
+        }
+
+        .contact-details .contact-heading {
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .contact-details .contact-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-details .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-divider {
+            margin: 30px 0;
+            border-color: #E2E8F0;
+        }
+
+        .contact-subheading {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .why-visit-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .why-visit-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .why-visit-list i {
+            color: var(--success);
         }
 
         .section-description {
@@ -566,8 +802,9 @@ Enroll now! Free syllabus.
         /* FLOATING BUTTONS */
         .floating-whatsapp {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 100px;
+            top: auto;
+            left: 20px;
             z-index: 1000;
         }
 
@@ -755,7 +992,7 @@ Enroll now! Free syllabus.
   "description": "Professional Video Editing Institute in Mohali & Chandigarh",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Sector 35, Mohali",
+    "streetAddress": "Phase 8B, Sector 74, Mohali",
     "addressLocality": "Mohali",
     "addressRegion": "Punjab",
     "postalCode": "160062",
@@ -771,9 +1008,23 @@ Enroll now! Free syllabus.
   }
 }
 </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 
     <!-- ✅ STICKY HEADER -->
@@ -795,12 +1046,12 @@ Enroll now! Free syllabus.
     <main>
         <!-- HERO SECTION -->
         <section class="hero-section">
-            <div class="container">
+            <div class="container faq-wrapper">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-7">
                         <div class="hero-content">
-                            <h1 class="hero-title">Master Video Editing in <span class="text-gradient">Mohali</span>
-                                & Chandigarh - Professional Training Course</h1>
+                            <h1 class="hero-title">Video Editing Training in <span class="text-gradient">Mohali</span>
+                            </h1>
                             <p class="hero-subtitle"><i class="bi bi-award-fill"></i> Professional Training in Adobe
                                 Premiere Pro & DaVinci Resolve</p>
                             <ul class="hero-benefits">
@@ -811,6 +1062,13 @@ Enroll now! Free syllabus.
                                 <li><i class="bi bi-check-circle-fill"></i><strong>Job Assistance & Portfolio
                                         Building</strong></li>
                             </ul>
+                            <div class="social-proof-bar">
+                                <span>⭐ <strong>150+</strong> Students Trained</span>
+                                <span class="divider">|</span>
+                                <span>✅ <strong>95%</strong> Job Placement</span>
+                                <span class="divider">|</span>
+                                <span>⏰ Next Batch Starts Soon!</span>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -848,13 +1106,13 @@ Enroll now! Free syllabus.
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 reveal">
-                        <h2 class="section-subtitle-left">Video Editing Courses in Mohali & Chandigarh</h2>
+                        <h2 class="section-subtitle-left">Video Editing Courses in Mohali</h2>
                         <p>Located in the heart of Punjab's tech hub, Tech Engineer offers the most
-                            comprehensive video editing training in Sector 35 Mohali. Our state-of-the-art
+                            comprehensive video editing training in Phase 8B, Sector 74 Mohali. Our state-of-the-art
                             facility is equipped with professional editing suites and high-end computers.</p>
                         <ul class="location-benefits">
-                            <li>🏢 Centrally located in Sector 35, Mohali</li>
-                            <li>🚗 Easy commute from Chandigarh & nearby areas</li>
+                            <li>🏢 Centrally located in Phase 8B, Sector 74, Mohali</li>
+                            <li>🚗 Easy commute from Mohali & nearby areas</li>
                             <li>🏗️ Professional studio with high-end editing labs</li>
                             <li>☕ Comfortable learning environment with all amenities</li>
                         </ul>
@@ -988,10 +1246,28 @@ Enroll now! Free syllabus.
                 </div>
             </div>
         </section>
-
+        <!-- ✅ CONSULTATION CTA SECTION -->
+        <section class="consultation-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="reveal">Want to Know More?</h2>
+                    <p class="reveal reveal-delay-1">Talk to our counselors about your career goals. Schedule your FREE,
+                        no-obligation consultation today.</p>
+                    <div class="cta-buttons reveal reveal-delay-2">
+                        <a href="tel:+918544884846" class="btn-consult btn-consult-light">
+                            <i class="bi bi-telephone-fill"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/918544884846?text=Can%20I%20schedule%20a%20free%20consultation%20for%20the%20video%20editing%20course?"
+                            class="btn-consult btn-consult-whatsapp" target="_blank">
+                            <i class="bi bi-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- FAQ SECTION (✅ UPDATED) -->
         <section class="section">
-            <div class="container" style="max-width: 800px;">
+            <div class="container">
                 <h2 class="section-title reveal">Video Editing Course FAQs - Answers to Your Questions</h2>
                 <div id="faq-container" class="reveal">
                     <div class="faq-item">
@@ -1109,7 +1385,45 @@ Enroll now! Free syllabus.
                 </div>
             </div>
         </section>
+        <!-- ✅ CONTACT & MAP SECTION -->
+        <section class="contact-section section">
+            <div class="container">
+                <h2 class="section-title reveal">Visit Us in Mohali</h2>
 
+                <div class="row g-5">
+                    <div class="col-lg-6 reveal">
+                        <!-- Google Map Embed -->
+                        <div class="map-container shadow-lg">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.2522126161134!2d76.68759957544081!3d30.711309286667856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefb734292bc9%3A0xe8d5a561abf59757!2sTech%20Engineer!5e0!3m2!1sen!2sin!4v1738736686230!5m2!1sen!2sin"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 reveal reveal-delay-1">
+                        <div class="contact-details">
+                            <h3 class="contact-heading">TechEngineer Studio</h3>
+                            <p class="contact-item"><strong>📍 Address:</strong> Phase 8B, Sector 74, Mohali, Punjab -
+                                160062</p>
+                            <p class="contact-item"><strong>📞 Phone:</strong> <a
+                                    href="tel:+918544884846">+91-8544884846</a></p>
+                            <p class="contact-item"><strong>📧 Email:</strong> <a
+                                    href="mailto:hr.techengineer00@gmail.com">hr.techengineer00@gmail.com</a></p>
+                            <p class="contact-item"><strong>🕒 Hours:</strong> Monday - Saturday, 9 AM - 6 PM</p>
+                            <hr class="contact-divider">
+                            <h4 class="contact-subheading">Why Visit Our Studio?</h4>
+                            <ul class="why-visit-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Tour our professional editing labs</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Meet our instructors in person</li>
+                                <li><i class="bi bi-check-circle-fill"></i> See curriculum & course materials</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Discuss batch timings & fees</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- FINAL CTA SECTION -->
         <section class="final-cta">
             <div class="container">
@@ -1120,11 +1434,92 @@ Enroll now! Free syllabus.
             </div>
         </section>
     </main>
+    <section class="AIbotchatModal">
 
+
+
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+            <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
+            <span class="icon-close"><i class="bi bi-x-lg"></i></span>
+            <span class="chat-badge" id="chatBadge"></span>
+        </button>
+
+        <div class="chat-window" id="chatWindow">
+
+            <div id="leadForm" class="lead-card">
+                <button class="form-close-btn" onclick="toggleChat()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <div class="logo-area">
+                    <div class="icon-circle"><i class="bi bi-robot"></i></div>
+                    <h3>Tech Engineer AI</h3>
+                    <p>Enter your details to start chatting</p>
+                </div>
+
+                <div class="form-floating position-relative">
+                    <i class="bi bi-person input-icon"></i>
+                    <input type="text" class="form-control" id="userName" placeholder="Name" required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-envelope input-icon"></i>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email" required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-whatsapp input-icon"></i>
+                    <input type="tel" class="form-control" id="userPhone" placeholder="Phone" required>
+                    <label>WhatsApp Number</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="bi bi-grid input-icon"></i>
+                    <select class="form-select" id="userCategory">
+                        <option value="training">AI & IT Training</option>
+                        <option value="service">IT Services & Automation</option>
+                    </select>
+                    <label>I'm interested in</label>
+                </div>
+
+                <button class="btn-start" id="btnStart" onclick="submitLead()">
+                    <i class="bi bi-chat-dots me-2"></i> Start Chatting
+                </button>
+            </div>
+
+            <div id="chatInterface" class="chat-card" style="display:none;">
+                <div class="chat-header">
+                    <div class="avatar"><i class="bi bi-robot"></i></div>
+                    <div class="info">
+                        <h5>Tech Engineer AI</h5>
+                        <small><span class="status-dot"></span>Online</small>
+                    </div>
+                    <button class="chat-close-btn" onclick="toggleChat()">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+
+                <div class="chat-messages" id="chatMessages"></div>
+
+                <div class="quick-actions" id="quickActions"></div>
+
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your question..."
+                        onkeypress="if(event.key==='Enter') sendMessage()">
+                    <button class="btn-send" id="btnSend" onclick="sendMessage()">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <!-- ✅ NEW: FLOATING EMAIL BUTTON -->
     <div class="floating-email">
-        <a href="mailto:hr.techengineer00@gmail.com" aria-label="Send us an Email"><i
-                class="bi bi-envelope-fill"></i></a>
+        <!-- <a href="mailto:hr.techengineer00@gmail.com" aria-label="Send us an Email"><i
+                class="bi bi-envelope-fill"></i></a> -->
+        <a href="mailto::hr.techengineer00@gmail.com?subject=Inquiry&body=Hello, I want to know about your services">
+            <i class="bi bi-envelope-fill"></i>
+        </a>
     </div>
 
     <!-- FLOATING WHATSAPP BUTTON -->
@@ -1171,7 +1566,17 @@ Enroll now! Free syllabus.
                 .then(data => {
                     if (data.result === "success") {
                         showToast('Thank you! The syllabus will be sent to you shortly.');
+
+                        // This is the "flag" we are raising for Google Tag Manager.
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'form_success', // This is the name of our custom event flag.
+                            'form_type': 'syllabus_download',
+                            'course_interest': formData.get('course_interest')
+                        });
+
                         form.reset();
+
                     } else {
                         throw new Error(data.error || 'Unknown error');
                     }
@@ -1187,6 +1592,7 @@ Enroll now! Free syllabus.
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
+    <script src="/script/aichatbot.js"></script>
 </body>
 
 </html>

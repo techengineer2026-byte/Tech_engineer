@@ -1,0 +1,225 @@
+{
+  "galleries": [
+    {
+      "id": "training-sessions",
+      "title": "Live Training Sessions & Workshops",
+      "description": "Real classroom moments from Full Stack, AI, Cloud, and Digital Marketing courses",
+      "images": [
+        {
+          "src": "/images/gallery/IMG_5982 2.webp",
+          "alt": "Full Stack Web Development Training - React and Node.js Session at Tech Engineer Mohali",
+          "layout": "tall",
+          "height": 500
+        },
+        {
+          "src": "/images/gallery/IMG_6029 2.webp",
+          "alt": "AI & Prompt Engineering Workshop - ChatGPT Training in Mohali",
+          "layout": "tall",
+          "height": 500
+        },
+        {
+          "src": "/images/gallery/IMG_6108 2.webp",
+          "alt": "Cloud Computing Lab Session - AWS and Azure Training at Tech Engineer",
+          "layout": "tall",
+          "height": 500
+        },
+        {
+          "src": "/images/IMG4.webp",
+          "alt": "Digital Marketing Classroom - SEO and Social Media Training Mohali",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/IMG2.webp",
+          "alt": "Video Editing Training - Premiere Pro and After Effects Course",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/IMG5.webp",
+          "alt": "Web Development Bootcamp - HTML CSS JavaScript Training Session",
+          "layout": "wide",
+          "height": 250
+        }
+      ]
+    },
+    {
+      "id": "student-projects",
+      "title": "Student Projects & Live Development",
+      "description": "Real-world applications, e-commerce websites, and mobile apps built by our students",
+      "images": [
+        {
+          "src": "/images/IMG7.webp",
+          "alt": "E-commerce Website Project - MERN Stack Student Development Tech Engineer",
+          "layout": "tall",
+          "height": 500
+        },
+        {
+          "src": "/images/IMG1.webp",
+          "alt": "Mobile App Development Project - React Native and Flutter Student Work",
+          "layout": "tall",
+          "height": 500
+        },
+        {
+          "src": "/images/IMG3.webp",
+          "alt": "AI Chatbot Project Demo - GPT Integration Student Project Mohali",
+          "layout": "tall",
+          "height": 500
+        }
+      ]
+    },
+    {
+      "id": "events-celebrations",
+      "title": "Events & Certification Ceremonies",
+      "description": "Celebrating student achievements, course completions, and industry expert sessions",
+      "images": [
+        {
+          "src": "/images/gallery/IMG_5987 2.webp",
+          "alt": "Course Completion Ceremony - Full Stack Developer Batch 2024 Tech Engineer Mohali",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/gallery/IMG_5992 2.webp",
+          "alt": "Industry Expert Guest Lecture - Cloud Computing Professional Talk Mohali",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/gallery/IMG_5995 2.webp",
+          "alt": "Tech Fest 2024 - AI and ML Workshop Event at Tech Engineer Chandigarh",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/gallery/IMG_6008 2.webp",
+          "alt": "Hackathon Winners - Coding Competition First Prize Students Tech Engineer",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/gallery/IMG_6021 2.webp",
+          "alt": "Student Testimonial Recording - Success Story Video Production Mohali",
+          "layout": "wide",
+          "height": 250
+        },
+        {
+          "src": "/images/gallery/IMG_6036 2.webp",
+          "alt": "Campus Tour Event - Prospective Students Visiting Tech Engineer Training Center",
+          "layout": "wide",
+          "height": 250
+        }
+      ]
+    },
+    {
+      "id": "facility-infrastructure",
+      "title": "Our Modern Training Facility",
+      "description": "State-of-the-art computer labs, design studios, and learning spaces in Sector 74 Mohali",
+      "images": [
+        {
+          "src": "/images/gallery/IMG_6052 2.webp",
+          "alt": "Computer Lab Setup - Dual Monitor Workstations Tech Engineer Mohali Training Center",
+          "layout": "square",
+          "height": 400
+        },
+        {
+          "src": "/images/gallery/AF1QipMuFgkbbThWrDBZvXkznnWDN8XT.webp",
+          "alt": "Design Studio Interior - Creative Workspace for Video Editing Students",
+          "layout": "medium",
+          "height": 400
+        }
+      ]
+    },
+    {
+      "id": "recent-updates",
+      "title": "Recent Updates - January 2025 Batch",
+      "description": "Latest photos from ongoing training programs and new course launches",
+      "images": [
+        {
+          "src": "/images/gallery/2025-07-17.webp",
+          "alt": "January 2025 Batch - New Full Stack Development Course Starting Mohali",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/2025-07-17 (1).webp",
+          "alt": "New AI Course Launch Event - Prompt Engineering Training Program 2025",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/2025-11-19.webp",
+          "alt": "Advanced AI Training Program - Machine Learning Workshop Tech Engineer",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/2025-11-19 (1).webp",
+          "alt": "Cloud Certification Preparation - AWS Solutions Architect Training Mohali",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/AF1QipMpLw87OYR5iTIL0X-A7-buQz_X.webp",
+          "alt": "Student Success Story - Placement at Top IT Company Chandigarh",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/IMG_6090 2.webp",
+          "alt": "Prompt Engineering Workshop - ChatGPT and MidJourney Training Session",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/IMG_6113 2.webp",
+          "alt": "DevOps Training Session - Docker Kubernetes CI CD Pipeline Course Mohali",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/IMG_6143 2.webp",
+          "alt": "Full Stack Project Presentation - Final Year Capstone Demo Day Tech Engineer",
+          "layout": "grid",
+          "height": 200
+        },
+        {
+          "src": "/images/gallery/2025-06-03.webp",
+          "alt": "Grand Batch Completion Ceremony 2025 - Industrial Training Certificate Distribution Mohali Punjab",
+          "layout": "hero",
+          "height": 450
+        }
+      ]
+    }
+  ],
+  "layouts": {
+    "tall": {
+      "colClass": "col-md-4",
+      "defaultHeight": 500
+    },
+    "wide": {
+      "colClass": "col-md-4",
+      "defaultHeight": 250
+    },
+    "square": {
+      "colClass": "col-md-5",
+      "defaultHeight": 400
+    },
+    "narrow": {
+      "colClass": "col-md-3",
+      "defaultHeight": 400
+    },
+    "medium": {
+      "colClass": "col-md-4",
+      "defaultHeight": 400
+    },
+    "grid": {
+      "colClass": "col-6 col-md-3",
+      "defaultHeight": 200
+    },
+    "hero": {
+      "colClass": "col-12",
+      "defaultHeight": 450
+    }
+  }
+}

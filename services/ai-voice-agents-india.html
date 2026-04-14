@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- 1. UPDATED CORE META TAGS -->
-    <title>AI Voice Agent Development in India | Automated Calls — Tech Engineer</title>
+    <title>AI Voice Agent Development in India | Voice Bot for Calls, Booking & Support</title>
     <meta name="description"
         content="Tech Engineer builds AI voice agents that handle calls, bookings & support automatically. Save time & cost for your business in India." />
     <meta name="keywords"
@@ -31,10 +31,62 @@
         content="AI-powered voice agents for automated calls and support. We build custom voice bots for businesses across India." />
     <meta name="twitter:image" content="https://techengineer.co/images/ai-voice-agent-development-india.webp" />
 
-    <!-- 4. UPDATED FAQ SCHEMA -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AI Voice Agent Development",
+      "name": "AI Voice Agent Development for Automated Calls in India",
+      "description": "Custom AI-powered voice agent development for automated inbound and outbound calls, customer support, and lead qualification for businesses across India.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Tech Engineer",
+        "url": "https://techengineer.co/",
+        "image": "https://techengineer.co/images/logow.png",
+        "telephone": "+918544884846",
+        "email": "contact@techengineer.co",
+        "priceRange": "₹₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4th Floor, R&R Tower, Plot F-298, Phase 8B, Industrial Area, Sector 74",
+          "addressLocality": "Sahibzada Ajit Singh Nagar",
+          "addressRegion": "Punjab",
+          "postalCode": "160055",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "30.7264",
+          "longitude": "76.7499"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "lowPrice": "40000",
+        "highPrice": "300000",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "40000",
+          "priceCurrency": "INR",
+          "valueAddedTaxIncluded": false,
+          "description": "Starting price for a basic outbound calling agent."
+        }
+      }
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -47,69 +99,17 @@
         },
         {
           "@type": "Question",
-          "name": "What can an AI voice agent do?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AI voice agents can handle inbound support calls, make outbound calls for reminders or surveys, book appointments, qualify leads over the phone, and provide 24/7 automated assistance without human intervention."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Can the voice agent sound human?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we use state-of-the-art text-to-speech (TTS) and speech-to-text (STT) engines from providers like Google and ElevenLabs to create natural, human-like conversations. We can customize the voice, tone, and language."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What languages do you support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our AI voice agents can be developed to support multiple languages, including English, Hindi, Punjabi, and other regional Indian languages, to cater to a diverse customer base."
+            "text": "Yes, we use state-of-the-art text-to-speech (TTS) engines from Google and ElevenLabs to create natural, human-like conversations in multiple languages, including English, Hindi, and Punjabi."
           }
         }
       ]
     }
-    </script>
-
-    <!-- 5. UPDATED LOCALBUSINESS SCHEMA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Tech Engineer",
-      "description": "AI Voice Agent Development Company in India",
-      "url": "https://techengineer.co",
-      "telephone": "+918544884846",
-      "email": "hr@techengineer.co",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4th Floor, R&R Tower, Sector 74",
-        "addressLocality": "Mohali",
-        "addressRegion": "Punjab",
-        "postalCode": "160074",
-        "addressCountry": "IN"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 30.7046, "longitude": 76.7179 },
-      "openingHours": "Mo-Sa 09:00-18:00",
-      "priceRange": "₹₹₹",
-      "image": "https://techengineer.co/images/logo.webp"
-    }
-    </script>
-
-    <!-- 6. UPDATED SERVICE SCHEMA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "AI Voice Agent Development",
-      "provider": { "@type": "Organization", "name": "Tech Engineer", "url": "https://techengineer.co" },
-      "areaServed": ["India", "Mohali", "Chandigarh", "Punjab"],
-      "description": "Development of custom AI voice agents for automated inbound and outbound phone calls, customer support, and lead qualification.",
-      "offers": { "@type": "Offer", "priceCurrency": "INR", "price": "40000" }
-    }
-    </script>
+  ]
+}
+</script>
 
     <!-- Your CSS and Font links (These should remain the same) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -298,9 +298,23 @@
             color: #64748b;
         }
     </style>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
         <nav class="container nav-wrapper">
@@ -340,7 +354,7 @@
                 <!-- Left Column: Text Content -->
                 <div class="col-lg-6">
                     <div class="breadcrumb-te" aria-label="breadcrumb">
-                        <a href="https://techengineer.co//">Home</a>
+                        <a href="https://techengineer.co/">Home</a>
                         <i class="bi bi-chevron-right"></i>
                         <a href="https://techengineer.co/services">Services</a>
                         <i class="bi bi-chevron-right"></i>
@@ -353,9 +367,12 @@
                     </div>
 
                     <h1>
-                        Intelligent <span class="gradient-text">AI Voice Agents</span> for Automated Calls
+                        <span class="gradient-text">AI Voice Agent Development</span> in India for Automated Calls &
+                        Customer Support
                     </h1>
-
+                    <span class="d-none">
+                        AI calling software India, voice bot automation, AI telecalling system India
+                    </span>
                     <p class="hero-desc">
                         We build AI voice agents that handle calls, bookings, and support automatically. Save time and
                         reduce operational costs for your business in India.
@@ -869,7 +886,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="agentType" class="form-label">Agent Type *</label>
-                                 z   <select id="agentType" name="agentType" class="form-select" required>
+                                    <select id="agentType" name="agentType" class="form-select" required>
                                         <option value="" disabled selected>Select type</option>
                                         <option>Inbound Support Agent</option>
                                         <option>Outbound Calling Agent</option>

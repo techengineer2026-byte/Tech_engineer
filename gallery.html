@@ -4,66 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo & Video Gallery</title>
-    <!-- Bootstrap CSS -->
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Bootstrap 5.3 CSS -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style"
-        onload="this.rel='stylesheet'"
-        integrity="sha384-QWTKw8N44CUHGtnCqwvXFpkoh3XV8LNmumDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Tech Engineer Gallery - IT Training Mohali | Photo & Video Gallery</title>
+    <meta name="description"
+        content="Browse our gallery showcasing IT training programs, student projects, and certification ceremonies at Tech Engineer, Mohali's premier institute for Full Stack, AI, Cloud, and Digital Marketing courses.">
     <link rel="canonical" href="https://techengineer.co/gallery" />
 
-    <noscript>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    </noscript>
-    <!-- Font Awesome (Added: Required for your icon to work) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <!-- Bootstrap 5 -->
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Preloads -->
-    <link rel="preload" href="/style.css" as="style">
-    <link rel="preload" href="/javascript.js" as="script">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gallery | Tech Engineer">
-    <meta name="twitter:description"
-        content="Explore our photo and video gallery showcasing our training programs and student projects.">
-    <meta name="twitter:image" content="https://techengineer.co/images/AnuragStudent.jpg">
-    <meta name="twitter:url" content="https://techengineer.co/gallery">
-    <meta name="twitter:site" content="@TechEngineer">
-
-    <!-- Custom Stylesheet -->
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&family=Inter:wght@400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/style/header.css">
-<link rel="stylesheet" href="/style/AIchatbot.css">
-
-    <meta name="p:domain_verify" content="8b6a74d2257919b7726f6c619e32e4ca" />
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome (Required for icons) -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
-        onload="this.rel='stylesheet'">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </noscript>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/style/AIchatbot.css">
     <style>
-        body {
-            background-color: #f8f9fa;
+        /* ═══════════════════════════════════════════════════════
+           GLOBAL STYLES
+           ═══════════════════════════════════════════════════════ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Section Headings */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            color: #212529;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background-color: #667eea;
+            color: white;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           TYPOGRAPHY
+           ═══════════════════════════════════════════════════════ */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #4a4a4a;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0d6efd;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0a58ca;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           SECTION HEADINGS
+           ═══════════════════════════════════════════════════════ */
+
         .section-title {
             font-weight: 800;
             color: #222;
             position: relative;
             margin-bottom: 40px;
             display: inline-block;
+            font-size: 2.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+            margin: 10px auto 0;
+            border-radius: 2px;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+
+            to {
+                width: 50%;
+                opacity: 1;
+            }
         }
 
         @media (max-width: 991px) {
@@ -73,14 +126,123 @@
             }
         }
 
-        .section-title::after {
+        @media (max-width: 575px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           HERO GRADIENT SECTION
+           ═══════════════════════════════════════════════════════ */
+
+        .bg-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-gradient::before {
             content: '';
-            display: block;
-            width: 50%;
-            height: 4px;
-            background: #0d6efd;
-            margin: 10px auto 0;
-            border-radius: 2px;
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .bg-gradient h1,
+        .bg-gradient p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           CONTENT BLOCKS
+           ═══════════════════════════════════════════════════════ */
+
+        .content-block {
+            line-height: 1.8;
+            background: white;
+            border-radius: 12px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .content-block:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .content-block h2,
+        .content-block h3,
+        .content-block h4 {
+            color: #2c3e50;
+        }
+
+        .content-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-block ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-block ul li i {
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           STATS CARDS
+           ═══════════════════════════════════════════════════════ */
+
+        .stat-card {
+            transition: all 0.3s ease;
+            cursor: default;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .stat-card .display-6 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (max-width: 767px) {
+            .stat-card .display-6 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           GALLERY GRID SYSTEM
+           ═══════════════════════════════════════════════════════ */
+
+        .mb-grid {
+            margin-bottom: 1.5rem;
         }
 
         /* Gallery Item Card */
@@ -88,10 +250,17 @@
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             background: #fff;
             height: 100%;
             width: 100%;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
         }
 
         /* Images */
@@ -99,106 +268,519 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Crucial for beautiful cropping */
             display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Videos */
-        .gallery-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Hover Effects */
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
-        /* Clean spacing helper */
-        .mb-grid {
-            margin-bottom: 1.5rem;
+        /* Overlay on hover */
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+            pointer-events: none;
         }
 
-        .swiper {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
+        .gallery-item:hover::before {
+            opacity: 1;
         }
 
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            /* Width of inactive slides */
-            height: 500px;
-            border-radius: 20px;
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-            /* Video positioning */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* Alt text overlay */
+        .gallery-item-alt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 2;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            pointer-events: none;
         }
 
-        .swiper-slide video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .gallery-item:hover .gallery-item-alt {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Responsive width for mobile */
-        @media (max-width: 768px) {
-            .swiper-slide {
-                width: 85%;
-                height: 400px;
+        /* Zoom icon indicator */
+        .gallery-item::after {
+            content: '\F52A';
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            font-size: 3rem;
+            color: white;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 2;
+            pointer-events: none;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           LOADING & ERROR STATES
+           ═══════════════════════════════════════════════════════ */
+
+        .loading {
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .loading i {
+            display: inline-block;
+            font-size: 3rem;
+            color: #667eea;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
             }
         }
 
-        /* Custom Colors for Swiper Arrows */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #0d6efd;
-            background: rgba(255, 255, 255, 0.8);
+        .loading p {
+            margin-top: 15px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           LIGHTBOX MODAL
+           ═══════════════════════════════════════════════════════ */
+
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.4s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: white;
+            font-size: 50px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100000;
             width: 50px;
             height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(10px);
         }
 
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-            font-size: 20px;
-            font-weight: bold;
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
         }
 
-        .swiper-pagination-bullet-active {
-            background: #0d6efd;
+        #lightboxCaption {
+            color: white;
+            text-align: center;
+            padding: 25px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-close {
+                top: 15px;
+                right: 15px;
+                font-size: 35px;
+            }
+
+            .lightbox-content {
+                max-width: 95%;
+                max-height: 80vh;
+            }
+
+            #lightboxCaption {
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           ALERT STYLES
+           ═══════════════════════════════════════════════════════ */
+
+        .alert {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .alert-primary {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #0d47a1;
+            border-left: 4px solid #2196F3;
+        }
+
+        .alert-danger {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            color: #b71c1c;
+            border-left: 4px solid #f44336;
+        }
+
+        .alert i {
+            font-size: 1.2rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           BUTTONS
+           ═══════════════════════════════════════════════════════ */
+
+        .btn {
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 10px 24px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 6px 16px;
+            font-size: 0.875rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           ACCORDION (FAQ)
+           ═══════════════════════════════════════════════════════ */
+
+        .accordion-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+            border: none;
+            padding: 15px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: none;
+        }
+
+        .accordion-button:hover {
+            background-color: #e9ecef;
+        }
+
+        .accordion-button:not(.collapsed):hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        .accordion-body {
+            padding: 20px;
+            background-color: white;
+            line-height: 1.8;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           SCROLLBAR STYLING (WEBKIT BROWSERS)
+           ═══════════════════════════════════════════════════════ */
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #5568d3, #6a3f8f);
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           RESPONSIVE UTILITIES
+           ═══════════════════════════════════════════════════════ */
+
+        @media (max-width: 1199px) {
+            .container {
+                max-width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .content-block {
+                padding: 2rem !important;
+            }
+
+            .gallery-item-alt {
+                font-size: 12px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1.display-4 {
+                font-size: 2rem;
+            }
+
+            .lead {
+                font-size: 1rem;
+            }
+
+            .content-block {
+                padding: 1.5rem !important;
+            }
+
+            .stat-card {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .gallery-item::after {
+                font-size: 2rem;
+            }
+
+            .gallery-item-alt {
+                font-size: 11px;
+                padding: 10px;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           ANIMATIONS & TRANSITIONS
+           ═══════════════════════════════════════════════════════ */
+
+        /* Fade in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Pulse animation for important elements */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           ACCESSIBILITY
+           ═══════════════════════════════════════════════════════ */
+
+        /* Focus visible for keyboard navigation */
+        *:focus-visible {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+
+        /* Skip to content link (for screen readers) */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+            z-index: 100000;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           PRINT STYLES
+           ═══════════════════════════════════════════════════════ */
+
+        @media print {
+
+            .bg-gradient,
+            .lightbox-modal,
+            .btn {
+                display: none !important;
+            }
+
+            .gallery-item {
+                page-break-inside: avoid;
+            }
+
+            body {
+                background: white;
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           DARK MODE SUPPORT (OPTIONAL)
+           ═══════════════════════════════════════════════════════ */
+
+        @media (prefers-color-scheme: dark) {
+            /* Uncomment to enable dark mode */
+            /*
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .content-block {
+                background-color: #2c2c2c;
+                color: #e0e0e0;
+            }
+
+            .gallery-item {
+                background-color: #2c2c2c;
+            }
+            */
         }
     </style>
-
-
-
 </head>
 
 <body>
-
-
     <header class="header">
         <nav class="container nav-wrapper">
             <a href="/" class="logo">
                 <img src="/images/logow.png" alt="Tech Engineer Logo" loading="lazy">
             </a>
-
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
             <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
@@ -206,7 +788,6 @@
                 <li><a href="/portfolio">Portfolio</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact Us</a></li>
-
                 <li class="internship">
                     <a href="/industrial-training">
                         <img src="/images/icon.webp" alt="Internship" loading="lazy">
@@ -216,193 +797,118 @@
             </ul>
         </nav>
     </header>
-    <!-- ========================================== -->
-    <!-- SECTION 1: PHOTO GALLERY                   -->
-    <!-- ========================================== -->
-    <section class="py-5">
+    <!-- Hero Section -->
+    <section class="py-5 bg-gradient text-white">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Tech Engineer Training Gallery</h1>
+            <p class="lead">Explore photos from our IT training programs in Mohali - Full Stack, AI, Cloud, Digital
+                Marketing</p>
+        </div>
+    </section>
+
+    <!-- Main Gallery Section -->
+    <section id="main-content" class="py-5">
         <div class="container">
 
-            <div class="text-center">
-                <h1 class="section-title display-5">Photo Gallery</h1>
-            </div>
+            <!-- SEO Content Block -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-block bg-white p-4 p-md-5 rounded-3 shadow-sm border">
 
-            <!-- ROW 1: The "Hero" Vertical Shots -->
-            <!-- Tall images used here: IMG_5982, IMG_6029, IMG_6108 -->
-            <div class="row g-3 mb-grid">
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 500px;">
-                        <img src="/images/gallery/IMG_5982 2.webp" alt="Portrait">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 500px;">
-                        <img src="/images/gallery/IMG_6029 2.webp" alt="Portrait">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 500px;">
-                        <img src="/images/gallery/IMG_6108 2.webp" alt="Portrait">
-                    </div>
-                </div>
-            </div>
+                        <h2 class="h4 fw-bold text-primary mb-4">Welcome to Tech Engineer's Visual Journey</h2>
 
-            <!-- ROW 2: Landscape Grid (High Quality Wides) -->
-            <div class="row g-3 mb-grid">
+                        <p class="mb-4">
+                            At <strong>Tech Engineer</strong>, Mohali's leading IT training institute, we showcase real
+                            moments
+                            from our industrial training programs. Located in <strong>Sector 74, Mohali,
+                                Punjab</strong>,
+                            we've trained over <strong>500+ students</strong> in Full Stack Development, AI, Cloud
+                            Computing,
+                            and Digital Marketing.
+                        </p>
 
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/IMG4.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/IMG2.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/IMG5.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 500px;">
-                        <img src="/images/IMG7.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 500px;">
-                        <img src="/images/IMG1.webp" alt="Landscape">
-                    </div>
-                </div>
+                        <!-- Stats Grid -->
+                        <div class="row g-3 my-4">
+                            <div class="col-6 col-md-3">
+                                <div class="stat-card text-center p-3 bg-light rounded-3 border">
+                                    <div class="display-6 fw-bold text-primary mb-2">500+</div>
+                                    <div class="small text-muted fw-semibold">Students Trained</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-card text-center p-3 bg-light rounded-3 border">
+                                    <div class="display-6 fw-bold text-success mb-2">50+</div>
+                                    <div class="small text-muted fw-semibold">Live Projects</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-card text-center p-3 bg-light rounded-3 border">
+                                    <div class="display-6 fw-bold text-warning mb-2">15+</div>
+                                    <div class="small text-muted fw-semibold">Expert Trainers</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-card text-center p-3 bg-light rounded-3 border">
+                                    <div class="display-6 fw-bold text-danger mb-2">100%</div>
+                                    <div class="small text-muted fw-semibold">Placement Support</div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 500px;">
-                        <img src="/images/IMG3.webp" alt="Landscape">
-                    </div>
-                </div>
-            </div>
-            <!-- Wide images: 5987, 5992, 5995, 6008, 6021, 6036 -->
-            <div class="row g-3 mb-grid">
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/gallery/IMG_5987 2.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/gallery/IMG_5992 2.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/gallery/IMG_5995 2.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/gallery/IMG_6008 2.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/gallery/IMG_6021 2.webp" alt="Landscape">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 250px;">
-                        <img src="/images/gallery/IMG_6036 2.webp" alt="Landscape">
+                        <div class="alert alert-primary border-0 mt-4" role="alert">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-info-circle-fill fs-4 me-3 mt-1"></i>
+                                <div>
+                                    <h4 class="alert-heading h6 fw-bold mb-2">Planning to Join Our Training Programs?
+                                    </h4>
+                                    <p class="mb-2 small">
+                                        Browse through our gallery to see authentic insights into the Tech Engineer
+                                        learning experience.
+                                    </p>
+                                    <a href="/contact" class="btn btn-sm btn-primary">
+                                        <i class="bi bi-calendar-check me-1"></i> Book Free Campus Tour
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ROW 3: The "Mix" (Square, Skinny, Medium Vertical) -->
-            <!-- Images: IMG_6052 (Square), 2025-06-03 (Skinny), AF1QipMu... (Tall) -->
-            <div class="row g-3 mb-grid">
-                <!-- Square Image -->
-                <div class="col-md-5">
-                    <div class="gallery-item" style="height: 400px;">
-                        <img src="/images/gallery/IMG_6052 2.webp" alt="Square">
-                    </div>
-                </div>
-
-                <!-- The Skinny Image (Narrow Column) -->
-                <div class="col-md-3">
-                    <div class="gallery-item" style="height: 400px;">
-                        <img src="/images/gallery/2025-06-03.webp" alt="Narrow Vertical">
-                    </div>
-                </div>
-
-                <!-- Medium Vertical Image -->
-                <div class="col-md-4">
-                    <div class="gallery-item" style="height: 400px;">
-                        <img src="/images/gallery/AF1QipMuFgkbbThWrDBZvXkznnWDN8XT.webp" alt="Medium Vertical">
-                    </div>
-                </div>
+            <!-- Gallery Sections Header -->
+            <div class="text-center mb-4">
+                <h2 class="h3 fw-bold">Browse Our Complete Gallery</h2>
+                <p class="text-muted">High-resolution photos from training sessions, events, and student projects</p>
             </div>
 
-            <!-- ROW 4: The 2025 Collection & Final Wides -->
-            <!-- Remaining Wides: 2025-xx, AF1QipMp..., IMG_6090, 6113, 6125, 6143 -->
-            <div class="row g-3">
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/2025-07-17.webp" alt="Event">
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/2025-07-17 (1).webp" alt="Event">
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/2025-11-19.webp" alt="Event">
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/2025-11-19 (1).webp" alt="Event">
-                    </div>
-                </div>
-                <!-- Row 4 Continued -->
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/AF1QipMpLw87OYR5iTIL0X-A7-buQz_X.webp" alt="Event">
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/IMG_6090 2.webp" alt="Event">
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/IMG_6113 2.webp" alt="Event">
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="gallery-item" style="height: 200px;">
-                        <img src="/images/gallery/IMG_6143 2.webp" alt="Event">
-                    </div>
-                </div>
-                <!-- Final Single Wide Centered -->
-                <div class="col-12">
-                    <div class="gallery-item" style="height: 450px;">
-                        <img src="/images/gallery/IMG_6125 2.webp" alt="Finale">
-                    </div>
-                </div>
+            <!-- Loading State -->
+            <div id="loadingState" class="loading">
+                <i class="bi bi-arrow-repeat"></i>
+                <p>Loading gallery images...</p>
+            </div>
+
+            <!-- Dynamic Gallery Container -->
+            <div id="dynamicGallery"></div>
+
+            <!-- Error State -->
+            <div id="errorState" class="alert alert-danger d-none" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                <strong>Oops!</strong> Failed to load gallery. Please check if gallery.json exists in the root
+                directory.
             </div>
 
         </div>
     </section>
 
-
-
-    <!-- Footer with Updated Training Courses -->
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()" role="dialog" aria-label="Image preview">
+        <span class="lightbox-close" aria-label="Close">&times;</span>
+        <img id="lightboxImage" class="lightbox-content" alt="">
+        <div id="lightboxCaption"></div>
+    </div>
     <footer class="footer-bs5">
         <div class="container">
             <div class="row gy-5">
-
-                <!-- Column 1: Logo -->
                 <div class="col-lg-3 col-md-12">
                     <a href="/" class="d-inline-block mb-3">
                         <img src="/images/logow.png" alt="Tech Engineer" class="img-fluid" style="max-width: 180px;">
@@ -411,8 +917,6 @@
                         Empowering students with industry-standard training in AI, Coding, and Cloud technologies.
                     </p>
                 </div>
-
-                <!-- Column 2: Quick Links -->
                 <div class="col-lg-3 col-md-4">
                     <h4 class="text-white fw-bold mb-4">Quick Links</h4>
                     <div class="row">
@@ -421,7 +925,7 @@
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/about">About Us</a></li>
                                 <li><a href="/portfolio">Portfolio</a></li>
-                                <li><a href="/gallery">Gallery</a></li>                            </ul>
+                            </ul>
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
@@ -432,12 +936,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Column 3: NEW TRAINING COURSES (Updated) -->
                 <div class="col-lg-3 col-md-4">
                     <h4 class="text-white fw-bold mb-4">Training Courses</h4>
                     <div class="row">
-                        <!-- Left Sub-Column -->
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
                                 <li><a href="/courses/fullstack-course">Full Stack Web</a></li>
@@ -445,7 +946,6 @@
                                 <li><a href="/courses/prompt-engineering-course">AI & Prompt Eng</a></li>
                             </ul>
                         </div>
-                        <!-- Right Sub-Column -->
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
                                 <li><a href="/courses/video-editing-course">Video Editing</a></li>
@@ -455,8 +955,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Column 4: Get in Touch -->
                 <div class="col-lg-3 col-md-4">
                     <h4 class="text-white fw-bold mb-4">Get in Touch</h4>
                     <ul class="list-unstyled contact-list">
@@ -484,13 +982,10 @@
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
-
-        <!-- Copyright -->
-        <div class="footer-bottom mt-5">
-            <div class="container  border-secondary pt-3">
+        <div class="footer-bottom">
+            <div class="container  border-secondary">
                 <div class="row text-center">
                     <div class="col-12">
                         <p class="text-white-50 small mb-0">
@@ -502,9 +997,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Floating Buttons (As per screenshot layout) -->
-        <div class="floating-left">
+        <div class="floating-left gap-3">
             <button onclick="clicktowhatsapp()" class="float-btn whatsapp mb-3">
                 <i class="fab fa-whatsapp"></i>
             </button>
@@ -512,25 +1005,19 @@
                 <i class="bi bi-telephone-fill"></i>
             </button>
         </div>
-
-
     </footer>
     <section class="AIbotchatModal">
 
-        <!-- YOUR WEBSITE -->
 
 
-        <!-- FLOATING BUTTON -->
         <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
         </button>
 
-        <!-- CHAT WINDOW -->
         <div class="chat-window" id="chatWindow">
 
-            <!-- LEAD FORM -->
             <div id="leadForm" class="lead-card">
                 <button class="form-close-btn" onclick="toggleChat()">
                     <i class="bi bi-x-lg"></i>
@@ -571,7 +1058,6 @@
                 </button>
             </div>
 
-            <!-- CHAT -->
             <div id="chatInterface" class="chat-card" style="display:none;">
                 <div class="chat-header">
                     <div class="avatar"><i class="bi bi-robot"></i></div>
@@ -600,15 +1086,111 @@
         </div>
     </section>
 
-
     <!-- Bootstrap Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/script/aichatbot.js"></script>
 
-    <script src="/javascript.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2026/02/14/18/20260214184230-UQRERNBF.js" defer></script>
+    <!-- Gallery Loader Script -->
+    <script>
+        async function loadGallery() {
+            const container = document.getElementById('dynamicGallery');
+            const loadingState = document.getElementById('loadingState');
+            const errorState = document.getElementById('errorState');
+
+            try {
+                const response = await fetch('/gallery.json');
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch gallery.json');
+                }
+
+                const data = await response.json();
+
+                // Hide loading
+                loadingState.style.display = 'none';
+
+                // Render galleries
+                data.galleries.forEach((gallery) => {
+                    // Section Header
+                    const header = document.createElement('div');
+                    header.className = 'text-center mt-5 mb-4 fade-in';
+                    header.innerHTML = `
+                <h3 class="h4 fw-bold">${gallery.title}</h3>
+                <p class="text-muted">${gallery.description}</p>
+            `;
+                    container.appendChild(header);
+
+                    // Create Row
+                    const row = document.createElement('div');
+                    row.className = 'row g-3 mb-grid';
+
+                    gallery.images.forEach((img, index) => {
+                        const layout = data.layouts[img.layout];
+                        const col = document.createElement('div');
+                        col.className = layout.colClass + ' fade-in';
+                        col.style.animationDelay = `${index * 0.1}s`;
+
+                        col.innerHTML = `
+                    <div class="gallery-item" style="height: ${img.height}px;" 
+                         onclick="openLightbox('${img.src}', '${img.alt.replace(/'/g, "&#39;")}')"
+                         role="button"
+                         tabindex="0"
+                         onkeypress="if(event.key==='Enter') openLightbox('${img.src}', '${img.alt.replace(/'/g, "&#39;")}')">
+                        <img src="${img.src}" alt="${img.alt}" loading="lazy">
+                        <div class="gallery-item-alt">${img.alt}</div>
+                    </div>
+                `;
+
+                        row.appendChild(col);
+                    });
+
+                    container.appendChild(row);
+                });
+
+                // Trigger fade-in animations
+                setTimeout(() => {
+                    document.querySelectorAll('.fade-in').forEach(el => {
+                        el.classList.add('visible');
+                    });
+                }, 100);
+
+            } catch (error) {
+                console.error('Gallery loading error:', error);
+                loadingState.style.display = 'none';
+                errorState.classList.remove('d-none');
+            }
+        }
+
+        // Lightbox Functions
+        function openLightbox(src, alt) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImage');
+            const caption = document.getElementById('lightboxCaption');
+
+            modal.classList.add('active');
+            img.src = src;
+            img.alt = alt;
+            caption.textContent = alt;
+
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ESC key to close lightbox
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Load gallery on page ready
+        document.addEventListener('DOMContentLoaded', loadGallery);
+    </script>
+    <script src="/script/aichatbot.js"></script>
 </body>
 
 </html>

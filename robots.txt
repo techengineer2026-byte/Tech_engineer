@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /temp
 Sitemap: https://techengineer.co/sitemap.xml
