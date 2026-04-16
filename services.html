@@ -648,20 +648,23 @@
     ]
     </script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-55RDCHQQ');</script>
-<!-- End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');</script>
+        <!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
         <nav class="container nav-wrapper">
@@ -833,6 +836,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <p>Intelligent voice bots to handle inbound and outbound calls, bookings, and support
                                 automatically.</p>
                             <a href="services/ai-voice-agents-india" class="btn-inquire">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 10: Wordpress Agents -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="service-card h-100">
+                            <div class="service-icon-wrapper">
+                                <i class="bi bi-wordpress service-icon"></i>
+                            </div>
+                            <h4>Wordpress Agents</h4>
+                            <p>Custom WordPress solutions to enhance your website's functionality and user experience.</p>
+                            <a href="services/wordpress-development-mohali" class="btn-inquire">Learn More <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -1029,7 +1045,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()" aria-label="Toggle AI Chatbot">
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
@@ -1105,7 +1121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <script src="/script/aichatbot.js"></script>
+    <script src="/script/aichatbot.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/javascript.js" defer></script>
@@ -1188,6 +1204,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
     </script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-    </body>
+</body>
 
 </html>

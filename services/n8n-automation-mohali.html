@@ -30,7 +30,9 @@
     <meta name="twitter:description"
         content="Custom n8n automation in Mohali. We build workflows to connect your apps, save time, and eliminate manual work." />
     <meta name="twitter:image" content="https://techengineer.co/images/n8n-automation-mohali.webp" />
+    <style>
 
+    </style>
     <!-- 4. UPDATED FAQ SCHEMA -->
     <script type="application/ld+json">
     {
@@ -67,6 +69,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. You just need to explain the manual process you want to automate. Our team handles the entire technical setup, development, and deployment of the n8n workflow for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you connect to an app that n8n doesn't officially support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. This is a key strength of n8n. If your app has an API, we can use the powerful HTTP Request node to build a custom connection, allowing us to integrate with virtually any modern software."
           }
         }
       ]
@@ -110,277 +120,203 @@
       "offers": { "@type": "Offer", "priceCurrency": "INR", "price": "15000" }
     }
     </script>
-
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Build a Custom n8n Automation Workflow",
+      "description": "Our 5-step process for developing and deploying custom n8n automation pipelines for businesses.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Discovery & Strategy",
+          "text": "We start with a call to understand your manual processes and define the exact workflow we can automate to save you time and money.",
+          "position": 1
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Workflow Mapping & Logic Design",
+          "text": "We visually map out the entire automation, including triggers, apps, actions, and any conditional logic needed.",
+          "position": 2
+        },
+        {
+          "@type": "HowToStep",
+          "name": "n8n Development & Integration",
+          "text": "Our team builds the workflow in n8n, securely connects your app APIs, and writes any custom code if required.",
+          "position": 3
+        },
+        {
+          "@type": "HowToStep",
+          "name": "End-to-End Testing",
+          "text": "We rigorously test the entire workflow with sample data to ensure every step runs flawlessly and handles potential errors.",
+          "position": 4
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Deployment & Monitoring",
+          "text": "We deploy the workflow to your live environment and monitor its performance to ensure it's running smoothly and delivering results.",
+          "position": 5
+        }
+      ]
+    }
+    </script>
     <!-- Your CSS and Font links (These should remain the same) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style/servicecourse.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/AIchatbot.css">
     <style>
-        /* ══════════════ N8N AUTOMATION VISUAL (NEW UI) ══════════════ */
+        /* ══════════ UNIQUE COMPARISON GRID CSS ══════════ */
 
-        /* Main container for the visual */
-        .hero-visual {
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .comparison-section {
+            background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
         }
 
-        .automation-visual {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            animation: float 8s ease-in-out infinite;
-            /* Reuse float animation */
+        .comparison-grid-wrapper {
+            overflow-x: auto;
+            /* Ensures table is scrollable on small screens */
+            padding-bottom: 1rem;
         }
 
-        /* Base style for all nodes */
-        .node {
-            position: absolute;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        .comparison-grid {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 12px 0;
+            min-width: 700px;
+            /* Prevents squishing on medium screens */
         }
 
-        /* Central n8n node */
-        .n8n-core {
-            width: 100px;
-            height: 100px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
-            font-size: 40px;
-            z-index: 2;
-        }
-
-        /* Surrounding app nodes */
-        .app-node {
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
+        .comparison-grid th,
+        .comparison-grid td {
+            padding: 1.25rem;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #ffffff;
             border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        /* First column (Features) styling */
+        .comparison-grid td:first-child,
+        .comparison-grid th:first-child {
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            font-weight: 700;
             color: #475569;
-            font-size: 24px;
+            width: 20%;
+        }
+
+        .comparison-grid th:first-child {
+            background-color: transparent !important;
+        }
+
+        /* Header row styling */
+        .comparison-grid thead th {
+            background-color: #f8fafc;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 18px;
+            color: #334155;
+        }
+
+        .comparison-grid thead th:first-of-type {
+            border-radius: 1rem 0 0 0;
+        }
+
+        .comparison-grid thead th:last-of-type {
+            border-radius: 0 1rem 0 0;
+        }
+
+        /* Body cell styling */
+        .comparison-grid tbody td {
+            font-size: 15px;
+            color: #475569;
+        }
+
+        /* Rounding corners for the card effect */
+        .comparison-grid tbody tr:first-of-type td {
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .comparison-grid tbody tr:last-of-type td:nth-child(2) {
+            border-radius: 0 0 0 1rem;
+        }
+
+        .comparison-grid tbody tr:last-of-type td:nth-child(3) {
+            border-radius: 0 0 0 0;
+            /* Middle column has no bottom rounding */
+        }
+
+        .comparison-grid tbody tr:last-of-type td:last-of-type {
+            border-radius: 0 0 1rem 0;
+        }
+
+        /* ─── Featured Column Styling ─── */
+        .comparison-grid .col-featured {
+            position: relative;
+            border-color: #a5b4fc;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+            transform: scale(1.05);
+            /* Make it pop out */
             z-index: 2;
         }
 
-        /* Positioning for each app node */
-        .an1 {
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        .comparison-grid .col-featured,
+        .comparison-grid .col-featured .platform-name {
+            color: #4338ca;
+            font-weight: 700;
         }
 
-        /* Top */
-        .an2 {
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
+        .comparison-grid thead .col-featured {
+            background-color: #eef2ff;
+            border-top: 3px solid #667eea;
+            border-radius: 1rem 1rem 0 0;
         }
 
-        /* Right */
-        .an3 {
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        /* Reposition last row's featured cell rounding */
+        .comparison-grid tbody tr:last-of-type .col-featured {
+            border-radius: 0 0 1rem 1rem;
         }
 
-        /* Bottom */
-        .an4 {
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
+        /* Add icons for visual cues */
+        .comparison-grid td {
+            line-height: 1.6;
         }
 
-        /* Left */
-
-        /* Connecting lines using pseudo-elements */
-        .app-node::before {
-            content: '';
-            position: absolute;
-            border: 1.5px dashed #cbd5e1;
-            z-index: 1;
-        }
-
-        .an1::before {
-            width: 0;
-            height: 70px;
-            top: 100%;
-            left: 50%;
-        }
-
-        /* Top to center */
-        .an2::before {
-            width: 70px;
-            height: 0;
-            right: 100%;
-            top: 50%;
-        }
-
-        /* Right to center */
-        .an3::before {
-            width: 0;
-            height: 70px;
-            bottom: 100%;
-            left: 50%;
-        }
-
-        /* Bottom to center */
-        .an4::before {
-            width: 70px;
-            height: 0;
-            left: 100%;
-            top: 50%;
-        }
-
-        /* Left to center */
-
-        /* Animated data dots */
-        .data-dot {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #667eea;
-            border-radius: 50%;
-            z-index: 1;
-            animation: move-dot 3s linear infinite;
-        }
-
-        /* Stagger animations for each dot */
-        .dot1 {
-            animation-name: move-dot-1;
-        }
-
-        .dot2 {
-            animation-name: move-dot-2;
-            animation-delay: 0.75s;
-        }
-
-        .dot3 {
-            animation-name: move-dot-3;
-            animation-delay: 1.5s;
-        }
-
-        .dot4 {
-            animation-name: move-dot-4;
-            animation-delay: 2.25s;
-        }
-
-        /* Keyframes for each dot's path */
-        @keyframes move-dot-1 {
-
-            /* Top to Center */
-            0% {
-                transform: translate(145px, 30px);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translate(145px, 110px);
-                opacity: 0;
-            }
-        }
-
-        @keyframes move-dot-2 {
-
-            /* Right to Center */
-            0% {
-                transform: translate(240px, 145px);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translate(160px, 145px);
-                opacity: 0;
-            }
-        }
-
-        @keyframes move-dot-3 {
-
-            /* Bottom to Center */
-            0% {
-                transform: translate(145px, 260px);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translate(145px, 180px);
-                opacity: 0;
-            }
-        }
-
-        @keyframes move-dot-4 {
-
-            /* Left to Center */
-            0% {
-                transform: translate(30px, 145px);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translate(110px, 145px);
-                opacity: 0;
-            }
-        }
-
-        /* Floating Badges */
-        .n8n-badge {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 16px;
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
+        .comparison-grid td:not(:first-child)::before {
+            margin-right: 8px;
             font-weight: 600;
-            color: #1e293b;
-            animation: bounce 4s ease-in-out infinite;
         }
 
-        .n8n-badge i {
-            color: #667eea;
-            font-size: 16px;
-        }
-
-        .nb1 {
-            top: 15%;
-            right: -5%;
-            animation-delay: 0s;
-        }
-
-        .nb2 {
-            bottom: 15%;
-            left: -10%;
-            animation-delay: 1s;
+        .comparison-grid td:not(:first-child) {
+            text-align: left;
         }
     </style>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-55RDCHQQ');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
         <nav class="container nav-wrapper">
@@ -434,7 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <h1>
-                        Custom <span class="gradient-text">n8n Workflows</span> for Business Automation
+                        Custom <span class="gradient-text">n8n Workflows</span> for Business Automation in Mohali
                     </h1>
 
                     <p class="hero-desc">
@@ -666,7 +602,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
-
+    <!-- ══════════ COURSE CTA (NEW) ══════════ -->
+    <div class="container my-5">
+        <div class="course-cta-banner">
+            <div class="course-cta-icon"><i class="bi bi-code-slash"></i></div>
+            <div>
+                <h4>Want to Build Your Own Automations?</h4>
+                <p>Master the fundamentals with our AI & Python courses to build powerful custom workflows.</p>
+            </div>
+            <a href="/courses/prompt-engineering-course" class="btn-outline-te ms-auto">View AI Course</a>
+        </div>
+    </div>
     <!-- ══════════ TECH STACK ══════════ -->
     <section class="section-padding tech-section">
         <div class="container text-center">
@@ -687,7 +633,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
+    <!-- ══════════ COMPARISON TABLE (NEW UNIQUE DESIGN) ══════════ -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="text-center mb-60 reveal">
+                <div class="service-section-label">n8n vs. The Competition</div>
+                <h2 class="service-section-title">n8n vs. Zapier vs. Make.com</h2>
+                <p class="service-section-desc mx-auto">Understanding the best tool for the job is key. Here’s how n8n
+                    compares to other popular automation platforms.</p>
+            </div>
 
+            <div class="comparison-grid-wrapper reveal">
+                <table class="comparison-grid">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th class="col-featured">
+                                <span class="platform-name">n8n</span>
+                            </th>
+                            <th>
+                                <span class="platform-name">Zapier</span>
+                            </th>
+                            <th>
+                                <span class="platform-name">Make.com</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pricing Model</strong></td>
+                            <td class="col-featured">✅ Workflow-based, highly cost-effective at scale.</td>
+                            <td>〰️ Task-based, can get expensive quickly.</td>
+                            <td>〰️ Operation-based, more granular.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hosting</strong></td>
+                            <td class="col-featured">✅ Cloud & Self-Hosted (for data privacy).</td>
+                            <td>❌ Cloud Only</td>
+                            <td>❌ Cloud Only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Logic & Branching</strong></td>
+                            <td class="col-featured">✅ Unlimited, complex branching and merging.</td>
+                            <td>❌ Limited on lower plans.</td>
+                            <td>〰️ Visually complex but powerful.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom Code</strong></td>
+                            <td class="col-featured">✅ Built-in nodes for JavaScript & Python.</td>
+                            <td>❌ Available on higher-tier plans only.</td>
+                            <td>❌ Limited custom code options.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best For</strong></td>
+                            <td class="col-featured">Complex, custom, and high-volume workflows.</td>
+                            <td>Simple, linear automations.</td>
+                            <td>Visually mapping complex scenarios.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
     <!-- ══════════ PRICING ══════════ -->
     <section class="section-padding bg-white">
         <div class="container">
@@ -853,6 +861,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <p>We can automate almost any repetitive digital task: lead management, marketing
                                     campaigns, e-commerce order processing, customer support ticketing, data
                                     synchronization between apps, generating reports, and much more.</p>
+                            </div>
+                        </div>
+                        <!-- ADD THESE TWO NEW FAQ ITEMS -->
+                        <div class="faq-item reveal">
+                            <div class="faq-q" onclick="toggleFaq(this)">
+                                <span>Do I need any technical skills?</span>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="faq-a">
+                                <p>No. You just need to explain the manual process you want to automate. Our team
+                                    handles the entire technical setup, development, and deployment of the n8n workflow
+                                    for you.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item reveal">
+                            <div class="faq-q" onclick="toggleFaq(this)">
+                                <span>Can you connect to an app that n8n doesn't officially support?</span>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="faq-a">
+                                <p>Yes, absolutely. This is a key strength of n8n. If your app has an API, we can use
+                                    the powerful HTTP Request node to build a custom connection, allowing us to
+                                    integrate with virtually any modern software.</p>
                             </div>
                         </div>
                     </div>
@@ -1077,7 +1108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-                                                <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+                                                <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()" aria-label="Toggle AI Chatbot">
                                                     <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
                                                     <span class="icon-close"><i class="bi bi-x-lg"></i></span>
                                                     <span class="chat-badge" id="chatBadge"></span>
@@ -1169,7 +1200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 }
                                             </script>
 
-                                            <script src="/script/aichatbot.js" defer></script>
+                                            <script src="/script/aichatbot.js" defer defer></script>
                                             <script src="/javascript.js" defer></script>
                                             <script>
                                                 function toggleFaq(element) {

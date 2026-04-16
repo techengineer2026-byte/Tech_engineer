@@ -33,6 +33,25 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Chatbot for Business",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, WhatsApp",
+  "description": "A custom AI-powered chatbot application for websites and WhatsApp, designed to automate customer service and lead generation.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Tech Engineer"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "25000",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Service",
@@ -111,6 +130,53 @@
             "@type": "Answer",
             "text": "Yes, absolutely. We specialize in developing WhatsApp chatbots using the official WhatsApp Business API. This allows you to automate conversations, send notifications, and provide support directly on WhatsApp."
           }
+        },
+                ,{
+          "@type": "Question",
+          "name": "What makes your chatbots 'AI'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our AI chatbots are powered by Large Language Models (LLMs) like OpenAI's GPT and use advanced frameworks like LangChain and RAG (Retrieval-Augmented Generation). This allows them to understand complex user intent and provide natural, human-like answers based on your specific business data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer maintenance after the chatbot is live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All our packages include a free support period. We also offer affordable monthly maintenance plans that include performance monitoring, conversation analysis, and AI model retraining to ensure your chatbot gets smarter over time."
+          }
+        }        ,{
+          "@type": "Question",
+          "name": "What makes your chatbots 'AI'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our AI chatbots are powered by Large Language Models (LLMs) like OpenAI's GPT and use advanced frameworks like LangChain and RAG (Retrieval-Augmented Generation). This allows them to understand complex user intent and provide natural, human-like answers based on your specific business data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer maintenance after the chatbot is live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All our packages include a free support period. We also offer affordable monthly maintenance plans that include performance monitoring, conversation analysis, and AI model retraining to ensure your chatbot gets smarter over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes your chatbots 'AI'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our AI chatbots are powered by Large Language Models (LLMs) like OpenAI's GPT and use advanced frameworks like LangChain and RAG (Retrieval-Augmented Generation). This allows them to understand complex user intent and provide natural, human-like answers based on your specific business data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer maintenance after the chatbot is live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All our packages include a free support period. We also offer affordable monthly maintenance plans that include performance monitoring, conversation analysis, and AI model retraining to ensure your chatbot gets smarter over time."
+          }
         }
       ]
     }
@@ -149,6 +215,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style/servicecourse.css">
     <link rel="stylesheet" href="/style/header.css">
@@ -243,7 +311,7 @@
 
                     <div class="hero-stats">
                         <div>
-                            <div class="stat-num">50+</div>
+                            <div class="stat-num">30+</div>
                             <div class="stat-label">Chatbots Deployed</div>
                         </div>
                         <div>
@@ -457,6 +525,9 @@
                 <span class="tech-pill"><i class="devicon-docker-plain"></i> Docker</span>
                 <span class="tech-pill"><i class="devicon-mongodb-plain"></i> MongoDB</span>
                 <span class="tech-pill"><i class="devicon-firebase-plain"></i> Firebase</span>
+                <!-- ADD THESE TECH PILLS -->
+                <span class="tech-pill"><i class="devicon-langchain-plain"></i> LangChain</span>
+                <span class="tech-pill"><i class="bi bi-file-earmark-text-fill"></i> RAG Architecture</span>
             </div>
         </div>
     </section>
@@ -624,6 +695,32 @@
                                 <p>An AI chatbot can automate customer support by answering common questions 24/7,
                                     capture and qualify leads from your website, book appointments, take orders, and
                                     provide personalized user experiences, saving you time and increasing revenue.</p>
+                            </div>
+                        </div>
+                        <!-- ADD THESE TWO NEW FAQ ITEMS -->
+                        <div class="faq-item reveal">
+                            <div class="faq-q" onclick="toggleFaq(this)">
+                                <span>What makes your chatbots 'AI'?</span>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="faq-a">
+                                <p>Our AI chatbots are powered by Large Language Models (LLMs) like OpenAI's GPT. We use
+                                    advanced frameworks like <strong>LangChain</strong> and <strong>RAG
+                                        (Retrieval-Augmented Generation)</strong> to train the bot on your specific
+                                    business data. This allows it to understand complex user intent and provide natural,
+                                    human-like answers instead of just following a script.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item reveal">
+                            <div class="faq-q" onclick="toggleFaq(this)">
+                                <span>Do you offer maintenance after the chatbot is live?</span>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="faq-a">
+                                <p>Yes. All our packages come with a free support period. After that, we offer
+                                    affordable monthly maintenance plans that include performance monitoring,
+                                    conversation analysis, and AI model retraining to ensure your chatbot continues to
+                                    get smarter and more effective over time.</p>
                             </div>
                         </div>
                     </div>
@@ -860,7 +957,7 @@
 
 
 
-        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()" aria-label="Toggle AI Chatbot">
             <span class="icon-chat"><i class="bi bi-chat-dots-fill"></i></span>
             <span class="icon-close"><i class="bi bi-x-lg"></i></span>
             <span class="chat-badge" id="chatBadge"></span>
@@ -945,7 +1042,7 @@
         }
     </script>
 
-    <script src="/script/aichatbot.js" defer></script>
+    <script src="/script/aichatbot.js" defer defer></script>
     <script src="/javascript.js" defer></script>
     <script>
         function toggleFaq(element) {

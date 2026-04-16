@@ -267,86 +267,11 @@ svg {
     /* Lift effect */
 }
 
-/* List Styling */
-.custom-list li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-    font-size: 1.05rem;
-    color: #555;
-}
-
-/* Icons replacing Emojis */
-.icon-box {
-    min-width: 25px;
-    /* Ensures text aligns perfectly */
-    margin-right: 10px;
-    margin-top: 4px;
-    /* Aligns icon with text top */
-}
-
-/* Unique Section Style */
-.why-us-section {
-    background-color: #f8f9fa;
-    /* Light Gray Background */
-    padding: 80px 0;
-}
-
-/* The White Cards */
-.why-us-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease;
-}
-
-.why-us-card:hover {
-    transform: translateY(-5px);
-    /* Small lift on hover */
-    box-shadow: 0 15px 30px rgba(83, 74, 183, 0.1);
-}
-
-/* Big Numbers */
-.why-stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #534AB7;
-    /* Your Purple Brand Color */
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-/* List Items */
-.why-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.why-list li {
-    position: relative;
-    padding-left: 35px;
-    /* Space for icon */
-    margin-bottom: 15px;
-    color: #555;
-    font-size: 1.05rem;
-}
-
-/* Icons for the list */
-.why-list li i {
-    position: absolute;
-    left: 0;
-    top: 4px;
-    font-size: 18px;
-}
 
 /* Unique Section Wrapper */
 .tech-advantage-section {
     background-color: #ffffff;
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 /* Section Title */
@@ -3863,8 +3788,7 @@ nav a:hover::after {
 
 @media (max-width: 768px) {
     .hero-index {
-        margin-top: 90px;
-        padding: 80px 0;
+        padding: 40px 0;
     }
 
     .hero-index h1 {
@@ -4153,7 +4077,7 @@ nav a:hover::after {
 }
 
 .services {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #f4f6f9;
 }
 
