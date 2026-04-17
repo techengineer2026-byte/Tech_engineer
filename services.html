@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IT Services in Mohali — Web Dev, Cloud & AI Automation | Tech Engineer</title>
+    <title>IT Services in Mohali | Web Dev & AI Automation | Tech Engineer</title>
     <meta name="description"
         content="Explore Digital & AI services in Mohali. We offer expert Web Design, Mobile Apps, Digital Marketing, AI Chatbots, and Automation to grow your business. Get a free consultation!">
     <meta name="keywords"
@@ -58,16 +58,32 @@
             /* ===================================
    SERVICES PAGE STYLES
    =================================== */
-
-            /* Hero Banner */
+            /* 1. Hero Banner Container */
             .bannerservice {
                 position: relative;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                min-height: 400px;
+                background: linear-gradient(135deg, #534AB7 0%, #0d6efd 100%);
+                /* Tech Engineer Colors */
+                min-height: 350px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
                 overflow: hidden;
+                padding-top: 80px;
+                /* Space for the fixed header */
+            }
+
+            /* Optional: Adding a subtle pattern to the background */
+            .bannerservice::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+                background-size: 30px 30px;
+                opacity: 0.3;
             }
 
             .banner-overlay {
@@ -76,63 +92,108 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.3);
+                background: rgba(0, 0, 0, 0.2);
                 z-index: 1;
             }
 
             .banner-content {
                 position: relative;
-                z-index: 2;
-                text-align: center;
+                z-index: 10;
                 color: white;
-                padding: 80px 20px;
             }
 
-            .banner-content h1 {
+            /* 2. Professional Breadcrumbs */
+            .breadcrumb {
+                font-size: 0.9rem;
+                letter-spacing: 0.5px;
+            }
+
+            .breadcrumb-item a {
+                color: rgba(255, 255, 255, 0.7) !important;
+                transition: all 0.3s ease;
+                font-weight: 400;
+            }
+
+            .breadcrumb-item a:hover {
+                color: #ffffff !important;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+
+            /* Custom Separator (The / between Home and Services) */
+            .breadcrumb-item+.breadcrumb-item::before {
+                content: "/";
+                color: rgba(255, 255, 255, 0.4);
+                padding: 0 10px;
+            }
+
+            .breadcrumb-item.active {
+                color: #ffffff !important;
+                font-weight: 600;
+            }
+
+            /* 3. Typography & Animations */
+            .bannerservice h1 {
                 font-size: 3.5rem;
                 font-weight: 800;
-                margin-bottom: 1.5rem;
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+                margin-bottom: 15px;
+                text-transform: capitalize;
             }
 
-            .banner-content p {
-                font-size: 1.25rem;
-                max-width: 700px;
+            .bannerservice p {
+                font-size: 1.2rem;
+                max-width: 800px;
                 margin: 0 auto;
-                line-height: 1.8;
-                opacity: 0.95;
+                color: rgba(255, 255, 255, 0.9);
+                line-height: 1.6;
             }
 
-            /* Animations */
+            /* Animation: Slide In Left */
             .slide-in-left {
-                animation: slideInLeft 0.8s ease-out;
+                animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
             }
 
+            /* Animation: Fade In Up */
             .fade-in-up {
-                animation: fadeInUp 1s ease-out;
+                animation: fadeInUp 1s ease-out 0.2s both;
             }
 
             @keyframes slideInLeft {
-                from {
-                    opacity: 0;
+                0% {
                     transform: translateX(-50px);
+                    opacity: 0;
                 }
 
-                to {
-                    opacity: 1;
+                100% {
                     transform: translateX(0);
+                    opacity: 1;
                 }
             }
 
             @keyframes fadeInUp {
-                from {
-                    opacity: 0;
+                0% {
                     transform: translateY(30px);
+                    opacity: 0;
                 }
 
-                to {
-                    opacity: 1;
+                100% {
                     transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            /* Responsive Fixes */
+            @media (max-width: 768px) {
+                .bannerservice {
+                    min-height: 300px;
+                }
+
+                .bannerservice h1 {
+                    font-size: 2.5rem;
+                }
+
+                .bannerservice p {
+                    font-size: 1rem;
+                    padding: 0 15px;
                 }
             }
 
@@ -616,34 +677,125 @@
             }]
         },
         {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Tech Engineer",
+          "url": "https://techengineer.co",
+          "areaServed": "IN",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital & AI Services",
             "itemListElement": [
-                {
-                    "@type": "Service",
-                    "position": 1,
-                    "name": "Web Development",
-                    "description": "Custom websites and web applications."
+        
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Web Design & Development",
+                  "description": "Fast, modern, and SEO-friendly websites that rank on Google and convert visitors into customers.",
+                  "url": "https://techengineer.co/services/web-design-mohali"
                 },
-                {
-                    "@type": "Service",
-                    "position": 2,
-                    "name": "Mobile App Development",
-                    "description": "Native and cross-platform mobile applications for iOS and Android."
+                "priceCurrency": "INR",
+                "price": "9999"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Mobile App Development",
+                  "description": "User-friendly mobile apps for iOS & Android that engage users and grow your business.",
+                  "url": "https://techengineer.co/services/mobile-app-development-mohali"
                 },
-                {
-                    "@type": "Service",
-                    "position": 3,
-                    "name": "Digital Marketing",
-                    "description": "SEO, social media, and targeted advertising strategies."
+                "priceCurrency": "INR",
+                "price": "25000"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Digital Marketing",
+                  "description": "Results-driven SEO, Google Ads, and content strategies to increase traffic and revenue.",
+                  "url": "https://techengineer.co/services/digital-marketing-mohali"
                 },
-                {
-                    "@type": "Service",
-                    "position": 4,
-                    "name": "Cloud Solutions",
-                    "description": "Cloud migration and management services."
-                }
+                "priceCurrency": "INR",
+                "price": "8000"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI Chatbot Development",
+                  "description": "Smart chatbots for websites and WhatsApp to automate support and generate leads 24/7.",
+                  "url": "https://techengineer.co/services/ai-chatbot-development-mohali"
+                },
+                "priceCurrency": "INR",
+                "price": "7999"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Social Media Management",
+                  "description": "Engaging content and community management for Instagram, Facebook, and LinkedIn.",
+                  "url": "https://techengineer.co/services/social-media-management-mohali"
+                },
+                "priceCurrency": "INR",
+                "price": "5000"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Video Editing Services",
+                  "description": "Professional video editing for YouTube, Instagram Reels, social media ads, and corporate content.",
+                  "url": "https://techengineer.co/services/video-editing-mohali"
+                },
+                "priceCurrency": "INR",
+                "price": "2999"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "WhatsApp Marketing",
+                  "description": "Official WhatsApp Business API setup for bulk messaging, campaigns, and automation.",
+                  "url": "https://techengineer.co/services/whatsapp-marketing-mohali"
+                },
+                "priceCurrency": "INR",
+                "price": "6999"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "n8n Automation",
+                  "description": "Custom workflows to connect your apps, eliminate manual tasks, and scale your business.",
+                  "url": "https://techengineer.co/services/n8n-automation-mohali"
+                },
+                "priceCurrency": "INR",
+                "price": "9000"
+              },
+          
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI Voice Agents",
+                  "description": "Intelligent voice bots to handle inbound and outbound calls, bookings, and support automatically.",
+                  "url": "https://techengineer.co/services/ai-voice-agents-mohali"
+                },
+                "priceCurrency": "INR",
+                "price": "15000"
+              }
             ]
+          }
         }
     ]
     </script>
@@ -693,10 +845,17 @@
         </nav>
     </header>
     <main>
-        <!-- Hero Banner -->
+        <!-- CORRECTED HERO BANNER -->
         <section class="bannerservice">
             <div class="banner-overlay"></div>
             <div class="banner-content container">
+                <!-- Added Visual Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb justify-content-center bg-transparent p-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+                    </ol>
+                </nav>
                 <h1 class="slide-in-left">Our Services</h1>
                 <p class="fade-in-up">We build tailored solutions that connect with your audience, automate your
                     processes, and deliver measurable results.</p>
@@ -835,27 +994,29 @@
                             <h4>AI Voice Agents</h4>
                             <p>Intelligent voice bots to handle inbound and outbound calls, bookings, and support
                                 automatically.</p>
-                            <a href="services/ai-voice-agents-india" class="btn-inquire">Learn More <i
+                            <a href="services/ai-voice-agents-mohali" class="btn-inquire">Learn More <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 10: Wordpress Agents -->
-                    <div class="col-lg-4 col-md-6 reveal">
-                        <div class="service-card h-100">
-                            <div class="service-icon-wrapper">
-                                <i class="bi bi-wordpress service-icon"></i>
-                            </div>
-                            <h4>Wordpress Agents</h4>
-                            <p>Custom WordPress solutions to enhance your website's functionality and user experience.</p>
-                            <a href="services/wordpress-development-mohali" class="btn-inquire">Learn More <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- NEW SECTION: Transparent Pricing Signal -->
+        <section class="py-4 bg-white border-top border-bottom">
+            <div class="container">
+                <div class="row align-items-center text-center text-md-start">
+                    <div class="col-md-8">
+                        <h4 class="fw-bold mb-1">Transparent & Affordable Pricing</h4>
+                        <p class="text-muted mb-md-0">Quality digital solutions starting from <strong>₹15,000</strong>.
+                            No hidden costs.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <a href="#contact-form" class="btn btn-outline-primary fw-bold">Request Pricing Sheet</a>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Let's Talk Contact Form Section -->
         <section class="contact-form-section py-2" id="contact-form">
             <div class="container">
@@ -1166,26 +1327,12 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.result === 'success') {
-                        // Success message
-                        formMessage.innerHTML = `
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <i class="bi bi-check-circle-fill"></i> 
-                    <strong>Success!</strong> Your inquiry has been submitted. We'll contact you within 24 hours.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
-            `;
-
-                        // Reset form
-                        form.reset();
-
-                        // Optional: Redirect to thank you page
-                        // setTimeout(() => {
-                        //     window.location.href = '/thank-you.html';
-                        // }, 2000);
-
+                        // REDIRECT TO YOUR NEW PAGE
+                        window.location.href = '/thank-you.html';
                     } else {
-                        throw new Error(data.message || 'Submission failed');
+                        alert("Something went wrong. Please try again.");
                     }
+
                 })
                 .catch(error => {
                     // Error message

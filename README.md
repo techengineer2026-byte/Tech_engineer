@@ -1,119 +1,96 @@
-Great — now I have everything I need. Let me build you a clean, actionable Google Business Profile keyword & optimization task sheet.The visual tool seems to be timing out right now. Here's your complete GBP keyword and task plan in text — everything you need to get more clicks and calls:
+# 🚀 GBP Optimization Task List — Tech Engineer
+
+## ✅ Phase 1: Cleanup (Do this first)
+- [ ] Go to GBP Dashboard > Services
+- [ ] **DELETE ALL existing services** (Remove every single one until the list is empty)
+- [ ] Go to Categories
+- [ ] **REMOVE** "Computer Hardware Company" 
+- [ ] **ADD** "Software Company" (as an additional category)
 
 ---
 
-## GBP Keywords to Use (by section)
+## ✅ Phase 2: Add Main Ad Services (Add these FIRST — Top to Bottom)
 
-### Services section — add these exact phrases
-Add each as a separate service with a short description:
+- [ ] **1. Video Editing Training in Mohali**
+  - Description: `Professional Video Editing Training in Mohali with Adobe Premiere Pro & After Effects. Learn color grading, motion graphics, transitions, and portfolio building with real client projects. Job placement support included.`
+  - Price: `₹12,000`
+  - Link: `https://techengineer.co/courses/video-editing-course`
 
-| Service Name | Keywords to include |
-|---|---|
-| Web Development Mohali | "website design mohali", "web development chandigarh", "wordpress website" |
-| Mobile App Development | "android app developer mohali", "flutter app development", "react native" |
-| Digital Marketing | "seo company mohali", "google ads agency chandigarh", "local seo" |
-| AI Chatbot Development | "whatsapp chatbot", "ai chatbot mohali", "lead generation bot" |
-| Industrial Training | "6 weeks training btech", "100% placement training", "live project training phase 8b" |
-| Full Stack Course | "full stack developer course mohali", "react node.js training" |
-| Digital Marketing Course | "digital marketing course mohali", "seo training chandigarh" |
-| Video Editing Course | "video editing course mohali", "premiere pro training" |
-| Cloud & Azure Training | "azure cloud training mohali", "devops course punjab" |
-| AI & Prompt Engineering | "prompt engineering course", "chatgpt training mohali" |
+- [ ] **2. Graphic Designing Course in Mohali**
+  - Description: `Complete Graphic Designing Course in Mohali. Learn Adobe Photoshop, Illustrator, Canva & branding design with real projects. Build a professional portfolio. Placement assistance provided.`
+  - Price: `₹15,000`
+  - Link: `https://techengineer.co/courses/graphic-designing-course`
 
----
+- [ ] **3. Digital Marketing Training in Mohali**
+  - Description: `Practical Digital Marketing Training in Mohali with live campaigns. Covers SEO, Google Ads, Social Media Marketing, Meta Ads, Analytics & Content Marketing. 100% placement support.`
+  - Price: `₹18,000`
+  - Link: `https://techengineer.co/courses/digital-marketing-course`
 
-## 24 GBP Tasks — Do These to Get More Clicks & Calls
+- [ ] **4. AI & Machine Learning Training in Mohali**
+  - Description: `AI & Machine Learning Training in Mohali. Learn Python, ML algorithms, deep learning, ChatGPT, Prompt Engineering & AI agent building. Live projects + placement support.`
+  - Price: `₹20,000`
+  - Link: `https://techengineer.co/courses/prompt-engineering-course`
 
-### 🔴 Critical (do this week)
-1. **Change primary category** → "Software Training Institute" (currently "Software Company" — wrong for student searches)
-2. **Update GBP description** with keyword text (paste below)
-3. **Verify business** if not verified (blue tick on GBP profile)
-4. **Add all 10 services** listed above with descriptions and prices
-5. **Upload 10+ photos**: office, students working, certificate examples, team
-6. **Post first Google Post** (course batch starting — template below)
-7. **Reply to all 32 reviews** — even one line each ("Thank you! Looking forward to seeing you succeed")
-8. **Send review link** to last 10 students via WhatsApp — target 50+ reviews fast
-9. **Add Q&A #1**: "Where is Tech Engineer located?" (template below)
-10. **Add Q&A #2**: "Does Tech Engineer provide placement after training?"
-11. **Add Q&A #3**: "What courses are available at Tech Engineer Mohali?"
-
-### 🟡 High priority (next 2 weeks)
-12. Add additional categories: "Computer Training School", "Vocational School"
-13. Set GBP short name: `techengineermohali` → shareable as `g.page/techengineermohali`
-14. Add opening hours (Mon–Sat 10am–7pm)
-15. Add pricing to each service (₹8,000 for websites, etc.)
-16. Post second Google Post (service post about website development)
-17. Add Q&A: "What IT services does Tech Engineer provide?"
-18. Add Q&A: "How much does a website cost at Tech Engineer?"
-19. Add cover photo (1080×608px) showing training + Sector 74 address
-20. Respond to every new review within 24 hours — set a phone reminder
-
-### 🔵 Medium
-21. Enable WhatsApp business messaging in GBP
-22. Set a weekly Monday reminder to publish one Google Post
-23. Add a "Review ask" post monthly
-24. Add Q&A: "What is the salary after training at Tech Engineer?"
+- [ ] **5. Prompt Engineering Course in Mohali**
+  - Description: `AI Prompt Engineering & ChatGPT Course in Mohali. Learn to build AI agents, automation workflows, and LLM applications. Hands-on real projects with certification.`
+  - Price: `₹15,000`
+  - Link: `https://techengineer.co/courses/prompt-engineering-course`
 
 ---
 
-## GBP Description (copy-paste this — 750 chars max)
+## ✅ Phase 3: Add Remaining Services (Add these AFTER the main 5)
 
-> Tech Engineer is a top-rated IT company and training institute in Mohali (Sector 74, Phase 8B). We offer industrial training with 100% job placement in Full Stack Development, Mobile App Development, Digital Marketing, Prompt Engineering, Cloud & Azure, and Video Editing — with live UK/US client projects and a valid company experience certificate.
->
-> We also provide professional IT services: website design, mobile app development, AI chatbot development, WhatsApp marketing, n8n automation, social media management, and AI voice agents.
->
-> Trusted by 5000+ students · 4.8★ Google · NASSCOM certified · Mohali, Chandigarh & Punjab.
+- [ ] **6. Industrial Training in Mohali**
+  - Description: `6 weeks to 6 months industrial training for BTech, BCA & MCA students in Mohali. Real UK/US client projects + 100% placement support with company certificate.`
+  - Price: `₹12,000`
+  - Link: `https://techengineer.co/industrial-training`
 
----
+- [ ] **7. Full Stack Development Course in Mohali**
+  - Description: `Job-oriented Full Stack Web Development course in Mohali. Learn React, Node.js, MongoDB with live projects. Placement assistance.`
+  - Price: `₹25,000`
+  - Link: `https://techengineer.co/courses/fullstack-course`
 
-## 4 Google Posts Templates
+- [ ] **8. UI UX Design Course in Mohali**
+  - Description: `Complete UI/UX Design course in Mohali. Learn Figma, Adobe XD and user research with portfolio projects.`
+  - Price: `₹18,000`
+  - Link: `https://techengineer.co/courses/ui-ux-design-course`
 
-**Post 1 — Course batch (post weekly)**
-> 🎓 New batch starting!
-> Full Stack Developer Course — 3 months | Live UK/US projects | 100% placement support.
-> Learn React, Node.js, MongoDB with real clients.
-> 📍 R&R Tower, Sector 74, Mohali | 📞 +91 85448 84846
-> 🔗 techengineer.co/courses/fullstack-course
+- [ ] **9. Cloud Computing Course in Mohali**
+  - Description: `Azure Cloud & DevOps training in Mohali with live projects and certification.`
+  - Price: `₹22,000`
+  - Link: `https://techengineer.co/courses/cloud-computing-course`
 
-**Post 2 — Website service (bi-weekly)**
-> 💻 Need a website for your business in Mohali?
-> Fast, SEO-ready websites from ₹8,000 · Mobile responsive · 7-day delivery
-> Free consultation! 📞 +91 85448 84846
-> 🔗 techengineer.co/services/web-design-mohali
+- [ ] **10. Web Development Services in Mohali**
+  - Description: `Professional website design & development in Mohali & Chandigarh. Fast, SEO-ready, mobile responsive websites.`
+  - Price: `₹8,000`
+  - Link: `https://techengineer.co/services/web-design-mohali`
 
-**Post 3 — Review ask (monthly)**
-> ⭐ Did we help you? Leave us a Google review!
-> Your feedback helps students and businesses find us.
-> [paste your Google review short link]
+- [ ] **11. Mobile App Development in Mohali**
+  - Description: `Android, iOS & Flutter mobile app development services and training in Mohali.`
+  - Price: `₹25,000`
+  - Link: `https://techengineer.co/services/mobile-app-development-mohali`
 
-**Post 4 — Industrial training (when new batch opens)**
-> 🚀 Industrial Training — limited seats!
-> Full Stack · App Dev · Prompt Engineering · Cloud Azure · Digital Marketing · Video Editing
-> ✅ Real IT company certificate ✅ 100% placement ✅ Live client projects
-> 📞 +91 85448 84846 | techengineer.co/industrial-training
+- [ ] **12. AI Chatbot Development in Mohali**
+  - Description: `Custom AI Chatbot and WhatsApp Bot development for lead generation and business automation in Mohali.`
+  - Price: `₹15,000`
+  - Link: `https://techengineer.co/services/ai-chatbot-development-mohali`
 
----
+- [ ] **13. AI Voice Agents India**
+  - Description: `AI Voice Agents development for customer support and automation across India.`
+  - Price: `₹20,000`
+  - Link: `https://techengineer.co/services/ai-voice-agents-mohali`
 
-## 6 Q&A Scripts (add to GBP yourself)
-
-**Q: Where is Tech Engineer located in Mohali?**
-A: 4th Floor, R&R Tower, Plot F-298, Phase 8B, Industrial Area, Sector 74, Mohali (SAS Nagar), Punjab 160055. Open Mon–Sat 10am–7pm. Call +91 85448 84846.
-
-**Q: Does Tech Engineer provide 100% placement after training?**
-A: Yes — 100+ partner companies, average placement 2–3 weeks after completion, average salary ₹3.5–4.5 LPA (up to ₹12 LPA for top performers).
-
-**Q: What courses are available at Tech Engineer Mohali?**
-A: Full Stack Web Development, Mobile App (Flutter & React Native), AI & Prompt Engineering, Cloud & Azure DevOps, Digital Marketing, and Video Editing. 45 days to 6 months. All courses include live client projects + placement support.
-
-**Q: What is the best industrial training institute in Mohali?**
-A: Tech Engineer in Sector 74 Mohali is rated 4.8★ on Google. We are a real IT company — students work on actual UK/US client projects. NASSCOM certified, 5000+ students, 98%+ placement rate.
-
-**Q: What IT services does Tech Engineer provide?**
-A: Website design (from ₹8,000), mobile app development, AI chatbot, WhatsApp marketing, n8n automation, social media management, video editing, and AI voice agents. Free consultation: +91 85448 84846.
-
-**Q: How much does a website cost at Tech Engineer?**
-A: Starts at ₹8,000 for a 5-page site, ₹20,000 for a 12-page professional site with SEO, ₹40,000 for full e-commerce. Free quote: +91 85448 84846.
+- [ ] **14. WhatsApp Marketing in Mohali**
+  - Description: `WhatsApp Marketing automation, campaigns and chatbots for business growth in Mohali.`
+  - Price: `₹10,000`
+  - Link: `https://techengineer.co/services/whatsapp-marketing-mohali`
 
 ---
 
-The biggest single win: **change primary category to "Software Training Institute"** and **get reviews to 50+**. Most "industrial training mohali" and "it training near me" searches heavily weight category match and review count. That alone will put you above most competitors.
+## ✅ Phase 4: Final Checks (Before Running Ads)
+
+- [ ] Update Hours to `9:30 AM – 6:30 PM` (Mon-Sat)
+- [ ] Ensure Description is updated (719 characters, includes all 4 ad keywords)
+- [ ] Add Service Area: `Mohali, Chandigarh, Panchkula, Kharar, Zirakpur`
+- [ ] Upload 3-5 new photos for each Ad course (Classroom, editing setup, student projects)
+- [ ] Create a Google Post for each of the 4 main Ad courses with a "Book Now" button

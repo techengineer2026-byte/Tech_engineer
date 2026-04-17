@@ -309,27 +309,41 @@ const jsMouth = document.querySelector('.js-mouth');
 const bubble = document.getElementById('js-bubble');
 const jsText = document.getElementById('js-text');
 
-// Click / Touch Interaction
-jsHuman.addEventListener('click', () => {
-    jsHuman.classList.add('shake-active');
-    bubble.style.opacity = '1';
-    jsMouth.style.height = '18px'; // Open mouth
-    jsMouth.style.borderRadius = '50%';
-    jsText.innerText = "Function Executed!";
+// Check if jsHuman exists before adding the listener
+if (typeof jsHuman !== 'undefined' && jsHuman !== null) {
 
-    setTimeout(() => {
-        jsHuman.classList.remove('shake-active');
-        bubble.style.opacity = '0';
-        jsMouth.style.height = '8px'; // Close mouth
-        jsMouth.style.borderRadius = '0 0 20px 20px';
-        jsText.innerText = "Hover me or Click me!";
-    }, 800);
-});
+    jsHuman.addEventListener('click', () => {
+        jsHuman.classList.add('shake-active');
+
+        // Use safe checks for sub-elements too
+        if (bubble) bubble.style.opacity = '1';
+        if (jsMouth) {
+            jsMouth.style.height = '18px';
+            jsMouth.style.borderRadius = '50%';
+        }
+        if (jsText) jsText.innerText = "Function Executed!";
+
+        setTimeout(() => {
+            if (jsHuman) jsHuman.classList.remove('shake-active');
+            if (bubble) bubble.style.opacity = '0';
+            if (jsMouth) {
+                jsMouth.style.height = '8px';
+                jsMouth.style.borderRadius = '0 0 20px 20px';
+            }
+            if (jsText) jsText.innerText = "Hover me or Click me!";
+        }, 800);
+    });
+
+} else {
+    console.log("jsHuman element not found on this page, skipping animation script.");
+}
 
 // Mouse Move (Desktop)
 document.addEventListener('mousemove', (e) => {
+    const tabJs = document.getElementById('tab-js');
+
     // Check if JS tab is currently shown
-    if (document.getElementById('tab-js').classList.contains('active')) {
+    if (tabJs && tabJs.classList.contains('active')) {
         jsPupils.forEach(pupil => {
             const rect = pupil.getBoundingClientRect();
             const x = (rect.left + rect.width / 2);
@@ -376,20 +390,20 @@ function sendSyllabus() {
             course: course
         })
     })
-    .then(() => {
-        // With 'no-cors', we can't read the response, but if we get here, it sent!
-        status.innerText = "✅ Syllabus Sent! Check your inbox.";
-        status.style.color = "green";
-        
-        // Clear fields
-        //document.getElementById("email").value = "";
-        //document.getElementById("name").value = "";
-    })
-    .catch(err => {
-        console.error(err);
-        status.innerText = "❌ Something went wrong.";
-        status.style.color = "red";
-    });
+        .then(() => {
+            // With 'no-cors', we can't read the response, but if we get here, it sent!
+            status.innerText = "✅ Syllabus Sent! Check your inbox.";
+            status.style.color = "green";
+
+            // Clear fields
+            //document.getElementById("email").value = "";
+            //document.getElementById("name").value = "";
+        })
+        .catch(err => {
+            console.error(err);
+            status.innerText = "❌ Something went wrong.";
+            status.style.color = "red";
+        });
 }
 
 

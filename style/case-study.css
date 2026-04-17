@@ -1,162 +1,135 @@
-/* =============================================
-   BEAUTIFUL CASE STUDY STYLES (case-study-premium.css)
-   ============================================= */
+/* Premium Case Study Styling */
+:root {
+    --primary-gradient: linear-gradient(135deg, #534AB7 0%, #0d6efd 100%);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+}
 
-/* 1. HERO */
+/* 1. Hero Section */
 .case-study-hero-premium {
-    padding: 4rem 0;
-    background-color: #fff;
-    border-bottom: 1px solid #e9ecef;
+    background: var(--primary-gradient);
+    padding: 100px 0 60px;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.bg-primary-soft {
-    background-color: rgba(0, 123, 255, 0.1);
-}
-.text-primary {
-    color: #007bff !important;
+.case-study-hero-premium::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(80px);
 }
 
-/* 2. PROJECT OVERVIEW */
-.project-overview-section {
-    background-color: #fff;
-}
+/* 2. Floating Overview Box */
 .overview-box {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 12px;
-    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: -50px;
+    /* Pulls it up into the hero */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    position: relative;
 }
+
 .overview-label {
-    font-size: 0.8rem;
-    color: #6c757d;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
-    display: block;
+    color: #888;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
+
 .overview-value {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #212529;
+    font-weight: 700;
+    color: #333;
     margin-bottom: 0;
 }
 
-/* 3. STORY SECTION */
-.section-title-alt {
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.fa-ul {
-    padding-left: 1.5em; /* Adjust for better alignment */
-}
-.fa-ul li {
-    font-size: 1.05rem;
-    margin-bottom: 0.75rem;
-}
-
-.challenge-visual, .solution-text {
-    padding-right: 2rem;
-}
-
-@media (max-width: 991.98px) {
-    .challenge-visual, .solution-text {
-        padding-right: 0;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-    .row.flex-row-reverse {
-        flex-direction: column-reverse !important;
-    }
-}
-
-/* 4. KEY RESULTS */
-.key-results-section {
-    background-color: #f8f9fa;
-    border-top: 1px solid #e9ecef;
-    border-bottom: 1px solid #e9ecef;
-}
+/* 3. Metrics Cards */
 .metric-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 2.5rem 2rem;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 20px;
     text-align: center;
-    border: 1px solid #e9ecef;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
+
 .metric-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(83, 74, 183, 0.1);
 }
-.metric-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
+
 .metric-value-large {
     font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    line-height: 1.1;
-    color: #212529;
-}
-.metric-label-large {
-    font-size: 1.1rem;
-    color: #6c757d;
-    margin-bottom: 0;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
 }
 
-/* 5. PREMIUM TESTIMONIAL */
+/* 4. Story Section */
+.section-title-alt {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.challenge-box,
+.solution-box {
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.challenge-box {
+    background: #fff5f5;
+    border-left: 8px solid #ff4d4d;
+}
+
+.solution-box {
+    background: #f0f7ff;
+    border-left: 8px solid #0d6efd;
+}
+
+/* 5. Premium Testimonial */
 .testimonial-premium-section {
-    background-color: #fff;
+    background: #f8faff;
+    padding: 80px 0;
 }
+
 .testimonial-card {
-    background-color: #0d1a2e; /* Dark, premium background */
-    color: #fff;
-    border-radius: 15px;
-    padding: 3rem;
-    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
     position: relative;
-    box-shadow: 0 15px 40px rgba(13, 26, 46, 0.2);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+
 .client-photo {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: -45px;
     left: 50%;
     transform: translateX(-50%);
-    object-fit: cover;
 }
-.testimonial-card .quote-icon {
-    font-size: 2.5rem;
-    color: rgba(0, 123, 255, 0.5);
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-.testimonial-card blockquote {
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 1.7;
-    margin: 0;
-    border: none;
-    padding: 0;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.testimonial-card .cite {
-    margin-top: 2rem;
-}
-.client-name {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.1rem;
-}
-.client-title {
-    color: #adb5bd;
-    font-size: 0.9rem;
-    margin-bottom: 0;
+
+.quote-icon {
+    font-size: 3rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
 }
