@@ -4,19 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Links - Tech Engineer</title>
-    <!-- FontAwesome for Icons -->
+    
+    <!-- ✅ PRIMARY SEO META TAGS -->
+    <title>Tech Engineer | Official Social Links & Portfolio</title>
+    <meta name="description" content="Connect with Tech Engineer on Instagram, YouTube, Threads, and more. Explore our professional video editing courses and AI services.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://techengineer.co/links">
+
+    <!-- ✅ OPEN GRAPH (For IG/FB/Threads Previews) -->
+    <meta property="og:title" content="Tech Engineer - Official Links">
+    <meta property="og:description" content="One place for all our social platforms and services.">
+    <meta property="og:image" content="https://techengineer.co/images/video-editing-course-og.jpg">
+    <meta property="og:url" content="https://techengineer.co/links">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ JSON-LD SCHEMA (For AEO & Google Search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tech Engineer",
+      "url": "https://techengineer.co",
+      "logo": "https://techengineer.co/images/logow.webp",
+      "sameAs": [
+        "https://www.facebook.com/people/Tech-Engineer/61588374936232/",
+        "https://instagram.com/tech___engineer",
+        "https://www.youtube.com/@TechEngineerAI",
+        "https://api.whatsapp.com/send?phone=918544884846",
+        "https://www.pinterest.com/5qW9Hc1oM",
+        "https://www.threads.net/@tech___engineer",
+        "https://x.com/TechEngineer115"
+      ]
+    }
+    </script>
+
+    <!-- FontAwesome & Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style/AIchatbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <style>
-        /* Base Reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        :root {
+            --bg-dark: #0f0c29;
+            --primary-gradient: linear-gradient(90deg, #00d4ff, #7b2ff7, #ff006e);
+            --glass: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.15);
         }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; }
 
         body {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
@@ -27,446 +61,77 @@
             align-items: center;
             min-height: 100vh;
             padding: 40px 20px;
-            position: relative;
             overflow-x: hidden;
+            color: white;
         }
 
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
+        @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Animated Background Particles */
-        body::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: particleMove 20s linear infinite;
-            z-index: 0;
-        }
-
-        @keyframes particleMove {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            100% {
-                transform: translate(-50px, -50px);
-            }
-        }
-
-        /* Main Container */
-        .main-wrapper {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: 900px;
-        }
+        .main-wrapper { width: 100%; max-width: 600px; z-index: 1; }
 
         /* Header Section */
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            animation: fadeInDown 0.8s ease;
-        }
+        .header { text-align: center; margin-bottom: 30px; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #7b2ff7; margin-bottom: 15px; box-shadow: 0 0 20px rgba(123, 47, 247, 0.5); }
+        .header h1 { font-size: 2rem; background: var(--primary-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
+        /* Container */
+        .social-container { display: flex; flex-direction: column; gap: 15px; }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, #00d4ff, #7b2ff7, #ff006e);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-
-        .header p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
-
-        /* Container for the buttons */
-        .social-container {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* The Button Style */
+        /* Button Style */
         .social-btn {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 18px 25px;
-            text-decoration: none;
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1.5px solid rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            display: flex; align-items: center; padding: 16px 20px;
+            text-decoration: none; color: #ffffff; background: var(--glass);
+            border: 1px solid var(--border); border-radius: 50px;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
         }
 
-        /* Icon Styling */
-        .social-btn i {
-            font-size: 28px;
-            margin-right: 18px;
-            width: 35px;
-            text-align: center;
-            transition: all 0.3s ease;
-            z-index: 2;
-        }
+        .social-btn:hover { transform: scale(1.05); background: rgba(255, 255, 255, 0.15); border-color: white; }
 
-        /* Text Styling */
-        .text-group {
-            display: flex;
-            flex-direction: column;
-            z-index: 2;
-        }
+        .social-btn i { font-size: 24px; margin-right: 15px; width: 30px; text-align: center; }
 
-        .label {
-            font-size: 0.75rem;
-            opacity: 0.6;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 3px;
-        }
+        .text-group { display: flex; flex-direction: column; }
+        .label { font-size: 0.7rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; }
+        .handle { font-size: 1rem; font-weight: 600; }
 
-        .handle {
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
+        /* Icon Colors */
+        .yt i { color: #ff0000; }
+        .ig i { color: #E1306C; }
+        .wa i { color: #25D366; }
+        .fb i { color: #1877F2; }
+        .tw i { color: #000000; } /* X / Twitter */
+        .th i { color: #ffffff; } /* Threads */
+        .pi i { color: #E60023; } /* Pinterest */
 
-        /* --- PLATFORM-SPECIFIC ANIMATIONS & COLORS --- */
-
-        /* 1. YouTube Animation */
-        .social-btn.yt:hover {
-            background: rgba(255, 0, 0, 0.15);
-            border-color: #ff0000;
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 35px -5px rgba(255, 0, 0, 0.5);
-        }
-
-        .social-btn.yt i {
-            color: #ff0000;
-        }
-
-        .social-btn.yt:hover i {
-            transform: scale(1.3) rotate(-15deg);
-            color: #fff;
-            filter: drop-shadow(0 0 12px #ff0000);
-        }
-
-        /* 2. Instagram Animation */
-        .social-btn.ig:hover {
-            background: linear-gradient(45deg, rgba(64, 93, 230, 0.15), rgba(193, 53, 132, 0.15));
-            border-color: #c13584;
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 35px -5px rgba(193, 53, 132, 0.5);
-        }
-
-        .social-btn.ig i {
-            background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .social-btn.ig:hover i {
-            transform: scale(1.3) rotate(15deg);
-            -webkit-text-fill-color: #fff;
-            filter: drop-shadow(0 0 12px #C13584);
-        }
-
-        /* 3. Website Animation */
-        .social-btn.web:hover {
-            background: rgba(0, 191, 255, 0.15);
-            border-color: #00bfff;
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 35px -5px rgba(0, 191, 255, 0.5);
-        }
-
-        .social-btn.web i {
-            color: #00bfff;
-        }
-
-        .social-btn.web:hover i {
-            transform: scale(1.3) rotate(360deg);
-            color: #fff;
-            filter: drop-shadow(0 0 12px #00bfff);
-        }
-
-        /* 4. WhatsApp Animation */
-        .social-btn.wa:hover {
-            background: rgba(37, 211, 102, 0.15);
-            border-color: #25D366;
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 35px -5px rgba(37, 211, 102, 0.5);
-        }
-
-        .social-btn.wa i {
-            color: #25D366;
-        }
-
-        .social-btn.wa:hover i {
-            transform: scale(1.3);
-            color: #fff;
-            filter: drop-shadow(0 0 12px #25D366);
-            animation: shake 0.5s ease;
-        }
-
-        @keyframes shake {
-
-            0%,
-            100% {
-                transform: scale(1.3) rotate(0deg);
-            }
-
-            25% {
-                transform: scale(1.3) rotate(-10deg);
-            }
-
-            75% {
-                transform: scale(1.3) rotate(10deg);
-            }
-        }
-
-        /* Shine Effect Overlay */
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.6s;
-            z-index: 1;
-        }
-
-        .social-btn:hover::before {
-            left: 100%;
-        }
-
-        /* Ripple Effect on Click */
-        .social-btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .social-btn:active::after {
-            width: 300px;
-            height: 300px;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-            animation: fadeIn 1s ease 0.5s both;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
-
-            .header p {
-                font-size: 0.95rem;
-            }
-
-            .social-container {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .social-btn {
-                padding: 15px 20px;
-            }
-
-            .social-btn i {
-                font-size: 24px;
-                margin-right: 15px;
-            }
-
-            .handle {
-                font-size: 0.95rem;
-            }
-        }
-
-        /* Loading Animation */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .social-btn {
-            animation: slideIn 0.5s ease forwards;
-        }
-
-        .social-btn:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .social-btn:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .social-btn:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .social-btn:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .social-btn:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        .social-btn:nth-child(6) {
-            animation-delay: 0.6s;
-        }
-
-        .social-btn:nth-child(7) {
-            animation-delay: 0.7s;
-        }
-
-        .social-btn:nth-child(8) {
-            animation-delay: 0.8s;
-        }
-
-        .social-btn:nth-child(9) {
-            animation-delay: 0.9s;
+        .footer { text-align: center; margin-top: 40px; color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; }
+        
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.5rem; }
+            .social-btn { padding: 12px 18px; }
         }
     </style>
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-55RDCHQQ');</script>
-<!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
     <div class="main-wrapper">
-        <!-- Header -->
-        <div class="header">
-            <h1>🚀 Tech Engineer Links</h1>
-            <p>Connect with us across all platforms</p>
-        </div>
+        <header class="header">
+            <img src="/images/logow.webp" alt="Tech Engineer" class="profile-img">
+            <h1>Tech Engineer</h1>
+            <p>Master AI & Video Editing</p>
+        </header>
 
         <div class="social-container">
-
-            <!-- Tech Engineer Website -->
-            <a href="https://techengineer.co/" target="_blank" class="social-btn web">
-                <i class="fa-solid fa-globe"></i>
+            <!-- Website -->
+            <a href="https://techengineer.co/" class="social-btn" aria-label="Visit our Website">
+                <i class="bi bi-globe"></i>
                 <div class="text-group">
-                    <span class="label">Website</span>
+                    <span class="label">Official Website</span>
                     <span class="handle">techengineer.co</span>
                 </div>
             </a>
 
-            <!-- Puadh Punjabi Podcast Website -->
-            <a href="https://puadhpunjabipodcast.com/" target="_blank" class="social-btn web">
-                <i class="fa-solid fa-microphone-lines"></i>
-                <div class="text-group">
-                    <span class="label">Podcast</span>
-                    <span class="handle">puadhpunjabipodcast.com</span>
-                </div>
-            </a>
-
-            <!-- WhatsApp Contact -->
-            <a href="https://api.whatsapp.com/send/?phone=918360769451" target="_blank" class="social-btn wa">
-                <i class="fa-brands fa-whatsapp"></i>
-                <div class="text-group">
-                    <span class="label">Contact Us</span>
-                    <span class="handle">WhatsApp Chat</span>
-                </div>
-            </a>
-
-            <!-- Tech Engineer Programming YT -->
-            <a href="https://www.youtube.com/@TechEngineerAI" target="_blank" class="social-btn yt">
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@TechEngineerAI" class="social-btn yt" aria-label="Subscribe on YouTube">
                 <i class="fa-brands fa-youtube"></i>
                 <div class="text-group">
                     <span class="label">YouTube</span>
@@ -474,26 +139,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </a>
 
-            <!-- Puadh Punjabi Podcast YT -->
-            <a href="https://www.youtube.com/@puadhpunjabipodcast" target="_blank" class="social-btn yt">
-                <i class="fa-brands fa-youtube"></i>
-                <div class="text-group">
-                    <span class="label">YouTube</span>
-                    <span class="handle">@PuadhPunjabiPodcast</span>
-                </div>
-            </a>
-
-            <!-- Tricity Rents YT -->
-            <a href="https://www.youtube.com/@TricityRents" target="_blank" class="social-btn yt">
-                <i class="fa-brands fa-youtube"></i>
-                <div class="text-group">
-                    <span class="label">YouTube</span>
-                    <span class="handle">@TricityRents</span>
-                </div>
-            </a>
-
-            <!-- Tech Engineer IG -->
-            <a href="https://www.instagram.com/tech___engineer/" target="_blank" class="social-btn ig">
+            <!-- Instagram -->
+            <a href="https://instagram.com/tech___engineer" class="social-btn ig" aria-label="Follow on Instagram">
                 <i class="fa-brands fa-instagram"></i>
                 <div class="text-group">
                     <span class="label">Instagram</span>
@@ -501,34 +148,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </a>
 
-            <!-- Puadh Punjabi Podcast IG -->
-            <a href="https://www.instagram.com/puadhpunjabipodcast/" target="_blank" class="social-btn ig">
-                <i class="fa-brands fa-instagram"></i>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/people/Tech-Engineer/61588374936232/" class="social-btn fb" aria-label="Follow on Facebook">
+                <i class="fa-brands fa-facebook"></i>
                 <div class="text-group">
-                    <span class="label">Instagram</span>
-                    <span class="handle">@puadhpunjabipodcast</span>
+                    <span class="label">Facebook</span>
+                    <span class="handle">Tech Engineer Official</span>
                 </div>
             </a>
 
-            <!-- Tricity Rents IG -->
-            <a href="https://www.instagram.com/tricityrents/" target="_blank" class="social-btn ig">
-                <i class="fa-brands fa-instagram"></i>
+            <!-- X / Twitter -->
+            <a href="https://x.com/TechEngineer115" class="social-btn tw" aria-label="Follow on X">
+                <i class="fa-brands fa-x-twitter"></i>
                 <div class="text-group">
-                    <span class="label">Instagram</span>
-                    <span class="handle">@tricityrents</span>
+                    <span class="label">Twitter / X</span>
+                    <span class="handle">@TechEngineer115</span>
                 </div>
             </a>
 
+            <!-- Threads -->
+            <a href="https://www.threads.net/@tech___engineer" class="social-btn th" aria-label="Follow on Threads">
+                <i class="fa-brands fa-threads"></i>
+                <div class="text-group">
+                    <span class="label">Threads</span>
+                    <span class="handle">@tech___engineer</span>
+                </div>
+            </a>
+
+            <!-- Pinterest -->
+            <a href="https://www.pinterest.com/5qW9Hc1oM" class="social-btn pi" aria-label="Follow on Pinterest">
+                <i class="fa-brands fa-pinterest"></i>
+                <div class="text-group">
+                    <span class="label">Pinterest</span>
+                    <span class="handle">Tech Engineer Labs</span>
+                </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=918544884846" class="social-btn wa" aria-label="Contact on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div class="text-group">
+                    <span class="label">WhatsApp</span>
+                    <span class="handle">Direct Consultation</span>
+                </div>
+            </a>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>✨ Crafted with passion by Tech Engineer | © 2024 All Rights Reserved</p>
-        </div>
+        <footer class="footer">
+            <p>© 2024 Tech Engineer | Mohali & Chandigarh</p>
+        </footer>
     </div>
-
-    <script src="/script/aichatbot.js" defer></script>
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-    </body>
-
+</body>
 </html>
