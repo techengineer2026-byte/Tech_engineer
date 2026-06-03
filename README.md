@@ -1,451 +1,457 @@
-<!-- 
-  ========================================
-  3 STRATEGIC VIDEO SECTIONS FOR PAGE 1 RANKING
-  ========================================
-  INSERT THESE INTO YOUR LANDING PAGE:
-  - Section A: Student Projects Gallery (After Hero/Form)
-  - Section B: YouTube Testimonials (Before FAQ)
-  - Section C: Course Preview Video (In Why Section)
-  
-  Replace the placeholder URLs with your actual YouTube/video links
-  ========================================
--->
 
-<!-- ========================================
-  SECTION A: STUDENT PROJECTS VIDEO GALLERY
-  Insert after: "Local Authority Section" 
-  (Position: 2nd or 3rd section)
-  ======================================== -->
+```
+te_public
+├─ .firebaserc
+├─ .stylelintrc.json
+├─ 404.html
+├─ about.html
+├─ assets
+│  └─ css
+│     ├─ blog.css
+│     └─ portfolio.css
+├─ blog
+│  ├─ ai-agents-stealing-software-engineering-jobs.html
+│  ├─ ai-in-2026-whats-changed-and-whats-coming-next.html
+│  ├─ how-we-give-100-job-placement-to-our-students.html
+│  ├─ index.html
+│  ├─ it-career-in-doha.html
+│  ├─ mwc-2026-future-of-smartphones-and-ai.html
+│  ├─ summer-industrial-training-mohali-2026.html
+│  └─ templateblog.html
+├─ blog.html
+├─ contact.html
+├─ courses
+│  ├─ cloud-computing-course.html
+│  ├─ cyber-security-course.html
+│  ├─ digital-marketing-course.html
+│  ├─ dotnet-api-course.html
+│  ├─ dotnet-course.html
+│  ├─ dotnet-desktop-development-course.html
+│  ├─ dotnet-maui-course.html
+│  ├─ dotnet-mobile-app-development-course.html
+│  ├─ dotnet-mssql-course.html
+│  ├─ fullstack-course.html
+│  ├─ game-development-course.html
+│  ├─ prompt-engineering-course.html
+│  ├─ python-course.html
+│  ├─ syllabus
+│  │  ├─ 3M C#_API_DotNet Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_Azure-Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_Desktop-Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_DotNet Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_MAUI DotNet Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_ML-Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_Unity-Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M C#_Webdev-Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Cyber Security Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Digital Marketing Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Full-Stack Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Graphic Design Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Mobile App Dev Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M n8n Automation Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Prompt Engineer Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Python Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M SQL Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M UI-UX Syllabus - Tech Engineer.pdf
+│  │  ├─ 3M Video Editing Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M Cyber Security Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M Digital Marketing Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M Full-Stack Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M n8n Automation Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M Prompt Engineer Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M Python Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M UI-UX Syllabus - Tech Engineer.pdf
+│  │  ├─ 6M Video Editing Syllabus - Tech Engineer.pdf
+│  │  └─ 6W Python Syllabus - Tech Engineer.pdf
+│  ├─ syllabus.css
+│  ├─ thumbs
+│  │  ├─ 3M_API-DotNet.jpeg
+│  │  ├─ 3M_Csh-Azure.jpeg
+│  │  ├─ 3M_Csh-Desktop.jpeg
+│  │  ├─ 3M_Csh-DotNet.jpeg
+│  │  ├─ 3M_Csh-ML.jpeg
+│  │  ├─ 3M_Csh-Unity.jpeg
+│  │  ├─ 3M_Csh-Webdev.jpeg
+│  │  ├─ 3M_Cyber-Security.jpeg
+│  │  ├─ 3M_Digital-Marketing.jpeg
+│  │  ├─ 3M_Full-Stack.jpeg
+│  │  ├─ 3M_Graphic-Design.jpeg
+│  │  ├─ 3M_MAUI-DotNet.jpeg
+│  │  ├─ 3M_Mobile-App-Dev.jpeg
+│  │  ├─ 3M_n8n-Automation.jpeg
+│  │  ├─ 3M_Prompt-Eng.jpeg
+│  │  ├─ 3M_Python.jpeg
+│  │  ├─ 3M_SQL-Database.jpeg
+│  │  ├─ 3M_UI-UX.jpeg
+│  │  ├─ 3M_Video-Editing.jpeg
+│  │  ├─ 6M_Cyber-Security.jpeg
+│  │  ├─ 6M_Digital-Marketing.jpeg
+│  │  ├─ 6M_Full-Stack.jpeg
+│  │  ├─ 6M_n8n-Automation.jpeg
+│  │  ├─ 6M_Prompt-Eng.jpeg
+│  │  ├─ 6M_UI-UX.jpeg
+│  │  └─ 6M_Video-Editing.jpeg
+│  ├─ ui-ux-design-course.html
+│  └─ video-editing-course.html
+├─ favicon.ico
+├─ firebase.json
+├─ gallery.html
+├─ gallery.json
+├─ gallery_editor.py
+├─ icon
+│  ├─ 25231.webp
+│  ├─ Amazon_Web_Services-Logo.wine.svg
+│  ├─ bt5.webp
+│  ├─ c-sharp.webp
+│  ├─ css.webp
+│  ├─ docker.png
+│  ├─ dot-net-jpg.webp
+│  ├─ git-icon-logo.webp
+│  ├─ html.webp
+│  ├─ icons8-buy-for-change-100.png
+│  ├─ icons8-consultation-100.png
+│  ├─ icons8-holding-box-100.png
+│  ├─ icons8-leader-100.png
+│  ├─ js.webp
+│  ├─ mongodb-logo-png_seeklogo-481256.png
+│  ├─ MySQL-Logo.png
+│  ├─ node-js-icon.webp
+│  ├─ react-js-icon.webp
+│  └─ swagger.png
+├─ images
+│  ├─ 12.webp
+│  ├─ 2025-06-03.webp
+│  ├─ 2025-07-17.webp
+│  ├─ 5.webp
+│  ├─ 6.webp
+│  ├─ about_banner.webp
+│  ├─ Adobe_After_Effects_CC_2026_icon.svg.png
+│  ├─ Adobe_After_Effects_CC_2026_icon.svg.webp
+│  ├─ Adobe_After_Effects_CC_icon.svg
+│  ├─ Adobe_Illustrator_CC_icon.svg.png
+│  ├─ Adobe_Illustrator_CC_icon.svg.webp
+│  ├─ Adobe_Photoshop_CC_2026_icon.svg.png
+│  ├─ Adobe_Photoshop_CC_2026_icon.svg.webp
+│  ├─ Adobe_Photoshop_CC_icon.svg
+│  ├─ Adobe_Premiere_Pro_CC_2026_icon.svg.png
+│  ├─ Adobe_Premiere_Pro_CC_2026_icon.svg.webp
+│  ├─ Adobe_Premiere_Pro_Logo.svg
+│  ├─ ai-chatbot-development-mohali.webp
+│  ├─ ai-voice-agent-development-india.webp
+│  ├─ aiprompt.webp
+│  ├─ AnuragKohli.webp
+│  ├─ AnuragStudent.jpg
+│  ├─ AnuragStudent1.jpg
+│  ├─ app-developer-company-mohali.webp
+│  ├─ aso-optimization-mohali.webp
+│  ├─ asp-net.webp
+│  ├─ Aviator.webp
+│  ├─ Background (5).webp
+│  ├─ backup.webp
+│  ├─ banner2.webp
+│  ├─ bg-lines.jpg
+│  ├─ Bg.webp
+│  ├─ blog
+│  │  ├─ ai-2026-featured.webp
+│  │  ├─ ai-2026-featured1.webp
+│  │  ├─ ai-agents-takeover.webp
+│  │  ├─ gpt5-comparison.webp
+│  │  ├─ job-placement-og.webp
+│  │  ├─ mwc-2026-thumbnail.webp
+│  │  └─ summer-training-mohali-2026.webp
+│  ├─ blog.webp
+│  ├─ brow-shaping.jfif
+│  ├─ C
+│  │  └─ CC+.jpg
+│  ├─ C++.png
+│  ├─ c.png
+│  ├─ C1.webp
+│  ├─ Canva-logo-PNG-medium-size.png
+│  ├─ Canva-logo-PNG-medium-size.webp
+│  ├─ Capcut-icon.svg
+│  ├─ CC2.webp
+│  ├─ CEO!.jfif
+│  ├─ classroom-training.webp
+│  ├─ client-photo.webp
+│  ├─ clients
+│  │  ├─ client1.webp
+│  │  ├─ client2.webp
+│  │  ├─ client3.webp
+│  │  ├─ client4.webp
+│  │  ├─ client5.webp
+│  │  ├─ client6.webp
+│  │  ├─ client7.webp
+│  │  └─ client8.webp
+│  ├─ cloud-server-solutions-client-feedback.webp
+│  ├─ cloudcomputing.webp
+│  ├─ codebank-course-builder.webp
+│  ├─ codebank.webp
+│  ├─ contact us.gif
+│  ├─ contact-us1.gif
+│  ├─ contactus.gif
+│  ├─ CorelDRAW-2020-icon.webp
+│  ├─ course
+│  │  ├─ basic-computer-training-in-mohali.webp
+│  │  ├─ cloud-computing-solutions-mohali.webp
+│  │  ├─ data-science-specialist-services-mohali.webp
+│  │  ├─ digital-marketing-services-in-mohali.webp
+│  │  ├─ dotnet-core-development-company-mohali.webp
+│  │  ├─ hybrid-mobile-app-development-mohali.webp
+│  │  └─ web-development-services-mohali.webp
+│  ├─ courses
+│  ├─ cpp-course.webp
+│  ├─ Cpp.jpg
+│  ├─ cybersecuirty.webp
+│  ├─ DaVinci_Resolve_Studio.png
+│  ├─ DaVinci_Resolve_Studio.webp
+│  ├─ denim-cloth-texture-design_294865-5607.avif
+│  ├─ desktopcode.jpg
+│  ├─ digital marketing.webp
+│  ├─ Digital-Marketing-Course.webp
+│  ├─ digital-marketing-mohali.webp
+│  ├─ digital-marketing-seo-results-client.webp
+│  ├─ digital-marketing.webp
+│  ├─ dot-net-jpg.webp
+│  ├─ driving school  image.webp
+│  ├─ ear-candling.jfif
+│  ├─ et-app-hero-mockup.jfif
+│  ├─ et-chat.jfif
+│  ├─ et-onboarding.jfif
+│  ├─ et-profile.jfif
+│  ├─ et-swipe-cards.jfif
+│  ├─ et-trust-center.jfif
+│  ├─ eyelash-extensions.jfif
+│  ├─ first testimonials.webp
+│  ├─ g0YTRh7uRHpbWQgSZz62bO050.avif
+│  ├─ gallery
+│  │  ├─ 1.mp4
+│  │  ├─ 2.mp4
+│  │  ├─ 2025-06-03.webp
+│  │  ├─ 2025-07-17 (1).webp
+│  │  ├─ 2025-07-17.webp
+│  │  ├─ 2025-11-19 (1).webp
+│  │  ├─ 2025-11-19.webp
+│  │  ├─ 3.mp4
+│  │  ├─ 4.mp4
+│  │  ├─ AF1QipMpLw87OYR5iTIL0X-A7-buQz_X.webp
+│  │  ├─ AF1QipMuFgkbbThWrDBZvXkznnWDN8XT.webp
+│  │  ├─ IMG_5982 2.webp
+│  │  ├─ IMG_5987 2.webp
+│  │  ├─ IMG_5992 2.webp
+│  │  ├─ IMG_5995 2.webp
+│  │  ├─ IMG_6008 2.webp
+│  │  ├─ IMG_6021 2.webp
+│  │  ├─ IMG_6029 2.webp
+│  │  ├─ IMG_6036 2.webp
+│  │  ├─ IMG_6052 2.webp
+│  │  ├─ IMG_6090 2.webp
+│  │  ├─ IMG_6108 2.webp
+│  │  ├─ IMG_6113 2.webp
+│  │  ├─ IMG_6125 2.webp
+│  │  └─ IMG_6143 2.webp
+│  ├─ gamedeveloper.webp
+│  ├─ girl.webp
+│  ├─ graphic-design.webp
+│  ├─ graphic-designers.webp
+│  ├─ graphic-designing-course.webp
+│  ├─ graphics.jpg
+│  ├─ guarantee.webp
+│  ├─ hands-on-projects.webp
+│  ├─ hero-banner.webp
+│  ├─ himanshikaur.webp
+│  ├─ home-bg.webp
+│  ├─ host.png
+│  ├─ HTMLCSS.webp
+│  ├─ I&T.webp
+│  ├─ icon.ico
+│  ├─ icon.png
+│  ├─ icon.webp
+│  ├─ IMG1.webp
+│  ├─ IMG2.webp
+│  ├─ IMG3.webp
+│  ├─ IMG4.webp
+│  ├─ IMG5.webp
+│  ├─ IMG7.webp
+│  ├─ imgwhat.png
+│  ├─ imgwhat.webp
+│  ├─ industrial-training.webp
+│  ├─ internship-certified.webp
+│  ├─ it-support.webp
+│  ├─ java-training.jfif
+│  ├─ Javascript.png
+│  ├─ kabaddi_project.webp
+│  ├─ Kamalpreet_singh.jpg
+│  ├─ lLead.jfif
+│  ├─ logo.png
+│  ├─ logo.webp
+│  ├─ logow.png
+│  ├─ logow.webp
+│  ├─ main-og-image.webp
+│  ├─ Mask-group-61.png
+│  ├─ Mask-group-61.webp
+│  ├─ mission_vision_bg.webp
+│  ├─ mobile-app-development-client-review.webp
+│  ├─ mobile-app-development-company-mohali.webp
+│  ├─ mobilecode.jpg
+│  ├─ n8n-automation-mohali.webp
+│  ├─ netcorespec.webp
+│  ├─ network.webp
+│  ├─ no-photo_avatar.png
+│  ├─ nutrition  website image.webp
+│  ├─ online-classes.webp
+│  ├─ pantika-image1.webp
+│  ├─ pattern.webp
+│  ├─ person.jpg
+│  ├─ phone.jpg
+│  ├─ photo-1551288049-bebda4e38f71.jpg
+│  ├─ photo-1551650975-87deedd944c3.jpg
+│  ├─ placement-support.webp
+│  ├─ portfolio
+│  │  ├─ art-marketplace.webp
+│  │  ├─ av-01.jpg
+│  │  ├─ av-02.jpg
+│  │  ├─ aviator.webp
+│  │  ├─ codebank1.webp
+│  │  ├─ codebank2.webp
+│  │  ├─ codebank3.webp
+│  │  ├─ crm-dashboard.webp
+│  │  ├─ ecommerce-site.webp
+│  │  ├─ Etrust.jpg
+│  │  ├─ ppp-logo.webp
+│  │  ├─ soniasalon.webp
+│  │  ├─ third.jpg
+│  │  └─ tricityrent.webp
+│  ├─ progmming.webp
+│  ├─ programming-banner.webp
+│  ├─ programming-classes.webp
+│  ├─ python-course.jfif
+│  ├─ python-course.jpg
+│  ├─ python-course.webp
+│  ├─ Rajeshkumar.webp
+│  ├─ S1.webp
+│  ├─ S2.webp
+│  ├─ serveice.avif
+│  ├─ social-media-case-study-mohali.webp
+│  ├─ social-media-management-mohali.webp
+│  ├─ social-media.webp
+│  ├─ software-dev.webp
+│  ├─ soniaowner.webp
+│  ├─ sonias-challenge.png
+│  ├─ sonias-solution.png
+│  ├─ sonias-solution.webp
+│  ├─ sports image.webp
+│  ├─ Succ.webp
+│  ├─ Sucess.webp
+│  ├─ sunny.webp
+│  ├─ swagger.webp
+│  ├─ te-team.jpeg
+│  ├─ tech-engineer-students-training.webp
+│  ├─ techcast-ep15-jobanjeet-singh-coding-journey.jpg
+│  ├─ techcast-ep18-akash-ecommerce-smart-farming.jpg
+│  ├─ techcast-ep3-mr-bhatia-rise.jpg
+│  ├─ techcast-logo.svg
+│  ├─ teche.webp
+│  ├─ techeee.webp
+│  ├─ tempbanner012.webp
+│  ├─ TESlogo.webp
+│  ├─ thirdeye-challenge.png
+│  ├─ thirdeye-challenge.webp
+│  ├─ thirdeye-owner-photo.png
+│  ├─ thirdeye-solution.png
+│  ├─ tl.webp
+│  ├─ tools01.webp
+│  ├─ tools02.webp
+│  ├─ tools03.webp
+│  ├─ tools04.webp
+│  ├─ tools05.webp
+│  ├─ tools06.webp
+│  ├─ tools07.webp
+│  ├─ tools08.webp
+│  ├─ tools09.webp
+│  ├─ tools10.webp
+│  ├─ tools11.webp
+│  ├─ tools12.webp
+│  ├─ tricityrent-new.webp
+│  ├─ tricityrrent.png
+│  ├─ uiux.webp
+│  ├─ utb_puadh-punjabi.jpg
+│  ├─ utb_tech-engineer.jpg
+│  ├─ utb_tricity-rents.jpg
+│  ├─ video-editing-course-og.jpg
+│  ├─ video-editing-mohali.webp
+│  ├─ video.webp
+│  ├─ video1.webp
+│  ├─ videoback.mp4
+│  ├─ Videoedit.webp
+│  ├─ videoeditor.webp
+│  ├─ web-design-icon.webp
+│  ├─ web-designing-company-mohali.webp
+│  ├─ web-designing-company-panchkula.webp
+│  ├─ web-designing.webp
+│  ├─ web-dev.webp
+│  ├─ web-development-client-success-story.webp
+│  ├─ web-development-training.webp
+│  ├─ web.jfif
+│  ├─ web1.webp
+│  ├─ web2.avif
+│  ├─ website-design1.webp
+│  ├─ whatsapp-marketing-mohali.webp
+│  ├─ whatsapp.webp
+│  └─ WhatsAppsvg.webp
+├─ index.html
+├─ industrial-training.html
+├─ javascript.js
+├─ modal.js
+├─ other
+│  ├─ GrowthAI.py
+│  ├─ image_toolkit.py
+│  └─ main.py
+├─ portfolio
+│  ├─ aviator.html
+│  ├─ codebank.html
+│  ├─ employmenttrust.html
+│  ├─ soniasalon.html
+│  ├─ thirdeyesecurity.html
+│  └─ tricityrent.html
+├─ portfolio.html
+├─ privacy-policy.html
+├─ README.md
+├─ robots.txt
+├─ script
+│  └─ aichatbot.js
+├─ services
+│  ├─ ai-chatbot-development-mohali.html
+│  ├─ ai-voice-agents-mohali.html
+│  ├─ digital-marketing-mohali.html
+│  ├─ mobile-app-development-mohali.html
+│  ├─ n8n-automation-mohali.html
+│  ├─ social-media-management-mohali.html
+│  ├─ style
+│  │  └─ servicecourse.css
+│  ├─ video-editing-mohali.html
+│  ├─ web-design-mohali.html
+│  ├─ whatsapp-marketing-mohali.html
+│  └─ wordpress-development-mohali.html
+├─ services.html
+├─ sitemap.xml
+├─ social.html
+├─ states.json
+├─ style
+│  ├─ ai-theme.css
+│  ├─ AIchatbot.css
+│  ├─ app-theme.css
+│  ├─ case-study.css
+│  ├─ cloud-theme.css
+│  ├─ coding-theme.css
+│  ├─ data-theme.css
+│  ├─ digital-theme.css
+│  ├─ dotnet.css
+│  ├─ gaming-theme.css
+│  ├─ header.css
+│  └─ web-dev-theme.css
+├─ style.css
+├─ terms.html
+├─ thank-you.html
+└─ video-editing-course-mohali-chandigarh.html
 
-<section class="section" style="background: #F9FAFB; padding: 60px 0;">
-  <div class="container">
-    <h2 class="section-title reveal">Student Work Showcase - Real Editing Projects</h2>
-    <p class="section-description reveal">
-      See what our students create during the course. From short-form social media videos to professional documentaries.
-    </p>
-    
-    <div class="row g-4 reveal">
-      
-      <!-- Video 1: Student Before-After Project -->
-      <div class="col-lg-6 col-md-6">
-        <div class="feature-card" style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-          <iframe width="100%" height="300" 
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1?rel=0&modestbranding=1" 
-            title="Student Project: Wedding Video Edit"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen style="display: block;">
-          </iframe>
-          <div style="padding: 20px;">
-            <h4 style="margin: 0 0 8px; font-weight: 600;">Wedding Cinematic Edit</h4>
-            <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">
-              Created by Priya Sharma in Month 1 | 2:45 min • DaVinci Resolve + Premiere Pro
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video 2: Product Review Style -->
-      <div class="col-lg-6 col-md-6">
-        <div class="feature-card" style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-          <iframe width="100%" height="300" 
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2?rel=0&modestbranding=1" 
-            title="Student Project: Product Review Video"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen style="display: block;">
-          </iframe>
-          <div style="padding: 20px;">
-            <h4 style="margin: 0 0 8px; font-weight: 600;">Tech Product Review</h4>
-            <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">
-              Created by Arjun Singh in Month 2 | 3:20 min • Adobe Premiere Pro + After Effects
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video 3: YouTube Shorts Style -->
-      <div class="col-lg-6 col-md-6">
-        <div class="feature-card" style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-          <iframe width="100%" height="300" 
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3?rel=0&modestbranding=1" 
-            title="Student Project: Instagram Reel Edit"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen style="display: block;">
-          </iframe>
-          <div style="padding: 20px;">
-            <h4 style="margin: 0 0 8px; font-weight: 600;">Viral Social Media Edit</h4>
-            <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">
-              Created by Neha Patel in Month 1 | 0:45 sec • CapCut + DaVinci Resolve Color Grade
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video 4: Documentary Style -->
-      <div class="col-lg-6 col-md-6">
-        <div class="feature-card" style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-          <iframe width="100%" height="300" 
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4?rel=0&modestbranding=1" 
-            title="Student Project: Documentary Segment"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen style="display: block;">
-          </iframe>
-          <div style="padding: 20px;">
-            <h4 style="margin: 0 0 8px; font-weight: 600;">Documentary Segment</h4>
-            <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">
-              Created by Raj Kumar in Month 2 | 4:15 min • Final Cut Pro + Adobe Premiere Pro
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Call-to-action below videos -->
-    <div style="text-align: center; margin-top: 50px;">
-      <p style="color: var(--text-dark); margin-bottom: 20px; font-weight: 500;">
-        Want to create videos like these? <strong>Enroll in our course today.</strong>
-      </p>
-      <a href="#leadForm" style="background: var(--secondary); color: white; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
-        Download Course Syllabus
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ========================================
-  SECTION B: YOUTUBE CHANNEL EMBED + TESTIMONIALS
-  Insert before: FAQ Section
-  ======================================== -->
-
-<section class="section" style="background: white;">
-  <div class="container">
-    <h2 class="section-title reveal">Student Success Stories - Video Testimonials</h2>
-    <p class="section-description reveal">
-      Hear directly from our graduates about how the course transformed their video editing skills and career.
-    </p>
-    
-    <div class="row g-5">
-      
-      <!-- YouTube Testimonial 1 -->
-      <div class="col-lg-6 reveal">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-          <iframe width="100%" height="340" 
-            src="https://www.youtube.com/embed/YOUR_TESTIMONIAL_1?rel=0&modestbranding=1" 
-            title="Student Testimonial: From Beginner to Professional"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div style="text-align: center; margin-top: 16px;">
-          <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Aditya Verma</p>
-          <p style="margin: 8px 0 0; color: var(--text-light); font-size: 0.9rem;">Got freelance clients 2 weeks after completing the course</p>
-        </div>
-      </div>
-
-      <!-- YouTube Testimonial 2 -->
-      <div class="col-lg-6 reveal reveal-delay-1">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-          <iframe width="100%" height="340" 
-            src="https://www.youtube.com/embed/YOUR_TESTIMONIAL_2?rel=0&modestbranding=1" 
-            title="Student Testimonial: Career Change Success"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div style="text-align: center; margin-top: 16px;">
-          <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Divya Chatterjee</p>
-          <p style="margin: 8px 0 0; color: var(--text-light); font-size: 0.9rem;">Career change: Marketing → Video Editor in 3 months</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Subscribe CTA -->
-    <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(110deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 16px; color: white;">
-      <h3 style="margin: 0 0 15px; color: white; font-size: 1.4rem;">Subscribe to Our YouTube Channel</h3>
-      <p style="margin: 0 0 25px; font-size: 1.1rem; opacity: 0.9;">
-        Get weekly video editing tips, course updates, and more student success stories.
-      </p>
-      <a href="https://www.youtube.com/@YOUR_CHANNEL_NAME?sub_confirmation=1" 
-        target="_blank"
-        style="background: white; color: var(--primary); padding: 14px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; transition: all 0.3s ease;">
-        <i class="bi bi-youtube" style="margin-right: 8px;"></i> Subscribe Now
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ========================================
-  SECTION C: COURSE PREVIEW VIDEO
-  Insert into: "Why Choose Us Section"
-  (Replace the image on the left)
-  ======================================== -->
-
-<!-- THIS SECTION REPLACES THE "WHY CHOOSE US" IMAGE -->
-
-<!-- OLD CODE TO REMOVE:
-<div class="col-lg-4 reveal reveal-delay-1">
-  <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1964"
-    alt="Creative student working on a computer" class="img-fluid rounded shadow-lg">
-</div>
--->
-
-<!-- NEW CODE TO ADD: -->
-<section class="section why-section">
-  <div class="container">
-    <h2 class="section-title reveal">Why Choose TechEngineer for Video Editing Training?</h2>
-    <div class="row align-items-center g-5">
-      
-      <!-- VIDEO ON LEFT SIDE (REPLACEMENT) -->
-      <div class="col-lg-4 reveal reveal-delay-1">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); position: relative;">
-          <iframe width="100%" height="300" 
-            src="https://www.youtube.com/embed/YOUR_COURSE_PREVIEW_VIDEO?rel=0&modestbranding=1" 
-            title="Video Editing Course Preview - What You'll Learn"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-          <!-- Play button overlay (optional, for mobile) -->
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;">
-            <i class="bi bi-play-circle-fill" style="font-size: 60px; color: white; opacity: 0.8;"></i>
-          </div>
-        </div>
-        <div style="text-align: center; margin-top: 16px;">
-          <p style="margin: 0; color: var(--text-light); font-size: 0.95rem;">
-            👇 Watch: Complete Course Overview (5:30 min)
-          </p>
-        </div>
-      </div>
-
-      <!-- TEXT BENEFITS ON RIGHT SIDE (KEEP AS-IS) -->
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="why-box"><i class="bi bi-trophy-fill"></i>
-            <div>
-                <h3>Expert-Led Training</h3>
-                <p>Learn directly from industry professionals with years of real-world experience.</p>
-            </div>
-        </div>
-        <div class="why-box"><i class="bi bi-laptop"></i>
-            <div>
-                <h3>Hands-On Projects</h3>
-                <p>Build a strong portfolio by working on practical assignments and real client projects.</p>
-            </div>
-        </div>
-        <div class="why-box"><i class="bi bi-briefcase-fill"></i>
-            <div>
-                <h3>100% Job Assistance</h3>
-                <p>We help you with resume building, interview preparation, and placement opportunities.</p>
-            </div>
-        </div>
-        <div class="why-box"><i class="bi bi-gear-fill"></i>
-            <div>
-                <h3>More Training Options</h3>
-                <p>Explore our other courses:
-                    <a href="/courses/fullstack-course" style="color: var(--primary);">Full Stack Development</a>,
-                    <a href="/courses/prompt-engineering-course" style="color: var(--primary);">AI & Prompt Engineering</a>, and
-                    <a href="/courses/digital-marketing-course" style="color: var(--primary);">Digital Marketing</a>.
-                </p>
-            </div>
-        </div>
-        <div class="why-box"><i class="bi bi-patch-check-fill"></i>
-            <div>
-                <h4>Industry Certification</h4>
-                <p>Earn a certificate that is recognized and valued by top companies.</p>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ========================================
-  OPTIONAL: SUBSCRIPTION BOX IN HERO
-  (For YouTube channel growth - quick add)
-  ======================================== -->
-
-<style>
-  .youtube-subscription-box {
-    position: fixed;
-    bottom: 300px;
-    right: 20px;
-    background: white;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    z-index: 900;
-    max-width: 280px;
-    border-left: 4px solid #FF0000;
-  }
-  
-  .youtube-subscription-box h4 {
-    margin: 0 0 8px;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  
-  .youtube-subscription-box p {
-    margin: 0 0 12px;
-    font-size: 13px;
-    color: #666;
-  }
-  
-  .youtube-subscription-box a {
-    display: block;
-    text-align: center;
-    background: #FF0000;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 12px;
-    transition: all 0.3s ease;
-  }
-  
-  .youtube-subscription-box a:hover {
-    background: #CC0000;
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 768px) {
-    .youtube-subscription-box {
-      position: static;
-      margin: 20px 0;
-      max-width: 100%;
-    }
-  }
-}
-</style>
-
-<div class="youtube-subscription-box">
-  <h4>📺 Join Our Community</h4>
-  <p>Weekly editing tips, tutorials & course updates</p>
-  <a href="https://www.youtube.com/@YOUR_CHANNEL_NAME?sub_confirmation=1" target="_blank">
-    Subscribe on YouTube
-  </a>
-</div>
-
-
-<!-- ========================================
-  SEO OPTIMIZATION ADDITIONS
-  ======================================== -->
-
-<!-- Add these JSON-LD schemas to your <head> section -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Student Project Showcase - Video Editing Course",
-  "description": "Real projects created by our video editing students",
-  "uploadDate": "2024-01-15",
-  "duration": "PT3M45S",
-  "thumbnailUrl": "https://img.youtube.com/vi/YOUR_VIDEO_ID_1/maxresdefault.jpg",
-  "embedUrl": "https://www.youtube.com/embed/YOUR_VIDEO_ID_1"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Video Editing Course",
-      "item": "https://techengineer.co/video-editing-course-mohali-chandigarh"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Student Projects",
-      "item": "https://techengineer.co/video-editing-course-mohali-chandigarh#student-projects"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Student Testimonials",
-      "item": "https://techengineer.co/video-editing-course-mohali-chandigarh#testimonials"
-    }
-  ]
-}
-</script>
-
-<!-- ========================================
-  EXACT INSERTION POINTS IN YOUR HTML
-  ======================================== -->
-
-<!--
-📍 WHERE TO INSERT EACH SECTION:
-
-1. STUDENT PROJECTS VIDEO GALLERY (Section A)
-   └─ Insert AFTER: </section> of "LOCAL AUTHORITY SECTION" 
-   └─ Before: <!-- WHAT YOU'LL LEARN SECTION -->
-   └─ In your file: Around line 350-370
-   └─ Impact: ⭐⭐⭐⭐⭐ (HIGHEST - Immediately visible)
-
-2. COURSE PREVIEW VIDEO (Section C) 
-   └─ Replace: The <img> tag in "WHY CHOOSE US" section
-   └─ Search for: <img src="https://images.unsplash.com/photo-1558655146..."
-   └─ In your file: Around line 650-655
-   └─ Impact: ⭐⭐⭐⭐ (High - Above fold area after scrolling)
-
-3. STUDENT TESTIMONIALS (Section B)
-   └─ Insert BEFORE: <!-- FAQ SECTION -->
-   └─ After: <!-- ✅ CONSULTATION CTA SECTION -->
-   └─ In your file: Around line 700-720
-   └─ Impact: ⭐⭐⭐⭐⭐ (HIGHEST - Social proof before decision)
-
-4. YOUTUBE SUBSCRIPTION BOX (Optional)
-   └─ Can float on right side OR
-   └─ Insert in footer before closing </main>
-   └─ Impact: ⭐⭐⭐ (Good for channel growth)
--->
-
-<!-- ========================================
-  IMPLEMENTATION CHECKLIST
-  ======================================== -->
-
-<!--
-STEP 1: Gather Videos
-☐ Create 4 student project showcase videos (if you don't have, ask students to record)
-☐ Record 2 student testimonial videos (5-6 min each)
-☐ Create 1 course preview/overview video (5-10 min)
-
-STEP 2: Upload to YouTube
-☐ Create channel: youtube.com/@TechEngineerMohali
-☐ Upload all videos with these titles:
-  - "[Your Name] Video Editing Student Project - Wedding Edit"
-  - "[Student Name] Video Editing Course Testimonial"
-  - "Video Editing Course Preview - Learn Premiere Pro & DaVinci Resolve"
-☐ Add descriptions with keywords: "video editing course mohali", "video editing training chandigarh"
-☐ Add tags: #VideoEditing #CoursePreview #MohaliTraining
-
-STEP 3: Embed in Your Page
-☐ Replace YOUR_VIDEO_ID_1, YOUR_VIDEO_ID_2, etc. with actual YouTube IDs
-☐ Update student names and descriptions
-☐ Update YouTube subscribe link with your actual channel
-
-STEP 4: SEO Boost
-☐ Update meta description (add "watch student projects" language)
-☐ Add Schema markup for videos
-☐ Promote videos on social media + WhatsApp
-
-STEP 5: Track Results
-☐ Monitor Google Search Console for "video search" impressions
-☐ Track CTR improvement (should jump from Page 2 → Page 1 in 2-4 weeks)
-☐ Monitor YouTube channel subscribers
-
-KEY INSIGHTS:
-→ Google loves video content. Page 2 → Page 1 jump is usually 2-4 weeks
-→ Student projects = social proof (E-E-A-T)
-→ Testimonials = conversion booster (50%+ more form submissions)
-→ YouTube embeds = direct ranking signals
-→ Video schema markup = featured snippet eligibility
--->
+```

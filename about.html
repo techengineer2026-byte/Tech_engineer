@@ -179,6 +179,23 @@
         }
     </style>
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://techengineer.co/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://techengineer.co/about"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -191,7 +208,7 @@
     "streetAddress": "4th Floor, R&R Tower, Sector 74",
     "addressLocality": "Mohali",
     "addressRegion": "Punjab",
-    "postalCode": "160062",
+    "postalCode": "160055",
     "addressCountry": "IN"
   },
   "telephone": "+918544884846",
@@ -220,7 +237,7 @@
     "streetAddress": "4th Floor, R&R Tower, Sector 74",
     "addressLocality": "Mohali",
     "addressRegion": "Punjab",
-    "postalCode": "160062",
+    "postalCode": "160055",
     "addressCountry": "IN"
   },
   "geo": {
@@ -235,11 +252,11 @@
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     "opens": "10:00",
-    "closes": "18:00"
+    "closes": "18:30"
   },
   "sameAs": [
     "https://www.facebook.com/people/Tech-Engineer/61588374936232/",
-    "http://www.instagram.com/tech___engineer",
+    "http://www.instagram.com/techengineer_ai",
     "http://x.com/TechEngineer115",
     "http://www.linkedin.com/company/tech-eng-ineer/",
     "https://www.youtube.com/@TechEngineerai",
@@ -469,6 +486,52 @@
                 </div>
             </div>
         </section>
+        <!-- TESTIMONIALS SECTION (Added for Social Proof) -->
+        <section class="py-5 bg-light shadow-sm">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">What Our Students <span class="text-primary">Say</span></h2>
+                    <p class="text-muted">Verified success stories from our Google Business Profile</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="text-warning mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="fst-italic">"Amazing experience practical learning helpful staff and friendly
+                                environment. The best place for industrial training in Mohali."</p>
+                            <h6 class="fw-bold mb-0">Gurwinder Singh</h6>
+                            <small class="text-muted">Full Stack Student</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="text-warning mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="fst-italic">"The teachers here are very good and I learned a lot here. They focus
+                                on live projects which helped me get placed quickly."</p>
+                            <h6 class="fw-bold mb-0">Joti Kaur</h6>
+                            <small class="text-muted">Web Development Trainee</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="text-warning mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="fst-italic">"It is very good company and provide best training. The industrial
+                                exposure is exactly what I needed for my career."</p>
+                            <h6 class="fw-bold mb-0">Khushboo Hassija</h6>
+                            <small class="text-muted">Software Engineer Intern</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="https://www.google.com/maps/place/Tech+Engineer/@30.7145717,76.6917631,17z/data=!4m8!3m7!1s0x390fef979805903d:0x3953934394014902!8m2!3d30.7145717!4d76.6917631!9m1!1b1!16s%2Fg%2F11td_r0_c2?entry=ttu"
+                        target="_blank" class="text-decoration-none fw-bold">View all 33+ Google Reviews <i
+                            class="fas fa-external-link-alt ms-1"></i></a>
+                </div>
+            </div>
+        </section>
         <section class="vision-main py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Our Vision, Mission & Core Values</h2>
@@ -526,12 +589,12 @@
                 <h2>Ready to Work With Tech Engineer?</h2>
                 <p>Let’s build your next project or start your IT career with us.</p>
 
+                <!-- UPDATED CTA BUTTONS -->
                 <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-                    <a href="/contact" class="btn btn-primary px-4 py-2">
-                        Get Free Consultation
+                    <a href="/portfolio" class="btn btn-primary px-4 py-2">
+                        View Case Studies & Portfolio
                     </a>
-
-                    <a href="/industrial-training" class="btn btn-outline-light px-4 py-2">
+                    <a href="/industrial-training" class="btn btn-call px-4 py-2">
                         Explore Training Programs
                     </a>
 
@@ -618,7 +681,7 @@
                                 class="fab fa-youtube"></i></a>
                         <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a>
-                        <a href="http://www.instagram.com/tech___engineer" target="_blank"><i
+                        <a href="http://www.instagram.com/techengineer_ai" target="_blank"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -735,8 +798,8 @@
     <script src="/script/aichatbot.js" defer></script>
 
 
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-
+<!-- ✅ Non-blocking -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script>
 </body>
 <script src="/javascript.js" defer></script>
 

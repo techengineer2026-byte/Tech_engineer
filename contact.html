@@ -268,16 +268,16 @@
         }
 
         .cu-map-wrapper {
-            border-radius: 24px;
-            overflow: hidden;
             height: 450px;
-            border: 8px solid #fff;
+            /* Ensure the map has a defined height */
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         .cu-map-wrapper iframe {
             width: 100%;
             height: 100%;
-            border: none;
         }
 
         /* 4. Training Form */
@@ -418,7 +418,7 @@
     },
     "sameAs": [
         "https://www.facebook.com/people/Tech-Engineer/61588374936232/",
-        "http://www.instagram.com/tech___engineer",
+        "http://www.instagram.com/techengineer_ai",
         "http://www.linkedin.com/company/tech-eng-ineer/",
         "https://www.youtube.com/@TechEngineerai"
     ]
@@ -583,9 +583,8 @@
                         </div>
                         <div class="cu-review-card text-center p-4">
                             <p class="fw-semibold mb-3">Loved working with us?</p>
-                            <a href="https://www.google.com/search?q=Tech+Engineer+Reviews" target="_blank"
-                                class="cu-btn-google">
-
+                            <a href="https://search.google.com/local/writereview?placeid=ChIJySwpNLfvDzkRV5f1q2Gl1eg"
+                                target="_blank" class="cu-btn-google">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/40px-Google_%22G%22_logo.svg.png"
                                     alt="Google">
                                 Write a Google Review
@@ -661,13 +660,13 @@
                                             <option selected disabled value="">Choose a program...</option>
                                             <option value="Full Stack Web Development">Full Stack Web Development
                                             </option>
-                                            <option value="App Development">Mobile App Development</option>
+                                            <option value="Mobile App Development">Mobile App Development</option>
                                             <option value="Python Data Science">Python Data Science</option>
                                             <option value="AI & Prompt Engineering">AI & Prompt Engineering</option>
                                             <option value="Graphic Design">Graphic Design</option>
                                             <option value="Video Editing">Video Editing</option>
                                             <option value="Digital Marketing">Digital Marketing</option>
-                                            <option value="Cloud Computing">Cloud & DevOps</option>
+                                            <option value="Cloud & DevOps">Cloud & DevOps</option>
                                             <option value="Cyber Security">Cyber Security</option>
                                             <option value="UI UX Design">UI/UX Design</option>
                                             <option value="SEO Mastery">SEO Mastery</option>
@@ -775,13 +774,15 @@
         <!-- Hidden iframe for Google Forms -->
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
             onload="if(window.submitted) showSuccess();"></iframe>
-
         <script>
             window.submitted = false;
+
             function showSuccess() {
                 document.getElementById('cu-success-message').classList.add('active');
-                document.querySelector('form').reset();
+
+                document.querySelectorAll('form').forEach(form => form.reset());
             }
+
             function closeSuccess() {
                 document.getElementById('cu-success-message').classList.remove('active');
                 window.submitted = false;
@@ -863,7 +864,7 @@
                                 class="fab fa-youtube"></i></a>
                         <a href="http://www.linkedin.com/company/tech-eng-ineer/" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a>
-                        <a href="http://www.instagram.com/tech___engineer" target="_blank"><i
+                        <a href="http://www.instagram.com/techengineer_ai" target="_blank"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -1079,7 +1080,7 @@
     </script>
 
 
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-</body>
+<!-- ✅ Non-blocking -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script></body>
 
 </html>

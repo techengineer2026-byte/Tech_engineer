@@ -11,9 +11,125 @@
     border-right: 1px solid rgb(71 143 171);
 }
 
+/* --- FAQ WOW STYLING --- */
+.faq-wow-narrative {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.faq-card-wow {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #2563eb;
+    /* Blue border */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.faq-card-wow:hover {
+    transform: translateX(10px);
+    /* Slide effect */
+    border-left-color: #db2777;
+    /* Pink on hover */
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+}
+
+.faq-q {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.faq-a {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #2563eb, #db2777);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.faq-card-wow strong {
+    color: #0f172a;
+}
+
 .bg-glass {
     background: rgb(114 183 205);
     backdrop-filter: blur(10px);
+}
+
+/* --- PRICING NARRATIVE STYLES --- */
+.pricing-narrative-section {
+    background-color: #ffffff;
+}
+
+.format-number {
+    width: 40px;
+    height: 40px;
+    background: #f1f5f9;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-right: 15px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.format-item:hover .format-number {
+    background: #2563eb;
+    color: white;
+}
+
+.format-number.highlight {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.price-tag {
+    font-size: 1.1rem;
+    color: #0f172a;
+}
+
+.price-tag strong {
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Trust Card on the right */
+.trust-narrative-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0 !important;
+    position: sticky;
+    top: 100px;
+}
+
+.format-item {
+    position: relative;
+}
+
+/* Vertical line connecting the items */
+.format-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    bottom: -40px;
+    width: 2px;
+    background: #f1f5f9;
+}
+
+.text-secondary {
+    line-height: 1.8;
 }
 
 .btn-outline-success {

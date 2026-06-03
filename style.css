@@ -869,11 +869,6 @@ svg {
     color: #fd7e14;
 }
 
-.modal-content {
-    border-radius: 20px;
-    overflow: hidden;
-    border: none;
-}
 
 .modal-left {
     background-color: #3d2c79;
@@ -968,55 +963,6 @@ svg {
     z-index: 10;
 }
 
-@media (max-width: 991px) {
-    .modal-dialog {
-        max-width: 90%;
-        margin-top: 150px;
-        margin-left: 30px;
-    }
-
-    .modal-content {
-        border-radius: 12px;
-    }
-
-    .col-lg-7.p-5 {
-        padding: 20px !important;
-    }
-
-    .modal-left {
-        padding: 20px !important;
-        font-size: 0.9rem;
-    }
-
-    .modal-left h5 {
-        font-size: 1.1rem;
-    }
-
-    .form-control,
-    .form-select {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .special-input {
-        height: 40px;
-    }
-
-    .btn-submit {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .form-check-label.small {
-        font-size: 0.75rem;
-        line-height: 1.2;
-    }
-
-    .row.mt-3.mb-4 .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
 
 .bg-light-gray {
     background-color: #f8f9fa !important;
@@ -6323,9 +6269,7 @@ for .contact-container {
         font-size: 1em;
     }
 
-    .spacer {
-        margin-top: 100px;
-    }
+
 }
 
 .theme-line-1 {
@@ -6643,7 +6587,7 @@ h6 {
 }
 
 .spacer {
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .videoabout .video-wrapper {
