@@ -35,7 +35,7 @@
     <meta property="og:title" content="Tech Engineer Blog | Tutorials, IT Courses & Career Tips">
     <meta property="og:description"
         content="Read blogs on web development, digital marketing, programming, design, and IT career growth in Mohali.">
-    <meta property="og:image" content="https://techengineer.co/images/logo.webp">
+    <meta property="og:image" content="https://techengineer.co/images/logo.png">
 
     <!-- Twitter Cards (Fixed Handle) -->
     <meta name="twitter:card" content="summary_large_image">
@@ -44,7 +44,7 @@
     <meta name="twitter:title" content="Tech Engineer Blog | Learn & Grow">
     <meta name="twitter:description"
         content="Sharpen your IT skills with tutorials, guides, and career tips from industry experts.">
-    <meta name="twitter:image" content="https://techengineer.co/images/logo.webp">
+    <meta name="twitter:image" content="https://techengineer.co/images/logo.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/icon.ico">
@@ -85,7 +85,7 @@
     "url": "https://techengineer.co",
     "logo": { 
       "@type": "ImageObject", 
-      "url": "https://techengineer.co/images/logo.webp" 
+      "url": "https://techengineer.co/images/logo.png" 
     },
     "sameAs": [
       "https://www.facebook.com/people/Tech-Engineer/61588374936232/",
@@ -237,6 +237,7 @@
 
         .blog-text-gradient {
             background: linear-gradient(135deg, #a5b4fc, #e0e7ff);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -541,21 +542,23 @@
     </style>
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');</script>
+
     <!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW5YWJ49XK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZW5YWJ49XK');
+</script>
+
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+
     <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
@@ -568,7 +571,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
+<ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/services">Services</a></li>
@@ -579,6 +582,12 @@
                     <a href="/industrial-training">
                         <img src="/images/icon.webp" alt="Internship" loading="lazy">
                         <span>Internship</span>
+                    </a>
+                </li>
+                <li class="forum">
+                    <a href="https://forum.techengineer.co" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum</span>
                     </a>
                 </li>
             </ul>
@@ -603,7 +612,7 @@
                 </p>
             </div>
         </section>
-        <section class="py-4 mb-4">
+        <!-- <section class="py-4 mb-4">
             <div class="container bg-dark rounded-4 p-4 shadow-lg overflow-hidden position-relative">
                 <div class="row align-items-center">
                     <div class="col-md-8 text-white">
@@ -617,11 +626,10 @@
                             class="btn btn-outline-light rounded-pill px-4">Listen Now</a>
                     </div>
                 </div>
-                <!-- Decorative Background Icon -->
                 <i class="fas fa-headphones position-absolute"
                     style="right: -20px; bottom: -20px; font-size: 150px; opacity: 0.1; color: white;"></i>
             </div>
-        </section>
+        </section> -->
         <!-- 2. BLOG CONTENT SECTION -->
         <section class="blog-content-section py-5">
             <div class="container py-4">
@@ -629,6 +637,80 @@
 
                     <!-- MAIN ARTICLES COLUMN -->
                     <div class="col-lg-8">
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="/images/blog/how-to-become-video-editor.webp" alt="video editing 2026"
+                                    loading="lazy">
+                                <span class="blog-badge bg-success-gradient"><i class="fas fa-briefcase me-1"></i>
+                                    Career</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> June 2026</span>
+                                    <span><i class="fas fa-fire"></i> Best Topic</span>
+                                </div>
+                                <h2 class="blog-title">How to Become a Professional Video Editor in 2026 | Tech Engineer
+
+                                </h2>
+                                <p class="blog-excerpt">
+                                    A complete step-by-step guide on how to become a professional video editor in 2026. Learn which tools to master, skills to build, portfolio tips, and how to land your first paid job or client.
+                                    
+                                </p>
+                                <a href="/blog/how-to-become-professional-video-editor" class="blog-read-more">
+                                    Read here ⚡ <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="/images/blog/video-editing-jobs-chandigarh.webp" alt="video editing 2026"
+                                    loading="lazy">
+                                <span class="blog-badge bg-success-gradient"><i class="fas fa-briefcase me-1"></i>
+                                    Career</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> June 2026</span>
+                                    <span><i class="fas fa-fire"></i> Best Topic</span>
+                                </div>
+                                <h2 class="blog-title">Video Editing Jobs & Salary in Chandigarh 2026 | Tech Engineer
+
+                                </h2>
+                                <p class="blog-excerpt">
+                                    Looking for video editing jobs in Chandigarh? Discover average salaries, top hiring
+                                    companies, job roles, and how to land your first video editing job in Chandigarh &
+                                    Mohali.
+
+                                </p>
+                                <a href="/blog/video-editing-jobs-salary-chandigarh" class="blog-read-more">
+                                    Read here ⚡ <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="/images/blog/video-editing-vs-tutorials.webp"
+                                    alt="Video Editing Course vs Online Tutorials" loading="lazy">
+                                <span class="blog-badge bg-success-gradient"><i class="fas fa-briefcase me-1"></i>
+                                    Career</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> June 2026</span>
+                                    <span><i class="fas fa-fire"></i> Best Topic</span>
+                                </div>
+                                <h2 class="blog-title">Video Editing Course vs Online Tutorials: Which is Better in
+                                    2026?</h2>
+                                <p class="blog-excerpt">
+                                    Can't decide between a structured video editing course or free online tutorials? We
+                                    break down the pros, cons, cost, and career outcomes so you can choose the right
+                                    path.
+                                </p>
+                                <a href="/blog/video-editing-course-vs-online-tutorials" class="blog-read-more">
+                                    Read here ⚡ <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
                         <article class="blog-card">
                             <div class="blog-card-img">
                                 <img src="/images/blog/summer-training-mohali-2026.webp"
@@ -651,6 +733,10 @@
                                 </a>
                             </div>
                         </article>
+
+
+
+
                         <!-- These first articles already link correctly to internal pages -->
                         <article class="blog-card">
                             <div class="blog-card-img">
@@ -716,7 +802,7 @@
                                     for daily AI insights, tech news, and exclusive community content.
                                 </p>
                                 <!-- Link leads to your social links page -->
-                                <a href="/social" class="blog-read-more">
+                                <a href="/Social" class="blog-read-more">
                                     See All Social Links ⚡ <i class="bi bi-arrow-right"></i>
                                 </a>
                             </div>
@@ -849,7 +935,7 @@
                                 <li><a href="/blog">Blog</a></li>
                                 <li><a href="/services">Services</a></li>
                                 <li><a href="/contact">Contact</a></li>
-                                <li><a href="/social">Social Media</a></li>
+                                <li><a href="/Social">Social Media</a></li>
 
                             </ul>
                         </div>
@@ -1016,7 +1102,8 @@
 
 
     <script src="/javascript.js" defer></script>
-<!-- ✅ Non-blocking -->
-<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script></body>
+    <!-- ✅ Non-blocking -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script>
+</body>
 
 </html>

@@ -17,6 +17,12 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://techengineer.co/ai-machine-learning-course-mohali</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://techengineer.co/video-editing-course-mohali-chandigarh</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -182,7 +188,25 @@
   <!-- TIER 6: BLOG -->
   <url>
     <loc>https://techengineer.co/blog</loc>
-    <lastmod>2025-07-14</lastmod>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://techengineer.co/blog/video-editing-course-vs-online-tutorials</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://techengineer.co/blog/how-to-become-professional-video-editor</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techengineer.co/blog/video-editing-jobs-salary-chandigarh</loc>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -190,7 +214,7 @@
     <loc>https://techengineer.co/blog/summer-industrial-training-mohali-2026</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://techengineer.co/blog/it-career-in-doha</loc>
@@ -223,45 +247,7 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- TIER 7: PORTFOLIO -->
-  <url>
-    <loc>https://techengineer.co/portfolio/codebank</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/portfolio/tricityrent</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/portfolio/aviator</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/portfolio/soniasalon</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/portfolio/thirdeyesecurity</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://techengineer.co/portfolio/employmenttrust</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <!-- TIER 8: INFORMATIONAL -->
+    <!-- TIER 8: INFORMATIONAL -->
   <url>
     <loc>https://techengineer.co/about</loc>
     <lastmod>2025-07-14</lastmod>

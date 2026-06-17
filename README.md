@@ -106,7 +106,7 @@ te_public
 │  ├─ css.webp
 │  ├─ docker.png
 │  ├─ dot-net-jpg.webp
-│  ├─ git-icon-logo.webp
+│  ├─ git-icon-logo.png
 │  ├─ html.webp
 │  ├─ icons8-buy-for-change-100.png
 │  ├─ icons8-consultation-100.png
@@ -283,7 +283,7 @@ te_public
 │  ├─ Kamalpreet_singh.jpg
 │  ├─ lLead.jfif
 │  ├─ logo.png
-│  ├─ logo.webp
+│  ├─ logo.png
 │  ├─ logow.png
 │  ├─ logow.webp
 │  ├─ main-og-image.webp
@@ -317,7 +317,7 @@ te_public
 │  │  ├─ crm-dashboard.webp
 │  │  ├─ ecommerce-site.webp
 │  │  ├─ Etrust.jpg
-│  │  ├─ ppp-logo.webp
+│  │  ├─ ppp-logo.png
 │  │  ├─ soniasalon.webp
 │  │  ├─ third.jpg
 │  │  └─ tricityrent.webp
@@ -353,7 +353,7 @@ te_public
 │  ├─ teche.webp
 │  ├─ techeee.webp
 │  ├─ tempbanner012.webp
-│  ├─ TESlogo.webp
+│  ├─ TESlogo.png
 │  ├─ thirdeye-challenge.png
 │  ├─ thirdeye-challenge.webp
 │  ├─ thirdeye-owner-photo.png

@@ -126,11 +126,11 @@
         "https://in.pinterest.com/techengineerai/",
         "https://github.com/techengineer2026-byte",
         "https://www.tumblr.com/techengineerai"
-      ]
+      ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
-      "reviewCount": "33",
+      "reviewCount": "41",
       "bestRating": "5",
       "worstRating": "1"
     }
@@ -1253,6 +1253,7 @@ https://www.tumblr.com/techengineerai
 
         .text-highlight {
             background: linear-gradient(90deg, #2563eb, #db2777);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -1376,24 +1377,59 @@ https://www.tumblr.com/techengineerai
                 justify-content: center;
             }
         }
+
+        .quick-facts {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .fact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .fact-item h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #ffd700;
+        }
+
+        .fact-item p {
+            margin: 10px 0 0 0;
+            line-height: 1.6;
+        }
     </style>
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');</script>
+
     <!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW5YWJ49XK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZW5YWJ49XK');
+</script>
+
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RDCHQQ" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+
     <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
@@ -1406,7 +1442,7 @@ https://www.tumblr.com/techengineerai
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
+<ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/services">Services</a></li>
@@ -1417,6 +1453,12 @@ https://www.tumblr.com/techengineerai
                     <a href="/industrial-training">
                         <img src="/images/icon.webp" alt="Internship" loading="lazy">
                         <span>Internship</span>
+                    </a>
+                </li>
+                <li class="forum">
+                    <a href="https://forum.techengineer.co" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum</span>
                     </a>
                 </li>
             </ul>
@@ -1483,7 +1525,49 @@ https://www.tumblr.com/techengineerai
                     </div>
                 </div>
             </div>
+            <!-- INSERT AFTER THE H1 "Master IT Skills in 6 Weeks - Mohali's #1 Training" -->
+
+            <section class="quick-facts">
+                <h2>Quick Facts About Our Industrial Training</h2>
+
+                <div class="facts-grid">
+                    <div class="fact-item">
+                        <h3>Duration?</h3>
+                        <p><strong>6 weeks (45 days)</strong> or <strong>6 months (full intensive)</strong></p>
+                    </div>
+
+                    <div class="fact-item">
+                        <h3>Cost?</h3>
+                        <p><strong>₹15,000 - ₹25,000</strong> (6 weeks) | <strong>₹25,000 - ₹30,000</strong> (6 months).
+                            0%
+                            EMI available.</p>
+                    </div>
+
+                    <div class="fact-item">
+                        <h3>Who's Eligible?</h3>
+                        <p>B.Tech (2nd-4th year), BCA, MCA, Diploma, or any IT graduate</p>
+                    </div>
+
+                    <div class="fact-item">
+                        <h3>Job Placement?</h3>
+                        <p><strong>92% placement rate</strong> | <strong>₹3.5 LPA average salary</strong> | <strong>21
+                                days
+                                avg time to job</strong></p>
+                    </div>
+
+                    <div class="fact-item">
+                        <h3>What You Get?</h3>
+                        <p>Live UK/US projects | ISO certification | 50+ hiring partners | Interview coaching</p>
+                    </div>
+
+                    <div class="fact-item">
+                        <h3>Batch Start?</h3>
+                        <p>1st of every month | June 2026: Only 12 seats available</p>
+                    </div>
+                </div>
+            </section>
         </section>
+
 
         <!-- 3️⃣ ABOUT THE TRAINING -->
         <section class="py-5" id="about">
@@ -2490,11 +2574,11 @@ https://www.tumblr.com/techengineerai
                             <div class="accordion-item bg-transparent">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed bg-transparent fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#faq8">
+                                        data-bs-toggle="collapse" data-bs-target="#faq9">
                                         Is Tech Engineer good for sem 6 or sem 8 industrial training in Mohali?
                                     </button>
                                 </h2>
-                                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body text-muted">
                                         Yes. Tech Engineer's 6-week program is ideal for sem 4 and sem 6 B.Tech
                                         students needing summer industrial training. The 6-month program is recommended
@@ -2628,7 +2712,7 @@ https://www.tumblr.com/techengineerai
                                 <li><a href="/blog">Blog</a></li>
                                 <li><a href="/services">Services</a></li>
                                 <li><a href="/contact">Contact</a></li>
-                                <li><a href="/social">Social Media</a></li>
+                                <li><a href="/Social">Social Media</a></li>
 
                             </ul>
                         </div>
@@ -2872,7 +2956,8 @@ https://www.tumblr.com/techengineerai
 
     <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-<!-- ✅ Non-blocking -->
-<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script></body>
+    <!-- ✅ Non-blocking -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script>
+</body>
 
 </html>

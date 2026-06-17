@@ -100,7 +100,6 @@
   ══════════════════════════════════════ -->
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/AIchatbot.css">
-    <link rel="stylesheet" href="/style/footer.css">
 
     <!-- ══════════════════════════════════════
        SCHEMA — Article (BlogPosting)
@@ -127,7 +126,7 @@
       "url": "https://techengineer.co",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://techengineer.co/images/logo.webp",
+        "url": "https://techengineer.co/images/logo.png",
         "width": 180,
         "height": 60
       }
@@ -217,7 +216,7 @@
     "@type": "EducationalOrganization",
     "name": "Tech Engineer",
     "url": "https://techengineer.co",
-    "logo": "https://techengineer.co/images/logo.webp",
+    "logo": "https://techengineer.co/images/logo.png",
     "image": "https://techengineer.co/images/blog/summer-training-mohali-2026.webp",
     "description": "Tech Engineer offers summer industrial training in Mohali for B.Tech, BCA, MCA students in AI, Full Stack, Cloud, and more.",
     "telephone": "+918544884846",
@@ -314,22 +313,6 @@
     ]
   }
   </script>
-
-    <!-- ══════════════════════════════════════
-       GOOGLE TAG MANAGER
-  ══════════════════════════════════════ -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-55RDCHQQ');
-    </script>
 
     <style>
         /* ══════════════════════════════════════
@@ -1496,6 +1479,16 @@
             }
         }
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW5YWJ49XK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZW5YWJ49XK');
+</script>
+
 </head>
 
 
@@ -1524,7 +1517,7 @@
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
                 <span></span><span></span><span></span>
             </button>
-            <ul class="nav-menu">
+<ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/services">Services</a></li>
@@ -1535,6 +1528,12 @@
                     <a href="/industrial-training">
                         <img src="/images/icon.webp" alt="Internship" loading="lazy">
                         <span>Internship</span>
+                    </a>
+                </li>
+                <li class="forum">
+                    <a href="https://forum.techengineer.co" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum</span>
                     </a>
                 </li>
             </ul>
