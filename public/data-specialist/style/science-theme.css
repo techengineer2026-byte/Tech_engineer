@@ -1,0 +1,109 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --indigo: #4f46e5;
+    --indigo-glow: rgba(79, 70, 229, 0.5);
+    --cyan: #06b6d4;
+    --yellow: #facc15;
+    --text-white: #f8fafc;
+    --text-gray: #94a3b8;
+}
+
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
+.font-tech { font-family: 'Share Tech Mono', monospace; }
+
+/* --- BACKGROUND NEURAL NET --- */
+#neuralCanvas {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: #0b0f19;
+}
+.scifi-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent 20%, #0b0f19 90%);
+    z-index: -1; pointer-events: none;
+}
+
+/* --- UTILS --- */
+.text-indigo { color: var(--indigo); text-shadow: 0 0 15px var(--indigo-glow); }
+.text-yellow { color: var(--yellow); }
+.bg-darker { background-color: #020617; }
+.bg-dark-glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); }
+.bg-panel { background: var(--panel-bg); border: 1px solid #333; }
+
+.border-y-indigo { border-top: 1px solid rgba(79, 70, 229, 0.3); border-bottom: 1px solid rgba(79, 70, 229, 0.3); }
+.border-end-indigo { border-right: 1px solid rgba(79, 70, 229, 0.3); }
+@media (max-width: 768px) { .border-end-indigo { border-right: none; border-bottom: 1px solid rgba(79,70,229,0.3); padding-bottom: 20px; } }
+
+/* --- HERO --- */
+.sci-hero { padding: 120px 0 100px;margin-top: 50px; position: relative; }
+.badge-sci {
+    border: 1px solid var(--indigo); color: var(--indigo); padding: 8px 16px; border-radius: 4px;
+    font-family: 'Share Tech Mono'; display: inline-block; margin-bottom: 20px; background: rgba(79, 70, 229, 0.1);
+}
+
+.btn-sci {
+    background: var(--indigo); color: white; padding: 12px 35px; border-radius: 4px; text-decoration: none; font-weight: 700; border: none; transition: 0.3s;
+}
+.btn-sci:hover { background: #4338ca; box-shadow: 0 0 20px var(--indigo-glow); transform: translateY(-2px); color: white; }
+
+.btn-outline-sci {
+    border: 2px solid var(--indigo); color: var(--text-white); padding: 12px 35px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.3s;
+}
+.btn-outline-sci:hover { background: var(--indigo); color: white; }
+
+/* 3D DNA */
+.dna-container { position: relative; width: 300px; height: 350px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.floating-brain { font-size: 5rem; color: var(--indigo); animation: float 6s infinite ease-in-out; z-index: 2; text-shadow: 0 0 30px var(--indigo-glow); }
+.dna-strand {
+    position: absolute; width: 100px; height: 300px; border-left: 2px dashed rgba(255,255,255,0.1); border-right: 2px dashed rgba(255,255,255,0.1);
+    animation: rotate 10s infinite linear; transform-style: preserve-3d;
+}
+.data-particles span {
+    position: absolute; color: var(--cyan); font-family: monospace; font-size: 0.8rem; animation: rise 4s infinite linear;
+}
+.p1 { left: 20px; animation-delay: 0s; } .p2 { right: 20px; animation-delay: 1s; } .p3 { bottom: 0; left: 50%; animation-delay: 2s; color: var(--yellow); }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@keyframes rise { 0% { bottom: -20px; opacity: 0; } 50% { opacity: 1; } 100% { bottom: 100%; opacity: 0; } }
+
+/* --- JUPYTER LAB --- */
+.notebook-console { background: #fff; border-radius: 8px; overflow: hidden; max-width: 800px; margin: 0 auto; border: 1px solid #ccc; font-family: 'Inter'; }
+.notebook-header { background: #f5f5f5; padding: 8px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+.notebook-body { background: #fff; padding: 20px; min-height: 250px; }
+
+.cell { display: flex; gap: 10px; margin-bottom: 15px; }
+.prompt-text { font-family: monospace; color: #d97706; font-weight: bold; padding-top: 5px; min-width: 60px; }
+.code-area { flex-grow: 1; background: #f0f0f0; padding: 10px; border-radius: 4px; border: 1px solid #ddd; color: #333; }
+.output-area { flex-grow: 1; padding: 10px; }
+
+/* Syntax Highlighting */
+.c-key { color: #cf222e; font-weight: bold; }
+.c-def { color: #0550ae; }
+.c-comment { color: #6e7781; font-style: italic; }
+.code-input { background: transparent; border: none; border-bottom: 1px solid #333; width: 40px; text-align: center; color: #0550ae; font-weight: bold; }
+
+/* Graph Animation */
+.graph-box { width: 100%; height: 100px; border-left: 2px solid #333; border-bottom: 2px solid #333; position: relative; }
+.graph-line { position: absolute; bottom: 0; left: 0; width: 0; height: 0; border-top: 2px solid var(--indigo); transform-origin: bottom left; transition: 1s; }
+.graph-point { width: 8px; height: 8px; background: var(--indigo); border-radius: 50%; position: absolute; display: none; }
+
+/* --- CARDS --- */
+.element-card {
+    background: var(--panel-bg); padding: 30px; border-radius: 12px; text-align: center; border: 1px solid transparent; transition: 0.3s; position: relative; overflow: hidden;
+}
+.element-card:hover { transform: translateY(-5px); }
+.border-blue { border-bottom: 4px solid #3b82f6; }
+.border-indigo { border-bottom: 4px solid #4f46e5; }
+.border-yellow { border-bottom: 4px solid #facc15; }
+.border-red { border-bottom: 4px solid #ef4444; }
+
+.atom-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 20px; color: #fff; }
+.bg-blue-soft { background: #3b82f6; }
+.bg-indigo-soft { background: #4f46e5; }
+.bg-yellow-soft { background: #facc15; color: black; }
+.bg-red-soft { background: #ef4444; }
+
+/* --- CAREER --- */
+.job-radar { display: flex; flex-direction: column; gap: 10px; }
+.radar-row { background: #1a1a25; padding: 15px; border-radius: 4px; display: flex; justify-content: space-between; border-left: 3px solid var(--indigo); }
+.hologram-card { border: 1px solid var(--indigo); box-shadow: 0 0 20px rgba(79, 70, 229, 0.2); }

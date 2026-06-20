@@ -1,0 +1,128 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #0b0b15;
+    --panel-bg: #151520;
+    --purple: #8B5CF6;
+    --teal: #2dd4bf;
+    --orange: #f97316;
+    --yellow: #eab308;
+    --blue: #3b82f6;
+    --text-white: #f8fafc;
+    --text-gray: #9ca3af;
+    --gradient: linear-gradient(135deg, #8B5CF6 0%, #2dd4bf 100%);
+}
+
+body { font-family: 'Outfit', sans-serif; background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
+.font-tech { font-family: 'Outfit', sans-serif; letter-spacing: 0.5px; }
+.font-code { font-family: 'Fira Code', monospace; }
+
+/* UTILS */
+.text-gradient { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.text-purple { color: var(--purple); }
+.text-teal { color: var(--teal); }
+.text-orange { color: var(--orange); }
+.text-yellow { color: var(--yellow); }
+.text-blue { color: var(--blue); }
+
+.bg-darker { background-color: #050508; }
+.bg-dark-glass { background: rgba(21, 21, 32, 0.8); backdrop-filter: blur(10px); }
+.bg-panel { background: var(--panel-bg); }
+
+.border-y-purple { border-top: 1px solid rgba(139, 92, 246, 0.3); border-bottom: 1px solid rgba(139, 92, 246, 0.3); }
+.border-end-purple { border-right: 1px solid rgba(139, 92, 246, 0.3); }
+@media (max-width: 768px) { .border-end-purple { border-right: none; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 20px; } }
+
+/* --- BACKGROUND BLOB --- */
+.shape-blob {
+    position: fixed; width: 600px; height: 600px; border-radius: 50%; filter: blur(100px); opacity: 0.2; z-index: -2;
+    animation: floatBlob 10s infinite alternate;
+}
+.blob-1 { top: -100px; left: -100px; background: var(--purple); }
+.blob-2 { bottom: -100px; right: -100px; background: var(--teal); }
+@keyframes floatBlob { 0% { transform: translate(0,0); } 100% { transform: translate(50px, 50px); } }
+
+.noise-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('data:image/svg+xml;base64,...'); /* Optional noise texture */
+    opacity: 0.03; pointer-events: none; z-index: -1;
+}
+
+/* --- HERO --- */
+.front-hero { padding: 120px 0 100px; margin-top: 50px; position: relative; }
+.badge-front {
+    border: 1px solid var(--purple); color: var(--purple); padding: 8px 16px; border-radius: 30px;
+    font-weight: 700; display: inline-block; margin-bottom: 20px; background: rgba(139, 92, 246, 0.1);
+}
+
+.btn-front {
+    background: var(--gradient); color: white; padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; border: none; transition: 0.3s;
+}
+.btn-front:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4); color: white; }
+
+.btn-outline-front {
+    border: 2px solid var(--teal); color: var(--text-white); padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s;
+}
+.btn-outline-front:hover { background: var(--teal); color: black; }
+
+/* 3D COMPOSITION */
+.ui-composition { position: relative; width: 350px; height: 350px; margin: 0 auto; perspective: 1000px; }
+.code-card {
+    position: absolute; top: 20px; left: 0; width: 200px; background: #1e1e2e; border-radius: 10px; padding: 15px;
+    border: 1px solid #333; transform: rotateY(-20deg) rotateX(10deg); box-shadow: -20px 20px 50px rgba(0,0,0,0.5); z-index: 1;
+}
+.dots span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; }
+.r { background: #ff5f56; } .y { background: #ffbd2e; } .g { background: #27c93f; }
+.lines { margin-top: 15px; font-family: 'Fira Code'; font-size: 0.7rem; color: #ccc; }
+.purple { color: #c792ea; } .teal { color: #89ddff; }
+
+.result-card {
+    position: absolute; top: 80px; right: 0; width: 180px; background: white; border-radius: 10px; padding: 15px;
+    transform: rotateY(10deg) rotateX(5deg); z-index: 2; box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+}
+.skeleton-header { width: 100%; height: 80px; background: #eee; border-radius: 5px; margin-bottom: 10px; }
+.skeleton-hero { width: 70%; height: 10px; background: #ddd; border-radius: 2px; margin-bottom: 10px; }
+.skeleton-btn { background: var(--gradient); border: none; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; }
+
+.float-icon {
+    position: absolute; width: 50px; height: 50px; background: #222; border-radius: 50%; border: 1px solid #444;
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem; animation: float 6s infinite ease-in-out;
+}
+.i-react { top: 0; right: 50px; color: #61dafb; animation-delay: 0s; }
+.i-css { bottom: 20px; left: 50px; color: #2965f1; animation-delay: 1s; }
+.i-js { top: 150px; left: -20px; color: #f7df1e; animation-delay: 2s; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+/* --- STYLE LAB --- */
+.lab-console { background: var(--panel-bg); border-radius: 12px; overflow: hidden; max-width: 900px; margin: 0 auto; border: 1px solid #333; }
+.control-group { margin-bottom: 20px; }
+.control-group label { display: block; font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px; }
+.custom-range { accent-color: var(--teal); }
+
+.bg-grid {
+    background-image: radial-gradient(#333 1px, transparent 1px); background-size: 20px 20px;
+    background-color: #0d0d12; min-height: 350px;
+}
+
+.demo-card {
+    width: 200px; background: #1e1e2e; border: 1px solid #333; padding: 0; overflow: hidden; transition: 0.3s;
+    /* Default Styles will be set by JS */
+}
+.card-img { height: 100px; background: #333; }
+.card-txt { padding: 15px; }
+.card-txt h5 { margin: 0 0 5px; color: white; font-size: 1rem; }
+.card-txt p { font-size: 0.75rem; color: #aaa; }
+.mini-btn { background: var(--purple); border: none; color: white; padding: 5px 10px; border-radius: 4px; font-size: 0.7rem; margin-top: 10px; }
+
+/* --- STACK BOXES --- */
+.stack-box {
+    background: var(--panel-bg); padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #333; transition: 0.3s; height: 100%;
+}
+.stack-box:hover { transform: translateY(-5px); border-color: var(--teal); }
+.border-orange { border-top: 4px solid var(--orange); }
+.border-yellow { border-top: 4px solid var(--yellow); }
+.border-blue { border-top: 4px solid var(--blue); }
+.border-teal { border-top: 4px solid var(--teal); }
+
+/* --- PERKS --- */
+.perk-item { background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #333; font-size: 0.95rem; }
+.salary-card { border: 1px solid #333; }

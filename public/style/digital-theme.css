@@ -1,0 +1,120 @@
+/* --- VARIABLES --- */
+:root {
+    --gradient-brand: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram Vibe */
+    --purple: #833AB4;
+    --blue: #2979ff;
+    --green: #00e676;
+    --orange: #f09433;
+    --pink: #e91e63;
+    --dark-bg: #0f0f0f;
+    --panel-bg: #181818;
+    --text-white: #ffffff;
+    --text-gray: #b0b0b0;
+}
+
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+/* UTILS */
+.text-gradient { background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.text-purple { color: var(--purple); }
+.text-pink { color: var(--pink); }
+.text-blue { color: var(--blue); }
+.text-orange { color: var(--orange); }
+.bg-light-gray { background-color: #f9f9f9; }
+.bg-darker { background-color: var(--dark-bg); }
+
+/* Buttons */
+.btn-gradient {
+    background: var(--gradient-brand); color: white; padding: 12px 35px; border-radius: 50px; font-weight: 700; border: none; transition: 0.3s; text-decoration: none;
+}
+.btn-gradient:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(220, 39, 67, 0.4); color: white; }
+
+.btn-outline-gradient {
+    border: 2px solid #dc2743; color: #dc2743; padding: 12px 35px; border-radius: 50px; font-weight: 700; text-decoration: none; transition: 0.3s;
+}
+.btn-outline-gradient:hover { background: #dc2743; color: white; }
+
+/* HERO */
+.marketing-hero { padding: 120px 0 100px; margin-top: 50px; position: relative; overflow: hidden; background: #fff; }
+.mesh-gradient {
+    position: absolute; top: -50%; right: -20%; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(240, 148, 51, 0.1) 0%, rgba(188, 24, 136, 0.05) 50%, transparent 70%);
+    z-index: 0; filter: blur(80px);
+}
+
+.badge-trend { background: #fff0f5; color: #bc1888; padding: 8px 16px; border-radius: 30px; font-weight: 700; display: inline-block; margin-bottom: 20px; font-size: 0.85rem; border: 1px solid #fce4ec; }
+
+/* 3D SPHERE */
+.social-sphere { position: relative; width: 350px; height: 400px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.phone-frame {
+    width: 200px; height: 380px; background: #000; border-radius: 30px; border: 6px solid #333; overflow: hidden; position: relative; z-index: 2;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+.reel-content { width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=500&q=80') center/cover; }
+.reel-ui { position: absolute; bottom: 20px; left: 10px; }
+.heart-anim { font-size: 2rem; color: white; animation: pulseHeart 1s infinite; text-shadow: 0 0 10px red; }
+.stat-pill { background: rgba(0,0,0,0.6); color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; margin-top: 5px; backdrop-filter: blur(5px); }
+
+@keyframes pulseHeart { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+.float-icon {
+    position: absolute; width: 60px; height: 60px; background: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); animation: float 6s infinite ease-in-out;
+}
+.icon-ig { top: 20px; left: 0; color: #bc1888; animation-delay: 0s; }
+.icon-yt { top: 80px; right: -20px; color: #ff0000; animation-delay: 1s; }
+.icon-google { bottom: 80px; left: -20px; color: #4285f4; animation-delay: 2s; }
+.icon-fb { bottom: 20px; right: 0; color: #1877f2; animation-delay: 3s; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+/* --- MODULE CARDS --- */
+.module-card {
+    background: white; padding: 30px; border-radius: 20px; border-top: 5px solid transparent;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: 100%; transition: 0.3s; position: relative;
+}
+.module-card:hover { transform: translateY(-10px); }
+
+.border-pink { border-color: #e91e63; }
+.border-blue { border-color: #2979ff; }
+.border-orange { border-color: #f09433; }
+.border-purple { border-color: #833AB4; }
+
+.icon-box { width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+.bg-pink-soft { background: #fce4ec; color: #e91e63; }
+.bg-blue-soft { background: #e3f2fd; color: #2979ff; }
+.bg-orange-soft { background: #fff3e0; color: #f09433; }
+.bg-purple-soft { background: #f3e5f5; color: #833AB4; }
+
+.duration { font-size: 0.85rem; color: #777; margin-bottom: 15px; }
+.module-list { list-style: none; padding: 0; margin-bottom: 20px; }
+.module-list li { font-size: 0.9rem; margin-bottom: 8px; color: #444; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px; }
+
+.link-btn { text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+
+/* --- AD CONSOLE --- */
+.ad-console { background: #111; border-radius: 15px; overflow: hidden; max-width: 900px; margin: 0 auto; border: 1px solid #333; }
+.bg-panel { background: #1a1a1a; }
+
+.platform-toggle { display: flex; gap: 10px; }
+.p-btn { background: #333; color: #aaa; border: none; padding: 8px 15px; border-radius: 5px; flex: 1; transition: 0.3s; }
+.p-btn.active { background: white; color: black; font-weight: bold; }
+
+.custom-range { accent-color: #bc1888; }
+
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stat-box { background: #222; padding: 20px; border-radius: 10px; text-align: center; border: 1px solid #333; }
+.stat-label { display: block; font-size: 0.75rem; color: #777; margin-bottom: 5px; letter-spacing: 1px; }
+.stat-num { font-size: 2.5rem; font-weight: 900; margin: 0; }
+.stat-trend { font-size: 0.8rem; }
+
+.graph-container { display: flex; align-items: flex-end; justify-content: space-between; height: 100px; padding: 0 20px; }
+.graph-bar { width: 12%; background: linear-gradient(to top, #bc1888, #f09433); border-radius: 5px 5px 0 0; transition: height 0.5s ease; height: 20%; }
+
+/* --- CAREER --- */
+.career-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.c-tag { background: #f3f4f6; padding: 8px 15px; border-radius: 30px; font-size: 0.9rem; color: #555; border: 1px solid #ddd; }
+.salary-card { border: 1px solid #eee; }
+.transform-hover { transition: 0.3s; }
+.transform-hover:hover { transform: scale(1.05); }

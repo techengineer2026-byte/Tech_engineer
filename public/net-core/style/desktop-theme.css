@@ -1,0 +1,113 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #0f172a; /* Slate 900 */
+    --panel-bg: #1e293b; /* Slate 800 */
+    --magenta: #d946ef;
+    --magenta-glow: rgba(217, 70, 239, 0.5);
+    --blue: #3b82f6;
+    --text-white: #f1f5f9;
+    --text-gray: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Segoe UI', sans-serif; /* Windows Standard Font */
+    overflow-x: hidden;
+}
+
+/* FONTS */
+.rajdhani { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; }
+
+/* --- BACKGROUND BLUEPRINT --- */
+.blueprint-grid {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+}
+.spotlight {
+    position: fixed; top: -50%; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.15), transparent 60%);
+    z-index: -1;
+}
+
+/* --- UTILS --- */
+.text-magenta { color: var(--magenta); text-shadow: 0 0 15px var(--magenta-glow); }
+.text-blue { color: var(--blue); }
+.text-gray { color: var(--text-gray); }
+
+.bg-steel { background: rgba(30, 41, 59, 0.8); backdrop-filter: blur(5px); }
+.bg-darker-panel { background: #020617; }
+.border-y-magenta { border-top: 1px solid rgba(217, 70, 239, 0.3); border-bottom: 1px solid rgba(217, 70, 239, 0.3); }
+.border-end-magenta { border-right: 1px solid rgba(217, 70, 239, 0.3); }
+.border-magenta { border: 1px solid var(--magenta); }
+
+@media (max-width: 768px) { .border-end-magenta { border-right: none; border-bottom: 1px solid rgba(217,70,239,0.3); padding-bottom: 20px; } }
+
+/* --- HERO --- */
+.desktop-hero { padding: 80px 0; min-height: 90vh; display: flex; align-items: center; }
+.badge-app { border: 1px solid var(--magenta); color: var(--magenta); display: inline-block; padding: 5px 20px; border-radius: 4px; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; font-size: 0.8rem; background: rgba(217, 70, 239, 0.1); }
+
+.btn-magenta {
+    background: var(--magenta); color: #fff; padding: 15px 40px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: 0.3s;
+}
+.btn-magenta:hover { background: #c026d3; box-shadow: 0 0 30px var(--magenta-glow); transform: translateY(-2px); color: #fff; }
+
+/* --- WINDOW STACK ANIMATION --- */
+.window-stack { position: relative; height: 350px; width: 80%; margin: 0 auto; }
+.app-window {
+    background: #1e293b; border: 1px solid #475569; border-radius: 8px; position: absolute; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    display: flex; flex-direction: column; overflow: hidden;
+}
+.win-header { background: #0f172a; padding: 8px 15px; display: flex; align-items: center; border-bottom: 1px solid #333; }
+.dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; }
+.win-title { font-size: 0.75rem; color: #94a3b8; font-family: 'Segoe UI'; }
+.win-body { padding: 20px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.win-back { top: 0; left: 40px; transform: scale(0.9); opacity: 0.5; z-index: 1; }
+.win-mid { top: 20px; left: 20px; transform: scale(0.95); opacity: 0.7; z-index: 2; }
+.win-front { top: 40px; left: 0; z-index: 3; border: 1px solid var(--magenta); animation: float 6s ease-in-out infinite; }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* Chart Mockup */
+.chart-mockup { display: flex; align-items: flex-end; gap: 10px; height: 100px; width: 100%; justify-content: center; }
+.bar { width: 20px; background: var(--magenta); border-radius: 4px 4px 0 0; }
+.btn-mockup { background: var(--blue); padding: 8px 20px; border-radius: 4px; font-size: 0.8rem; }
+
+/* --- IDE / XAML BUILDER --- */
+.ide-wrapper { border: 1px solid #333; border-radius: 8px; overflow: hidden; }
+.ide-toolbar { background: #1e293b; padding: 10px; border-bottom: 1px solid #333; }
+.tool-btn { background: #0f172a; color: #fff; border: 1px solid #333; padding: 5px 15px; margin-right: 5px; border-radius: 4px; font-size: 0.9rem; cursor: pointer; transition: 0.2s; }
+.tool-btn:hover { background: var(--magenta); border-color: var(--magenta); }
+.btn-clear { border-color: #ef4444; color: #ef4444; }
+.btn-clear:hover { background: #ef4444; color: white; }
+
+.bg-designer { background: #f1f5f9; height: 350px; position: relative; border-right: 1px solid #333; }
+.design-canvas { 
+    height: 100%; border: 2px dashed #cbd5e1; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 20px;
+}
+.bg-xaml { background: #0f172a; height: 350px; font-family: 'Consolas', monospace; color: #d4d4d4; font-size: 0.9rem; }
+.canvas-header { font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; opacity: 0.7; }
+
+/* XAML Colors */
+.x-tag { color: #569cd6; } .x-attr { color: #9cdcfe; } .x-val { color: #ce9178; }
+
+/* --- MVVM & OUTCOMES --- */
+.diagram-stack { text-align: center; }
+.layer { padding: 15px; border-radius: 4px; font-weight: bold; font-family: 'Rajdhani'; letter-spacing: 1px; }
+.layer-view { background: var(--blue); color: white; }
+.layer-vm { background: var(--magenta); color: white; }
+.layer-model { background: #0f172a; border: 1px solid #333; }
+.arrow-down { color: var(--text-gray); margin: 5px 0; font-size: 0.8rem; }
+
+.feature-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid var(--magenta); }
+.icon-square { font-size: 1.5rem; color: var(--magenta); margin-right: 15px; background: rgba(217, 70, 239, 0.1); padding: 10px; border-radius: 4px; }
+
+.tech-tile { background: var(--panel-bg); padding: 30px; border-radius: 8px; border: 1px solid transparent; transition: 0.3s; height: 100%; }
+.tech-tile:hover { border-color: var(--magenta); transform: translateY(-5px); }
+
+.outcome-bar { background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 4px; border-left: 2px solid var(--magenta); font-size: 1rem; }
+.cert-box { border-radius: 12px; }

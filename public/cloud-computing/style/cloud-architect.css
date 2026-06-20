@@ -1,0 +1,104 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --sky: #0ea5e9;
+    --sky-glow: rgba(14, 165, 233, 0.5);
+    --blue: #3b82f6;
+    --text-white: #f8fafc;
+    --text-gray: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.font-tech { font-family: 'Exo 2', sans-serif; }
+
+/* --- BACKGROUND --- */
+.cloud-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1), transparent 70%);
+    z-index: -2;
+}
+.fog-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://raw.githubusercontent.com/hudsonmar1/hudsonmar1.github.io/master/assets/fog.png');
+    opacity: 0.1; animation: fogMove 60s linear infinite; z-index: -1; pointer-events: none;
+}
+@keyframes fogMove { 0% { background-position: 0 0; } 100% { background-position: 1000px 0; } }
+
+/* --- UTILS --- */
+.text-sky { color: var(--sky); text-shadow: 0 0 15px var(--sky-glow); }
+.bg-darker { background-color: #020617; }
+.bg-darker-panel { background: #0f0f0f; }
+
+.bg-glass { background: rgba(30, 41, 59, 0.8); backdrop-filter: blur(10px); }
+.border-y-sky { border-top: 1px solid rgba(14, 165, 233, 0.3); border-bottom: 1px solid rgba(14, 165, 233, 0.3); }
+.border-end-sky { border-right: 1px solid rgba(14, 165, 233, 0.3); }
+.border-sky { border: 1px solid var(--sky); }
+
+@media (max-width: 768px) { .border-end-sky { border-right: none; border-bottom: 1px solid rgba(14,165,233,0.3); padding-bottom: 20px; } }
+
+/* --- HERO --- */
+.cloud-hero { padding: 120px 0 80px; margin-top: 50px; position: relative; }
+.badge-sky {
+    border: 1px solid var(--sky); color: var(--sky); padding: 8px 16px; border-radius: 4px;
+    font-family: 'Exo 2'; display: inline-block; margin-bottom: 20px; background: rgba(14, 165, 233, 0.1);
+}
+
+.btn-sky {
+    background: var(--sky); color: white; padding: 12px 30px; font-weight: 700; text-decoration: none; border-radius: 4px; border: none; transition: 0.3s;
+}
+.btn-sky:hover { background: #0284c7; box-shadow: 0 0 20px var(--sky-glow); transform: translateY(-2px); color: white; }
+
+/* 3D ORBIT SYSTEM */
+.orbit-system { position: relative; width: 300px; height: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.core-planet { width: 80px; height: 80px; background: radial-gradient(circle, var(--sky), #0284c7); border-radius: 50%; box-shadow: 0 0 50px var(--sky-glow); z-index: 5; }
+
+.orbit-ring { position: absolute; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; }
+.ring-1 { width: 140px; height: 140px; animation: spin 8s linear infinite; }
+.ring-2 { width: 220px; height: 220px; animation: spin 12s linear infinite reverse; }
+.ring-3 { width: 300px; height: 300px; animation: spin 16s linear infinite; }
+
+.planet-icon {
+    position: absolute; width: 40px; height: 40px; background: #1e293b; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem; top: -20px; left: 50%; transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.aws { color: #ff9900; } .azure { color: #008ad7; } .gcp { color: #db4437; }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* --- CONSOLE UI --- */
+.console-wrapper { border: 1px solid #333; border-radius: 8px; overflow: hidden; max-width: 800px; margin: 0 auto; }
+.console-ui { display: flex; height: 400px; background: #0f172a; }
+.sidebar { width: 50px; background: #020617; border-right: 1px solid #333; display: flex; flex-direction: column; align-items: center; padding-top: 20px; gap: 20px; color: #555; }
+.menu-item.active { color: var(--sky); border-left: 2px solid var(--sky); width: 100%; text-align: center; }
+
+.main-view { flex-grow: 1; padding: 20px; display: flex; flex-direction: column; }
+.view-header { display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 20px; }
+
+.terminal-window {
+    background: #000; border: 1px solid #333; height: 120px; padding: 10px; font-family: monospace; font-size: 0.8rem; overflow-y: auto; color: #4ade80;
+}
+
+.server-icon { width: 40px; height: 40px; background: #1e293b; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--sky); }
+.font-mono { font-family: monospace; }
+
+/* --- MAP & CARDS --- */
+.map-visual { display: flex; justify-content: space-around; align-items: center; position: relative; margin-top: 50px; }
+.zone { background: #1e293b; padding: 10px 20px; border-radius: 4px; border: 1px solid #333; z-index: 2; font-family: 'Exo 2'; font-size: 0.9rem; }
+.connection-line { position: absolute; width: 80%; height: 2px; background: var(--sky); top: 50%; left: 10%; z-index: 1; opacity: 0.5; }
+
+.cloud-card { background: var(--panel-bg); padding: 30px; border-radius: 8px; border: 1px solid transparent; transition: 0.3s; height: 100%; }
+.cloud-card:hover { border-color: var(--sky); transform: translateY(-5px); background: rgba(14, 165, 233, 0.05); }
+
+.feature-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid var(--sky); }
+.icon-cloud { font-size: 1.5rem; color: var(--sky); margin-right: 15px; }
+
+.outcome-tag { background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 4px; border: 1px solid #333; }
+.cert-box { border-radius: 12px; }

@@ -1,0 +1,107 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #050505;
+    --bg-panel: #0f0f10;
+    --emerald: #10b981;
+    --emerald-glow: rgba(16, 185, 129, 0.4);
+    --blue: #3b82f6;
+    --text-white: #f8fafc;
+    --text-gray: #9ca3af;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-white);
+}
+
+.font-tech { font-family: 'Share Tech Mono', monospace; }
+
+/* UTILS */
+.text-emerald { color: var(--emerald); text-shadow: 0 0 10px var(--emerald-glow); }
+.text-blue { color: var(--blue); }
+.bg-darker { background-color: #0a0a0a; }
+.bg-hex { 
+    background-image: radial-gradient(#1f2937 15%, transparent 16%), radial-gradient(#1f2937 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-color: var(--bg-dark);
+}
+
+/* BUTTONS */
+.btn-emerald {
+    background: var(--emerald); color: black; border: none; padding: 12px 30px;
+    font-family: 'Share Tech Mono', monospace; font-weight: bold; border-radius: 4px;
+    transition: 0.3s;
+}
+.btn-emerald:hover { 
+    background: #34d399; box-shadow: 0 0 20px var(--emerald-glow); transform: translateY(-2px); 
+}
+.btn-outline-emerald {
+    border: 1px solid var(--emerald); color: var(--emerald); padding: 12px 30px; border-radius: 4px;
+}
+.btn-outline-emerald:hover { background: rgba(16, 185, 129, 0.1); color: white; }
+
+/* HERO */
+.backend-hero {
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+.matrix-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05), transparent 70%);
+    z-index: -1;
+}
+.badge-terminal {
+    display: inline-block; padding: 5px 15px; border: 1px solid var(--emerald); color: var(--emerald);
+    font-family: 'Share Tech Mono'; font-size: 0.9rem; background: rgba(16, 185, 129, 0.1);
+}
+
+/* SERVER ANIMATION */
+.server-stack { width: 300px; margin: 0 auto; position: relative; }
+.server-blade {
+    background: #111; border: 1px solid #333; padding: 15px; margin-bottom: 10px;
+    border-radius: 4px; display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); position: relative;
+}
+.server-blade::before {
+    content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: var(--emerald);
+}
+.led { width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); display: inline-block; }
+.blink-fast { animation: blink 0.2s infinite; }
+.blink-slow { animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0.2; } }
+
+/* CONSOLE LAB */
+.console-wrapper { border: 1px solid #333; border-radius: 8px; overflow: hidden; }
+.console-header { background: #1a1a1a; padding: 10px 15px; border-bottom: 1px solid #333; display: flex; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.bg-panel { background: #111; }
+.terminal-text {
+    height: 250px; overflow-y: auto; color: #d1d5db; font-size: 0.9rem; line-height: 1.6;
+}
+
+/* CARDS */
+.tech-list { display: flex; flex-direction: column; gap: 20px; }
+.tech-item { 
+    display: flex; gap: 20px; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); 
+    border-radius: 8px; border-left: 3px solid transparent; transition: 0.3s;
+}
+.tech-item:hover { border-color: var(--emerald); background: rgba(255,255,255,0.05); }
+
+.stack-card {
+    background: #111; padding: 20px; border: 1px solid #333; border-radius: 8px; text-align: center;
+    transition: 0.3s;
+}
+.stack-card:hover { border-color: var(--emerald); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(16, 185, 129, 0.1); }
+
+.backend-project {
+    background: #111; border: 1px solid #333; padding: 30px; border-radius: 12px; height: 100%;
+}
+.backend-project:hover { border-color: var(--blue); }
+.p-icon { font-size: 2rem; margin-bottom: 15px; }
+.tags span { 
+    display: inline-block; font-size: 0.75rem; padding: 3px 10px; background: #222; 
+    border-radius: 20px; margin-right: 5px; color: var(--text-gray); margin-top: 10px;
+}
