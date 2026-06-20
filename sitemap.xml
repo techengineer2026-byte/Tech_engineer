@@ -17,6 +17,12 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://techengineer.co/web-developer-mohali-chandigarh</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://techengineer.co/ai-machine-learning-course-mohali</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,7 +194,7 @@
   <!-- TIER 6: BLOG -->
   <url>
     <loc>https://techengineer.co/blog</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
